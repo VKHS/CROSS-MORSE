@@ -1,0 +1,154 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/vkhs/CROSS-MORSE/release/schemas/run_manifest.schema.json",
+  "title": "CROSS-MORSE stage run manifest",
+  "description": "Provenance record for one lifecycle stage. The fit stage may train the backbone/head; all later stages must keep them byte-identical.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version", "dataset", "stage", "run_id", "created_utc",
+    "source_tree_sha256", "config_sha256", "dataset_version",
+    "unit_manifest_sha256", "parent_manifest_sha256s", "inputs_frozen_before_stage",
+    "model", "label_access", "inputs", "outputs"
+  ],
+  "properties": {
+    "schema_version": {"const": "2.0"},
+    "dataset": {
+      "enum": ["ogbn-arxiv", "ogbn-proteins", "ogbn-products", "Roman-empire", "PascalVOC-SP", "COCO-SP", "Peptides-func"]
+    },
+    "stage": {"enum": ["fit", "explore", "select", "confirm", "admit", "test"]},
+    "run_id": {"type": "string", "minLength": 8},
+    "created_utc": {"type": "string", "format": "date-time"},
+    "source_tree_sha256": {"$ref": "#/$defs/sha256"},
+    "config_sha256": {"$ref": "#/$defs/sha256"},
+    "dataset_version": {"type": "string", "minLength": 1},
+    "unit_manifest_sha256": {"$ref": "#/$defs/sha256"},
+    "parent_manifest_sha256s": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {"$ref": "#/$defs/sha256"}
+    },
+    "inputs_frozen_before_stage": {"type": "boolean"},
+    "model": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "backbone_sha256_before", "backbone_sha256_after",
+        "head_sha256_before", "head_sha256_after", "frozen_during_stage"
+      ],
+      "properties": {
+        "backbone_sha256_before": {"$ref": "#/$defs/sha256"},
+        "backbone_sha256_after": {"$ref": "#/$defs/sha256"},
+        "head_sha256_before": {"$ref": "#/$defs/sha256"},
+        "head_sha256_after": {"$ref": "#/$defs/sha256"},
+        "frozen_during_stage": {"type": "boolean"}
+      }
+    },
+    "label_access": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "online_decisions_label_free", "official_test_evaluation_performed",
+        "official_test_labels_exposed_to_decision_code", "test_results_used_for_decision"
+      ],
+      "properties": {
+        "online_decisions_label_free": {"const": true},
+        "official_test_evaluation_performed": {"type": "boolean"},
+        "official_test_labels_exposed_to_decision_code": {"const": false},
+        "test_results_used_for_decision": {"const": false}
+      }
+    },
+    "inputs": {"$ref": "#/$defs/hashMap"},
+    "outputs": {
+      "allOf": [
+        {"$ref": "#/$defs/hashMap"},
+        {"minProperties": 1}
+      ]
+    },
+    "evaluator_sha256": {"$ref": "#/$defs/sha256"},
+    "notes": {"type": "string"}
+  },
+  "allOf": [
+    {
+      "if": {"properties": {"stage": {"const": "fit"}}, "required": ["stage"]},
+      "then": {
+        "properties": {
+          "inputs_frozen_before_stage": {"const": false},
+          "parent_manifest_sha256s": {"maxItems": 0},
+          "label_access": {"properties": {"official_test_evaluation_performed": {"const": false}}},
+          "outputs": {"required": ["backbone_checkpoint", "prediction_head_checkpoint"]}
+        }
+      }
+    },
+    {
+      "if": {"properties": {"stage": {"not": {"const": "fit"}}}, "required": ["stage"]},
+      "then": {
+        "properties": {
+          "inputs_frozen_before_stage": {"const": true},
+          "parent_manifest_sha256s": {"minItems": 1},
+          "model": {"properties": {"frozen_during_stage": {"const": true}}}
+        }
+      }
+    },
+    {
+      "if": {"properties": {"stage": {"not": {"const": "test"}}}, "required": ["stage"]},
+      "then": {
+        "properties": {
+          "label_access": {"properties": {"official_test_evaluation_performed": {"const": false}}}
+        }
+      }
+    },
+    {
+      "if": {"properties": {"stage": {"const": "explore"}}, "required": ["stage"]},
+      "then": {
+        "properties": {
+          "outputs": {"required": ["logged_trajectories", "observer_model", "consequence_models"]}
+        }
+      }
+    },
+    {
+      "if": {"properties": {"stage": {"const": "select"}}, "required": ["stage"]},
+      "then": {
+        "properties": {
+          "outputs": {"required": ["comparator", "provisional_policy", "candidate_ledger"]}
+        }
+      }
+    },
+    {
+      "if": {"properties": {"stage": {"const": "confirm"}}, "required": ["stage"]},
+      "then": {
+        "properties": {
+          "inputs": {"required": ["comparator", "provisional_policy", "confirmation_map"]},
+          "outputs": {"required": ["confirmed_policy"]}
+        }
+      }
+    },
+    {
+      "if": {"properties": {"stage": {"const": "admit"}}, "required": ["stage"]},
+      "then": {
+        "properties": {
+          "inputs": {"required": ["comparator", "executable_policy"]},
+          "outputs": {"required": ["deployment_decision"]}
+        }
+      }
+    },
+    {
+      "if": {"properties": {"stage": {"const": "test"}}, "required": ["stage"]},
+      "then": {
+        "required": ["evaluator_sha256"],
+        "properties": {
+          "label_access": {"properties": {"official_test_evaluation_performed": {"const": true}}},
+          "inputs": {"required": ["comparator", "executable_policy", "deployment_decision"]},
+          "outputs": {"required": ["official_test_evaluation"]}
+        }
+      }
+    }
+  ],
+  "$defs": {
+    "sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "hashMap": {
+      "type": "object",
+      "additionalProperties": {"$ref": "#/$defs/sha256"}
+    }
+  }
+}

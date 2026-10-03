@@ -1,0 +1,2 @@
+The upgrader preserves the existing LICENSE file when --license keep is used.
+Before public release, confirm that it grants the reuse rights intended by all rights holders and their institution.

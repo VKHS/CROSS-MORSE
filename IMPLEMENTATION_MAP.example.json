@@ -1,0 +1,11 @@
+{
+  "datasets": {
+    "ogbn-arxiv": ["src/cross_morse/experiments/run_ogbn_arxiv.py"],
+    "ogbn-proteins": ["src/cross_morse/experiments/run_ogbn_proteins.py"],
+    "ogbn-products": ["src/cross_morse/experiments/run_ogbn_products.py"],
+    "Roman-empire": ["src/cross_morse/experiments/run_roman_empire.py"],
+    "PascalVOC-SP": ["src/cross_morse/experiments/run_pascalvoc_sp.py"],
+    "COCO-SP": ["src/cross_morse/experiments/run_coco_sp.py"],
+    "Peptides-func": ["src/cross_morse/experiments/run_peptides_func.py"]
+  }
+}

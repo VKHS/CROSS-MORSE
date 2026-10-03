@@ -1,0 +1,16 @@
+{
+  "schema_version": "1.0",
+  "release_type": "source-code-only",
+  "article_files_in_repository": false,
+  "supplementary_files_in_repository": false,
+  "manuscript_tex_in_repository": false,
+  "published_numbers_duplicated_as_authoritative_results": false,
+  "official_datasets_redistributed": false,
+  "precomputed_checkpoints_included": false,
+  "precomputed_predictions_included": false,
+  "logged_trajectories_included": false,
+  "complete_output_archives_included": false,
+  "paper_table_figure_one_command_reconstruction_claimed": false,
+  "results_source_of_truth": "peer-reviewed journal article and Supplementary Information",
+  "intended_use": "independent implementation and computational rerunning"
+}

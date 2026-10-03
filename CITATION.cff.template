@@ -1,0 +1,26 @@
+cff-version: 1.2.0
+message: "Please cite the peer-reviewed CROSS-MORSE article and this software release."
+title: "CROSS-MORSE: source code for cross-spectral control of message passing in frozen graph neural networks"
+type: software
+authors:
+  - family-names: "Khalili Sadaghiani"
+    given-names: "Abdolvahab"
+  - family-names: "Nunez-Yanez"
+    given-names: "Jose"
+repository-code: "https://github.com/vkhs/CROSS-MORSE"
+url: "{{ARTICLE_LINK}}"
+identifiers:
+  - type: doi
+    value: "{{DOI_TEXT}}"
+    description: "Peer-reviewed CROSS-MORSE article"
+abstract: >-
+  Source-code release for the CROSS-MORSE post-training control framework.
+  The article and Supplementary Information are hosted by the journal and are
+  not mirrored in this repository.
+keywords:
+  - graph neural networks
+  - adaptive propagation
+  - feedback control
+  - model predictive control
+  - calibrated policy selection
+license: "{{LICENSE_ID}}"

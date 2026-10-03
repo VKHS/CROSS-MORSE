@@ -1,0 +1,23 @@
+{
+  "schema_version": "1.0",
+  "numerical_source_of_truth": "journal article and Supplementary Information",
+  "entries": [
+    {"id": "EXP-01", "name": "statistical units and dependence treatment", "paper_locations": ["Supplementary Table S1"], "datasets": ["all"]},
+    {"id": "EXP-02", "name": "six-stage split, fold, and seed lifecycle", "paper_locations": ["Supplementary Table S2"], "datasets": ["all"]},
+    {"id": "EXP-03", "name": "target-regime qualification", "paper_locations": ["Supplementary Tables S3-S4", "Main Table 1", "Main Figure 2"], "datasets": ["all"]},
+    {"id": "EXP-04", "name": "frozen model and instrumentation registry", "paper_locations": ["Supplementary Table S5"], "datasets": ["all"]},
+    {"id": "EXP-05", "name": "action registry and support audit", "paper_locations": ["Supplementary Tables S6-S7"], "datasets": ["all"]},
+    {"id": "EXP-06", "name": "measurements, observer, critic, and sequence models", "paper_locations": ["Supplementary Tables S8-S9"], "datasets": ["all"]},
+    {"id": "EXP-07", "name": "open-loop and feedback policy implementations", "paper_locations": ["Supplementary Table S10"], "datasets": ["all"]},
+    {"id": "EXP-08", "name": "confirmation and candidate selection", "paper_locations": ["Supplementary Tables S11-S12", "Main Table 2"], "datasets": ["all"]},
+    {"id": "EXP-09", "name": "independent-graph admission", "paper_locations": ["Supplementary Table S13", "Main Table 2"], "datasets": ["PascalVOC-SP", "COCO-SP", "Peptides-func"]},
+    {"id": "EXP-10", "name": "held-out mechanism tests", "paper_locations": ["Supplementary Table S14", "Main Figure 3"], "datasets": ["all"]},
+    {"id": "EXP-11", "name": "matched baselines and resources", "paper_locations": ["Supplementary Table S15", "Main Table 3"], "datasets": ["all"]},
+    {"id": "EXP-12", "name": "factorial and within-block ablations", "paper_locations": ["Supplementary Tables S16-S17", "Main Figure 4"], "datasets": ["all"]},
+    {"id": "EXP-13", "name": "sensitivity and negative controls", "paper_locations": ["Supplementary Tables S18-S19", "Main Figure 5"], "datasets": ["all"]},
+    {"id": "EXP-14", "name": "selection and stability diagnostics", "paper_locations": ["Supplementary Tables S20-S22"], "datasets": ["all"]},
+    {"id": "EXP-15", "name": "worst-case and expected compute accounting", "paper_locations": ["Supplementary Table S23", "Main Figure 4"], "datasets": ["all"]},
+    {"id": "EXP-16", "name": "cross-backbone validation", "paper_locations": ["Supplementary Table S25"], "datasets": ["ogbn-arxiv", "Roman-empire", "PascalVOC-SP"]},
+    {"id": "PROV-01", "name": "claim-to-artifact identities for newly generated runs", "paper_locations": ["Supplementary Table S24"], "datasets": ["all"]}
+  ]
+}

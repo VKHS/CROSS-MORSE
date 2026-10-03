@@ -1,0 +1,68 @@
+{
+  "schema_version": "1.0",
+  "paper_title": "CROSS-MORSE: Cross-Spectral Control of Message Passing in Frozen Graph Neural Networks",
+  "method_identity": {
+    "backbone_trained_before_cross_morse": true,
+    "backbone_parameters_frozen_during_controller_development": true,
+    "prediction_head_frozen_during_controller_development": true,
+    "native_update_functions_frozen": true,
+    "numerical_precision_frozen": true,
+    "online_decisions_are_label_free": true,
+    "post_training_adapter_uses_runtime_hooks": true
+  },
+  "data_roles": [
+    {
+      "name": "D_fit",
+      "allocation": "60% of official training; internal checkpoint subset",
+      "permitted_use": "fit plant/head before freezing; audit entry contract and bands",
+      "official_test_access": false
+    },
+    {
+      "name": "D_explore",
+      "allocation": "20% of official training",
+      "permitted_use": "collect logged trajectories; fit observer and consequence models",
+      "official_test_access": false
+    },
+    {
+      "name": "D_select",
+      "allocation": "10% of official training",
+      "permitted_use": "reconstruct comparator and select complete policy configuration",
+      "official_test_access": false
+    },
+    {
+      "name": "D_confirm",
+      "allocation": "10% of official training; untouched by fitting",
+      "permitted_use": "apply fixed confirmation map without refitting",
+      "official_test_access": false
+    },
+    {
+      "name": "D_admit",
+      "allocation": "official validation/calibration; disjoint from checkpointing",
+      "permitted_use": "compare one fixed executable rule with one fixed comparator",
+      "official_test_access": false
+    },
+    {
+      "name": "D_test",
+      "allocation": "official test",
+      "permitted_use": "evaluator-only final reporting",
+      "official_test_access": true,
+      "further_decision_allowed": false
+    }
+  ],
+  "test_firewall": {
+    "policy_frozen_before_test": true,
+    "comparator_frozen_before_test": true,
+    "test_metrics_absent_from_pre_final_summaries": true,
+    "test_results_cannot_change_policy_or_thresholds": true,
+    "post_test_decisions_prohibited": true
+  },
+  "datasets": [
+    "ogbn-arxiv",
+    "ogbn-proteins",
+    "ogbn-products",
+    "Roman-empire",
+    "PascalVOC-SP",
+    "COCO-SP",
+    "Peptides-func"
+  ]
+}
