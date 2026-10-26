@@ -1,0 +1,150 @@
+{
+  "schema_version": 1,
+  "profile": "smoke",
+  "dataset": "synthetic",
+  "seed": 314159,
+  "scientific_run": false,
+  "data": {
+    "partitioner": "graphs",
+    "internal_val_fraction": 0.1,
+    "feature_standardization": false,
+    "download": false,
+    "synthetic_nodes": 160,
+    "synthetic_features": 12,
+    "synthetic_classes": 4,
+    "synthetic_graphs": 80,
+    "synthetic_nodes_per_graph": 8
+  },
+  "model": {
+    "hidden_dim": 16,
+    "depth": 8,
+    "encoder_layers": 1,
+    "dropout": 0.1,
+    "activation": "relu",
+    "precision": "fp32",
+    "checkpoint_segment": 2,
+    "backbone": "gps",
+    "native_layers": 2,
+    "attention_heads": 4
+  },
+  "training": {
+    "epochs": 3,
+    "patience": 3,
+    "lr": 0.0003,
+    "weight_decay": 0.0001,
+    "seeds": [
+      1,
+      2
+    ],
+    "grad_clip": 1.0,
+    "graph_batch_size": 2,
+    "schedule": "constant",
+    "checkpoint_rule": "min_loss"
+  },
+  "exploration": {
+    "trajectories": 12,
+    "critic_horizon": 1,
+    "record_stride": 1,
+    "terminal_samples_per_trajectory": 1
+  },
+  "controller": {
+    "state_dim": 6,
+    "covariance_rank": 2,
+    "observer_period": 2,
+    "depth_bins": 2,
+    "crossfit_folds": 3,
+    "epochs": 3,
+    "patience": 2,
+    "batch_size": 64,
+    "lr": 0.001,
+    "weight_decay": 0.0001,
+    "calibration_alpha": 0.05,
+    "entropy_bins": [
+      0.3333333333333333,
+      0.6666666666666666
+    ],
+    "kappa_grid": [
+      1.0
+    ],
+    "lambda_rho": 0.0001,
+    "lambda_transport": 5e-05,
+    "lambda_terminal": 1.0,
+    "gamma": 0.97,
+    "horizons": [
+      1,
+      2
+    ],
+    "beam_width": 2,
+    "top_k": 2,
+    "max_search_calls": 1000000,
+    "calibration_protocol": "trajectory_holdout_v2",
+    "calibration_fraction": 0.2,
+    "calibration_audit_fraction": 0.2
+  },
+  "sensor": {
+    "bands": [
+      0,
+      2,
+      5
+    ],
+    "degree": 8,
+    "sketch_dim": 0,
+    "profiles": [
+      "lean",
+      "full"
+    ]
+  },
+  "support": {
+    "p_min": 0.05,
+    "n_min": 2,
+    "max_normalized_weight": 1.0
+  },
+  "registry": {
+    "ensemble_sizes": [
+      1,
+      2
+    ],
+    "max_exploration_sequences": 1,
+    "phase_boundaries": [
+      0.5
+    ],
+    "phase_pairs": [
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        4
+      ]
+    ],
+    "include_state_controls": true
+  },
+  "selection": {
+    "outer_folds": 4,
+    "inner_folds": 3,
+    "bootstrap_reps": 80,
+    "alpha": 0.025,
+    "epsilon_r": 0.003,
+    "epsilon_eq": 0.002,
+    "epsilon_metric": 0.001,
+    "max_normalized_work": 18.0,
+    "enforce_entry_contract": false
+  },
+  "admission": {
+    "bootstrap_reps": 80,
+    "alpha": 0.025,
+    "epsilon_a": 0.003,
+    "epsilon_metric": 0.001,
+    "clip": 0.1,
+    "rule": "empirical_bernstein"
+  },
+  "entry": {
+    "plant_margin": 0.004,
+    "pdd_max": 0.01,
+    "dil_gap_max": 0.02,
+    "registry_fraction_min": 0.8,
+    "headroom_margin": 0.003
+  },
+  "benchmark_dataset": "COCO-SP"
+}

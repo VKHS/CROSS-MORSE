@@ -1,0 +1,5 @@
+model,ensemble,metric_name,metric,metric_percent,loss_name,loss_nats,test_samples,test_units
+q0,2,accuracy,0.15625,15.625,cross_entropy,1.4357632249593735,32,8
+qN,2,accuracy,0.40625,40.625,cross_entropy,1.3372392058372498,32,8
+qC,2,accuracy,0.28125,28.125,cross_entropy,1.395486332476139,32,8
+qD,2,accuracy,0.28125,28.125,cross_entropy,1.395486332476139,32,8

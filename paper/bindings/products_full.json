@@ -1,0 +1,52 @@
+{
+  "schema_version": "result-binding-1",
+  "status": "template_prefilled_with_reported_values",
+  "_how_to_complete": "Run `python -B scripts/compare_with_manuscript.py <run> --emit-binding <path>` on the completed full-profile run; it fills run_identities from the sealed stage manifests and sets status to author_completed with the relationship you declare. Then run `python -B scripts/check_result_binding.py <run> <path>`.",
+  "manuscript_identifier": "CROSS-MORSE: Cross-Spectral Control of Message Passing in Frozen Graph Neural Networks; Scientific Reports submission, revised 2026-10-24",
+  "relationship_to_manuscript": null,
+  "run_identities": {
+    "source_sha256": null,
+    "config_sha256": null,
+    "unit_sha256": null,
+    "dataset": "ogbn-products"
+  },
+  "expected_profile": "full",
+  "expected_config": "configs/products_full.json",
+  "results": [
+    {
+      "manuscript_location": "Main Table 1, ogbn-products, final effect over qC: paired CE (nats)",
+      "artifact": "final/results_summary.json",
+      "json_pointer": "/paired_qD_minus_qC_loss/mean",
+      "reported_value": 0.0,
+      "absolute_tolerance": 0.0
+    },
+    {
+      "manuscript_location": "Main Table 1, ogbn-products, official accuracy gain over qC (percentage points)",
+      "artifact": "final/results_summary.json",
+      "json_pointer": "/paired_qD_minus_qC_metric_pp/mean",
+      "reported_value": 0.0,
+      "absolute_tolerance": 0.0
+    },
+    {
+      "manuscript_location": "Supplementary Table S15, ogbn-products, 'optimized phase (qC, returned)' official test score",
+      "artifact": "final/results_summary.json",
+      "json_pointer": "/models/qD/metric_percent",
+      "reported_value": 87.74,
+      "absolute_tolerance": 0.005
+    },
+    {
+      "manuscript_location": "Supplementary Table S15, ogbn-products, 'optimized phase (qC, returned)' official test score",
+      "artifact": "final/results_summary.json",
+      "json_pointer": "/models/qC/metric_percent",
+      "reported_value": 87.74,
+      "absolute_tolerance": 0.005
+    },
+    {
+      "manuscript_location": "Supplementary Table S15, ogbn-products, 'full-depth plant' official test score",
+      "artifact": "final/results_summary.json",
+      "json_pointer": "/models/qN/metric_percent",
+      "reported_value": 87.59,
+      "absolute_tolerance": 0.005
+    }
+  ]
+}

@@ -1,0 +1,76 @@
+{
+ "admission": {
+  "alpha": 0.025,
+  "bootstrap_reps": 500,
+  "clip": 0.1,
+  "epsilon_a": 0.003,
+  "rule": "cluster_bootstrap"
+ },
+ "checkpoint_rule": "min_loss",
+ "config": "roman_empire_pilot.json",
+ "config_sha256": "86d3171fb5dc44185f09a7b5af95c2c5dc55692b0e85f3dc077d14628b222bd8",
+ "controller": {
+  "beam_width": 4,
+  "calibration_protocol": "trajectory_holdout_v2",
+  "crossfit_folds": 3,
+  "horizons": [
+   1,
+   4
+  ],
+  "observer_period": 2,
+  "top_k": 2
+ },
+ "data_roles": {
+  "buffer_hops": 2,
+  "download": true,
+  "internal_val_fraction": 0.1,
+  "num_clusters": 32,
+  "partitioner": "metis",
+  "rule": "seeded permutation of the official training units; 60%/20%/10%/10% to D_fit/D_explore/D_select/D_confirm; official validation = D_admit; official test = D_test",
+  "split_index": 0
+ },
+ "dataset": "Roman-empire",
+ "exploration": {
+  "record_stride": 1,
+  "trajectories": 24
+ },
+ "partition_seed": 314159,
+ "profile": "pilot",
+ "registry": {
+  "ensemble_sizes": [
+   1,
+   2
+  ],
+  "include_state_controls": true,
+  "max_exploration_sequences": 1,
+  "phase_boundaries": [
+   0.5
+  ],
+  "phase_pairs": [
+   [
+    0,
+    1
+   ],
+   [
+    0,
+    4
+   ]
+  ]
+ },
+ "schema": "cross-morse-registered-manifest-1",
+ "scientific_run": false,
+ "selection": {
+  "alpha": 0.025,
+  "bootstrap_reps": 500,
+  "enforce_entry_contract": false,
+  "epsilon_eq": 0.002,
+  "epsilon_metric": 0.001,
+  "epsilon_r": 0.003,
+  "inner_folds": 4,
+  "outer_folds": 5
+ },
+ "training_seeds": [
+  1,
+  2
+ ]
+}

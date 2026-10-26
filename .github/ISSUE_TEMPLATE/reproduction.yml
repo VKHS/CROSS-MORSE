@@ -1,0 +1,64 @@
+name: Reproduction question
+description: Ask about a manuscript result, saved experiment or reproducibility check.
+title: "[Reproduction] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        The reviewer guide separates numerical replay, trusted-checkpoint execution
+        and a new training run. Tell us which route you used so the comparison is meaningful.
+  - type: dropdown
+    id: route
+    attributes:
+      label: Verification route
+      options:
+        - Source or method inspection
+        - Numerical replay of saved observations
+        - Reexecution of trusted checkpoints
+        - New training and controller development
+        - Manuscript-to-run result binding
+    validations:
+      required: true
+  - type: dropdown
+    id: dataset
+    attributes:
+      label: Dataset
+      options:
+        - ogbn-arxiv
+        - ogbn-products
+        - ogbn-proteins
+        - Roman-empire
+        - PascalVOC-SP
+        - COCO-SP
+        - Peptides-func
+        - Synthetic fixture or source tooling
+  - type: input
+    id: release
+    attributes:
+      label: Source and run identity
+      description: Include the commit and available source/config/unit hashes.
+    validations:
+      required: true
+  - type: input
+    id: location
+    attributes:
+      label: Manuscript or documentation location
+      description: Table, figure, equation, result field or documentation section, if applicable.
+  - type: textarea
+    id: question
+    attributes:
+      label: Question and observed difference
+      description: State the expected quantity, observed quantity, units and comparison you are making.
+    validations:
+      required: true
+  - type: textarea
+    id: command
+    attributes:
+      label: Command and environment
+      description: Include profile, precision and CPU/GPU details for execution questions.
+      render: shell
+  - type: textarea
+    id: artifacts
+    attributes:
+      label: Relevant evidence
+      description: Link public replay reports or paste the pertinent JSON fields. Full private run directories are not needed for the initial report.

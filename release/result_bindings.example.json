@@ -1,0 +1,21 @@
+{
+  "schema_version": "result-binding-1",
+  "status": "template_not_evidence",
+  "manuscript_identifier": null,
+  "relationship_to_manuscript": null,
+  "run_identities": {
+    "source_sha256": null,
+    "config_sha256": null,
+    "unit_sha256": null,
+    "dataset": "ogbn-arxiv"
+  },
+  "results": [
+    {
+      "manuscript_location": "Main Table 1, arxiv paired CE effect",
+      "artifact": "final/results_summary.json",
+      "json_pointer": "/paired_qD_minus_qC_ce/mean",
+      "reported_value": null,
+      "absolute_tolerance": null
+    }
+  ]
+}

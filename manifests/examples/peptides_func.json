@@ -1,0 +1,197 @@
+{
+ "benchmark_dataset": "Peptides-func",
+ "data_kind": "synthetic",
+ "dataset": "Peptides-func",
+ "environment": {
+  "cuda_runtime": null,
+  "cudnn_deterministic": false,
+  "deterministic_algorithms_enabled": false,
+  "device": "cpu",
+  "gpu": null,
+  "machine": "x86_64",
+  "numpy": "2.3.5",
+  "platform": "Linux-6.18.55-x86_64-with-glibc2.39",
+  "precision": "fp32",
+  "python": "3.12.14",
+  "python_implementation": "CPython",
+  "tf32_matmul": false,
+  "torch": "2.10.0+cpu"
+ },
+ "identities": {
+  "config_sha256": "286b22b6af7a6faefa617db030931ef522bef77157294b536089634410ea53da",
+  "prepared_fingerprint": "96b21d598ff0d6b521dac774899c1578549972e750af13a7357c6c1ebf6e8be0",
+  "source_sha256": "9e0154c11c0ebc67d533a84b6d6a80c4e77a8d76e6d2cc165bcff5897980b108",
+  "unit_sha256": "921f7a501d28cfdcbe38e7a08af9574c8492406aeb0e5c6652d2f47bfeb54f3e"
+ },
+ "is_benchmark_data": false,
+ "packages": {
+  "CairoSVG": "2.9.1",
+  "Jinja2": "3.1.6",
+  "MarkupSafe": "3.0.3",
+  "attrs": "26.1.0",
+  "cairocffi": "1.7.1",
+  "certifi": "2026.10.23",
+  "cffi": "2.1.1",
+  "charset-normalizer": "3.5.2",
+  "cloudpickle": "3.1.2",
+  "contourpy": "1.4.0",
+  "cssselect2": "0.10.1",
+  "cycler": "0.12.1",
+  "defusedxml": "0.7.1",
+  "filelock": "3.32.3",
+  "fonttools": "4.67.0",
+  "fsspec": "2026.7.0",
+  "idna": "3.20",
+  "joblib": "1.6.0",
+  "jsonschema": "4.26.0",
+  "jsonschema-specifications": "2025.9.1",
+  "kiwisolver": "1.5.1",
+  "littleutils": "0.2.4",
+  "matplotlib": "3.10.8",
+  "mpmath": "1.3.0",
+  "narwhals": "2.27.1",
+  "networkx": "3.6.1",
+  "numpy": "2.3.5",
+  "ogb": "1.3.6",
+  "outdated": "0.2.2",
+  "packaging": "26.3",
+  "pandas": "3.1.0",
+  "pillow": "13.0.0",
+  "pip": "25.0.1",
+  "pycparser": "3.12",
+  "pymetis": "2025.2.2",
+  "pyparsing": "3.3.3",
+  "python-dateutil": "3.0.0",
+  "referencing": "0.37.0",
+  "requests": "2.34.2",
+  "rpds-py": "2026.9.1",
+  "scikit-learn": "1.9.1",
+  "scipy": "1.17.0",
+  "setuptools": "78.1.0",
+  "six": "1.17.0",
+  "sympy": "1.14.0",
+  "threadpoolctl": "3.7.0",
+  "tinycss2": "1.5.1",
+  "torch": "2.10.0+cpu",
+  "tqdm": "4.70.1",
+  "typing_extensions": "4.16.0",
+  "tzdata": "2026.5",
+  "urllib3": "2.8.0",
+  "webencodings": "0.6.1"
+ },
+ "policy_lock": {
+  "comparator_hash": "64637bcf4ba34c4918c267cd5aaf5a3c85f66b105ece13d55582927bb1968e2b",
+  "deployed_hash": "64637bcf4ba34c4918c267cd5aaf5a3c85f66b105ece13d55582927bb1968e2b",
+  "model_hashes": {
+   "fit/full/controller.pt": "dafe533573baba677b3ea74d3f2c5c358d5a05744f6cfd243017776dbdeac572",
+   "fit/lean/controller.pt": "a0217bb8faef30844e9134fc81925dbc8fde90671bf2f94cfe7fb838fa7187eb",
+   "train/plant_seed1_best.pt": "6a9f2a45bff7597f5962597a16edcdabd536197ef7a7e5ad8f8b7ef8e7a23c2b",
+   "train/plant_seed2_best.pt": "3ffe9150a1e340660b7914d4681546690f60e0d6bed6e15948f351f21d92609f",
+   "train/q0_seed1_best.pt": "01fd077732457cf58cffbbe2ba0e6fc6d02ccd28ac58cf65a677d6594ee8fa38",
+   "train/q0_seed2_best.pt": "61f6a2d16ac179085bc2f581c466aca7d50281a52b4841c6c2b9d7e73efeb4a7"
+  }
+ },
+ "profile": "smoke",
+ "run_name": "peptides_func",
+ "schema": "cross-morse-run-manifest-1",
+ "scientific_run": false,
+ "seeds": {
+  "bootstrap_seeds": {
+   "admission": 314165,
+   "final": 314166,
+   "selection": 314163
+  },
+  "ensemble_seeds": {
+   "qC": [
+    1,
+    2
+   ],
+   "qD": [
+    1,
+    2
+   ]
+  },
+  "partition_seed": 314159,
+  "split_index": null,
+  "training_seeds": [
+   1,
+   2
+  ]
+ },
+ "source_data": {
+  "num_features": 12,
+  "num_graphs": 80,
+  "num_nodes": 640,
+  "num_outputs": 4,
+  "source": "synthetic_fixture",
+  "source_array_hashes": {
+   "edge_attr": "d4e40701986ba92870b7d9256f7c2910a9023dc6d72e3af8e7182a8bd7b053da",
+   "edge_index": "f86c4776fa6490ca23b371a8d38e65849f077dff65a5f31164f26f2ac89a47fe",
+   "edge_ptr": "3d9edc70ae3b78834f628cfda853561d1452061fa47270ddb7f9eb3e9c5024c3",
+   "edge_weight": "bca175a20263703eb76830154ceb18e5509a0fb07f1dd4354a1a01f678c5a7ea",
+   "graph_ptr": "3d9edc70ae3b78834f628cfda853561d1452061fa47270ddb7f9eb3e9c5024c3",
+   "x": "8f8107030a9b3b508f444e88330a77af1453920edb4bc7ff0a1d9f098ea472b5",
+   "y": "0e4936e80d1de40912f2b88b20d34866935616592a13f7d40e107e5ce0c82f80"
+  }
+ },
+ "splits": {
+  "arrays": {
+   "clusters.npz": {
+    "bytes": 916,
+    "sha256": "babedb0595c27168ed8813c9b9d0b2d456a119b878907ed37091ad251fe5b6df"
+   },
+   "graph_splits.npz": {
+    "bytes": 2838,
+    "sha256": "921f7a501d28cfdcbe38e7a08af9574c8492406aeb0e5c6652d2f47bfeb54f3e"
+   },
+   "official_splits.npz": {
+    "bytes": 1386,
+    "sha256": "5db94f5ea4d43b99d136d0e7372b9e67525d00c1cad25124dfb6c434e54f0198"
+   },
+   "splits.npz": {
+    "bytes": 2838,
+    "sha256": "921f7a501d28cfdcbe38e7a08af9574c8492406aeb0e5c6652d2f47bfeb54f3e"
+   }
+  },
+  "graph_role_hashes": {
+   "admit": "f3cf7e60965e0c3d990c925b703e84860b4f6746c371aa4b6560f7a685a68515",
+   "confirm": "9fe5891f59414ead06c88c3c2bd9fcdd15d8d0d2b6100d80f027b0fc1e3f69b1",
+   "explore": "b1a6a59b6ad1c556a7028ce06fcb8970f391ebcde69626c6065f5fd53dffd7a6",
+   "fit": "4f60108dfbff4c14e393edf1cf9ea53a84efd5980d9657e557aa3e790abdfa92",
+   "fit_train": "f781d041a12d2937fd273c2b67137bde71de0987abee2e8d1822e4a342217ff8",
+   "fit_val": "9dbd8388ed7923f58518f99fdea3661cc747c9ff043fdc8eb93b8992044e7c89",
+   "select": "6684d2a62a27267ca60952a62fea7b6f171daf3a7a4b68fe38b1ad9699ce57fc",
+   "test": "62a220a848ad14665479f28889d11e84fc551e82113e38ea62f9bde32c0db80d"
+  },
+  "independent_graphs": true,
+  "official_split_axis": "graph",
+  "official_split_hashes": {
+   "test": "62a220a848ad14665479f28889d11e84fc551e82113e38ea62f9bde32c0db80d",
+   "train": "87b6dc5b5adde617bde8b68828fa6891918c8749f03e2cab1a517904823044db",
+   "valid": "f3cf7e60965e0c3d990c925b703e84860b4f6746c371aa4b6560f7a685a68515"
+  },
+  "role_hashes": {
+   "admit": "f3cf7e60965e0c3d990c925b703e84860b4f6746c371aa4b6560f7a685a68515",
+   "confirm": "9fe5891f59414ead06c88c3c2bd9fcdd15d8d0d2b6100d80f027b0fc1e3f69b1",
+   "explore": "b1a6a59b6ad1c556a7028ce06fcb8970f391ebcde69626c6065f5fd53dffd7a6",
+   "fit": "4f60108dfbff4c14e393edf1cf9ea53a84efd5980d9657e557aa3e790abdfa92",
+   "fit_train": "f781d041a12d2937fd273c2b67137bde71de0987abee2e8d1822e4a342217ff8",
+   "fit_val": "9dbd8388ed7923f58518f99fdea3661cc747c9ff043fdc8eb93b8992044e7c89",
+   "select": "6684d2a62a27267ca60952a62fea7b6f171daf3a7a4b68fe38b1ad9699ce57fc",
+   "test": "62a220a848ad14665479f28889d11e84fc551e82113e38ea62f9bde32c0db80d"
+  },
+  "rule": "seeded permutation of official train; floor cuts at 60%,80%,90%; remaining units in confirm",
+  "sizes": {
+   "admit": 16,
+   "confirm": 5,
+   "explore": 10,
+   "fit": 28,
+   "fit_train": 26,
+   "fit_val": 2,
+   "select": 5,
+   "test": 16
+  },
+  "statistical_unit": "complete graph",
+  "unit": "graph"
+ }
+}

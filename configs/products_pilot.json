@@ -1,0 +1,144 @@
+{
+  "schema_version": 1,
+  "profile": "pilot",
+  "dataset": "ogbn-products",
+  "seed": 314159,
+  "scientific_run": false,
+  "data": {
+    "num_clusters": 64,
+    "buffer_hops": 2,
+    "partitioner": "metis",
+    "internal_val_fraction": 0.1,
+    "feature_standardization": false,
+    "download": true
+  },
+  "model": {
+    "hidden_dim": 128,
+    "depth": 32,
+    "encoder_layers": 4,
+    "dropout": 0.1,
+    "activation": "relu",
+    "precision": "bf16",
+    "checkpoint_segment": 8,
+    "backbone": "shared_transport",
+    "dense_chunk_size": 8192
+  },
+  "training": {
+    "epochs": 30,
+    "patience": 8,
+    "lr": 0.0005,
+    "weight_decay": 1e-05,
+    "seeds": [
+      1,
+      2
+    ],
+    "grad_clip": 1.0,
+    "schedule": "cosine",
+    "checkpoint_rule": "min_loss"
+  },
+  "exploration": {
+    "trajectories": 24,
+    "critic_horizon": 1,
+    "record_stride": 1,
+    "terminal_samples_per_trajectory": 2
+  },
+  "controller": {
+    "state_dim": 16,
+    "covariance_rank": 4,
+    "observer_period": 2,
+    "depth_bins": 4,
+    "crossfit_folds": 3,
+    "epochs": 30,
+    "patience": 6,
+    "batch_size": 512,
+    "lr": 0.001,
+    "weight_decay": 0.0001,
+    "calibration_alpha": 0.05,
+    "entropy_bins": [
+      0.3333333333333333,
+      0.6666666666666666
+    ],
+    "kappa_grid": [
+      1.0
+    ],
+    "lambda_rho": 0.0001,
+    "lambda_transport": 5e-05,
+    "lambda_terminal": 1.0,
+    "gamma": 0.97,
+    "horizons": [
+      1,
+      4
+    ],
+    "beam_width": 4,
+    "top_k": 2,
+    "max_search_calls": 1000000,
+    "calibration_protocol": "trajectory_holdout_v2",
+    "calibration_fraction": 0.2,
+    "calibration_audit_fraction": 0.2
+  },
+  "sensor": {
+    "bands": [
+      0,
+      2,
+      5
+    ],
+    "degree": 8,
+    "sketch_dim": 0,
+    "profiles": [
+      "lean",
+      "full"
+    ]
+  },
+  "support": {
+    "p_min": 0.05,
+    "n_min": 64,
+    "max_normalized_weight": 0.2
+  },
+  "registry": {
+    "ensemble_sizes": [
+      1,
+      2
+    ],
+    "max_exploration_sequences": 1,
+    "phase_boundaries": [
+      0.5
+    ],
+    "phase_pairs": [
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        4
+      ]
+    ],
+    "include_state_controls": true
+  },
+  "selection": {
+    "outer_folds": 5,
+    "inner_folds": 4,
+    "bootstrap_reps": 500,
+    "alpha": 0.025,
+    "epsilon_r": 0.003,
+    "epsilon_eq": 0.002,
+    "epsilon_metric": 0.001,
+    "max_normalized_work": 18.0,
+    "enforce_entry_contract": false
+  },
+  "admission": {
+    "bootstrap_reps": 500,
+    "alpha": 0.025,
+    "epsilon_a": 0.003,
+    "epsilon_metric": 0.001,
+    "clip": 0.1,
+    "rule": "cluster_bootstrap"
+  },
+  "entry": {
+    "plant_margin": 0.004,
+    "pdd_max": 0.01,
+    "dil_gap_max": 0.02,
+    "registry_fraction_min": 0.8,
+    "headroom_margin": 0.003
+  }
+}

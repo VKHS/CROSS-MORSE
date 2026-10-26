@@ -1,0 +1,42 @@
+{
+  "active_parameter_count": 1092,
+  "baseline": true,
+  "best_internal_fit_val_ce": 1.3344308137893677,
+  "best_internal_fit_val_loss": 1.3344308137893677,
+  "best_internal_fit_val_metric": 0.6,
+  "checkpoint_rule": "min_loss",
+  "checkpoint_selection_labels": "fit_val only",
+  "checkpoint_sha256": "3b4faea578adb0b1237af2365d2d16084e4529b6c60b4c81713d66aaf8fdb363",
+  "epochs_completed": 3,
+  "execution": "exact full-graph sparse transport",
+  "graph_batch_size": null,
+  "instrumentation": {
+    "backbone": "shared_transport",
+    "controlled_depth": 6,
+    "dense_chunk_size": 0,
+    "inserted_site_count": 0,
+    "native_site_count": 6,
+    "parameter_count": 1396,
+    "site_indexing": "zero-based transition d to d+1",
+    "task": {
+      "dataset": "ogbn-arxiv",
+      "metric": "accuracy",
+      "num_outputs": 4,
+      "prediction_level": "node",
+      "task_type": "multiclass"
+    },
+    "transport_history_definition": "kernel transport mass and expected kernel hops before source retention; inserted A0 bypass=0/0; designated native A0 mean aggregation=1/1; other transports use registered nu and kernel hop moment; hybrid resets=0/0; these are transport descriptors, not complete block work or effective output displacement"
+  },
+  "official_validation_used": false,
+  "parameter_count": 1396,
+  "schedule": "cosine",
+  "seconds_this_attempt": 0.012951696000072843,
+  "seed": 2,
+  "task": {
+    "dataset": "ogbn-arxiv",
+    "metric": "accuracy",
+    "num_outputs": 4,
+    "prediction_level": "node",
+    "task_type": "multiclass"
+  }
+}

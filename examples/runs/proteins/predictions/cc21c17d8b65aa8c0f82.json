@@ -1,0 +1,150 @@
+{
+  "candidate": {
+    "behavior_id": "3c1e13e060759a36",
+    "candidate_id": "cc21c17d8b65aa8c0f82",
+    "complexity": 1,
+    "depth": 1,
+    "ensemble": 1,
+    "hash": "cc21c17d8b65aa8c0f828ad876b7dfd383b9f83267a35b78d604c88889d3d2fa",
+    "is_open_loop": true,
+    "profile": "none",
+    "route": "best_depth"
+  },
+  "deployed_multiply_add_work": 224064,
+  "feasible": true,
+  "labels_accessed_during_prediction": false,
+  "members": [
+    {
+      "actions": [
+        0
+      ],
+      "anchor_observer_dependency": false,
+      "anchor_rule": "finite_measurements_entropy_le_0.99_v2",
+      "behavior_id": "3c1e13e060759a36",
+      "checkpoint_sha256": "69e8524e4e822c2adf5227eb80de73df084362194b463055894b26caf56e4917",
+      "controller_operations": {},
+      "decisions": [
+        {
+          "action": 0,
+          "anchor_depth": 0,
+          "anchor_updated": false,
+          "coverage_status": "not assessed by a label-free execution trace",
+          "depth": 0,
+          "inserted_a0_bypass": false,
+          "model_calls": 0,
+          "origin": "nominal",
+          "score_contract": "mean_kappa_sigma_radius_transport_v2",
+          "scores": null,
+          "selection_mode": "best_depth",
+          "site_kind": "native",
+          "supported_actions": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "transport_hops_increment": 0.7,
+          "transport_mass_increment": 0.7
+        }
+      ],
+      "deployed_multiply_add_work": 224064,
+      "deployment_work_scope": "total products minus support-qualification-only sensing/head products; MPC-OL initial planning measurements retained; static graph qualification; estimated operation ledger, not a hard resource guarantee",
+      "feasible": true,
+      "graph_operations": {
+        "random_walk_products": 1,
+        "sparse_multiply_adds": 19264,
+        "sparse_products": 1,
+        "symmetric_products": 0
+      },
+      "inserted_a0_bypass_count": 0,
+      "inserted_site_action_counts": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "inserted_site_count": 0,
+      "label_free": true,
+      "model_calls_charged": 0,
+      "multiply_add_work": 224064,
+      "native_site_action_counts": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "native_site_count": 1,
+      "observer_failures": 0,
+      "origins": [
+        "nominal"
+      ],
+      "peak_cuda_allocated_bytes": null,
+      "planning_action_contract": "registered supported actions and legal recovery",
+      "planning_budget_exhausted": false,
+      "plant_host_seconds": 0.00015102300039870897,
+      "plant_operations": {
+        "attention_calls": 0,
+        "dense_multiply_adds": 204800,
+        "dense_updates": 1,
+        "encoder_calls": 1,
+        "head_calls": 1,
+        "normalization_elements": 2560,
+        "readout_pooling_elements": 0,
+        "resets": 0
+      },
+      "policy_host_seconds": 0.0,
+      "prediction_sha256": "80fb17c82c5a8ebc8ce26b67f72eaf2bfbcbc9257e94befe709f1177622ba875",
+      "profile": "none",
+      "qualification_multiply_add_work": 0,
+      "qualification_sensor_dense_macs": 0,
+      "qualification_sensor_host_seconds": 0.0,
+      "qualification_sensor_sparse_macs": 0,
+      "route": "best_depth",
+      "runtime_estimate_warning": "host subtraction is not an isolated CUDA runtime measurement; total wall time is authoritative for this executed pass",
+      "runtime_host_seconds_excluding_qualification_estimate": 0.00033544500001880806,
+      "safe_depths": [
+        0
+      ],
+      "seed": 1,
+      "sensor_host_seconds": 0.0,
+      "sensor_operations": {},
+      "shuffle_matched_sites": 0,
+      "shuffle_missing_sites": 0,
+      "shuffle_support_mismatch_sites": 0,
+      "state_assignment": "source-reset A8; dynamic-anchor A9 excluded from open-loop execution",
+      "state_control_valid": null,
+      "support_violations": 0,
+      "terminal_depth": 1,
+      "timing_note": "total CUDA-synchronized; component host dispatch times are not isolated CUDA-kernel durations",
+      "transport_history_definition": "kernel transport mass and expected kernel hops before source retention; inserted A0 bypass=0/0; designated native A0 mean aggregation=1/1; other transports use registered nu and kernel hop moment; hybrid resets=0/0; these are transport descriptors, not complete block work or effective output displacement",
+      "wall_seconds": 0.00033544500001880806,
+      "work_scope": "executed sparse and dense products; elementwise/reduction costs excluded; use wall time too"
+    }
+  ],
+  "multiply_add_work": 224064,
+  "prediction_sha256": "80fb17c82c5a8ebc8ce26b67f72eaf2bfbcbc9257e94befe709f1177622ba875",
+  "qualification_multiply_add_work": 0,
+  "serial_wall_seconds": 0.00033544500001880806,
+  "shuffle_matched_sites": 0,
+  "shuffle_missing_sites": 0,
+  "state_control_valid": false,
+  "support_violations": 0
+}

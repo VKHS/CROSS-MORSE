@@ -1,0 +1,33 @@
+name: Research or documentation discussion
+description: Discuss a method question, extension or documentation improvement.
+title: "[Discussion] "
+body:
+  - type: dropdown
+    id: topic
+    attributes:
+      label: Topic
+      options:
+        - Method explanation
+        - Evaluation or statistical interpretation
+        - New dataset or backbone
+        - Performance engineering
+        - Documentation or usability
+    validations:
+      required: true
+  - type: textarea
+    id: question
+    attributes:
+      label: Question or proposal
+      description: Explain the problem and the proposed improvement.
+    validations:
+      required: true
+  - type: textarea
+    id: context
+    attributes:
+      label: Relevant source or manuscript context
+      description: Point to the function, equation, experiment or guide involved.
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evaluation or example
+      description: What observation, example or comparison would help assess the proposal?

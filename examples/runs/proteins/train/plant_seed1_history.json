@@ -1,0 +1,38 @@
+[
+  {
+    "epoch": 0,
+    "internal_fit_val_bce": 0.7303774952888489,
+    "internal_fit_val_loss": 0.7303774952888489,
+    "internal_fit_val_metric": 0.6041666666666666,
+    "internal_fit_val_rocauc": 0.6041666666666666,
+    "loss_name": "bce",
+    "lr": 0.000225,
+    "metric_name": "rocauc",
+    "train_bce": 0.7313830852508545,
+    "train_loss": 0.7313830852508545
+  },
+  {
+    "epoch": 1,
+    "internal_fit_val_bce": 0.728057324886322,
+    "internal_fit_val_loss": 0.728057324886322,
+    "internal_fit_val_metric": 0.6041666666666666,
+    "internal_fit_val_rocauc": 0.6041666666666666,
+    "loss_name": "bce",
+    "lr": 7.500000000000003e-05,
+    "metric_name": "rocauc",
+    "train_bce": 0.7295300960540771,
+    "train_loss": 0.7295300960540771
+  },
+  {
+    "epoch": 2,
+    "internal_fit_val_bce": 0.7273298501968384,
+    "internal_fit_val_loss": 0.7273298501968384,
+    "internal_fit_val_metric": 0.6041666666666666,
+    "internal_fit_val_rocauc": 0.6041666666666666,
+    "loss_name": "bce",
+    "lr": 0.0,
+    "metric_name": "rocauc",
+    "train_bce": 0.7257465124130249,
+    "train_loss": 0.7257465124130249
+  }
+]

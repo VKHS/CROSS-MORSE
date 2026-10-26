@@ -1,0 +1,279 @@
+{
+  "checkpoints": [
+    {
+      "active_parameter_count": 1092,
+      "baseline": true,
+      "best_internal_fit_val_bce": 0.6850737929344177,
+      "best_internal_fit_val_loss": 0.6850737929344177,
+      "best_internal_fit_val_metric": 0.7708333333333334,
+      "checkpoint_rule": "min_loss",
+      "checkpoint_selection_labels": "fit_val only",
+      "checkpoint_sha256": "f943a820e4d0c69138753e00b04ed7ad07ccdcec5eecda58e2582f0d797d20a2",
+      "epochs_completed": 3,
+      "execution": "exact full-graph sparse transport",
+      "graph_batch_size": null,
+      "instrumentation": {
+        "backbone": "edge_weighted_transport",
+        "controlled_depth": 6,
+        "dense_chunk_size": 0,
+        "inserted_site_count": 0,
+        "native_site_count": 6,
+        "parameter_count": 1396,
+        "site_indexing": "zero-based transition d to d+1",
+        "task": {
+          "dataset": "ogbn-proteins",
+          "metric": "rocauc",
+          "num_outputs": 4,
+          "prediction_level": "node",
+          "task_type": "multilabel"
+        },
+        "transport_history_definition": "kernel transport mass and expected kernel hops before source retention; inserted A0 bypass=0/0; designated native A0 mean aggregation=1/1; other transports use registered nu and kernel hop moment; hybrid resets=0/0; these are transport descriptors, not complete block work or effective output displacement"
+      },
+      "official_validation_used": false,
+      "parameter_count": 1396,
+      "schedule": "cosine",
+      "seconds_this_attempt": 0.020303898000292975,
+      "seed": 1,
+      "task": {
+        "dataset": "ogbn-proteins",
+        "metric": "rocauc",
+        "num_outputs": 4,
+        "prediction_level": "node",
+        "task_type": "multilabel"
+      }
+    },
+    {
+      "active_parameter_count": 1396,
+      "baseline": false,
+      "best_internal_fit_val_bce": 0.7273298501968384,
+      "best_internal_fit_val_loss": 0.7273298501968384,
+      "best_internal_fit_val_metric": 0.6041666666666666,
+      "checkpoint_rule": "min_loss",
+      "checkpoint_selection_labels": "fit_val only",
+      "checkpoint_sha256": "69e8524e4e822c2adf5227eb80de73df084362194b463055894b26caf56e4917",
+      "epochs_completed": 3,
+      "execution": "exact full-graph sparse transport",
+      "graph_batch_size": null,
+      "instrumentation": {
+        "backbone": "edge_weighted_transport",
+        "controlled_depth": 6,
+        "dense_chunk_size": 0,
+        "inserted_site_count": 0,
+        "native_site_count": 6,
+        "parameter_count": 1396,
+        "site_indexing": "zero-based transition d to d+1",
+        "task": {
+          "dataset": "ogbn-proteins",
+          "metric": "rocauc",
+          "num_outputs": 4,
+          "prediction_level": "node",
+          "task_type": "multilabel"
+        },
+        "transport_history_definition": "kernel transport mass and expected kernel hops before source retention; inserted A0 bypass=0/0; designated native A0 mean aggregation=1/1; other transports use registered nu and kernel hop moment; hybrid resets=0/0; these are transport descriptors, not complete block work or effective output displacement"
+      },
+      "official_validation_used": false,
+      "parameter_count": 1396,
+      "schedule": "cosine",
+      "seconds_this_attempt": 0.03899119999960021,
+      "seed": 1,
+      "task": {
+        "dataset": "ogbn-proteins",
+        "metric": "rocauc",
+        "num_outputs": 4,
+        "prediction_level": "node",
+        "task_type": "multilabel"
+      }
+    },
+    {
+      "active_parameter_count": 1092,
+      "baseline": true,
+      "best_internal_fit_val_bce": 0.7050846219062805,
+      "best_internal_fit_val_loss": 0.7050846219062805,
+      "best_internal_fit_val_metric": 0.22916666666666666,
+      "checkpoint_rule": "min_loss",
+      "checkpoint_selection_labels": "fit_val only",
+      "checkpoint_sha256": "991d5f79be8b7ff2499c58c00a9e858d15744e18d0725ae734806e6c627f6b1b",
+      "epochs_completed": 3,
+      "execution": "exact full-graph sparse transport",
+      "graph_batch_size": null,
+      "instrumentation": {
+        "backbone": "edge_weighted_transport",
+        "controlled_depth": 6,
+        "dense_chunk_size": 0,
+        "inserted_site_count": 0,
+        "native_site_count": 6,
+        "parameter_count": 1396,
+        "site_indexing": "zero-based transition d to d+1",
+        "task": {
+          "dataset": "ogbn-proteins",
+          "metric": "rocauc",
+          "num_outputs": 4,
+          "prediction_level": "node",
+          "task_type": "multilabel"
+        },
+        "transport_history_definition": "kernel transport mass and expected kernel hops before source retention; inserted A0 bypass=0/0; designated native A0 mean aggregation=1/1; other transports use registered nu and kernel hop moment; hybrid resets=0/0; these are transport descriptors, not complete block work or effective output displacement"
+      },
+      "official_validation_used": false,
+      "parameter_count": 1396,
+      "schedule": "cosine",
+      "seconds_this_attempt": 0.01612168500014377,
+      "seed": 2,
+      "task": {
+        "dataset": "ogbn-proteins",
+        "metric": "rocauc",
+        "num_outputs": 4,
+        "prediction_level": "node",
+        "task_type": "multilabel"
+      }
+    },
+    {
+      "active_parameter_count": 1396,
+      "baseline": false,
+      "best_internal_fit_val_bce": 0.6678460836410522,
+      "best_internal_fit_val_loss": 0.6678460836410522,
+      "best_internal_fit_val_metric": 0.75,
+      "checkpoint_rule": "min_loss",
+      "checkpoint_selection_labels": "fit_val only",
+      "checkpoint_sha256": "48827dacc8e28d792c151a704e31b5c17354e2f055aa3118555d5980a9c94e8d",
+      "epochs_completed": 3,
+      "execution": "exact full-graph sparse transport",
+      "graph_batch_size": null,
+      "instrumentation": {
+        "backbone": "edge_weighted_transport",
+        "controlled_depth": 6,
+        "dense_chunk_size": 0,
+        "inserted_site_count": 0,
+        "native_site_count": 6,
+        "parameter_count": 1396,
+        "site_indexing": "zero-based transition d to d+1",
+        "task": {
+          "dataset": "ogbn-proteins",
+          "metric": "rocauc",
+          "num_outputs": 4,
+          "prediction_level": "node",
+          "task_type": "multilabel"
+        },
+        "transport_history_definition": "kernel transport mass and expected kernel hops before source retention; inserted A0 bypass=0/0; designated native A0 mean aggregation=1/1; other transports use registered nu and kernel hop moment; hybrid resets=0/0; these are transport descriptors, not complete block work or effective output displacement"
+      },
+      "official_validation_used": false,
+      "parameter_count": 1396,
+      "schedule": "cosine",
+      "seconds_this_attempt": 0.04839773300000161,
+      "seed": 2,
+      "task": {
+        "dataset": "ogbn-proteins",
+        "metric": "rocauc",
+        "num_outputs": 4,
+        "prediction_level": "node",
+        "task_type": "multilabel"
+      }
+    }
+  ],
+  "entry_audit": {
+    "depth_bce": [
+      0.6906832498784607,
+      0.7506471515307764,
+      0.7235413715203085,
+      0.6808261669908857
+    ],
+    "depth_gate_pass": false,
+    "depth_grid": [
+      1,
+      2,
+      4,
+      6
+    ],
+    "depth_loss": [
+      0.6906832498784607,
+      0.7506471515307764,
+      0.7235413715203085,
+      0.6808261669908857
+    ],
+    "depth_metric": [
+      0.5416666666666667,
+      0.625,
+      0.39583333333333337,
+      0.7708333333333333
+    ],
+    "depth_rocauc": [
+      0.5416666666666667,
+      0.625,
+      0.39583333333333337,
+      0.7708333333333333
+    ],
+    "dil_gap": 0.028641728405374378,
+    "dil_log_depth": 0.7228385848299319,
+    "dil_reference": "feature-only q0 loss repeated on the depth grid (reconstruction choice)",
+    "identity_pass": true,
+    "initial_entry_pass": false,
+    "instrumentation": {
+      "backbone": "edge_weighted_transport",
+      "controlled_depth": 6,
+      "dense_chunk_size": 0,
+      "inserted_site_count": 0,
+      "native_site_count": 6,
+      "parameter_count": 1396,
+      "site_indexing": "zero-based transition d to d+1",
+      "task": {
+        "dataset": "ogbn-proteins",
+        "metric": "rocauc",
+        "num_outputs": 4,
+        "prediction_level": "node",
+        "task_type": "multilabel"
+      },
+      "transport_history_definition": "kernel transport mass and expected kernel hops before source retention; inserted A0 bypass=0/0; designated native A0 mean aggregation=1/1; other transports use registered nu and kernel hop moment; hybrid resets=0/0; these are transport descriptors, not complete block work or effective output displacement"
+    },
+    "labels": "internal D_fit validation",
+    "loss_name": "bce",
+    "metric_available": true,
+    "metric_name": "rocauc",
+    "nominal_identity": [
+      {
+        "absolute_fit_val_loss_deviation": 0.0,
+        "loss_tolerance": 0.0001,
+        "max_relative_state_error": 0.0,
+        "pass": true,
+        "seed": 1,
+        "state_tolerance": 1e-05
+      },
+      {
+        "absolute_fit_val_loss_deviation": 0.0,
+        "loss_tolerance": 0.0001,
+        "max_relative_state_error": 0.0,
+        "pass": true,
+        "seed": 2,
+        "state_tolerance": 1e-05
+      }
+    ],
+    "pdd_fraction": 0.0,
+    "plant_gate_pass": false,
+    "plant_vs_q0": {
+      "bootstrap_replicates": 80,
+      "bootstrap_seed": 314160,
+      "independent_graph_guarantee": false,
+      "interval_level": 0.95,
+      "lower": -0.11807849009498347,
+      "mean": -0.013370689433671635,
+      "method": "paired whole-unit bootstrap; descriptive when units are dependent",
+      "one_sided_alpha": 0.025,
+      "p_greater_zero": 0.5061728395061729,
+      "p_less_zero": 0.5061728395061729,
+      "se": 0.055414333860681265,
+      "units": 4,
+      "upper": 0.09839715692304052,
+      "valid_interval": true,
+      "weight_sum": 5.0,
+      "weighting": "fixed_unit_weight_ratio"
+    },
+    "risk_weighting": "node-weighted statistical cores",
+    "statistical_scope": "descriptive dependent-core bootstrap",
+    "task": {
+      "dataset": "ogbn-proteins",
+      "metric": "rocauc",
+      "num_outputs": 4,
+      "prediction_level": "node",
+      "task_type": "multilabel"
+    }
+  },
+  "weights_frozen_after_training": true
+}

@@ -1,0 +1,80 @@
+"# One-row-per-method comparison, internal routes (Supplementary Table S15) -- SYNTHETIC SOFTWARE EXAMPLES: these values are not benchmark results"
+"# generated from 7 run(s) [examples]; runtime source 9e0154c11c0e; runs: ogbn-arxiv:arxiv, ogbn-products:products, ogbn-proteins:proteins, Roman-empire:roman_empire, PascalVOC-SP:pascalvoc_sp, COCO-SP:coco_sp, Peptides-func:peptides_func"
+Dataset,method,family,E,serial cost,wall time (s),selection loss,selection metric,test score (%),test loss (nats)
+ogbn-arxiv,nominal,open loop,1,1.000,0.0012,1.43366,0.3000,,
+ogbn-arxiv,best depth,open loop,1,0.541,0.0005,1.36983,0.3000,,
+ogbn-arxiv,learned stop (q_C),open loop,2,3.382,0.0196,1.35721,0.3000,28.12,1.39549
+ogbn-arxiv,phase schedule,open loop,1,1.000,0.0207,1.43239,0.3000,,
+ogbn-arxiv,fixed sequence,open loop,1,1.656,0.0191,1.36180,0.3000,,
+ogbn-arxiv,MPC-OL,open loop,1,3.687,0.0125,1.43280,0.3000,,
+ogbn-arxiv,one-step,feedback,2,15.245,0.0481,1.38168,0.4000,,
+ogbn-arxiv,radius,feedback,1,3.972,0.0160,1.43366,0.3000,,
+ogbn-arxiv,MPC-RH,feedback,1,13.035,0.0326,1.43250,0.3000,,
+ogbn-arxiv,feature-only predictor q_0,reference,2,,,,,15.62,1.43576
+ogbn-arxiv,full-depth plant q_N,reference,2,,,,,40.62,1.33724
+ogbn-products,nominal,open loop,1,1.000,0.0018,1.43366,0.3000,,
+ogbn-products,best depth,open loop,1,0.541,0.0010,1.36983,0.3000,,
+ogbn-products,learned stop (q_C),open loop,2,3.382,0.0237,1.35721,0.3000,28.12,1.39549
+ogbn-products,phase schedule,open loop,1,1.000,0.0231,1.43239,0.3000,,
+ogbn-products,fixed sequence,open loop,1,1.656,0.0305,1.36180,0.3000,,
+ogbn-products,MPC-OL,open loop,1,3.687,0.0141,1.43280,0.3000,,
+ogbn-products,one-step,feedback,2,15.245,0.0490,1.38168,0.4000,,
+ogbn-products,radius,feedback,1,3.972,0.0148,1.43366,0.3000,,
+ogbn-products,MPC-RH,feedback,1,13.035,0.0407,1.43250,0.3000,,
+ogbn-products,feature-only predictor q_0,reference,2,,,,,15.62,1.43576
+ogbn-products,full-depth plant q_N,reference,2,,,,,40.62,1.33724
+ogbn-proteins,nominal,open loop,2,2.000,0.0025,0.69920,0.6317,,
+ogbn-proteins,best depth (q_C),open loop,1,0.771,0.0007,0.61898,0.6462,46.68,0.73370
+ogbn-proteins,learned stop,open loop,1,1.748,0.0109,0.69907,0.6242,,
+ogbn-proteins,phase schedule,open loop,2,2.000,0.0389,0.69960,0.6594,,
+ogbn-proteins,fixed sequence,open loop,2,1.825,0.0399,0.70750,0.5332,,
+ogbn-proteins,MPC-OL,open loop,2,4.074,0.0267,0.69920,0.6317,,
+ogbn-proteins,one-step,feedback,1,2.842,0.0128,0.61898,0.6462,,
+ogbn-proteins,radius,feedback,2,7.606,0.0294,0.69920,0.6317,,
+ogbn-proteins,MPC-RH,feedback,2,11.773,0.0467,0.69920,0.6317,,
+ogbn-proteins,feature-only predictor q_0,reference,1,,,,,44.38,0.70010
+ogbn-proteins,full-depth plant q_N,reference,1,,,,,57.41,0.72436
+Roman-empire,nominal,open loop,2,2.000,0.0056,1.46523,0.3000,,
+Roman-empire,best depth,open loop,2,0.688,0.0023,1.47902,0.3000,,
+Roman-empire,learned stop,open loop,2,3.357,0.0274,1.36304,0.3000,,
+Roman-empire,phase schedule,open loop,2,2.000,0.0508,1.46532,0.3000,,
+Roman-empire,fixed sequence (q_C),open loop,1,0.781,0.0205,1.33439,0.3000,40.62,1.34149
+Roman-empire,MPC-OL,open loop,2,3.413,0.0277,1.46523,0.3000,,
+Roman-empire,one-step,feedback,2,11.026,0.0462,1.46512,0.3000,,
+Roman-empire,radius,feedback,2,5.819,0.0257,1.46523,0.3000,,
+Roman-empire,MPC-RH,feedback,2,8.658,0.0467,1.46523,0.3000,,
+Roman-empire,feature-only predictor q_0,reference,1,,,,,15.62,1.45854
+Roman-empire,full-depth plant q_N,reference,1,,,,,15.62,1.79824
+PascalVOC-SP,nominal,open loop,2,2.000,0.2470,1.47218,0.1135,,
+PascalVOC-SP,best depth,open loop,2,0.086,0.0975,1.44735,0.1352,,
+PascalVOC-SP,learned stop (q_C),open loop,2,1.075,1.4703,1.44332,0.1336,19.10,1.48795
+PascalVOC-SP,phase schedule,open loop,2,2.032,2.8540,1.42940,0.1026,,
+PascalVOC-SP,fixed sequence,open loop,2,2.194,2.6848,1.44505,0.1196,,
+PascalVOC-SP,MPC-OL,open loop,2,17.919,2.0472,1.47218,0.1135,,
+PascalVOC-SP,one-step,feedback,2,53.668,2.2117,1.41607,0.1481,,
+PascalVOC-SP,radius,feedback,2,53.616,2.0721,1.47218,0.1135,,
+PascalVOC-SP,MPC-RH,feedback,2,126.541,3.5505,1.47218,0.1135,,
+PascalVOC-SP,feature-only predictor q_0,reference,2,,,,,22.06,1.41491
+PascalVOC-SP,full-depth plant q_N,reference,2,,,,,18.33,1.50360
+COCO-SP,nominal,open loop,2,2.000,0.2553,1.47218,0.1135,,
+COCO-SP,best depth,open loop,2,0.086,0.1354,1.44735,0.1352,,
+COCO-SP,learned stop (q_C),open loop,2,1.075,1.4405,1.44332,0.1336,19.10,1.48795
+COCO-SP,phase schedule,open loop,2,2.032,2.6165,1.42940,0.1026,,
+COCO-SP,fixed sequence,open loop,2,2.194,2.7359,1.44505,0.1196,,
+COCO-SP,MPC-OL,open loop,2,17.919,2.0142,1.47218,0.1135,,
+COCO-SP,one-step,feedback,2,53.668,2.4575,1.41607,0.1481,,
+COCO-SP,radius,feedback,2,53.616,2.2327,1.47218,0.1135,,
+COCO-SP,MPC-RH,feedback,2,126.541,3.5628,1.47218,0.1135,,
+COCO-SP,feature-only predictor q_0,reference,2,,,,,22.06,1.41491
+COCO-SP,full-depth plant q_N,reference,2,,,,,18.33,1.50360
+Peptides-func,nominal,open loop,2,2.000,0.1639,0.68532,0.7597,,
+Peptides-func,best depth,open loop,2,1.155,0.1259,0.69799,0.7875,,
+Peptides-func,learned stop,open loop,2,3.532,1.1938,0.69653,0.7181,,
+Peptides-func,phase schedule (q_C),open loop,2,3.540,2.6191,0.68132,0.7722,56.13,0.69432
+Peptides-func,fixed sequence,open loop,2,3.988,2.6981,0.67072,0.7722,,
+Peptides-func,MPC-OL,open loop,2,75.476,1.7957,0.68532,0.7597,,
+Peptides-func,one-step,feedback,1,119.539,1.1732,0.68055,0.8556,,
+Peptides-func,radius,feedback,2,237.318,2.4856,0.68532,0.7597,,
+Peptides-func,MPC-RH,feedback,2,570.471,3.6345,0.68532,0.7597,,
+Peptides-func,feature-only predictor q_0,reference,2,,,,,78.75,0.68614
+Peptides-func,full-depth plant q_N,reference,2,,,,,54.59,0.69773

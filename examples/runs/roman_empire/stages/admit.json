@@ -1,0 +1,20 @@
+{
+  "config_sha256": "2b8da655efb76599067147c7e11b5dda4d6749741ad010d4518870e1e47eb873",
+  "label_accesses": [
+    {
+      "nodes": 32,
+      "role": "admit",
+      "stage": "admit"
+    },
+    {
+      "nodes": 32,
+      "role": "admit",
+      "stage": "admit"
+    }
+  ],
+  "manifest_sha256": "484f9d2aa5926440905b034e43c85958b9eb3ef9185cfda1a766710df5afe336",
+  "seconds_this_attempt": 0.31699233599965737,
+  "source_sha256": "9e0154c11c0ebc67d533a84b6d6a80c4e77a8d76e6d2cc165bcff5897980b108",
+  "stage": "admit",
+  "status": "COMPLETE"
+}

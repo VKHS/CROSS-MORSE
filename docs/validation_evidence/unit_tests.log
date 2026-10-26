@@ -1,0 +1,472 @@
+test_bundled_example_complete_inventory_when_available (test_artifact_inventory.ArtifactInventoryTests.test_bundled_example_complete_inventory_when_available) ... ok
+test_byte_verification_does_not_deserialize_opaque_checkpoint (test_artifact_inventory.ArtifactInventoryTests.test_byte_verification_does_not_deserialize_opaque_checkpoint) ... ok
+test_changed_checkpoint_rejected_on_every_call (test_artifact_inventory.ArtifactInventoryTests.test_changed_checkpoint_rejected_on_every_call) ... ok
+test_check_mode_does_not_rewrite_stale_report (test_artifact_inventory.ArtifactInventoryTests.test_check_mode_does_not_rewrite_stale_report) ... ok
+test_complete_inventory_is_portable_after_moving_run (test_artifact_inventory.ArtifactInventoryTests.test_complete_inventory_is_portable_after_moving_run) ... ok
+test_evaluation_cannot_add_policy_output (test_artifact_inventory.ArtifactInventoryTests.test_evaluation_cannot_add_policy_output) ... ok
+test_import_and_chain_verification_work_with_numpy_torch_blocked (test_artifact_inventory.ArtifactInventoryTests.test_import_and_chain_verification_work_with_numpy_torch_blocked) ... ok
+test_missing_checkpoint_is_not_an_acceptable_analysis_bundle (test_artifact_inventory.ArtifactInventoryTests.test_missing_checkpoint_is_not_an_acceptable_analysis_bundle) ... ok
+test_missing_final_stage_rejected (test_artifact_inventory.ArtifactInventoryTests.test_missing_final_stage_rejected) ... ok
+test_npz_duplicate_and_traversal_members_rejected (test_artifact_inventory.ArtifactInventoryTests.test_npz_duplicate_and_traversal_members_rejected) ... ok
+test_numpy_header_rejects_object_and_truncation (test_artifact_inventory.ArtifactInventoryTests.test_numpy_header_rejects_object_and_truncation) ... ok
+test_parent_hash_checks_actual_manifest_bytes (test_artifact_inventory.ArtifactInventoryTests.test_parent_hash_checks_actual_manifest_bytes) ... ok
+test_path_traversal_and_symlink_rejected (test_artifact_inventory.ArtifactInventoryTests.test_path_traversal_and_symlink_rejected) ... ok
+test_recorded_head_hash_disagreement_rejected (test_artifact_inventory.ArtifactInventoryTests.test_recorded_head_hash_disagreement_rejected) ... ok
+test_safe_fixed_width_metadata_strings_are_supported (test_artifact_inventory.ArtifactInventoryTests.test_safe_fixed_width_metadata_strings_are_supported) ... ok
+test_shared_prediction_directory_frozen_in_complete_inventory (test_artifact_inventory.ArtifactInventoryTests.test_shared_prediction_directory_frozen_in_complete_inventory) ... ok
+test_static_manifest_matches_actual_21_profiles (test_artifact_inventory.ArtifactInventoryTests.test_static_manifest_matches_actual_21_profiles) ... ok
+test_unsealed_completed_directory_file_rejected (test_artifact_inventory.ArtifactInventoryTests.test_unsealed_completed_directory_file_rejected) ... ok
+test_binding_cannot_modify_run_evidence (test_compare_with_manuscript.CompareWithManuscriptTests.test_binding_cannot_modify_run_evidence) ... {"status": "INCOMPLETE_OR_INVALID", "error": "ValueError: Outputs must be outside the run/campaign and source directories"}
+ok
+test_binding_requires_the_authors_explicit_relationship (test_compare_with_manuscript.CompareWithManuscriptTests.test_binding_requires_the_authors_explicit_relationship) ... {"status": "INCOMPLETE_OR_INVALID", "error": "ValueError: --emit-binding requires an explicit --relationship declaration"}
+ok
+test_config_only_is_not_a_successful_comparison (test_compare_with_manuscript.CompareWithManuscriptTests.test_config_only_is_not_a_successful_comparison) ... {"status": "INCOMPLETE_OR_INVALID", "error": "EvidenceError: Eight distinct sealed lifecycle stages are required"}
+ok
+test_emit_binding_writes_an_author_completed_declaration (test_compare_with_manuscript.CompareWithManuscriptTests.test_emit_binding_writes_an_author_completed_declaration) ... ok
+test_empty_sealed_decisions_are_not_complete_evidence (test_compare_with_manuscript.CompareWithManuscriptTests.test_empty_sealed_decisions_are_not_complete_evidence) ... {"status": "INCOMPLETE_OR_INVALID", "error": "ValueError: Nonempty decision record required: select/decision.json"}
+{"status": "INCOMPLETE_OR_INVALID", "error": "ValueError: Nonempty decision record required: confirm/decision.json"}
+{"status": "INCOMPLETE_OR_INVALID", "error": "ValueError: Nonempty decision record required: admit/decision.json"}
+{"status": "INCOMPLETE_OR_INVALID", "error": "ValueError: Nonempty decision record required: policy_lock.json"}
+{"status": "INCOMPLETE_OR_INVALID", "error": "ValueError: A nonempty candidate ledger with route and ensemble identities is required"}
+ok
+test_existing_outputs_are_preserved (test_compare_with_manuscript.CompareWithManuscriptTests.test_existing_outputs_are_preserved) ... {"status": "INCOMPLETE_OR_INVALID", "error": "ValueError: Choose a new output file; existing paths are preserved: /tmp/tmpsg8j27e6/comparison.json"}
+ok
+test_incomplete_input_cannot_pass_or_emit_a_binding (test_compare_with_manuscript.CompareWithManuscriptTests.test_incomplete_input_cannot_pass_or_emit_a_binding) ... {"status": "INCOMPLETE_OR_INVALID", "error": "EvidenceError: Eight distinct sealed lifecycle stages are required"}
+ok
+test_malformed_model_records_are_rejected_before_writing_reports (test_compare_with_manuscript.CompareWithManuscriptTests.test_malformed_model_records_are_rejected_before_writing_reports) ... {"status": "INCOMPLETE_OR_INVALID", "error": "ValueError: The final summary must record a models object"}
+{"status": "INCOMPLETE_OR_INVALID", "error": "ValueError: A model record is required: qN"}
+{"status": "INCOMPLETE_OR_INVALID", "error": "ValueError: A model record is required: qC"}
+{"status": "INCOMPLETE_OR_INVALID", "error": "ValueError: A model record is required: qD"}
+ok
+test_markdown_escapes_table_delimiters (test_compare_with_manuscript.CompareWithManuscriptTests.test_markdown_escapes_table_delimiters) ... ok
+test_modified_summary_is_rejected_before_writing_reports (test_compare_with_manuscript.CompareWithManuscriptTests.test_modified_summary_is_rejected_before_writing_reports) ... {"status": "INCOMPLETE_OR_INVALID", "error": "EvidenceError: Evidence hash/size mismatch: final/results_summary.json"}
+ok
+test_nested_output_paths_fail_before_any_output_is_written (test_compare_with_manuscript.CompareWithManuscriptTests.test_nested_output_paths_fail_before_any_output_is_written) ... {"status": "INCOMPLETE_OR_INVALID", "error": "ValueError: Output files cannot be ancestors or descendants of one another"}
+ok
+test_nonfinite_comparisons_and_binding_tolerances_are_rejected (test_compare_with_manuscript.CompareWithManuscriptTests.test_nonfinite_comparisons_and_binding_tolerances_are_rejected) ... {"status": "INCOMPLETE_OR_INVALID", "error": "ValueError: Binding tolerance scale must be positive and finite"}
+ok
+test_one_roman_split_is_only_a_diagnostic (test_compare_with_manuscript.CompareWithManuscriptTests.test_one_roman_split_is_only_a_diagnostic) ... ok
+test_output_inside_the_run_is_refused (test_compare_with_manuscript.CompareWithManuscriptTests.test_output_inside_the_run_is_refused) ... {"status": "INCOMPLETE_OR_INVALID", "error": "ValueError: Outputs must be outside the run/campaign and source directories"}
+ok
+test_printed_trailing_zeros_do_not_create_false_exact_matches (test_compare_with_manuscript.CompareWithManuscriptTests.test_printed_trailing_zeros_do_not_create_false_exact_matches) ... ok
+test_rejected_admission_is_reported_as_a_difference_for_an_admitted_dataset (test_compare_with_manuscript.CompareWithManuscriptTests.test_rejected_admission_is_reported_as_a_difference_for_an_admitted_dataset) ... ok
+test_reported_horizon_is_part_of_comparator_settings (test_compare_with_manuscript.CompareWithManuscriptTests.test_reported_horizon_is_part_of_comparator_settings) ... ok
+test_result_producing_values_reach_exact_agreement (test_compare_with_manuscript.CompareWithManuscriptTests.test_result_producing_values_reach_exact_agreement) ... ok
+test_retraining_values_inside_the_interval_are_not_exact (test_compare_with_manuscript.CompareWithManuscriptTests.test_retraining_values_inside_the_interval_are_not_exact) ... ok
+test_roman_campaign_writes_an_aggregate_report (test_compare_with_manuscript.CompareWithManuscriptTests.test_roman_campaign_writes_an_aggregate_report) ... ok
+test_run_figure_renders (test_compare_with_manuscript.CompareWithManuscriptTests.test_run_figure_renders) ... ok
+test_run_plot_preserves_existing_files_and_symlink_targets (test_compare_with_manuscript.CompareWithManuscriptTests.test_run_plot_preserves_existing_files_and_symlink_targets) ... ok
+test_run_plot_rejects_duplicate_output_names_before_writing (test_compare_with_manuscript.CompareWithManuscriptTests.test_run_plot_rejects_duplicate_output_names_before_writing) ... ok
+test_run_plot_rejects_modified_summary_before_creating_output (test_compare_with_manuscript.CompareWithManuscriptTests.test_run_plot_rejects_modified_summary_before_creating_output) ... ok
+test_synthetic_run_plot_does_not_load_paper_values (test_compare_with_manuscript.CompareWithManuscriptTests.test_synthetic_run_plot_does_not_load_paper_values) ... ok
+test_synthetic_task_fixture_is_not_benchmark_evidence (test_compare_with_manuscript.CompareWithManuscriptTests.test_synthetic_task_fixture_is_not_benchmark_evidence) ... {"status": "INCOMPLETE_OR_INVALID", "error": "ValueError: Synthetic fixtures are software checks, not manuscript benchmark comparisons"}
+ok
+test_frozen_parameters_and_deterministic_replay (test_core.PlantTests.test_frozen_parameters_and_deterministic_replay) ... ok
+test_nominal_identity_each_depth (test_core.PlantTests.test_nominal_identity_each_depth) ... ok
+test_nominal_identity_under_bf16_autocast (test_core.PlantTests.test_nominal_identity_under_bf16_autocast) ... ok
+test_recovery_is_direct_assignment_without_dense_update (test_core.PlantTests.test_recovery_is_direct_assignment_without_dense_update) ... ok
+test_training_gradients_flow_before_freeze (test_core.PlantTests.test_training_gradients_flow_before_freeze) ... ok
+test_exact_probabilities_and_ranges (test_core.RegistryTests.test_exact_probabilities_and_ranges) ... ok
+test_nominal_spectral_response_matches_each_site_operator (test_core.RegistryTests.test_nominal_spectral_response_matches_each_site_operator) ... ok
+test_polynomial_response_matches_eigenvectors (test_core.RegistryTests.test_polynomial_response_matches_eigenvectors) ... ok
+test_sparse_graph_mass_and_isolate (test_core.RegistryTests.test_sparse_graph_mass_and_isolate) ... ok
+test_transport_agrees_with_independent_dense_resolvent (test_core.RegistryTests.test_transport_agrees_with_independent_dense_resolvent) ... ok
+test_mask_changes_pooling_without_changing_graph (test_core.SensorTests.test_mask_changes_pooling_without_changing_graph) ... ok
+test_reachability_uses_next_sites_actual_nominal_operator (test_core.SensorTests.test_reachability_uses_next_sites_actual_nominal_operator) ... ok
+test_windows_partition_and_shared_recurrence (test_core.SensorTests.test_windows_partition_and_shared_recurrence) ... ok
+test_zero_states_and_lean_schema_are_finite (test_core.SensorTests.test_zero_states_and_lean_schema_are_finite) ... ok
+test_actual_metis_partition_is_reproducible (test_data.ContextAndPartitionTests.test_actual_metis_partition_is_reproducible) ... ok
+test_download_authorization_and_module_state_restored (test_data.ContextAndPartitionTests.test_download_authorization_and_module_state_restored) ... ok
+test_halos_are_exact_on_path_graph (test_data.ContextAndPartitionTests.test_halos_are_exact_on_path_graph) ... ok
+test_incomplete_download_is_never_committed_and_valid_zip_reuses (test_data.ContextAndPartitionTests.test_incomplete_download_is_never_committed_and_valid_zip_reuses) ... ok
+test_real_graph_cannot_silently_use_balanced_fallback (test_data.ContextAndPartitionTests.test_real_graph_cannot_silently_use_balanced_fallback) ... ok
+test_raw_official_reader_ignores_processed_and_split_pickles (test_data.OfficialReaderTests.test_raw_official_reader_ignores_processed_and_split_pickles) ...   0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00, 24672.38it/s]
+/workspace/scratch/2aa93dc25af6/review_work_20261025/runtime_env/lib/python3.12/site-packages/outdated/__init__.py:36: DeprecationWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html
+  from pkg_resources import parse_version
+ok
+test_cache_rejects_changed_configuration_and_corruption (test_data.PreparedDataTests.test_cache_rejects_changed_configuration_and_corruption) ... ok
+test_full_graph_is_preserved_and_duplicates_loops_removed (test_data.PreparedDataTests.test_full_graph_is_preserved_and_duplicates_loops_removed) ... ok
+test_invalid_split_and_object_array_are_rejected (test_data.PreparedDataTests.test_invalid_split_and_object_array_are_rejected) ... ok
+test_non_finite_features_and_fractional_edges_are_rejected (test_data.PreparedDataTests.test_non_finite_features_and_fractional_edges_are_rejected) ... ok
+test_roundtrip_and_fingerprint_are_reproducible (test_data.PreparedDataTests.test_roundtrip_and_fingerprint_are_reproducible) ... ok
+test_separated_protocol_exact_coverage_and_role_access (test_data.PreparedDataTests.test_separated_protocol_exact_coverage_and_role_access) ... ok
+test_source_cache_drift_is_rejected (test_data.PreparedDataTests.test_source_cache_drift_is_rejected) ... ok
+test_standardization_uses_only_fit_train_features (test_data.PreparedDataTests.test_standardization_uses_only_fit_train_features) ... ok
+test_products_and_proteins_use_official_raw_splits_and_tasks (test_dataset_adapters.OGBRawAdapters.test_products_and_proteins_use_official_raw_splits_and_tasks) ... # Run versus manuscript: ogbn-arxiv
+
+Run: `/tmp/tmpx15qnz2h/run`
+
+Scope: numerical comparison with author-reported observations. Input check: sealed numerical inputs verified.
+
+| Section | Quantity | Run value | Reported value | Status | Manuscript location |
+|---|---|---|---|---|---|
+| Table 1 | deployed rule | radius (kappa = 1.0, full), E = 4 | radius, E = 4 | match | main Table 1, deployed rule |
+| Table 1 | comparator qC route and reported settings (Checks the reported route, ensemble and any stated horizon; this is not a match of a full policy hash or checkpoint identity.) | fixed sequence, E = 4 | fixed sequence, E = 4 | match | main Table 1, qC identity |
+| Table 1 | global admission G_admit | 1 | 1 | match | main Table 1, global admission |
+| Table 1 | input fallback fraction (g_input) (the general serving-time input gate is outside this source release (docs/IMPLEMENTATION_CONTRACT.md)) | — | 0.12 | not produced by this source | main Table 1, input fallback |
+| Table 1 | paired CE effect qD - qC (nats), mean | -0.0045 | -0.0045 | exact | main Table 1 / Table 2, test-stage effect |
+| Table 1 | paired loss effect, lower 95% end | -0.0075 | -0.0075 | exact | main Table 1 |
+| Table 1 | paired loss effect, upper 95% end | -0.0015 | -0.0015 | exact | main Table 1 |
+| Table 1 | official accuracy gain qD - qC (pp), mean | 0.07 | 0.07 | exact | main Table 1, final effect |
+| Table 1 | official gain, lower 95% end | 0.01 | 0.01 | exact | main Table 1 |
+| Table 1 | official gain, upper 95% end | 0.13 | 0.13 | exact | main Table 1 |
+| Table S15 | official test score of qD (radius (deployed)) | 73.22 | 73.22 | exact | Supplementary Table S15 |
+| Table S15 | official test score of qC (best fixed sequence (qC)) | 73.15 | 73.15 | exact | Supplementary Table S15 |
+| Table S15 | official test score of qN (full-depth plant) (qN is the full-depth plant at the comparator's ensemble size) | 72.93 | 72.93 | exact | Supplementary Table S15 |
+| Table 1 | clipped mean D_bar on the dependent admission unit | -0.0046 | -0.0046 | exact | main Table 1, global admission |
+| Table 1 | descriptive upper limit U_desc | -0.0008 | -0.0008 | exact | main Table 1, global admission |
+| Table S20 | \|Q_s\| (eligible feedback configurations) | 7 | 7 | match | Supplementary Table S20 |
+| Table S20 | r_max (largest simultaneous radius) | 0.0032 | 0.0032 | exact | Supplementary Table S20 |
+| Table S12c | U_min over feasible configurations (Includes the zero-effect comparator as in Eq. (19); this value precedes the practical-margin eligibility test.) | -0.00338 | -0.00338 | exact | Supplementary Table S12c |
+| Table 1 | provisional policy q^_s | radius (kappa = 1.0, full), E = 4 | radius/4 | informational | main Table 1, provisional q^_s |
+| Table S14 | held-out state contrast (state), mean | 0.00574 | 0.00574 | exact | Supplementary Table S14 |
+| Table S14 | held-out state contrast, Holm-adjusted P (passes: True) | 0.0098 | 0.0098 | informational | Supplementary Table S14 |
+| Table S14 | held-out radius contrast (radius), mean | -0.00286 | -0.00286 | exact | Supplementary Table S14 |
+| Table S14 | held-out radius contrast, Holm-adjusted P (passes: True) | 0.015 | 0.015 | informational | Supplementary Table S14 |
+| Table 1 | confirmed policy q_M | radius (kappa = 1.0, full), E = 4 | state and radius pass; MPC-RH within epsilon_eq of radius at selection | informational | main Table 1, confirmation output |
+| Table 2 | qC work ledger (multiply-adds / nominal E=1) (the ledger counts sparse/dense products normalized by nominal E=1; the manuscript's cost unit is measured serial execution (Table S23)) | 4 | 4 | informational | main Table 2, C_qC |
+| Table 2 | deployed-rule work ledger (multiply-adds / nominal E=1) | 4.7 | 4.7 | informational | Supplementary Table S23, controller cost |
+
+Levels: {"exact": 15, "interval": 0, "outside": 0, "match": 4, "differs": 0, "missing": 0, "informational": 6, "not produced by this source": 1, "not reported": 0, "diagnostic only": 0}
+
+'exact' means equal at the displayed precision. 'interval' means inside the reported interval or one reported across-seed standard deviation; neither is a formal replication test, a prediction interval for a fresh run, or evidence of historical provenance. Different architectures, splits and execution protocols can change the result.
+
+# Run versus manuscript: Roman-empire
+
+Run: `/tmp/tmprekqs8yr/campaign`
+
+Scope: ten-split campaign aggregate. Input check: ten sealed split runs numerically replayed.
+
+| Section | Quantity | Run value | Reported value | Status | Manuscript location |
+|---|---|---|---|---|---|
+| Table 1 | paired CE effect qD - qC (nats), mean (Paired split-level Student-t descriptive interval; masks share one graph.) | -0.00572 | -0.00572 | exact | main Table 1, Roman-empire, ten official splits |
+| Table 1 | paired CE effect qD - qC (nats), lower (Paired split-level Student-t descriptive interval; masks share one graph.) | -0.00889 | -0.00889 | exact | main Table 1, Roman-empire, ten official splits |
+| Table 1 | paired CE effect qD - qC (nats), upper (Paired split-level Student-t descriptive interval; masks share one graph.) | -0.00255 | -0.00255 | exact | main Table 1, Roman-empire, ten official splits |
+| Table 1 | paired accuracy gain qD - qC (pp), mean (Paired split-level Student-t descriptive interval; masks share one graph.) | 0.26 | 0.26 | exact | main Table 1, Roman-empire, ten official splits |
+| Table 1 | paired accuracy gain qD - qC (pp), lower (Paired split-level Student-t descriptive interval; masks share one graph.) | 0.1 | 0.1 | exact | main Table 1, Roman-empire, ten official splits |
+| Table 1 | paired accuracy gain qD - qC (pp), upper (Paired split-level Student-t descriptive interval; masks share one graph.) | 0.42 | 0.42 | exact | main Table 1, Roman-empire, ten official splits |
+| Table S15 | official test accuracy of qN (percent) (Mean across ten official splits.) | 91.76 | 91.76 | exact | Supplementary Table S15, Roman-empire |
+| Table S15 | official test accuracy of qC (percent) (Mean across ten official splits.) | 92.37 | 92.37 | exact | Supplementary Table S15, Roman-empire |
+| Table S15 | official test accuracy of qD (percent) (Mean across ten official splits.) | 92.63 | 92.63 | exact | Supplementary Table S15, Roman-empire |
+
+Levels: {"exact": 9, "interval": 0, "outside": 0, "match": 0, "differs": 0, "missing": 0}
+
+Numerical compatibility is descriptive, not a replication guarantee or provenance claim. Ten official masks on one graph are not independent-graph admission units.
+
+/tmp/tmp5jbqure5/figures/run_run_ogbn-arxiv.png
+/tmp/tmpw8786t29/plain/run_run_ogbn-arxiv.png
+Loading necessary files...
+This might take a while.
+Processing graphs...
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00, 27776.85it/s]
+Loading necessary files...
+This might take a while.
+Processing graphs...
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00, 31775.03it/s]
+ok
+test_all_seven_fixture_tasks_roundtrip_with_explicit_axes (test_dataset_adapters.PreparedTaskTests.test_all_seven_fixture_tasks_roundtrip_with_explicit_axes) ... ok
+test_complete_graph_roles_and_episode_labels_share_parent_scope (test_dataset_adapters.PreparedTaskTests.test_complete_graph_roles_and_episode_labels_share_parent_scope) ... ok
+test_degree_stratified_cores_are_reproducible_and_explicit (test_dataset_adapters.PreparedTaskTests.test_degree_stratified_cores_are_reproducible_and_explicit) ... ok
+test_multilabel_missing_targets_remain_missing_and_invalid_values_fail (test_dataset_adapters.PreparedTaskTests.test_multilabel_missing_targets_remain_missing_and_invalid_values_fail) ... ok
+test_real_preparation_rejects_a_truncated_independent_corpus (test_dataset_adapters.PreparedTaskTests.test_real_preparation_rejects_a_truncated_independent_corpus) ... ok
+test_coco_remapping_preserves_all81_official_categories (test_dataset_adapters.RawFormatTests.test_coco_remapping_preserves_all81_official_categories) ... ok
+test_cross_graph_edges_are_rejected (test_dataset_adapters.RawFormatTests.test_cross_graph_edges_are_rejected) ... ok
+test_edge_features_and_weights_coalesce_in_the_same_order (test_dataset_adapters.RawFormatTests.test_edge_features_and_weights_coalesce_in_the_same_order) ... ok
+test_incident_means_include_both_endpoints_and_isolates (test_dataset_adapters.RawFormatTests.test_incident_means_include_both_endpoints_and_isolates) ... ok
+test_missing_raw_data_cannot_download_without_authorization (test_dataset_adapters.RawFormatTests.test_missing_raw_data_cannot_download_without_authorization) ... ok
+test_peptide_graph_targets_one_hot_atoms_and_nonnegative_weights (test_dataset_adapters.RawFormatTests.test_peptide_graph_targets_one_hot_atoms_and_nonnegative_weights) ... ok
+test_restricted_raw_tuple_reader_and_official_cache_layout (test_dataset_adapters.RawFormatTests.test_restricted_raw_tuple_reader_and_official_cache_layout) ... ok
+test_roman_uses_requested_official_split_without_network (test_dataset_adapters.RawFormatTests.test_roman_uses_requested_official_split_without_network) ... ok
+test_unsafe_pickle_is_rejected_without_executing_payload (test_dataset_adapters.RawFormatTests.test_unsafe_pickle_is_rejected_without_executing_payload) ... ok
+test_all_supplied_profiles_route_without_importing_torch (test_dataset_entrypoints.DatasetRoutingTests.test_all_supplied_profiles_route_without_importing_torch) ... ok
+test_config_without_dataset_flag_selects_declared_real_dataset (test_dataset_entrypoints.DatasetRoutingTests.test_config_without_dataset_flag_selects_declared_real_dataset) ... ok
+test_dataset_profile_and_wrapper_mismatches_are_errors (test_dataset_entrypoints.DatasetRoutingTests.test_dataset_profile_and_wrapper_mismatches_are_errors) ... ok
+test_fixtures_cannot_claim_benchmark_execution (test_dataset_entrypoints.DatasetRoutingTests.test_fixtures_cannot_claim_benchmark_execution) ... ok
+test_independent_graph_profiles_use_graph_units_and_compatible_native_sites (test_dataset_entrypoints.DatasetRoutingTests.test_independent_graph_profiles_use_graph_units_and_compatible_native_sites) ... ok
+test_invalid_or_inapplicable_split_is_rejected (test_dataset_entrypoints.DatasetRoutingTests.test_invalid_or_inapplicable_split_is_rejected) ... ok
+test_nonfinite_json_is_rejected_before_runtime_import (test_dataset_entrypoints.DatasetRoutingTests.test_nonfinite_json_is_rejected_before_runtime_import) ... ok
+test_python_wrappers_select_their_own_dataset (test_dataset_entrypoints.DatasetRoutingTests.test_python_wrappers_select_their_own_dataset) ... ok
+test_roman_split_override_is_effective_without_mutating_source_config (test_dataset_entrypoints.DatasetRoutingTests.test_roman_split_override_is_effective_without_mutating_source_config) ... ok
+test_campaign_source_stays_fixed_when_original_changes (test_dataset_entrypoints.LauncherSnapshotTests.test_campaign_source_stays_fixed_when_original_changes) ... ok
+test_changed_missing_and_extra_files_are_detected (test_dataset_entrypoints.LauncherSnapshotTests.test_changed_missing_and_extra_files_are_detected) ... ok
+test_failed_campaign_creation_does_not_leave_a_partial_destination (test_dataset_entrypoints.LauncherSnapshotTests.test_failed_campaign_creation_does_not_leave_a_partial_destination) ... ok
+test_resolved_and_submitted_config_are_both_captured (test_dataset_entrypoints.LauncherSnapshotTests.test_resolved_and_submitted_config_are_both_captured) ... ok
+test_snapshot_never_replaces_an_existing_snapshot (test_dataset_entrypoints.LauncherSnapshotTests.test_snapshot_never_replaces_an_existing_snapshot) ... ok
+test_snapshot_refuses_source_descendant_and_ancestor (test_dataset_entrypoints.LauncherSnapshotTests.test_snapshot_refuses_source_descendant_and_ancestor) ... ok
+test_action_rows_bind_each_setting_to_the_correct_action (test_draw_diagrams.DrawDiagramsTests.test_action_rows_bind_each_setting_to_the_correct_action) ... ok
+test_artifact_review_scopes_do_not_overstate_replay (test_draw_diagrams.DrawDiagramsTests.test_artifact_review_scopes_do_not_overstate_replay) ... ok
+test_check_mode_reports_stale_and_missing_files_without_traceback (test_draw_diagrams.DrawDiagramsTests.test_check_mode_reports_stale_and_missing_files_without_traceback) ... ok
+test_committed_svg_and_png_sources_are_current (test_draw_diagrams.DrawDiagramsTests.test_committed_svg_and_png_sources_are_current) ... ok
+test_explanatory_diagrams_do_not_depend_on_performance_results (test_draw_diagrams.DrawDiagramsTests.test_explanatory_diagrams_do_not_depend_on_performance_results) ... ok
+test_explicit_png_failure_is_visible_and_preserves_prior_png (test_draw_diagrams.DrawDiagramsTests.test_explicit_png_failure_is_visible_and_preserves_prior_png) ... ok
+test_feedback_loop_separates_parameters_actions_and_global_admission (test_draw_diagrams.DrawDiagramsTests.test_feedback_loop_separates_parameters_actions_and_global_admission) ... ok
+test_figures_are_accessible_self_contained_svg (test_draw_diagrams.DrawDiagramsTests.test_figures_are_accessible_self_contained_svg) ... ok
+test_layout_has_readable_body_text_and_no_measured_overflow (test_draw_diagrams.DrawDiagramsTests.test_layout_has_readable_body_text_and_no_measured_overflow) ... ok
+test_lifecycle_locks_precede_selection_admission_and_test (test_draw_diagrams.DrawDiagramsTests.test_lifecycle_locks_precede_selection_admission_and_test) ... ok
+test_mathematical_runs_use_renderer_portable_sizes_and_offsets (test_draw_diagrams.DrawDiagramsTests.test_mathematical_runs_use_renderer_portable_sizes_and_offsets) ... ok
+test_nine_routes_preserve_open_loop_information_contract (test_draw_diagrams.DrawDiagramsTests.test_nine_routes_preserve_open_loop_information_contract) ... ok
+test_png_fingerprint_detects_old_source_wrong_size_and_corruption (test_draw_diagrams.DrawDiagramsTests.test_png_fingerprint_detects_old_source_wrong_size_and_corruption) ... ok
+test_transport_identity_depends_on_the_registered_site (test_draw_diagrams.DrawDiagramsTests.test_transport_identity_depends_on_the_registered_site) ... ok
+test_changed_lock_is_rejected_even_if_its_json_hash_is_updated (test_environment_spec.EnvironmentSpecTests.test_changed_lock_is_rejected_even_if_its_json_hash_is_updated) ... ok
+test_checker_reports_missing_and_mismatched_pins_without_importing_torch (test_environment_spec.EnvironmentSpecTests.test_checker_reports_missing_and_mismatched_pins_without_importing_torch) ... ok
+test_installer_dry_run_preserves_spaces_and_rejects_existing_or_inside_paths (test_environment_spec.EnvironmentSpecTests.test_installer_dry_run_preserves_spaces_and_rejects_existing_or_inside_paths) ... ok
+test_lock_contains_exactly_the_observed_distribution_versions (test_environment_spec.EnvironmentSpecTests.test_lock_contains_exactly_the_observed_distribution_versions) ... ok
+test_column_multiclass_labels_do_not_broadcast_accuracy (test_evaluation.EvaluationTests.test_column_multiclass_labels_do_not_broadcast_accuracy) ... ok
+test_crossfitted_metric_uses_predictions_and_bootstrap_frequencies (test_evaluation.EvaluationTests.test_crossfitted_metric_uses_predictions_and_bootstrap_frequencies) ... ok
+test_fixed_metric_self_comparison_is_zero_and_reproducible (test_evaluation.EvaluationTests.test_fixed_metric_self_comparison_is_zero_and_reproducible) ... ok
+test_fully_missing_graph_is_not_a_metric_resampling_unit (test_evaluation.EvaluationTests.test_fully_missing_graph_is_not_a_metric_resampling_unit) ... ok
+test_graph_loss_uses_equal_graph_means (test_evaluation.EvaluationTests.test_graph_loss_uses_equal_graph_means) ... ok
+test_independent_graph_admission_uses_conditional_bound (test_evaluation.EvaluationTests.test_independent_graph_admission_uses_conditional_bound) ... ok
+test_nonlinear_nested_selection_calls_observation_evaluator (test_evaluation.EvaluationTests.test_nonlinear_nested_selection_calls_observation_evaluator) ... ok
+test_roman_summary_requires_ten_and_uses_split_pairing (test_evaluation.EvaluationTests.test_roman_summary_requires_ten_and_uses_split_pairing) ... ok
+test_multi_step_target_uses_nominal_tail_in_both_branches (test_exploration_targets.ExplorationTargetTests.test_multi_step_target_uses_nominal_tail_in_both_branches) ... ok
+test_offline_label_changes_leave_measurements_and_behavior_unchanged (test_exploration_targets.ExplorationTargetTests.test_offline_label_changes_leave_measurements_and_behavior_unchanged) ... ok
+test_one_step_target_is_action_minus_nominal_not_before_after (test_exploration_targets.ExplorationTargetTests.test_one_step_target_is_action_minus_nominal_not_before_after) ... ok
+test_completed_fold_resume_preserves_weights (test_learning.LearningTests.test_completed_fold_resume_preserves_weights) ... ok
+test_cross_fitting_keeps_complete_trajectories (test_learning.LearningTests.test_cross_fitting_keeps_complete_trajectories) ... ok
+test_fingerprint_rejects_modified_training_target (test_learning.LearningTests.test_fingerprint_rejects_modified_training_target) ... ok
+test_loaded_controller_scores_predicts_and_counts_work (test_learning.LearningTests.test_loaded_controller_scores_predicts_and_counts_work) ... ok
+test_observer_psd_and_missing_history_recovery (test_learning.LearningTests.test_observer_psd_and_missing_history_recovery) ... ok
+test_support_never_inflates_with_repeated_depths (test_learning.LearningTests.test_support_never_inflates_with_repeated_depths) ... ok
+test_unseen_stratum_and_invalid_state_are_rejected (test_learning.LearningTests.test_unseen_stratum_and_invalid_state_are_rejected) ... ok
+test_a_committed_stage_recovers_a_missing_bookkeeping_marker (test_lifecycle.LifecycleTests.test_a_committed_stage_recovers_a_missing_bookkeeping_marker) ... ok
+test_direct_stage_calls_cannot_skip_the_verified_predecessor (test_lifecycle.LifecycleTests.test_direct_stage_calls_cannot_skip_the_verified_predecessor) ... ok
+test_failed_confirmation_control_copies_only_locked_comparator_bytes (test_lifecycle.LifecycleTests.test_failed_confirmation_control_copies_only_locked_comparator_bytes) ... ok
+test_failed_development_candidate_has_diagnostics_and_no_invented_prediction (test_lifecycle.LifecycleTests.test_failed_development_candidate_has_diagnostics_and_no_invented_prediction) ... ok
+test_label_roles_are_closed_outside_the_permitted_runtime_stage (test_lifecycle.LifecycleTests.test_label_roles_are_closed_outside_the_permitted_runtime_stage) ... ok
+test_model_baseline_is_captured_at_train_and_detects_exploration_mutation (test_lifecycle.LifecycleTests.test_model_baseline_is_captured_at_train_and_detects_exploration_mutation) ... ok
+test_resume_does_not_overwrite_the_original_environment_record (test_lifecycle.LifecycleTests.test_resume_does_not_overwrite_the_original_environment_record) ... ok
+test_resume_validates_completed_artifacts_instead_of_trusting_marker (test_lifecycle.LifecycleTests.test_resume_validates_completed_artifacts_instead_of_trusting_marker) ... ok
+test_default_help_never_starts_an_interpreter_or_training (test_make_workflows.MakeWorkflowTests.test_default_help_never_starts_an_interpreter_or_training) ... ok
+test_explicit_train_samples_routes_all_seven_to_external_cpu_work_paths (test_make_workflows.MakeWorkflowTests.test_explicit_train_samples_routes_all_seven_to_external_cpu_work_paths) ... ok
+test_official_preparation_routes_only_prepare_and_rejects_smoke (test_make_workflows.MakeWorkflowTests.test_official_preparation_routes_only_prepare_and_rejects_smoke) ... ok
+test_paper_target_only_regenerates_registry_views_and_explanatory_diagrams (test_make_workflows.MakeWorkflowTests.test_paper_target_only_regenerates_registry_views_and_explanatory_diagrams) ... ok
+test_reproduce_verifies_seven_examples_and_preserves_paths_with_spaces (test_make_workflows.MakeWorkflowTests.test_reproduce_verifies_seven_examples_and_preserves_paths_with_spaces) ... ok
+test_band_sensitivities_reproduce_figure_S15b (test_paper_registry.ActionRegistryTests.test_band_sensitivities_reproduce_figure_S15b) ... ok
+test_formulas_reproduce_table_S6b (test_paper_registry.ActionRegistryTests.test_formulas_reproduce_table_S6b) ... ok
+test_local_actions_have_closed_form_sensitivity (test_paper_registry.ActionRegistryTests.test_local_actions_have_closed_form_sensitivity) ... ok
+test_pure_python_formulas_agree_with_core (test_paper_registry.ActionRegistryTests.test_pure_python_formulas_agree_with_core) ... ok
+test_ten_actions_with_the_registered_parameters (test_paper_registry.ActionRegistryTests.test_ten_actions_with_the_registered_parameters) ... ok
+test_check_paper_constants_passes (test_paper_registry.FullProfileTests.test_check_paper_constants_passes) ... ok
+test_registered_margins_depend_on_the_loss_type (test_paper_registry.FullProfileTests.test_registered_margins_depend_on_the_loss_type) ... ok
+test_actual_supplied_pdf_bytes_match_table_provenance (test_paper_registry.PaperSourceProvenanceTests.test_actual_supplied_pdf_bytes_match_table_provenance) ... ok
+test_changed_pdf_is_rejected_even_when_manifest_shape_is_valid (test_paper_registry.PaperSourceProvenanceTests.test_changed_pdf_is_rejected_even_when_manifest_shape_is_valid) ... ok
+test_csv_preserves_missing_values_and_exact_comparator_return (test_paper_registry.PaperSourceProvenanceTests.test_csv_preserves_missing_values_and_exact_comparator_return) ... ok
+test_generated_summary_views_are_current (test_paper_registry.PaperSourceProvenanceTests.test_generated_summary_views_are_current) ... ok
+test_measurements_are_distinguished_from_sensitivity_models (test_paper_registry.PaperSourceProvenanceTests.test_measurements_are_distinguished_from_sensitivity_models) ... ok
+test_numeric_registry_rejects_nonfinite_values (test_paper_registry.PaperSourceProvenanceTests.test_numeric_registry_rejects_nonfinite_values) ... ok
+test_overview_and_csv_render_from_the_canonical_values (test_paper_registry.PaperSourceProvenanceTests.test_overview_and_csv_render_from_the_canonical_values) ... ok
+test_page_reference_must_be_inside_the_named_source (test_paper_registry.PaperSourceProvenanceTests.test_page_reference_must_be_inside_the_named_source) ... ok
+test_pdf_path_cannot_escape_repository (test_paper_registry.PaperSourceProvenanceTests.test_pdf_path_cannot_escape_repository) ... ok
+test_table_provenance_cannot_silently_omit_a_group (test_paper_registry.PaperSourceProvenanceTests.test_table_provenance_cannot_silently_omit_a_group) ... ok
+test_unavailable_q0_and_corrected_support_are_not_fabricated (test_paper_registry.PaperSourceProvenanceTests.test_unavailable_q0_and_corrected_support_are_not_fabricated) ... ok
+test_registry_figures_render (test_paper_registry.RegistryFigureTests.test_registry_figures_render) ... ok
+test_bindings_reference_registry_values (test_paper_registry.RegistryFilesTests.test_bindings_reference_registry_values) ... ok
+test_every_dataset_has_rows_in_the_main_ledgers (test_paper_registry.RegistryFilesTests.test_every_dataset_has_rows_in_the_main_ledgers) ... ok
+test_registry_files_exist_and_name_their_provenance (test_paper_registry.RegistryFilesTests.test_registry_files_exist_and_name_their_provenance) ... ok
+test_rendered_markdown_is_current (test_paper_registry.RegistryFilesTests.test_rendered_markdown_is_current) ... ok
+test_admission_bound_arithmetic_table_S13 (test_paper_registry.ReportedArithmeticTests.test_admission_bound_arithmetic_table_S13) ... ok
+test_corollary_2_minimum_sample_sizes (test_paper_registry.ReportedArithmeticTests.test_corollary_2_minimum_sample_sizes) ... ok
+test_printed_half_unit (test_paper_registry.ReportedArithmeticTests.test_printed_half_unit) ... ok
+test_table_1_gains_match_or_preserve_documented_discrepancy (test_paper_registry.ReportedArithmeticTests.test_table_1_gains_match_or_preserve_documented_discrepancy) ... ok
+test_table_2_follows_from_tables_S23_and_S41 (test_paper_registry.ReportedArithmeticTests.test_table_2_follows_from_tables_S23_and_S41) ... ok
+test_runtime_fingerprint_matches_the_validation_record (test_paper_registry.SourceIdentityTests.test_runtime_fingerprint_matches_the_validation_record) ... ok
+test_admission_locks_candidate_before_labels_and_rejects_to_comparator (test_pipeline_guardrails.PipelineGuardrailTests.test_admission_locks_candidate_before_labels_and_rejects_to_comparator) ... ok
+test_all_registered_predictions_precede_selection_label_access (test_pipeline_guardrails.PipelineGuardrailTests.test_all_registered_predictions_precede_selection_label_access) ... 584 of 584 registered-constant checks passed
+/tmp/tmp_b990389/registry_admission_arithmetic.png
+/tmp/tmp_b990389/registry_deployment_economics.png
+/tmp/tmp_b990389/registry_gain_and_cost.png
+/tmp/tmp_b990389/registry_mechanism_contrasts.png
+/tmp/tmp_b990389/registry_selection_geometry.png
+/tmp/tmp_b990389/registry_spectral_fingerprint.png
+[select/predict] 1/3 nominal E=1 none
+[select/predict] 2/3 one_step E=1 lean
+[select/predict] 3/3 radius E=1 full
+ok
+test_cached_candidate_rejects_changed_bytes_or_control_identity (test_pipeline_guardrails.PipelineGuardrailTests.test_cached_candidate_rejects_changed_bytes_or_control_identity) ... ok
+test_cached_member_rejects_another_seed_before_reusing_predictions (test_pipeline_guardrails.PipelineGuardrailTests.test_cached_member_rejects_another_seed_before_reusing_predictions) ... ok
+test_failed_nominal_ensemble_is_excluded_before_selection_labels (test_pipeline_guardrails.PipelineGuardrailTests.test_failed_nominal_ensemble_is_excluded_before_selection_labels) ... [select/predict] 1/3 nominal E=1 none
+[select/predict] 2/3 nominal E=2 none
+[select/predict] 3/3 learned_stop E=2 none
+ok
+test_failed_required_predecessor_is_unavailable_confirmation_evidence (test_pipeline_guardrails.PipelineGuardrailTests.test_failed_required_predecessor_is_unavailable_confirmation_evidence) ... ok
+test_final_copy_rejects_prediction_corruption_before_any_test_label_read (test_pipeline_guardrails.PipelineGuardrailTests.test_final_copy_rejects_prediction_corruption_before_any_test_label_read) ... ok
+test_final_rejected_predictions_are_byte_identical_and_labels_read_after_lock (test_pipeline_guardrails.PipelineGuardrailTests.test_final_rejected_predictions_are_byte_identical_and_labels_read_after_lock) ... {
+  "dataset": "synthetic",
+  "profile": "smoke",
+  "admitted": false,
+  "metric": "accuracy",
+  "test_metric": 1.0,
+  "route": "nominal"
+}
+ok
+test_frozen_exploration_reference_cannot_change_after_fitting (test_pipeline_guardrails.PipelineGuardrailTests.test_frozen_exploration_reference_cannot_change_after_fitting) ... ok
+test_modified_registry_is_rejected_before_any_test_label_read (test_pipeline_guardrails.PipelineGuardrailTests.test_modified_registry_is_rejected_before_any_test_label_read) ... ok
+test_resume_requires_original_source_and_configuration (test_pipeline_guardrails.PipelineGuardrailTests.test_resume_requires_original_source_and_configuration) ... ok
+test_role_scoring_rejects_prediction_corruption_before_reading_labels (test_pipeline_guardrails.PipelineGuardrailTests.test_role_scoring_rejects_prediction_corruption_before_reading_labels) ... ok
+test_stage_dependencies_block_evaluation_without_prior_stages (test_pipeline_guardrails.PipelineGuardrailTests.test_stage_dependencies_block_evaluation_without_prior_stages) ... ok
+test_beam_model_budget_matches_executed_calls_and_terminal_boundary (test_policy_guardrails.PolicyGuardrailTests.test_beam_model_budget_matches_executed_calls_and_terminal_boundary) ... ok
+test_execution_accepts_no_labels_or_dataset_handle (test_policy_guardrails.PolicyGuardrailTests.test_execution_accepts_no_labels_or_dataset_handle) ... ok
+test_feedback_replay_preserves_action_nine_anchor_without_observer (test_policy_guardrails.PolicyGuardrailTests.test_feedback_replay_preserves_action_nine_anchor_without_observer) ... ok
+test_fixed_open_loop_replays_deterministically_and_never_assimilates (test_policy_guardrails.PolicyGuardrailTests.test_fixed_open_loop_replays_deterministically_and_never_assimilates) ... ok
+test_mid_execution_numerical_failure_records_partial_trace (test_policy_guardrails.PolicyGuardrailTests.test_mid_execution_numerical_failure_records_partial_trace) ... ok
+test_missing_donors_never_count_as_valid_state_destruction (test_policy_guardrails.PolicyGuardrailTests.test_missing_donors_never_count_as_valid_state_destruction) ... ok
+test_mpc_feedback_retains_dynamic_a9_and_exact_anchor_replay (test_policy_guardrails.PolicyGuardrailTests.test_mpc_feedback_retains_dynamic_a9_and_exact_anchor_replay) ... ok
+test_mpc_open_loop_actual_support_audit_cannot_change_frozen_plan (test_policy_guardrails.PolicyGuardrailTests.test_mpc_open_loop_actual_support_audit_cannot_change_frozen_plan) ... ok
+test_mpc_open_loop_execution_uses_restricted_search_and_source_reset (test_policy_guardrails.PolicyGuardrailTests.test_mpc_open_loop_execution_uses_restricted_search_and_source_reset) ... ok
+test_mpc_open_loop_plans_once_and_feedback_replans_each_depth (test_policy_guardrails.PolicyGuardrailTests.test_mpc_open_loop_plans_once_and_feedback_replans_each_depth) ... ok
+test_nonfinite_output_has_typed_json_safe_failure_trace (test_policy_guardrails.PolicyGuardrailTests.test_nonfinite_output_has_typed_json_safe_failure_trace) ... ok
+test_nonfinite_planning_cost_is_a_typed_failure_not_a_valid_plan (test_policy_guardrails.PolicyGuardrailTests.test_nonfinite_planning_cost_is_a_typed_failure_not_a_valid_plan) ... ok
+test_open_loop_beam_never_queries_a9_even_for_simulated_recovery (test_policy_guardrails.PolicyGuardrailTests.test_open_loop_beam_never_queries_a9_even_for_simulated_recovery) ... ok
+test_open_loop_refuses_uncanonicalized_a9_but_explicit_replay_remains_legal (test_policy_guardrails.PolicyGuardrailTests.test_open_loop_refuses_uncanonicalized_a9_but_explicit_replay_remains_legal) ... ok
+test_open_loop_source_reset_cannot_depend_on_intermediate_measurements (test_policy_guardrails.PolicyGuardrailTests.test_open_loop_source_reset_cannot_depend_on_intermediate_measurements) ... ok
+test_real_sensor_qualification_ledger_balances_and_retains_initial_mpc_sensing (test_policy_guardrails.PolicyGuardrailTests.test_real_sensor_qualification_ledger_balances_and_retains_initial_mpc_sensing) ... ok
+test_registry_is_fixed_from_exploration_and_configuration_without_selection (test_policy_guardrails.PolicyGuardrailTests.test_registry_is_fixed_from_exploration_and_configuration_without_selection) ... ok
+test_registry_normalizes_open_loop_resets_and_preserves_original_provenance (test_policy_guardrails.PolicyGuardrailTests.test_registry_normalizes_open_loop_resets_and_preserves_original_provenance) ... ok
+test_shuffled_support_mismatch_is_recorded_before_safe_intersection (test_policy_guardrails.PolicyGuardrailTests.test_shuffled_support_mismatch_is_recorded_before_safe_intersection) ... ok
+test_unrelated_runtime_errors_are_not_reclassified_as_numerical_failure (test_policy_guardrails.PolicyGuardrailTests.test_unrelated_runtime_errors_are_not_reclassified_as_numerical_failure) ... ok
+test_zero_planning_budget_uses_only_legal_recovery_and_charges_no_calls (test_policy_guardrails.PolicyGuardrailTests.test_zero_planning_budget_uses_only_legal_recovery_and_charges_no_calls) ... ok
+test_actual_unit_and_configuration_corruption_are_rejected (test_provenance.ProvenanceTests.test_actual_unit_and_configuration_corruption_are_rejected) ... ok
+test_added_trajectory_in_completed_explore_is_rejected_but_atomic_tmp_is_ignored (test_provenance.ProvenanceTests.test_added_trajectory_in_completed_explore_is_rejected_but_atomic_tmp_is_ignored) ... ok
+test_artifact_cannot_escape_the_run_directory (test_provenance.ProvenanceTests.test_artifact_cannot_escape_the_run_directory) ... ok
+test_bfloat16_scalar_integer_empty_and_noncontiguous_state_hashes (test_provenance.ProvenanceTests.test_bfloat16_scalar_integer_empty_and_noncontiguous_state_hashes) ... ok
+test_capture_and_verify_actual_bfloat16_checkpoint_and_reject_rebaseline (test_provenance.ProvenanceTests.test_capture_and_verify_actual_bfloat16_checkpoint_and_reject_rebaseline) ... ok
+test_complete_chain_has_eight_stages_actual_parents_and_scientific_roles (test_provenance.ProvenanceTests.test_complete_chain_has_eight_stages_actual_parents_and_scientific_roles) ... ok
+test_empty_partial_chain_is_allowed_but_gaps_and_missing_required_stage_fail (test_provenance.ProvenanceTests.test_empty_partial_chain_is_allowed_but_gaps_and_missing_required_stage_fail) ... ok
+test_existing_manifest_is_idempotent_but_cannot_be_replaced (test_provenance.ProvenanceTests.test_existing_manifest_is_idempotent_but_cannot_be_replaced) ... ok
+test_final_stage_cannot_declare_policy_or_decision_outputs (test_provenance.ProvenanceTests.test_final_stage_cannot_declare_policy_or_decision_outputs) ... ok
+test_head_and_backbone_are_hashed_separately (test_provenance.ProvenanceTests.test_head_and_backbone_are_hashed_separately) ... ok
+test_hidden_policy_mutation_is_rejected_even_when_not_declared_as_test_output (test_provenance.ProvenanceTests.test_hidden_policy_mutation_is_rejected_even_when_not_declared_as_test_output) ... ok
+test_input_must_be_an_actual_earlier_sealed_output (test_provenance.ProvenanceTests.test_input_must_be_an_actual_earlier_sealed_output) ... ok
+test_parent_mutation_is_rechecked_instead_of_trusting_stored_digest (test_provenance.ProvenanceTests.test_parent_mutation_is_rechecked_instead_of_trusting_stored_digest) ... ok
+test_repeated_inputs_hash_once_per_call_and_corruption_is_detected_next_call (test_provenance.ProvenanceTests.test_repeated_inputs_hash_once_per_call_and_corruption_is_detected_next_call) ... ok
+test_source_identity_is_recomputed_not_only_compared_between_declarations (test_provenance.ProvenanceTests.test_source_identity_is_recomputed_not_only_compared_between_declarations) ... ok
+test_standalone_validator_requires_actual_complete_chain (test_provenance.ProvenanceTests.test_standalone_validator_requires_actual_complete_chain) ... ok
+test_all_dataset_wrappers_and_profiles_route_without_writes (test_release_launcher.LauncherTests.test_all_dataset_wrappers_and_profiles_route_without_writes) ... ok
+test_campaign_refuses_other_datasets_and_single_split_override (test_release_launcher.LauncherTests.test_campaign_refuses_other_datasets_and_single_split_override) ... ok
+test_campaign_submission_freezes_source_and_resume_uses_same_campaign (test_release_launcher.LauncherTests.test_campaign_submission_freezes_source_and_resume_uses_same_campaign) ... ok
+test_custom_roman_config_split_is_not_silently_reset_to_zero (test_release_launcher.LauncherTests.test_custom_roman_config_split_is_not_silently_reset_to_zero) ... ok
+test_dataset_and_split_errors_precede_submission (test_release_launcher.LauncherTests.test_dataset_and_split_errors_precede_submission) ... ok
+test_dry_run_preserves_spaces_and_performs_no_writes (test_release_launcher.LauncherTests.test_dry_run_preserves_spaces_and_performs_no_writes) ... ok
+test_effective_environment_is_in_hashed_snapshot_and_reused (test_release_launcher.LauncherTests.test_effective_environment_is_in_hashed_snapshot_and_reused) ... ok
+test_exported_overrides_win_over_environment_file_including_empty_values (test_release_launcher.LauncherTests.test_exported_overrides_win_over_environment_file_including_empty_values) ... ok
+test_mock_submissions_route_profiles_and_preserve_quoted_arguments (test_release_launcher.LauncherTests.test_mock_submissions_route_profiles_and_preserve_quoted_arguments) ... ok
+test_private_defaults_are_loaded_when_profile_is_present (test_release_launcher.LauncherTests.test_private_defaults_are_loaded_when_profile_is_present) ... skipped 'public export intentionally omits the private profile'
+test_public_fallback_requires_explicit_account_before_submission (test_release_launcher.LauncherTests.test_public_fallback_requires_explicit_account_before_submission) ... ok
+test_roman_split_and_custom_cache_are_quoted_in_mock_submission (test_release_launcher.LauncherTests.test_roman_split_and_custom_cache_are_quoted_in_mock_submission) ... ok
+test_syntax_help_and_account_directive (test_release_launcher.LauncherTests.test_syntax_help_and_account_directive) ... ok
+test_wrapper_refuses_conflicting_explicit_dataset (test_release_launcher.LauncherTests.test_wrapper_refuses_conflicting_explicit_dataset) ... ok
+test_archives_are_deterministic_and_replace_is_validated (test_release_tooling.ExportSafetyTests.test_archives_are_deterministic_and_replace_is_validated) ... ok
+test_audit_accepts_complete_seven_dataset_scope (test_release_tooling.ExportSafetyTests.test_audit_accepts_complete_seven_dataset_scope) ... ok
+test_failed_zip_build_preserves_prior_output_and_source (test_release_tooling.ExportSafetyTests.test_failed_zip_build_preserves_prior_output_and_source) ... ok
+test_no_clobber_is_preserved_when_output_appears_during_build (test_release_tooling.ExportSafetyTests.test_no_clobber_is_preserved_when_output_appears_during_build) ... ok
+test_public_audit_failure_preserves_prior_output (test_release_tooling.ExportSafetyTests.test_public_audit_failure_preserves_prior_output) ... ok
+test_public_export_preserves_code_bytes_and_exact_archive_root (test_release_tooling.ExportSafetyTests.test_public_export_preserves_code_bytes_and_exact_archive_root) ... ok
+test_refuses_existing_output_by_default (test_release_tooling.ExportSafetyTests.test_refuses_existing_output_by_default) ... ok
+test_rejects_inside_same_and_ancestor_paths_before_writes (test_release_tooling.ExportSafetyTests.test_rejects_inside_same_and_ancestor_paths_before_writes) ... ok
+test_benchmark_run_cannot_be_disguised_as_a_shipped_synthetic_example (test_release_tooling.ManifestIntegrityTests.test_benchmark_run_cannot_be_disguised_as_a_shipped_synthetic_example) ... ok
+test_cache_files_do_not_change_source_identity (test_release_tooling.ManifestIntegrityTests.test_cache_files_do_not_change_source_identity) ... ok
+test_changed_missing_and_extra_files_are_rejected (test_release_tooling.ManifestIntegrityTests.test_changed_missing_and_extra_files_are_rejected) ... ok
+test_changed_or_missing_example_checkpoint_fails_even_after_rehashing_release (test_release_tooling.ManifestIntegrityTests.test_changed_or_missing_example_checkpoint_fails_even_after_rehashing_release) ... ok
+test_complete_synthetic_examples_retain_and_hash_checkpoint_and_probability_bytes (test_release_tooling.ManifestIntegrityTests.test_complete_synthetic_examples_retain_and_hash_checkpoint_and_probability_bytes) ... ok
+test_editable_install_metadata_is_not_a_release_source (test_release_tooling.ManifestIntegrityTests.test_editable_install_metadata_is_not_a_release_source) ... ok
+test_explicit_binary_test_fixtures_are_retained_and_hashed (test_release_tooling.ManifestIntegrityTests.test_explicit_binary_test_fixtures_are_retained_and_hashed) ... ok
+test_manifest_and_checksum_files_are_bound_without_circularity (test_release_tooling.ManifestIntegrityTests.test_manifest_and_checksum_files_are_bound_without_circularity) ... ok
+test_public_audit_can_include_its_own_privacy_rules (test_release_tooling.ManifestIntegrityTests.test_public_audit_can_include_its_own_privacy_rules) ... ok
+test_static_dataset_manifests_are_retained_but_raw_caches_are_excluded (test_release_tooling.ManifestIntegrityTests.test_static_dataset_manifests_are_retained_but_raw_caches_are_excluded) ... ok
+test_symlinks_cannot_import_files_from_outside_source (test_release_tooling.ManifestIntegrityTests.test_symlinks_cannot_import_files_from_outside_source) ... ok
+test_check_detects_changed_recomputed_observations (test_reproduce_examples.ExampleReproductionTests.test_check_detects_changed_recomputed_observations) ... ok
+test_destination_guards_and_readonly_committed_views (test_reproduce_examples.ExampleReproductionTests.test_destination_guards_and_readonly_committed_views) ... ok
+test_missing_runs_fail_before_creating_reports (test_reproduce_examples.ExampleReproductionTests.test_missing_runs_fail_before_creating_reports) ... {
+  "error": "EvidenceError: Eight distinct sealed lifecycle stages are required",
+  "status": "FAIL"
+}
+
+ok
+test_refresh_is_idempotent_and_preserves_unrelated_files (test_reproduce_examples.ExampleReproductionTests.test_refresh_is_idempotent_and_preserves_unrelated_files) ... ok
+test_table_keeps_native_scores_and_all_predictors (test_reproduce_examples.ExampleReproductionTests.test_table_keeps_native_scores_and_all_predictors) ... ok
+test_unowned_collisions_are_preserved (test_reproduce_examples.ExampleReproductionTests.test_unowned_collisions_are_preserved) ... ok
+test_user_edited_report_is_not_overwritten (test_reproduce_examples.ExampleReproductionTests.test_user_edited_report_is_not_overwritten) ... ok
+test_bundle_is_portable_and_tamper_evident (test_review_tools.ReviewToolTests.test_bundle_is_portable_and_tamper_evident) ... ok
+test_checkpoint_evaluation_reproduces_saved_outputs (test_review_tools.ReviewToolTests.test_checkpoint_evaluation_reproduces_saved_outputs) ... ok
+test_numeric_mismatch_is_not_hidden_by_report_formatting (test_review_tools.ReviewToolTests.test_numeric_mismatch_is_not_hidden_by_report_formatting) ... ok
+test_numeric_replay_never_loads_pickled_models (test_review_tools.ReviewToolTests.test_numeric_replay_never_loads_pickled_models) ... ok
+test_paired_impact_comparison_of_the_same_run_is_zero (test_review_tools.ReviewToolTests.test_paired_impact_comparison_of_the_same_run_is_zero) ... ok
+test_parameter_inventory_counts_real_checkpoint_tensors (test_review_tools.ReviewToolTests.test_parameter_inventory_counts_real_checkpoint_tensors) ... ok
+test_record_corruption_fails_without_rewriting (test_review_tools.ReviewToolTests.test_record_corruption_fails_without_rewriting) ... ok
+test_result_binding_fails_on_missing_identity_or_wrong_number (test_review_tools.ReviewToolTests.test_result_binding_fails_on_missing_identity_or_wrong_number) ... ok
+test_review_source_subset_omits_examples_and_binary_fixtures (test_review_tools.ReviewToolTests.test_review_source_subset_omits_examples_and_binary_fixtures) ... ok
+test_safe_file_rejects_traversal_and_symlinks (test_review_tools.ReviewToolTests.test_safe_file_rejects_traversal_and_symlinks) ... ok
+test_assessment_target_changes_do_not_change_weights_or_radii (test_scientific_contract.CalibrationSeparationTests.test_assessment_target_changes_do_not_change_weights_or_radii) ... ok
+test_invalid_partition_rejected (test_scientific_contract.CalibrationSeparationTests.test_invalid_partition_rejected) ... ok
+test_three_roles_are_complete_disjoint_trajectory_partitions (test_scientific_contract.CalibrationSeparationTests.test_three_roles_are_complete_disjoint_trajectory_partitions) ... ok
+test_anchor_predicate_is_one_shared_function (test_scientific_contract.SafetyAndScoreTests.test_anchor_predicate_is_one_shared_function) ... ok
+test_configured_transport_cost_not_hardcoded (test_scientific_contract.SafetyAndScoreTests.test_configured_transport_cost_not_hardcoded) ... ok
+test_donor_build_does_not_rescan_every_trajectory_and_distinguishes_seeds (test_scientific_contract.SafetyAndScoreTests.test_donor_build_does_not_rescan_every_trajectory_and_distinguishes_seeds) ... ok
+test_headroom_does_not_mix_incompatible_global_policies (test_scientific_contract.SafetyAndScoreTests.test_headroom_does_not_mix_incompatible_global_policies) ... ok
+test_invalid_scoring_configuration_fails (test_scientific_contract.SafetyAndScoreTests.test_invalid_scoring_configuration_fails) ... ok
+test_observer_invalid_anchor_is_identical_in_exploration_and_execution (test_scientific_contract.SafetyAndScoreTests.test_observer_invalid_anchor_is_identical_in_exploration_and_execution) ... ok
+test_radius_changes_winner_and_matches_runtime (test_scientific_contract.SafetyAndScoreTests.test_radius_changes_winner_and_matches_runtime) ... ok
+test_changed_source_does_not_pass_record_check (test_source_fingerprint_cli.SourceFingerprintCliTests.test_changed_source_does_not_pass_record_check) ... ok
+test_explicit_identity_and_record_are_mutually_exclusive (test_source_fingerprint_cli.SourceFingerprintCliTests.test_explicit_identity_and_record_are_mutually_exclusive) ... ok
+test_missing_or_invalid_record_fails_without_silent_comparison_skip (test_source_fingerprint_cli.SourceFingerprintCliTests.test_missing_or_invalid_record_fails_without_silent_comparison_skip) ... ok
+test_record_matches_current_source_without_modifying_it (test_source_fingerprint_cli.SourceFingerprintCliTests.test_record_matches_current_source_without_modifying_it) ... ok
+test_admission_clips_differences_and_uses_metric (test_statistics.StatisticsTests.test_admission_clips_differences_and_uses_metric) ... ok
+test_bootstrap_paired_sign_and_reproducibility (test_statistics.StatisticsTests.test_bootstrap_paired_sign_and_reproducibility) ... ok
+test_bootstrap_reselects_comparator_instead_of_caching_winner (test_statistics.StatisticsTests.test_bootstrap_reselects_comparator_instead_of_caching_winner) ... ok
+test_confirmation_keeps_only_qualified_and_margin_strict (test_statistics.StatisticsTests.test_confirmation_keeps_only_qualified_and_margin_strict) ... ok
+test_core_means_and_node_weighted_risk (test_statistics.StatisticsTests.test_core_means_and_node_weighted_risk) ... ok
+test_degenerate_core_cannot_pass_admission (test_statistics.StatisticsTests.test_degenerate_core_cannot_pass_admission) ... ok
+test_empirical_bernstein_formula_is_diagnostic (test_statistics.StatisticsTests.test_empirical_bernstein_formula_is_diagnostic) ... ok
+test_execution_failure_requires_infeasibility_and_nonfailures_require_finite_observations (test_statistics.StatisticsTests.test_execution_failure_requires_infeasibility_and_nonfailures_require_finite_observations) ... ok
+test_failed_candidate_columns_do_not_change_observed_selection (test_statistics.StatisticsTests.test_failed_candidate_columns_do_not_change_observed_selection) ... ok
+test_holm_adjustment (test_statistics.StatisticsTests.test_holm_adjustment) ... ok
+test_invalid_intervention_differences_remain_diagnostic_and_cannot_pass (test_statistics.StatisticsTests.test_invalid_intervention_differences_remain_diagnostic_and_cannot_pass) ... ok
+test_missing_confirmation_fails_closed (test_statistics.StatisticsTests.test_missing_confirmation_fails_closed) ... ok
+test_nested_candidate_feasibility_and_empty_Qs (test_statistics.StatisticsTests.test_nested_candidate_feasibility_and_empty_Qs) ... ok
+test_nested_rule_cheapest_near_best_and_comparator_trace (test_statistics.StatisticsTests.test_nested_rule_cheapest_near_best_and_comparator_trace) ... ok
+test_selection_strict_improvement_margin (test_statistics.StatisticsTests.test_selection_strict_improvement_margin) ... ok
+test_unavailable_required_contrast_keeps_holm_membership_without_observations (test_statistics.StatisticsTests.test_unavailable_required_contrast_keeps_holm_membership_without_observations) ... ok
+test_cross_graph_edges_are_rejected_before_propagation (test_task_plants.TaskPlantTests.test_cross_graph_edges_are_rejected_before_propagation) ... ok
+test_dense_chunking_preserves_predictions_and_gradients (test_task_plants.TaskPlantTests.test_dense_chunking_preserves_predictions_and_gradients) ... ok
+test_duplicate_weights_average_and_zero_weight_nodes_are_safe (test_task_plants.TaskPlantTests.test_duplicate_weights_average_and_zero_weight_nodes_are_safe) ... ok
+test_full_control_site_counts_and_literal_inserted_identity (test_task_plants.TaskPlantTests.test_full_control_site_counts_and_literal_inserted_identity) ... ok
+test_gps_local_action_does_not_replace_attention_and_graphs_cannot_mix (test_task_plants.TaskPlantTests.test_gps_local_action_does_not_replace_attention_and_graphs_cannot_mix) ... /workspace/scratch/2aa93dc25af6/review_work_20261025/source/CROSS-MORSE/cross_morse/core.py:224: UserWarning: torch.searchsorted(): input value tensor is non-contiguous, this will lower the performance due to extra data copy when converting non-contiguous tensor to contiguous, please use contiguous input value tensor if possible. This message will only appear once per program. (Triggered internally at /pytorch/aten/src/ATen/native/BucketizationUtils.h:32.)
+  membership = torch.bucketize(edges, self.graph_ptr[1:-1], right=True)
+ok
+test_graph_readout_is_mean_within_each_graph_and_needs_binding (test_task_plants.TaskPlantTests.test_graph_readout_is_mean_within_each_graph_and_needs_binding) ... ok
+test_independent_sensor_rejects_union_and_accepts_graph_head (test_task_plants.TaskPlantTests.test_independent_sensor_rejects_union_and_accepts_graph_head) ... ok
+test_inserted_transport_formula_and_hybrid_resets (test_task_plants.TaskPlantTests.test_inserted_transport_formula_and_hybrid_resets) ... ok
+test_linear_gine_aggregation_has_no_nonlinear_edge_message (test_task_plants.TaskPlantTests.test_linear_gine_aggregation_has_no_nonlinear_edge_message) ... ok
+test_mpc_transport_penalty_observes_inserted_bypass (test_task_plants.TaskPlantTests.test_mpc_transport_penalty_observes_inserted_bypass) ... ok
+test_nominal_designated_trajectory_matches_native_blocks (test_task_plants.TaskPlantTests.test_nominal_designated_trajectory_matches_native_blocks) ... ok
+test_observed_predicted_and_replayed_site_histories_match (test_task_plants.TaskPlantTests.test_observed_predicted_and_replayed_site_histories_match) ... ok
+test_protein_factory_requires_weighted_kernel_and_uses_sigmoid_task (test_task_plants.TaskPlantTests.test_protein_factory_requires_weighted_kernel_and_uses_sigmoid_task) ... ok
+test_roman_has_separate_trainable_ego_and_neighbour_maps (test_task_plants.TaskPlantTests.test_roman_has_separate_trainable_ego_and_neighbour_maps) ... ok
+test_runtime_sensor_factory_preserves_designated_nominal_baselines (test_task_plants.TaskPlantTests.test_runtime_sensor_factory_preserves_designated_nominal_baselines) ... ok
+test_site_accounting_model_and_sealed_config_agree (test_task_plants.TaskPlantTests.test_site_accounting_model_and_sealed_config_agree) ... ok
+test_site_aware_checkpoint_segments_preserve_gradients (test_task_plants.TaskPlantTests.test_site_aware_checkpoint_segments_preserve_gradients) ... ok
+test_weighted_random_walk_and_symmetric_similarity (test_task_plants.TaskPlantTests.test_weighted_random_walk_and_symmetric_similarity) ... ok
+test_complete_graph_training_and_audit_never_copy_the_union (test_task_training.TaskTrainingTests.test_complete_graph_training_and_audit_never_copy_the_union) ... ok
+test_forbidden_graph_labels_cannot_change_checkpoint (test_task_training.TaskTrainingTests.test_forbidden_graph_labels_cannot_change_checkpoint) ... ok
+test_graph_training_epoch_boundary_resume_is_exact (test_task_training.TaskTrainingTests.test_graph_training_epoch_boundary_resume_is_exact) ... ok
+test_multilabel_node_training_records_bce_and_rocauc (test_task_training.TaskTrainingTests.test_multilabel_node_training_records_bce_and_rocauc) ... ok
+test_peptides_checkpoint_rule_uses_ap_then_bce (test_task_training.TaskTrainingTests.test_peptides_checkpoint_rule_uses_ap_then_bce) ... ok
+test_all_seven_task_definitions_and_synthetic_cardinality (test_tasks.TaskMathTests.test_all_seven_task_definitions_and_synthetic_cardinality) ... ok
+test_complete_multiclass_loss_preserves_original_ce (test_tasks.TaskMathTests.test_complete_multiclass_loss_preserves_original_ce) ... ok
+test_macro_f1_declared_universe_and_weights_match_reference (test_tasks.TaskMathTests.test_macro_f1_declared_universe_and_weights_match_reference) ... ok
+test_multilabel_confidence_is_bernoulli_not_categorical (test_tasks.TaskMathTests.test_multilabel_confidence_is_bernoulli_not_categorical) ... ok
+test_multilabel_sigmoid_does_not_normalize_across_tasks (test_tasks.TaskMathTests.test_multilabel_sigmoid_does_not_normalize_across_tasks) ... ok
+test_numeric_task_import_never_imports_torch (test_tasks.TaskMathTests.test_numeric_task_import_never_imports_torch) ... ok
+test_rank_metrics_ties_missing_tasks_and_bootstrap_multiplicities (test_tasks.TaskMathTests.test_rank_metrics_ties_missing_tasks_and_bootstrap_multiplicities) ... ok
+test_tensor_and_numeric_losses_agree_and_missing_gradients_are_zero (test_tasks.TaskMathTests.test_tensor_and_numeric_losses_agree_and_missing_gradients_are_zero) ... ok
+test_changing_forbidden_labels_cannot_change_checkpoint_weights (test_training_guardrails.TrainingGuardrailTests.test_changing_forbidden_labels_cannot_change_checkpoint_weights) ... ok
+test_checkpointed_segments_preserve_outputs_and_gradients (test_training_guardrails.TrainingGuardrailTests.test_checkpointed_segments_preserve_outputs_and_gradients) ... ok
+test_model_architecture_uses_metadata_without_any_label_read (test_training_guardrails.TrainingGuardrailTests.test_model_architecture_uses_metadata_without_any_label_read) ... ok
+test_safe_boundary_resume_matches_uninterrupted_training (test_training_guardrails.TrainingGuardrailTests.test_safe_boundary_resume_matches_uninterrupted_training) ... ok
+test_training_never_reads_admission_or_test_labels (test_training_guardrails.TrainingGuardrailTests.test_training_never_reads_admission_or_test_labels) ... ok
+
+----------------------------------------------------------------------
+Ran 346 tests in 24.410s
+
+OK (skipped=1)

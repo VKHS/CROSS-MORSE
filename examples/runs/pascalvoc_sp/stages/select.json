@@ -1,0 +1,250 @@
+{
+  "config_sha256": "922018f810bb925df20d0e43ee887ae74ac6cc321b45fb3402246d3945c12563",
+  "label_accesses": [
+    {
+      "nodes": 80,
+      "role": "explore",
+      "stage": "select"
+    },
+    {
+      "nodes": 80,
+      "role": "explore",
+      "stage": "select"
+    },
+    {
+      "nodes": 80,
+      "role": "explore",
+      "stage": "select"
+    },
+    {
+      "nodes": 80,
+      "role": "explore",
+      "stage": "select"
+    },
+    {
+      "nodes": 80,
+      "role": "explore",
+      "stage": "select"
+    },
+    {
+      "nodes": 80,
+      "role": "explore",
+      "stage": "select"
+    },
+    {
+      "nodes": 80,
+      "role": "explore",
+      "stage": "select"
+    },
+    {
+      "nodes": 80,
+      "role": "explore",
+      "stage": "select"
+    },
+    {
+      "nodes": 40,
+      "role": "select",
+      "stage": "select"
+    },
+    {
+      "nodes": 40,
+      "role": "select",
+      "stage": "select"
+    },
+    {
+      "nodes": 40,
+      "role": "select",
+      "stage": "select"
+    },
+    {
+      "nodes": 40,
+      "role": "select",
+      "stage": "select"
+    },
+    {
+      "nodes": 40,
+      "role": "select",
+      "stage": "select"
+    },
+    {
+      "nodes": 40,
+      "role": "select",
+      "stage": "select"
+    },
+    {
+      "nodes": 40,
+      "role": "select",
+      "stage": "select"
+    },
+    {
+      "nodes": 40,
+      "role": "select",
+      "stage": "select"
+    },
+    {
+      "nodes": 40,
+      "role": "select",
+      "stage": "select"
+    },
+    {
+      "nodes": 40,
+      "role": "select",
+      "stage": "select"
+    },
+    {
+      "nodes": 40,
+      "role": "select",
+      "stage": "select"
+    },
+    {
+      "nodes": 40,
+      "role": "select",
+      "stage": "select"
+    },
+    {
+      "nodes": 40,
+      "role": "select",
+      "stage": "select"
+    },
+    {
+      "nodes": 40,
+      "role": "select",
+      "stage": "select"
+    },
+    {
+      "nodes": 40,
+      "role": "select",
+      "stage": "select"
+    },
+    {
+      "nodes": 40,
+      "role": "select",
+      "stage": "select"
+    },
+    {
+      "nodes": 40,
+      "role": "select",
+      "stage": "select"
+    },
+    {
+      "nodes": 40,
+      "role": "select",
+      "stage": "select"
+    },
+    {
+      "nodes": 40,
+      "role": "select",
+      "stage": "select"
+    },
+    {
+      "nodes": 40,
+      "role": "select",
+      "stage": "select"
+    },
+    {
+      "nodes": 40,
+      "role": "select",
+      "stage": "select"
+    },
+    {
+      "nodes": 40,
+      "role": "select",
+      "stage": "select"
+    },
+    {
+      "nodes": 40,
+      "role": "select",
+      "stage": "select"
+    },
+    {
+      "nodes": 40,
+      "role": "select",
+      "stage": "select"
+    },
+    {
+      "nodes": 40,
+      "role": "select",
+      "stage": "select"
+    },
+    {
+      "nodes": 40,
+      "role": "select",
+      "stage": "select"
+    },
+    {
+      "nodes": 40,
+      "role": "select",
+      "stage": "select"
+    },
+    {
+      "nodes": 40,
+      "role": "select",
+      "stage": "select"
+    },
+    {
+      "nodes": 40,
+      "role": "select",
+      "stage": "select"
+    },
+    {
+      "nodes": 40,
+      "role": "select",
+      "stage": "select"
+    },
+    {
+      "nodes": 40,
+      "role": "select",
+      "stage": "select"
+    },
+    {
+      "nodes": 40,
+      "role": "select",
+      "stage": "select"
+    },
+    {
+      "nodes": 40,
+      "role": "select",
+      "stage": "select"
+    },
+    {
+      "nodes": 40,
+      "role": "select",
+      "stage": "select"
+    },
+    {
+      "nodes": 40,
+      "role": "select",
+      "stage": "select"
+    },
+    {
+      "nodes": 40,
+      "role": "select",
+      "stage": "select"
+    },
+    {
+      "nodes": 40,
+      "role": "select",
+      "stage": "select"
+    },
+    {
+      "nodes": 40,
+      "role": "select",
+      "stage": "select"
+    },
+    {
+      "nodes": 40,
+      "role": "select",
+      "stage": "select"
+    },
+    {
+      "nodes": 40,
+      "role": "select",
+      "stage": "select"
+    }
+  ],
+  "manifest_sha256": "16c1e298a756153babdaab373651ce7f7095a92ddf18fc8d01facaedaf5fa927",
+  "seconds_this_attempt": 52.18513570799996,
+  "source_sha256": "9e0154c11c0ebc67d533a84b6d6a80c4e77a8d76e6d2cc165bcff5897980b108",
+  "stage": "select",
+  "status": "COMPLETE"
+}

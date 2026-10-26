@@ -1,0 +1,4501 @@
+{
+  "_provenance": {
+    "title": "CROSS-MORSE: Cross-Spectral Control of Message Passing in Frozen Graph Neural Networks",
+    "authors": [
+      "Abdolvahab Khalili Sadaghiani",
+      "Jose Nunez-Yanez"
+    ],
+    "affiliation": "Linköping University, Linköping, Sweden",
+    "venue": "Scientific Reports manuscript",
+    "main_text_pages": 20,
+    "supplementary_pages": 39,
+    "repository": "https://github.com/vkhs/CROSS-MORSE",
+    "transcription_date": "2026-10-24",
+    "transcription_rule": "Values are transcribed at the precision printed in the supplied PDFs. They are author-reported measurements, reported derived quantities, or analytical sensitivities as classified in paper/sources.json. They are not new benchmark measurements from the bundled software-validation runs.",
+    "scope": "Curated numerical tables and quantitative claims from the supplied manuscript and supplementary information; not a claim to transcribe every number or raw observation.",
+    "units": "losses in nats (CE or mean multilabel BCE); official metrics in percentage points except where a table states native AP; costs in units of one nominal full-depth execution; GPU-hours on one NVIDIA GH200 96 GB",
+    "negative_is_better": "paired loss effects q_D minus q_C; negative favours the deployed rule",
+    "source_index": "paper/sources.json",
+    "source_precedence": "The 20-page main manuscript determines the interpretation of main results; supplementary tables retain their printed values and explicit caveats. Sources are identified by PDF SHA-256, not inferred publication status.",
+    "compatibility_note": "paired_CE_change_range_nats is a retained machine key for the reported CE-or-mean-BCE paired-loss range; it is not restricted to CE."
+  },
+  "abstract_and_section_claims": {
+    "paired_CE_change_range_nats": [
+      0.0,
+      -0.00905
+    ],
+    "official_metric_gain_max_points": 0.65,
+    "expected_overhead_pct_range": [
+      15,
+      33
+    ],
+    "millinats_per_nominal_execution_of_added_work": [
+      3.5,
+      7.3
+    ],
+    "assurance_cost_pct_range": [
+      118,
+      135
+    ],
+    "one_off_qualification_GPU_h": [
+      1.4,
+      2.3
+    ],
+    "qualification_share_of_plant_training": 0.18,
+    "exploration_budget_trajectories": [
+      9600,
+      32000
+    ],
+    "labelled_development_data": "40% of the official training labels plus the admission split",
+    "feedback_vs_plan_once_improvement_nats": [
+      0.0065,
+      0.0096
+    ]
+  },
+  "main_table_1_policy_and_deployment_ledger": {
+    "ogbn-arxiv": {
+      "qC_identity": "fixed sequence",
+      "qC_E": 4,
+      "provisional": "radius/4",
+      "confirmation": "state and radius pass; MPC-RH within epsilon_eq of radius at selection",
+      "G_admit": 1,
+      "admission_criterion": "descriptive, 32 buffered cores",
+      "admission_D_bar": -0.0046,
+      "admission_U_desc": -0.0008,
+      "admission_U_a": null,
+      "admission_J": null,
+      "input_fallback_fraction": 0.12,
+      "official_gain_pp": 0.07,
+      "official_gain_interval_pp": [
+        0.01,
+        0.13
+      ],
+      "official_metric": "accuracy",
+      "loss_effect_nats": -0.0045,
+      "loss_effect_interval_nats": [
+        -0.0075,
+        -0.0015
+      ],
+      "loss_name": "CE",
+      "scope": "admitted",
+      "deployed_rule": "radius",
+      "deployed_E": 4
+    },
+    "ogbn-proteins": {
+      "qC_identity": "learned stop / fixed sequence (one rule chosen by the outer-fold criterion; the results record names it, Table S35 R18)",
+      "qC_E": 4,
+      "provisional": "radius/4",
+      "confirmation": "state and radius pass; MPC-RH within epsilon_eq of radius at selection",
+      "G_admit": 1,
+      "admission_criterion": "descriptive, 32 buffered cores",
+      "admission_D_bar": -0.0039,
+      "admission_U_desc": -0.0007,
+      "admission_U_a": null,
+      "admission_J": null,
+      "input_fallback_fraction": 0.15,
+      "official_gain_pp": 0.11,
+      "official_gain_interval_pp": [
+        0.03,
+        0.19
+      ],
+      "official_metric": "ROC-AUC",
+      "loss_effect_nats": -0.0038,
+      "loss_effect_interval_nats": [
+        -0.0068,
+        -0.0008
+      ],
+      "loss_name": "BCE",
+      "scope": "admitted",
+      "deployed_rule": "radius",
+      "deployed_E": 4
+    },
+    "ogbn-products": {
+      "qC_identity": "phase, boundaries 8/32",
+      "qC_E": 2,
+      "provisional": "same phase",
+      "confirmation": "no feedback label: state destruction shows no detectable change (P = 0.42 against zero); return qC",
+      "G_admit": 0,
+      "admission_criterion": "not evaluated (Q_s empty)",
+      "admission_D_bar": null,
+      "admission_U_desc": null,
+      "admission_U_a": null,
+      "admission_J": null,
+      "input_fallback_fraction": null,
+      "official_gain_pp": 0.0,
+      "official_gain_interval_pp": null,
+      "official_metric": "accuracy",
+      "loss_effect_nats": 0.0,
+      "loss_effect_interval_nats": null,
+      "loss_name": "CE",
+      "scope": "comparator regime (exactly zero effect by construction)",
+      "deployed_rule": "qC returned",
+      "deployed_E": 2
+    },
+    "Roman-empire": {
+      "qC_identity": "MPC-OL, H = 8",
+      "qC_E": 4,
+      "provisional": "MPC-RH/4",
+      "confirmation": "RH minus OL -0.00649; pass",
+      "G_admit": 1,
+      "admission_criterion": "descriptive, ten official splits",
+      "admission_D_bar": -0.0064,
+      "admission_U_desc": -0.0033,
+      "admission_U_a": null,
+      "admission_J": null,
+      "input_fallback_fraction": 0.129,
+      "official_gain_pp": 0.26,
+      "official_gain_interval_pp": [
+        0.1,
+        0.42
+      ],
+      "official_metric": "accuracy",
+      "loss_effect_nats": -0.00572,
+      "loss_effect_interval_nats": [
+        -0.00889,
+        -0.00255
+      ],
+      "loss_name": "CE",
+      "scope": "admitted",
+      "deployed_rule": "MPC-RH",
+      "deployed_E": 4
+    },
+    "PascalVOC-SP": {
+      "qC_identity": "MPC-OL, H = 16",
+      "qC_E": 8,
+      "provisional": "MPC-RH/8",
+      "confirmation": "RH minus OL -0.00902; pass (validation split under the submitted protocol)",
+      "G_admit": 1,
+      "admission_criterion": "submitted protocol: J = 1428, U_a descriptive; E10 estimated label-retention probability 0.85; formal coverage additionally requires independent admission",
+      "admission_D_bar": -0.00836,
+      "admission_U_desc": null,
+      "admission_U_a": -0.00578,
+      "admission_J": 1428,
+      "input_fallback_fraction": 0.081,
+      "official_gain_pp": 0.6,
+      "official_gain_interval_pp": [
+        0.38,
+        0.82
+      ],
+      "official_metric": "macro F1",
+      "loss_effect_nats": -0.00842,
+      "loss_effect_interval_nats": [
+        -0.01278,
+        -0.00406
+      ],
+      "loss_name": "CE",
+      "scope": "admitted (descriptive under the submitted protocol)",
+      "deployed_rule": "MPC-RH",
+      "deployed_E": 8
+    },
+    "COCO-SP": {
+      "qC_identity": "MPC-OL, H = 16",
+      "qC_E": 8,
+      "provisional": "MPC-RH/8",
+      "confirmation": "RH minus OL -0.00962; pass (validation split under the submitted protocol)",
+      "G_admit": 1,
+      "admission_criterion": "submitted protocol: J = 5000, U_a descriptive; E10 estimated label-retention probability > 0.99",
+      "admission_D_bar": -0.00901,
+      "admission_U_desc": null,
+      "admission_U_a": -0.00792,
+      "admission_J": 5000,
+      "input_fallback_fraction": 0.071,
+      "official_gain_pp": 0.65,
+      "official_gain_interval_pp": [
+        0.42,
+        0.88
+      ],
+      "official_metric": "macro F1",
+      "loss_effect_nats": -0.00905,
+      "loss_effect_interval_nats": [
+        -0.01268,
+        -0.00542
+      ],
+      "loss_name": "CE",
+      "scope": "admitted (descriptive under the submitted protocol)",
+      "deployed_rule": "MPC-RH",
+      "deployed_E": 8
+    },
+    "Peptides-func": {
+      "qC_identity": "fixed sequence",
+      "qC_E": 4,
+      "provisional": "radius/4",
+      "confirmation": "radius in 4/5 confirmation folds; qC in 1/5 (validation split under the submitted protocol)",
+      "G_admit": 1,
+      "admission_criterion": "submitted protocol: J = 2331, U_a descriptive; E10 estimated label-retention probability 0.36, otherwise qC",
+      "admission_D_bar": -0.00311,
+      "admission_U_desc": null,
+      "admission_U_a": -0.00154,
+      "admission_J": 2331,
+      "input_fallback_fraction": 0.188,
+      "official_gain_pp": 0.58,
+      "official_gain_interval_pp": [
+        0.09,
+        1.07
+      ],
+      "official_metric": "AP",
+      "loss_effect_nats": -0.00303,
+      "loss_effect_interval_nats": [
+        -0.00474,
+        -0.00132
+      ],
+      "loss_name": "BCE",
+      "scope": "boundary; descriptive admission under the reported protocol; the analytical confirmation-split sensitivity has label-retention probability 0.36 and otherwise returns qC",
+      "deployed_rule": "radius",
+      "deployed_E": 4,
+      "official_gain_native": 0.0058,
+      "official_gain_native_interval": [
+        0.0009,
+        0.0107
+      ],
+      "note": "The manuscript prints the Peptides official gain as +0.0058 AP [0.0009, 0.0107] in native AP units; this registry stores it in AP percentage points (0.58 pp [0.09, 1.07])."
+    },
+    "_note": "admission_D_bar for PascalVOC-SP, COCO-SP and Peptides-func is the clipped mean D_bar of Supplementary Table S13 (Table 1 prints only J and U_a for those rows); admission_U_desc is printed in Table 1 for the single-graph benchmarks only"
+  },
+  "main_table_2_gain_and_cost_ledger": {
+    "ogbn-arxiv": {
+      "C_qC": 4.0,
+      "C_expected": 4.62,
+      "expected_overhead_pct": 15,
+      "C_099": 4.8,
+      "C_099_range": [
+        4.7,
+        4.8
+      ],
+      "C_099_overhead_pct": 19,
+      "C_assure": 8.7,
+      "assure_overhead_pct": 118,
+      "lambda_star_mnats": 7.29,
+      "lambda_star_range": [
+        2.4,
+        12.2
+      ],
+      "lambda_star_metric_rate": 0.11,
+      "M_star_t_nom_thousand_input_seconds": 112
+    },
+    "ogbn-proteins": {
+      "C_qC": 4.0,
+      "C_expected": 4.68,
+      "expected_overhead_pct": 17,
+      "C_099": 6.9,
+      "C_099_range": [
+        5.8,
+        8.4
+      ],
+      "C_099_overhead_pct": 72,
+      "C_assure": 8.8,
+      "assure_overhead_pct": 120,
+      "lambda_star_mnats": 5.57,
+      "lambda_star_range": [
+        1.2,
+        10.0
+      ],
+      "lambda_star_metric_rate": 0.16,
+      "M_star_t_nom_thousand_input_seconds": 106
+    },
+    "ogbn-products": {
+      "C_qC": 2.1,
+      "C_expected": 2.1,
+      "expected_overhead_pct": 0,
+      "C_099": null,
+      "C_099_range": null,
+      "C_099_overhead_pct": null,
+      "C_assure": 2.1,
+      "assure_overhead_pct": 0,
+      "lambda_star_mnats": null,
+      "lambda_star_range": null,
+      "lambda_star_metric_rate": null,
+      "M_star_t_nom_thousand_input_seconds": null
+    },
+    "Roman-empire": {
+      "C_qC": 4.0,
+      "C_expected": 5.22,
+      "expected_overhead_pct": 30,
+      "C_099": 5.4,
+      "C_099_range": [
+        5.4,
+        5.4
+      ],
+      "C_099_overhead_pct": 36,
+      "C_assure": 9.4,
+      "assure_overhead_pct": 135,
+      "lambda_star_mnats": 4.69,
+      "lambda_star_range": [
+        2.1,
+        7.3
+      ],
+      "lambda_star_metric_rate": 0.21,
+      "M_star_t_nom_thousand_input_seconds": 41
+    },
+    "PascalVOC-SP": {
+      "C_qC": 8.0,
+      "C_expected": 10.3,
+      "expected_overhead_pct": 29,
+      "C_099": 11.0,
+      "C_099_range": [
+        10.7,
+        11.3
+      ],
+      "C_099_overhead_pct": 37,
+      "C_assure": 18.5,
+      "assure_overhead_pct": 131,
+      "lambda_star_mnats": 3.66,
+      "lambda_star_range": [
+        1.8,
+        5.6
+      ],
+      "lambda_star_metric_rate": 0.26,
+      "M_star_t_nom_thousand_input_seconds": 25
+    },
+    "COCO-SP": {
+      "C_qC": 8.0,
+      "C_expected": 10.6,
+      "expected_overhead_pct": 33,
+      "C_099": 11.3,
+      "C_099_range": [
+        11.0,
+        11.6
+      ],
+      "C_099_overhead_pct": 41,
+      "C_assure": 18.8,
+      "assure_overhead_pct": 135,
+      "lambda_star_mnats": 3.48,
+      "lambda_star_range": [
+        2.1,
+        4.9
+      ],
+      "lambda_star_metric_rate": 0.25,
+      "M_star_t_nom_thousand_input_seconds": 25
+    },
+    "Peptides-func": {
+      "C_qC": 4.0,
+      "C_expected": 4.73,
+      "expected_overhead_pct": 18,
+      "C_099": 5.0,
+      "C_099_range": [
+        4.9,
+        5.1
+      ],
+      "C_099_overhead_pct": 25,
+      "C_assure": 8.9,
+      "assure_overhead_pct": 123,
+      "lambda_star_mnats": 4.15,
+      "lambda_star_range": [
+        1.8,
+        6.5
+      ],
+      "lambda_star_metric_rate": 0.79,
+      "M_star_t_nom_thousand_input_seconds": 83
+    }
+  },
+  "supplementary_table_S4_target_qualification": {
+    "ogbn-arxiv": {
+      "Delta_plant_hat": -0.018,
+      "U_Delta_plant": -0.012,
+      "PDD_pp": 0.24,
+      "DIL_gap_nats": 0.01,
+      "phi_registry": 0.89,
+      "selected_strata": 1.0,
+      "U_Delta_oracle": -0.005,
+      "decision": "pass"
+    },
+    "ogbn-proteins": {
+      "Delta_plant_hat": -0.014,
+      "U_Delta_plant": -0.009,
+      "PDD_pp": 0.31,
+      "DIL_gap_nats": 0.012,
+      "phi_registry": 0.87,
+      "selected_strata": 1.0,
+      "U_Delta_oracle": -0.0045,
+      "decision": "pass"
+    },
+    "ogbn-products": {
+      "Delta_plant_hat": -0.01,
+      "U_Delta_plant": -0.006,
+      "PDD_pp": 0.18,
+      "DIL_gap_nats": 0.007,
+      "phi_registry": 0.92,
+      "selected_strata": 1.0,
+      "U_Delta_oracle": -0.0032,
+      "decision": "pass"
+    },
+    "Roman-empire": {
+      "Delta_plant_hat": -0.024,
+      "U_Delta_plant": -0.015,
+      "PDD_pp": 0.58,
+      "DIL_gap_nats": 0.015,
+      "phi_registry": 0.84,
+      "selected_strata": 1.0,
+      "U_Delta_oracle": -0.021,
+      "decision": "pass"
+    },
+    "PascalVOC-SP": {
+      "Delta_plant_hat": -0.021,
+      "U_Delta_plant": -0.014,
+      "PDD_pp": 0.72,
+      "DIL_gap_nats": 0.018,
+      "phi_registry": 0.86,
+      "selected_strata": 1.0,
+      "U_Delta_oracle": -0.026,
+      "decision": "pass"
+    },
+    "COCO-SP": {
+      "Delta_plant_hat": -0.019,
+      "U_Delta_plant": -0.013,
+      "PDD_pp": 0.78,
+      "DIL_gap_nats": 0.019,
+      "phi_registry": 0.85,
+      "selected_strata": 1.0,
+      "U_Delta_oracle": -0.023,
+      "decision": "pass"
+    },
+    "Peptides-func": {
+      "Delta_plant_hat": -0.011,
+      "U_Delta_plant": -0.006,
+      "PDD_pp": 0.44,
+      "DIL_gap_nats": 0.014,
+      "phi_registry": 0.81,
+      "selected_strata": 1.0,
+      "U_Delta_oracle": -0.0035,
+      "decision": "boundary pass"
+    }
+  },
+  "supplementary_table_S6c_sensing_cost_identity": {
+    "ogbn-arxiv": {
+      "r": 0.013,
+      "measured_multiplier_m": 1.175,
+      "full_state_sensing_share_8r_over_1_plus_r": 0.106,
+      "at_P_s_2": 0.053,
+      "residual": 0.069,
+      "admissible_k_over_d_per_P_s": 1.0,
+      "sensor": "full-state sensing admitted"
+    },
+    "ogbn-proteins": {
+      "r": 0.583,
+      "measured_multiplier_m": 1.2,
+      "full_state_sensing_share_8r_over_1_plus_r": 2.946,
+      "at_P_s_2": 1.473,
+      "residual": -2.746,
+      "admissible_k_over_d_per_P_s": 0.068,
+      "sensor": "reduced sensor required; executed (k, P_s, f_res) not tabulated (E17)"
+    },
+    "Roman-empire": {
+      "r": 0.004,
+      "measured_multiplier_m": 1.35,
+      "full_state_sensing_share_8r_over_1_plus_r": 0.03,
+      "at_P_s_2": 0.015,
+      "residual": 0.32,
+      "admissible_k_over_d_per_P_s": 1.0,
+      "sensor": "full-state sensing admitted"
+    },
+    "PascalVOC-SP": {
+      "r": 0.044,
+      "measured_multiplier_m": 1.312,
+      "full_state_sensing_share_8r_over_1_plus_r": 0.338,
+      "at_P_s_2": 0.169,
+      "residual": -0.026,
+      "admissible_k_over_d_per_P_s": 0.923,
+      "sensor": "reduced sensor required; executed (k, P_s, f_res) not tabulated (E17)"
+    },
+    "COCO-SP": {
+      "r": 0.044,
+      "measured_multiplier_m": 1.35,
+      "full_state_sensing_share_8r_over_1_plus_r": 0.338,
+      "at_P_s_2": 0.169,
+      "residual": 0.012,
+      "admissible_k_over_d_per_P_s": 1.0,
+      "sensor": "full-state sensing admitted"
+    },
+    "Peptides-func": {
+      "r": 0.016,
+      "measured_multiplier_m": 1.225,
+      "full_state_sensing_share_8r_over_1_plus_r": 0.125,
+      "at_P_s_2": 0.063,
+      "residual": 0.1,
+      "admissible_k_over_d_per_P_s": 1.0,
+      "sensor": "full-state sensing admitted"
+    }
+  },
+  "supplementary_table_S12_selection_ledger": {
+    "ogbn-arxiv": [
+      {
+        "route": "qC",
+        "E": 4,
+        "profile": "Lean",
+        "Delta_s_hat": 0.0,
+        "L_s": 0.0,
+        "U_s": 0.0,
+        "rank": 0,
+        "selected": false,
+        "confirmation_output": null
+      },
+      {
+        "route": "best-depth",
+        "E": 4,
+        "profile": "Lean",
+        "Delta_s_hat": -0.00071,
+        "L_s": -0.00195,
+        "U_s": 0.00053,
+        "rank": 1,
+        "selected": false,
+        "confirmation_output": null
+      },
+      {
+        "route": "learned-stop",
+        "E": 4,
+        "profile": "Lean",
+        "Delta_s_hat": -0.00103,
+        "L_s": -0.00231,
+        "U_s": 0.00025,
+        "rank": 2,
+        "selected": false,
+        "confirmation_output": null
+      },
+      {
+        "route": "phase",
+        "E": 4,
+        "profile": "Lean",
+        "Delta_s_hat": -0.00141,
+        "L_s": -0.00274,
+        "U_s": -8e-05,
+        "rank": 3,
+        "selected": false,
+        "confirmation_output": null
+      },
+      {
+        "route": "fixed-sequence",
+        "E": 4,
+        "profile": "Lean",
+        "Delta_s_hat": -0.00229,
+        "L_s": -0.00359,
+        "U_s": -0.00099,
+        "rank": 4,
+        "selected": false,
+        "confirmation_output": null
+      },
+      {
+        "route": "MPC-OL",
+        "E": 4,
+        "profile": "Lean",
+        "Delta_s_hat": -0.00318,
+        "L_s": -0.00451,
+        "U_s": -0.00185,
+        "rank": 5,
+        "selected": false,
+        "confirmation_output": null
+      },
+      {
+        "route": "one-step",
+        "E": 4,
+        "profile": "Lean",
+        "Delta_s_hat": -0.00269,
+        "L_s": -0.00395,
+        "U_s": -0.00143,
+        "rank": 6,
+        "selected": false,
+        "confirmation_output": null
+      },
+      {
+        "route": "radius",
+        "E": 4,
+        "profile": "Full",
+        "Delta_s_hat": -0.00463,
+        "L_s": -0.00588,
+        "U_s": -0.00338,
+        "rank": 7,
+        "selected": true,
+        "confirmation_output": "radius, E=4"
+      },
+      {
+        "route": "MPC-RH",
+        "E": 4,
+        "profile": "Full",
+        "Delta_s_hat": -0.00447,
+        "L_s": -0.00577,
+        "U_s": -0.00317,
+        "rank": 8,
+        "selected": false,
+        "confirmation_output": null
+      }
+    ],
+    "ogbn-proteins": [
+      {
+        "route": "qC",
+        "E": 4,
+        "profile": "Lean",
+        "Delta_s_hat": 0.0,
+        "L_s": 0.0,
+        "U_s": 0.0,
+        "rank": 0,
+        "selected": false,
+        "confirmation_output": null
+      },
+      {
+        "route": "best-depth",
+        "E": 4,
+        "profile": "Lean",
+        "Delta_s_hat": -0.0006,
+        "L_s": -0.00186,
+        "U_s": 0.00066,
+        "rank": 1,
+        "selected": false,
+        "confirmation_output": null
+      },
+      {
+        "route": "learned-stop",
+        "E": 4,
+        "profile": "Lean",
+        "Delta_s_hat": -0.00089,
+        "L_s": -0.00217,
+        "U_s": 0.00039,
+        "rank": 2,
+        "selected": false,
+        "confirmation_output": null
+      },
+      {
+        "route": "phase",
+        "E": 4,
+        "profile": "Lean",
+        "Delta_s_hat": -0.00121,
+        "L_s": -0.00251,
+        "U_s": 9e-05,
+        "rank": 3,
+        "selected": false,
+        "confirmation_output": null
+      },
+      {
+        "route": "fixed-sequence",
+        "E": 4,
+        "profile": "Lean",
+        "Delta_s_hat": -0.00204,
+        "L_s": -0.0033,
+        "U_s": -0.00078,
+        "rank": 4,
+        "selected": false,
+        "confirmation_output": null
+      },
+      {
+        "route": "MPC-OL",
+        "E": 4,
+        "profile": "Lean",
+        "Delta_s_hat": -0.00281,
+        "L_s": -0.00413,
+        "U_s": -0.00149,
+        "rank": 5,
+        "selected": false,
+        "confirmation_output": null
+      },
+      {
+        "route": "one-step",
+        "E": 4,
+        "profile": "Lean",
+        "Delta_s_hat": -0.00227,
+        "L_s": -0.00357,
+        "U_s": -0.00097,
+        "rank": 6,
+        "selected": false,
+        "confirmation_output": null
+      },
+      {
+        "route": "radius",
+        "E": 4,
+        "profile": "Full",
+        "Delta_s_hat": -0.00391,
+        "L_s": -0.00518,
+        "U_s": -0.00264,
+        "rank": 7,
+        "selected": true,
+        "confirmation_output": "radius, E=4"
+      },
+      {
+        "route": "MPC-RH",
+        "E": 4,
+        "profile": "Full",
+        "Delta_s_hat": -0.00372,
+        "L_s": -0.00504,
+        "U_s": -0.0024,
+        "rank": 8,
+        "selected": false,
+        "confirmation_output": null
+      }
+    ],
+    "ogbn-products": [
+      {
+        "route": "qC",
+        "E": 2,
+        "profile": "Lean",
+        "Delta_s_hat": 0.0,
+        "L_s": 0.0,
+        "U_s": 0.0,
+        "rank": 0,
+        "selected": true,
+        "confirmation_output": "qC / optimized phase"
+      },
+      {
+        "route": "best-depth",
+        "E": 2,
+        "profile": "Lean",
+        "Delta_s_hat": 0.00124,
+        "L_s": 6e-05,
+        "U_s": 0.00242,
+        "rank": 1,
+        "selected": false,
+        "confirmation_output": null
+      },
+      {
+        "route": "learned-stop",
+        "E": 2,
+        "profile": "Lean",
+        "Delta_s_hat": 0.00154,
+        "L_s": 0.00031,
+        "U_s": 0.00277,
+        "rank": 2,
+        "selected": false,
+        "confirmation_output": null
+      },
+      {
+        "route": "phase",
+        "E": 2,
+        "profile": "Lean",
+        "Delta_s_hat": 0.00183,
+        "L_s": 0.00061,
+        "U_s": 0.00305,
+        "rank": 3,
+        "selected": false,
+        "confirmation_output": null
+      },
+      {
+        "route": "fixed-sequence",
+        "E": 2,
+        "profile": "Lean",
+        "Delta_s_hat": 0.00218,
+        "L_s": 0.00091,
+        "U_s": 0.00345,
+        "rank": 4,
+        "selected": false,
+        "confirmation_output": null
+      },
+      {
+        "route": "MPC-OL",
+        "E": 2,
+        "profile": "Lean",
+        "Delta_s_hat": 0.00247,
+        "L_s": 0.00118,
+        "U_s": 0.00376,
+        "rank": 5,
+        "selected": false,
+        "confirmation_output": null
+      },
+      {
+        "route": "one-step",
+        "E": 2,
+        "profile": "Lean",
+        "Delta_s_hat": 0.00273,
+        "L_s": 0.00143,
+        "U_s": 0.00403,
+        "rank": 6,
+        "selected": false,
+        "confirmation_output": null
+      },
+      {
+        "route": "radius",
+        "E": 2,
+        "profile": "Full",
+        "Delta_s_hat": 0.00307,
+        "L_s": 0.00174,
+        "U_s": 0.0044,
+        "rank": 7,
+        "selected": false,
+        "confirmation_output": null
+      },
+      {
+        "route": "MPC-RH",
+        "E": 2,
+        "profile": "Full",
+        "Delta_s_hat": 0.00336,
+        "L_s": 0.002,
+        "U_s": 0.00472,
+        "rank": 8,
+        "selected": false,
+        "confirmation_output": null
+      }
+    ],
+    "Roman-empire": [
+      {
+        "route": "qC",
+        "E": 4,
+        "profile": "Lean",
+        "Delta_s_hat": 0.0,
+        "L_s": 0.0,
+        "U_s": 0.0,
+        "rank": 0,
+        "selected": false,
+        "confirmation_output": null
+      },
+      {
+        "route": "best-depth",
+        "E": 4,
+        "profile": "Lean",
+        "Delta_s_hat": -0.00102,
+        "L_s": -0.00231,
+        "U_s": 0.00027,
+        "rank": 1,
+        "selected": false,
+        "confirmation_output": null
+      },
+      {
+        "route": "learned-stop",
+        "E": 4,
+        "profile": "Lean",
+        "Delta_s_hat": -0.0015,
+        "L_s": -0.00283,
+        "U_s": -0.00017,
+        "rank": 2,
+        "selected": false,
+        "confirmation_output": null
+      },
+      {
+        "route": "phase",
+        "E": 4,
+        "profile": "Lean",
+        "Delta_s_hat": -0.00208,
+        "L_s": -0.00344,
+        "U_s": -0.00072,
+        "rank": 3,
+        "selected": false,
+        "confirmation_output": null
+      },
+      {
+        "route": "fixed-sequence",
+        "E": 4,
+        "profile": "Lean",
+        "Delta_s_hat": -0.00346,
+        "L_s": -0.00486,
+        "U_s": -0.00206,
+        "rank": 4,
+        "selected": false,
+        "confirmation_output": null
+      },
+      {
+        "route": "MPC-OL",
+        "E": 4,
+        "profile": "Lean",
+        "Delta_s_hat": -0.00472,
+        "L_s": -0.00618,
+        "U_s": -0.00326,
+        "rank": 5,
+        "selected": false,
+        "confirmation_output": null
+      },
+      {
+        "route": "one-step",
+        "E": 4,
+        "profile": "Lean",
+        "Delta_s_hat": -0.00388,
+        "L_s": -0.0053,
+        "U_s": -0.00246,
+        "rank": 6,
+        "selected": false,
+        "confirmation_output": null
+      },
+      {
+        "route": "radius",
+        "E": 4,
+        "profile": "Full",
+        "Delta_s_hat": -0.00539,
+        "L_s": -0.00689,
+        "U_s": -0.00389,
+        "rank": 7,
+        "selected": false,
+        "confirmation_output": null
+      },
+      {
+        "route": "MPC-RH",
+        "E": 4,
+        "profile": "Full",
+        "Delta_s_hat": -0.00664,
+        "L_s": -0.00829,
+        "U_s": -0.00499,
+        "rank": 8,
+        "selected": true,
+        "confirmation_output": "MPC-RH, E=4"
+      }
+    ],
+    "PascalVOC-SP": [
+      {
+        "route": "qC",
+        "E": 8,
+        "profile": "Lean",
+        "Delta_s_hat": 0.0,
+        "L_s": 0.0,
+        "U_s": 0.0,
+        "rank": 0,
+        "selected": false,
+        "confirmation_output": null
+      },
+      {
+        "route": "best-depth",
+        "E": 4,
+        "profile": "Lean",
+        "Delta_s_hat": -0.00131,
+        "L_s": -0.00255,
+        "U_s": -7e-05,
+        "rank": 1,
+        "selected": false,
+        "confirmation_output": null
+      },
+      {
+        "route": "learned-stop",
+        "E": 4,
+        "profile": "Lean",
+        "Delta_s_hat": -0.00205,
+        "L_s": -0.00334,
+        "U_s": -0.00076,
+        "rank": 2,
+        "selected": false,
+        "confirmation_output": null
+      },
+      {
+        "route": "phase",
+        "E": 4,
+        "profile": "Lean",
+        "Delta_s_hat": -0.00277,
+        "L_s": -0.0041,
+        "U_s": -0.00144,
+        "rank": 3,
+        "selected": false,
+        "confirmation_output": null
+      },
+      {
+        "route": "fixed-sequence",
+        "E": 4,
+        "profile": "Lean",
+        "Delta_s_hat": -0.00476,
+        "L_s": -0.00617,
+        "U_s": -0.00335,
+        "rank": 4,
+        "selected": false,
+        "confirmation_output": null
+      },
+      {
+        "route": "MPC-OL",
+        "E": 4,
+        "profile": "Lean",
+        "Delta_s_hat": -0.00656,
+        "L_s": -0.00807,
+        "U_s": -0.00505,
+        "rank": 5,
+        "selected": false,
+        "confirmation_output": null
+      },
+      {
+        "route": "one-step",
+        "E": 4,
+        "profile": "Lean",
+        "Delta_s_hat": -0.00533,
+        "L_s": -0.00677,
+        "U_s": -0.00389,
+        "rank": 6,
+        "selected": false,
+        "confirmation_output": null
+      },
+      {
+        "route": "radius",
+        "E": 4,
+        "profile": "Full",
+        "Delta_s_hat": -0.00749,
+        "L_s": -0.00903,
+        "U_s": -0.00595,
+        "rank": 7,
+        "selected": false,
+        "confirmation_output": null
+      },
+      {
+        "route": "MPC-RH",
+        "E": 8,
+        "profile": "Full",
+        "Delta_s_hat": -0.00916,
+        "L_s": -0.01152,
+        "U_s": -0.0068,
+        "rank": 8,
+        "selected": true,
+        "confirmation_output": "MPC-RH, E=8"
+      }
+    ],
+    "COCO-SP": [
+      {
+        "route": "qC",
+        "E": 8,
+        "profile": "Lean",
+        "Delta_s_hat": 0.0,
+        "L_s": 0.0,
+        "U_s": 0.0,
+        "rank": 0,
+        "selected": false,
+        "confirmation_output": null
+      },
+      {
+        "route": "best-depth",
+        "E": 4,
+        "profile": "Lean",
+        "Delta_s_hat": -0.00147,
+        "L_s": -0.00269,
+        "U_s": -0.00025,
+        "rank": 1,
+        "selected": false,
+        "confirmation_output": null
+      },
+      {
+        "route": "learned-stop",
+        "E": 4,
+        "profile": "Lean",
+        "Delta_s_hat": -0.00214,
+        "L_s": -0.0034,
+        "U_s": -0.00088,
+        "rank": 2,
+        "selected": false,
+        "confirmation_output": null
+      },
+      {
+        "route": "phase",
+        "E": 4,
+        "profile": "Lean",
+        "Delta_s_hat": -0.00293,
+        "L_s": -0.00422,
+        "U_s": -0.00164,
+        "rank": 3,
+        "selected": false,
+        "confirmation_output": null
+      },
+      {
+        "route": "fixed-sequence",
+        "E": 4,
+        "profile": "Lean",
+        "Delta_s_hat": -0.00502,
+        "L_s": -0.00636,
+        "U_s": -0.00368,
+        "rank": 4,
+        "selected": false,
+        "confirmation_output": null
+      },
+      {
+        "route": "MPC-OL",
+        "E": 4,
+        "profile": "Lean",
+        "Delta_s_hat": -0.00693,
+        "L_s": -0.00834,
+        "U_s": -0.00552,
+        "rank": 5,
+        "selected": false,
+        "confirmation_output": null
+      },
+      {
+        "route": "one-step",
+        "E": 4,
+        "profile": "Lean",
+        "Delta_s_hat": -0.00564,
+        "L_s": -0.00702,
+        "U_s": -0.00426,
+        "rank": 6,
+        "selected": false,
+        "confirmation_output": null
+      },
+      {
+        "route": "radius",
+        "E": 4,
+        "profile": "Full",
+        "Delta_s_hat": -0.00791,
+        "L_s": -0.00938,
+        "U_s": -0.00644,
+        "rank": 7,
+        "selected": false,
+        "confirmation_output": null
+      },
+      {
+        "route": "MPC-RH",
+        "E": 8,
+        "profile": "Full",
+        "Delta_s_hat": -0.00978,
+        "L_s": -0.01211,
+        "U_s": -0.00745,
+        "rank": 8,
+        "selected": true,
+        "confirmation_output": "MPC-RH, E=8"
+      }
+    ],
+    "Peptides-func": [
+      {
+        "route": "qC",
+        "E": 4,
+        "profile": "Lean",
+        "Delta_s_hat": 0.0,
+        "L_s": 0.0,
+        "U_s": 0.0,
+        "rank": 0,
+        "selected": false,
+        "confirmation_output": null
+      },
+      {
+        "route": "best-depth",
+        "E": 4,
+        "profile": "Lean",
+        "Delta_s_hat": -0.00052,
+        "L_s": -0.00174,
+        "U_s": 0.0007,
+        "rank": 1,
+        "selected": false,
+        "confirmation_output": null
+      },
+      {
+        "route": "learned-stop",
+        "E": 4,
+        "profile": "Lean",
+        "Delta_s_hat": -0.00076,
+        "L_s": -0.00203,
+        "U_s": 0.00051,
+        "rank": 2,
+        "selected": false,
+        "confirmation_output": null
+      },
+      {
+        "route": "phase",
+        "E": 4,
+        "profile": "Lean",
+        "Delta_s_hat": -0.00102,
+        "L_s": -0.00231,
+        "U_s": 0.00027,
+        "rank": 3,
+        "selected": false,
+        "confirmation_output": null
+      },
+      {
+        "route": "fixed-sequence",
+        "E": 4,
+        "profile": "Lean",
+        "Delta_s_hat": -0.00172,
+        "L_s": -0.00305,
+        "U_s": -0.00039,
+        "rank": 4,
+        "selected": false,
+        "confirmation_output": null
+      },
+      {
+        "route": "MPC-OL",
+        "E": 4,
+        "profile": "Lean",
+        "Delta_s_hat": -0.00237,
+        "L_s": -0.00376,
+        "U_s": -0.00098,
+        "rank": 5,
+        "selected": false,
+        "confirmation_output": null
+      },
+      {
+        "route": "one-step",
+        "E": 4,
+        "profile": "Lean",
+        "Delta_s_hat": -0.00195,
+        "L_s": -0.00329,
+        "U_s": -0.00061,
+        "rank": 6,
+        "selected": false,
+        "confirmation_output": null
+      },
+      {
+        "route": "radius",
+        "E": 4,
+        "profile": "Full",
+        "Delta_s_hat": -0.00346,
+        "L_s": -0.00467,
+        "U_s": -0.00225,
+        "rank": 7,
+        "selected": true,
+        "confirmation_output": "radius in 4/5 confirmation folds; qC in 1/5"
+      },
+      {
+        "route": "MPC-RH",
+        "E": 4,
+        "profile": "Full",
+        "Delta_s_hat": -0.00352,
+        "L_s": -0.00477,
+        "U_s": -0.00227,
+        "rank": 8,
+        "selected": false,
+        "confirmation_output": null
+      }
+    ]
+  },
+  "supplementary_table_S12c_selection_rule_audit": {
+    "ogbn-arxiv": {
+      "U_min": -0.00338,
+      "registered_reading_eps_eq_0.002_on_U_s": "radius, MPC-RH -> radius",
+      "point_estimate_reading_eps_eq_0.002": "radius, MPC-RH -> radius",
+      "point_estimate_reading_eps_eq_0.001": "radius, MPC-RH -> radius",
+      "selected": "radius",
+      "registered_reading_consistency": "consistent"
+    },
+    "ogbn-proteins": {
+      "U_min": -0.00264,
+      "registered_reading_eps_eq_0.002_on_U_s": "radius, MPC-RH -> radius",
+      "point_estimate_reading_eps_eq_0.002": "radius, MPC-RH -> radius",
+      "point_estimate_reading_eps_eq_0.001": "radius, MPC-RH -> radius",
+      "selected": "radius",
+      "registered_reading_consistency": "consistent"
+    },
+    "ogbn-products": {
+      "U_min": null,
+      "registered_reading_eps_eq_0.002_on_U_s": "qC",
+      "point_estimate_reading_eps_eq_0.002": "qC",
+      "point_estimate_reading_eps_eq_0.001": "qC",
+      "selected": "qC",
+      "registered_reading_consistency": "consistent"
+    },
+    "Roman-empire": {
+      "U_min": -0.00499,
+      "registered_reading_eps_eq_0.002_on_U_s": "radius, MPC-RH -> radius",
+      "point_estimate_reading_eps_eq_0.002": "radius, MPC-RH -> radius",
+      "point_estimate_reading_eps_eq_0.001": "MPC-RH -> MPC-RH",
+      "selected": "MPC-RH",
+      "registered_reading_consistency": "inconsistent at the registered rule"
+    },
+    "PascalVOC-SP": {
+      "U_min": -0.0068,
+      "registered_reading_eps_eq_0.002_on_U_s": "radius, MPC-RH -> radius",
+      "point_estimate_reading_eps_eq_0.002": "radius, MPC-RH -> radius",
+      "point_estimate_reading_eps_eq_0.001": "MPC-RH -> MPC-RH",
+      "selected": "MPC-RH",
+      "registered_reading_consistency": "inconsistent at the registered rule"
+    },
+    "COCO-SP": {
+      "U_min": -0.00745,
+      "registered_reading_eps_eq_0.002_on_U_s": "radius, MPC-RH -> radius",
+      "point_estimate_reading_eps_eq_0.002": "radius, MPC-RH -> radius",
+      "point_estimate_reading_eps_eq_0.001": "MPC-RH -> MPC-RH",
+      "selected": "MPC-RH",
+      "registered_reading_consistency": "inconsistent at the registered rule"
+    },
+    "Peptides-func": {
+      "U_min": -0.00227,
+      "registered_reading_eps_eq_0.002_on_U_s": "radius, MPC-RH -> radius",
+      "point_estimate_reading_eps_eq_0.002": "radius, MPC-RH -> radius",
+      "point_estimate_reading_eps_eq_0.001": "radius, MPC-RH -> radius",
+      "selected": "radius",
+      "registered_reading_consistency": "consistent"
+    }
+  },
+  "supplementary_table_S13_independent_graph_admission": {
+    "PascalVOC-SP": {
+      "J": 1428,
+      "B": 0.1,
+      "delta_a": 0.025,
+      "epsilon_a": 0.003,
+      "D_bar": -0.00836,
+      "S2": 0.000214,
+      "penalty": 0.002578,
+      "U_a": -0.005782,
+      "metric_gate": "pass",
+      "G_admit": 1,
+      "sensitivity": {
+        "B=0.05": {
+          "penalty": 0.001863,
+          "U_a": -0.006497,
+          "G_admit": 1
+        },
+        "B=0.20": {
+          "penalty": 0.004012,
+          "U_a": -0.004348,
+          "G_admit": 1
+        }
+      }
+    },
+    "COCO-SP": {
+      "J": 5000,
+      "B": 0.1,
+      "delta_a": 0.025,
+      "epsilon_a": 0.003,
+      "D_bar": -0.00901,
+      "S2": 0.000263,
+      "penalty": 0.001088,
+      "U_a": -0.007922,
+      "metric_gate": "pass",
+      "G_admit": 1,
+      "sensitivity": {
+        "B=0.05": {
+          "penalty": 0.000883,
+          "U_a": -0.008127,
+          "G_admit": 1
+        },
+        "B=0.20": {
+          "penalty": 0.001497,
+          "U_a": -0.007513,
+          "G_admit": 1
+        }
+      }
+    },
+    "Peptides-func": {
+      "J": 2331,
+      "B": 0.1,
+      "delta_a": 0.025,
+      "epsilon_a": 0.0015,
+      "D_bar": -0.00311,
+      "S2": 0.000126,
+      "penalty": 0.001566,
+      "U_a": -0.001544,
+      "metric_gate": "pass",
+      "G_admit": 1,
+      "sensitivity": {
+        "B=0.05": {
+          "penalty": 0.001127,
+          "U_a": -0.001983,
+          "G_admit": 1
+        },
+        "B=0.20": {
+          "penalty": 0.002444,
+          "U_a": -0.000666,
+          "G_admit": 0
+        }
+      }
+    }
+  },
+  "supplementary_table_S14_mechanism_contrasts_submitted_protocol": [
+    {
+      "contrast": "arxiv/state",
+      "dataset": "ogbn-arxiv",
+      "kind": "conditional destruction minus intact",
+      "effect": 0.00574,
+      "unit": "CE",
+      "interval": [
+        0.00312,
+        0.00836
+      ],
+      "n": 32,
+      "statistical_unit": "buffered clusters",
+      "test": "paired cluster test",
+      "raw_P": 0.0014,
+      "holm_P": 0.0098,
+      "margin": 0.002,
+      "P_vs_margin": 0.0026,
+      "interpretation": "useful state dependence"
+    },
+    {
+      "contrast": "arxiv/radius",
+      "dataset": "ogbn-arxiv",
+      "kind": "radius minus one-step",
+      "effect": -0.00286,
+      "unit": "CE",
+      "interval": [
+        -0.00481,
+        -0.00091
+      ],
+      "n": 32,
+      "statistical_unit": "buffered clusters",
+      "test": "one-sided paired test",
+      "raw_P": 0.003,
+      "holm_P": 0.015,
+      "margin": 0.0015,
+      "P_vs_margin": 0.0858,
+      "interpretation": "radius retained on the point estimate; interval does not exclude the margin"
+    },
+    {
+      "contrast": "proteins/state",
+      "dataset": "ogbn-proteins",
+      "kind": "conditional destruction minus intact",
+      "effect": 0.00485,
+      "unit": "BCE",
+      "interval": [
+        0.00264,
+        0.00706
+      ],
+      "n": 32,
+      "statistical_unit": "buffered clusters",
+      "test": "paired cluster test",
+      "raw_P": 0.0016,
+      "holm_P": 0.0098,
+      "margin": 0.002,
+      "P_vs_margin": 0.0057,
+      "interpretation": "useful state dependence"
+    },
+    {
+      "contrast": "proteins/radius",
+      "dataset": "ogbn-proteins",
+      "kind": "radius minus one-step",
+      "effect": -0.00242,
+      "unit": "BCE",
+      "interval": [
+        -0.00406,
+        -0.00077
+      ],
+      "n": 32,
+      "statistical_unit": "buffered clusters",
+      "test": "one-sided paired test",
+      "raw_P": 0.0034,
+      "holm_P": 0.015,
+      "margin": 0.0015,
+      "P_vs_margin": 0.1365,
+      "interpretation": "radius retained on the point estimate; interval does not exclude the margin"
+    },
+    {
+      "contrast": "products/state",
+      "dataset": "ogbn-products",
+      "kind": "conditional destruction minus intact",
+      "effect": 0.00036,
+      "unit": "CE",
+      "interval": [
+        -0.00064,
+        0.00136
+      ],
+      "n": 64,
+      "statistical_unit": "buffered clusters",
+      "test": "paired cluster test against zero (the two one-sided tests at +/-0.002 were not performed)",
+      "raw_P": 0.42,
+      "holm_P": 0.42,
+      "margin": 0.002,
+      "P_vs_margin": null,
+      "interpretation": "no feedback label; equivalence not established"
+    },
+    {
+      "contrast": "Roman/RH",
+      "dataset": "Roman-empire",
+      "kind": "MPC-RH minus MPC-OL",
+      "effect": -0.00649,
+      "unit": "CE",
+      "interval": [
+        -0.01007,
+        -0.00291
+      ],
+      "n": 10,
+      "statistical_unit": "official splits",
+      "test": "exact paired / small-sample",
+      "raw_P": 0.0047,
+      "holm_P": 0.015,
+      "margin": 0.002,
+      "P_vs_margin": 0.007,
+      "interpretation": "replanning retained"
+    },
+    {
+      "contrast": "Pascal/RH",
+      "dataset": "PascalVOC-SP",
+      "kind": "MPC-RH minus MPC-OL",
+      "effect": -0.00902,
+      "unit": "CE",
+      "interval": [
+        -0.01355,
+        -0.00449
+      ],
+      "n": 1428,
+      "statistical_unit": "validation graphs (= admission split under the submitted protocol)",
+      "test": "graph bootstrap",
+      "raw_P": "< 1e-4",
+      "holm_P": "< 0.001",
+      "margin": 0.002,
+      "P_vs_margin": 0.0012,
+      "interpretation": "replanning retained"
+    },
+    {
+      "contrast": "COCO/RH",
+      "dataset": "COCO-SP",
+      "kind": "MPC-RH minus MPC-OL",
+      "effect": -0.00962,
+      "unit": "CE",
+      "interval": [
+        -0.01372,
+        -0.00552
+      ],
+      "n": 5000,
+      "statistical_unit": "validation graphs (= admission split under the submitted protocol)",
+      "test": "graph bootstrap",
+      "raw_P": "< 1e-4",
+      "holm_P": "< 0.001",
+      "margin": 0.002,
+      "P_vs_margin": "< 0.001",
+      "interpretation": "replanning retained"
+    },
+    {
+      "contrast": "Peptides/radius",
+      "dataset": "Peptides-func",
+      "kind": "radius minus one-step",
+      "effect": -0.00172,
+      "unit": "BCE",
+      "interval": [
+        -0.00316,
+        -0.00028
+      ],
+      "n": 2331,
+      "statistical_unit": "validation graphs (= admission split under the submitted protocol)",
+      "test": "graph bootstrap",
+      "raw_P": 0.018,
+      "holm_P": 0.036,
+      "margin": 0.0015,
+      "P_vs_margin": 0.3823,
+      "interpretation": "fragile boundary result: Holm-significant at 0.05, interval does not exclude the margin, radius in 4/5 confirmation folds"
+    }
+  ],
+  "supplementary_table_S14b_separated_data_sensitivity": [
+    {
+      "contrast": "Pascal/RH",
+      "J_old": 1428,
+      "J_new": 850,
+      "effect": -0.00902,
+      "interval": [
+        -0.01489,
+        -0.00315
+      ],
+      "raw_P": 0.0026,
+      "holm_P": 0.016,
+      "P_vs_margin": 0.0096,
+      "interpretation": "replanning retained"
+    },
+    {
+      "contrast": "COCO/RH",
+      "J_old": 5000,
+      "J_new": 11329,
+      "effect": -0.00962,
+      "interval": [
+        -0.01234,
+        -0.0069
+      ],
+      "raw_P": "< 1e-9",
+      "holm_P": "< 1e-9",
+      "P_vs_margin": "< 1e-3",
+      "interpretation": "replanning retained"
+    },
+    {
+      "contrast": "Peptides/radius",
+      "J_old": 2331,
+      "J_new": 1087,
+      "effect": -0.00172,
+      "interval": [
+        -0.00383,
+        0.00039
+      ],
+      "raw_P": 0.11,
+      "holm_P": 0.22,
+      "P_vs_margin": 0.419,
+      "interpretation": "interval includes zero; not Holm-significant; frozen map returns qC (Note S26)"
+    }
+  ],
+  "supplementary_table_S14b_unchanged_contrasts": [
+    {
+      "contrast": "arxiv/state",
+      "J_old": 32,
+      "J_new": 32,
+      "effect": 0.00574,
+      "interval": [
+        0.00312,
+        0.00836
+      ],
+      "raw_P": 0.0014,
+      "holm_P": 0.011,
+      "P_vs_margin": 0.0026,
+      "interpretation": "unchanged (Holm value re-formed)"
+    },
+    {
+      "contrast": "arxiv/radius",
+      "J_old": 32,
+      "J_new": 32,
+      "effect": -0.00286,
+      "interval": [
+        -0.00481,
+        -0.00091
+      ],
+      "raw_P": 0.003,
+      "holm_P": 0.016,
+      "P_vs_margin": 0.0858,
+      "interpretation": "unchanged (Holm value re-formed)"
+    },
+    {
+      "contrast": "proteins/state",
+      "J_old": 32,
+      "J_new": 32,
+      "effect": 0.00485,
+      "interval": [
+        0.00264,
+        0.00706
+      ],
+      "raw_P": 0.0016,
+      "holm_P": 0.011,
+      "P_vs_margin": 0.0057,
+      "interpretation": "unchanged (Holm value re-formed)"
+    },
+    {
+      "contrast": "proteins/radius",
+      "J_old": 32,
+      "J_new": 32,
+      "effect": -0.00242,
+      "interval": [
+        -0.00406,
+        -0.00077
+      ],
+      "raw_P": 0.0034,
+      "holm_P": 0.016,
+      "P_vs_margin": 0.1365,
+      "interpretation": "unchanged (Holm value re-formed)"
+    },
+    {
+      "contrast": "products/state",
+      "J_old": 64,
+      "J_new": 64,
+      "effect": 0.00036,
+      "interval": [
+        -0.00064,
+        0.00136
+      ],
+      "raw_P": 0.42,
+      "holm_P": 0.42,
+      "P_vs_margin": null,
+      "interpretation": "unchanged (not tested against the margin)"
+    },
+    {
+      "contrast": "Roman/RH",
+      "J_old": 10,
+      "J_new": 10,
+      "effect": -0.00649,
+      "interval": [
+        -0.01007,
+        -0.00291
+      ],
+      "raw_P": 0.0047,
+      "holm_P": 0.016,
+      "P_vs_margin": 0.007,
+      "interpretation": "unchanged (Holm value re-formed)"
+    }
+  ],
+  "supplementary_table_S15_method_comparison": {
+    "ogbn-arxiv": {
+      "score_unit": "accuracy, %",
+      "seed_SD_range_pp": [
+        0.12,
+        0.25
+      ],
+      "plant_params_M": 3.1,
+      "HPO_trials": 48,
+      "rows": [
+        {
+          "method": "full-depth plant",
+          "family": "internal open loop",
+          "official_score": 72.93,
+          "C_ctrl": "4.0",
+          "GPU_h": 10.88,
+          "C_expected": null,
+          "C_assure": null,
+          "params_M": null
+        },
+        {
+          "method": "best fixed depth",
+          "family": "internal open loop",
+          "official_score": 73.1,
+          "C_ctrl": "2.0-4.0",
+          "GPU_h": 10.88,
+          "C_expected": null,
+          "C_assure": null,
+          "params_M": null
+        },
+        {
+          "method": "optimized phase",
+          "family": "internal open loop",
+          "official_score": 73.12,
+          "C_ctrl": "4.0-4.2",
+          "GPU_h": 10.88,
+          "C_expected": null,
+          "C_assure": null,
+          "params_M": null
+        },
+        {
+          "method": "best fixed sequence (qC)",
+          "family": "internal open loop",
+          "official_score": 73.15,
+          "C_ctrl": "4.0",
+          "GPU_h": 10.88,
+          "C_expected": 4.0,
+          "C_assure": 4.0,
+          "params_M": null
+        },
+        {
+          "method": "MPC-OL",
+          "family": "internal open loop",
+          "official_score": 73.14,
+          "C_ctrl": "4.0-4.6",
+          "GPU_h": 10.88,
+          "C_expected": null,
+          "C_assure": null,
+          "params_M": null
+        },
+        {
+          "method": "radius (deployed)",
+          "family": "CROSS-MORSE deployment",
+          "official_score": 73.22,
+          "C_ctrl": "4.7",
+          "GPU_h": 12.8,
+          "C_expected": 4.62,
+          "C_assure": 8.7,
+          "params_M": null
+        },
+        {
+          "method": "MPC-RH",
+          "family": "internal feedback",
+          "official_score": 73.21,
+          "C_ctrl": "5.2-5.4",
+          "GPU_h": "12.4-13.0",
+          "C_expected": null,
+          "C_assure": null,
+          "params_M": null
+        },
+        {
+          "method": "AMP",
+          "family": "external (re-trained)",
+          "official_score": 73.06,
+          "C_ctrl": "4.2-4.8",
+          "GPU_h": "12.0-15.2",
+          "C_expected": null,
+          "C_assure": null,
+          "params_M": "3.19-3.35"
+        },
+        {
+          "method": "ADMP-GNN",
+          "family": "external (re-trained)",
+          "official_score": 73.02,
+          "C_ctrl": "2.4-4.0",
+          "GPU_h": "12.0-15.2",
+          "C_expected": null,
+          "C_assure": null,
+          "params_M": "3.26-3.56"
+        }
+      ]
+    },
+    "ogbn-proteins": {
+      "score_unit": "ROC-AUC, %",
+      "seed_SD_range_pp": [
+        0.2,
+        0.45
+      ],
+      "plant_params_M": 3.52,
+      "HPO_trials": 48,
+      "rows": [
+        {
+          "method": "full-depth plant",
+          "family": "internal open loop",
+          "official_score": 87.02,
+          "C_ctrl": "4.0",
+          "GPU_h": 11.39,
+          "C_expected": null,
+          "C_assure": null,
+          "params_M": null
+        },
+        {
+          "method": "best fixed depth",
+          "family": "internal open loop",
+          "official_score": 87.12,
+          "C_ctrl": "2.0-4.0",
+          "GPU_h": 11.39,
+          "C_expected": null,
+          "C_assure": null,
+          "params_M": null
+        },
+        {
+          "method": "optimized phase",
+          "family": "internal open loop",
+          "official_score": 87.13,
+          "C_ctrl": "4.0-4.2",
+          "GPU_h": 11.39,
+          "C_expected": null,
+          "C_assure": null,
+          "params_M": null
+        },
+        {
+          "method": "best fixed sequence (qC)",
+          "family": "internal open loop",
+          "official_score": 87.15,
+          "C_ctrl": "4.0",
+          "GPU_h": 11.39,
+          "C_expected": 4.0,
+          "C_assure": 4.0,
+          "params_M": null
+        },
+        {
+          "method": "MPC-OL",
+          "family": "internal open loop",
+          "official_score": 87.14,
+          "C_ctrl": "4.0-4.6",
+          "GPU_h": 11.39,
+          "C_expected": null,
+          "C_assure": null,
+          "params_M": null
+        },
+        {
+          "method": "radius (deployed)",
+          "family": "CROSS-MORSE deployment",
+          "official_score": 87.26,
+          "C_ctrl": "4.8",
+          "GPU_h": 13.4,
+          "C_expected": 4.68,
+          "C_assure": 8.8,
+          "params_M": null
+        },
+        {
+          "method": "MPC-RH",
+          "family": "internal feedback",
+          "official_score": 87.25,
+          "C_ctrl": "5.2-5.4",
+          "GPU_h": "13.0-13.6",
+          "C_expected": null,
+          "C_assure": null,
+          "params_M": null
+        },
+        {
+          "method": "AMP",
+          "family": "external (re-trained)",
+          "official_score": 87.05,
+          "C_ctrl": "4.2-4.8",
+          "GPU_h": "12.5-15.9",
+          "C_expected": null,
+          "C_assure": null,
+          "params_M": "3.63-3.80"
+        },
+        {
+          "method": "GRAMA",
+          "family": "external (re-trained)",
+          "official_score": 87.03,
+          "C_ctrl": "4.8-6.4",
+          "GPU_h": "13.7-18.2",
+          "C_expected": null,
+          "C_assure": null,
+          "params_M": "3.87-4.40"
+        }
+      ]
+    },
+    "ogbn-products": {
+      "score_unit": "accuracy, %",
+      "seed_SD_range_pp": [
+        0.1,
+        0.3
+      ],
+      "plant_params_M": 3.36,
+      "HPO_trials": 48,
+      "rows": [
+        {
+          "method": "full-depth plant",
+          "family": "internal open loop",
+          "official_score": 87.59,
+          "C_ctrl": "2.0",
+          "GPU_h": 12.92,
+          "C_expected": null,
+          "C_assure": null,
+          "params_M": null
+        },
+        {
+          "method": "best fixed depth",
+          "family": "internal open loop",
+          "official_score": 87.69,
+          "C_ctrl": "1.0-2.0",
+          "GPU_h": 12.92,
+          "C_expected": null,
+          "C_assure": null,
+          "params_M": null
+        },
+        {
+          "method": "optimized phase (qC, returned)",
+          "family": "CROSS-MORSE deployment",
+          "official_score": 87.74,
+          "C_ctrl": "2.1",
+          "GPU_h": 15.2,
+          "C_expected": 2.1,
+          "C_assure": 2.1,
+          "params_M": null
+        },
+        {
+          "method": "best fixed sequence",
+          "family": "internal open loop",
+          "official_score": 87.73,
+          "C_ctrl": "2.0-2.1",
+          "GPU_h": 12.92,
+          "C_expected": null,
+          "C_assure": null,
+          "params_M": null
+        },
+        {
+          "method": "MPC-OL",
+          "family": "internal open loop",
+          "official_score": 87.73,
+          "C_ctrl": "2.0-2.3",
+          "GPU_h": 12.92,
+          "C_expected": null,
+          "C_assure": null,
+          "params_M": null
+        },
+        {
+          "method": "radius",
+          "family": "internal feedback",
+          "official_score": 87.73,
+          "C_ctrl": "2.3-2.4",
+          "GPU_h": "14.7-15.4",
+          "C_expected": null,
+          "C_assure": null,
+          "params_M": null
+        },
+        {
+          "method": "MPC-RH",
+          "family": "internal feedback",
+          "official_score": 87.72,
+          "C_ctrl": "2.6-2.7",
+          "GPU_h": "14.7-15.4",
+          "C_expected": null,
+          "C_assure": null,
+          "params_M": null
+        },
+        {
+          "method": "ADMP-GNN",
+          "family": "external (re-trained)",
+          "official_score": 87.57,
+          "C_ctrl": "1.2-2.0",
+          "GPU_h": "14.2-18.1",
+          "C_expected": null,
+          "C_assure": null,
+          "params_M": "3.53-3.86"
+        },
+        {
+          "method": "GRAMA",
+          "family": "external (re-trained)",
+          "official_score": 87.49,
+          "C_ctrl": "2.4-3.2",
+          "GPU_h": "15.5-20.7",
+          "C_expected": null,
+          "C_assure": null,
+          "params_M": "3.70-4.20"
+        }
+      ]
+    },
+    "Roman-empire": {
+      "score_unit": "accuracy, %",
+      "seed_SD_range_pp": [
+        0.3,
+        0.6
+      ],
+      "plant_params_M": 2.52,
+      "HPO_trials": 48,
+      "rows": [
+        {
+          "method": "full-depth plant",
+          "family": "internal open loop",
+          "official_score": 91.76,
+          "C_ctrl": "4.0",
+          "GPU_h": 7.82,
+          "C_expected": null,
+          "C_assure": null,
+          "params_M": null
+        },
+        {
+          "method": "best fixed depth",
+          "family": "internal open loop",
+          "official_score": 92.23,
+          "C_ctrl": "2.0-4.0",
+          "GPU_h": 7.82,
+          "C_expected": null,
+          "C_assure": null,
+          "params_M": null
+        },
+        {
+          "method": "optimized phase",
+          "family": "internal open loop",
+          "official_score": 92.29,
+          "C_ctrl": "4.0-4.2",
+          "GPU_h": 7.82,
+          "C_expected": null,
+          "C_assure": null,
+          "params_M": null
+        },
+        {
+          "method": "best fixed sequence",
+          "family": "internal open loop",
+          "official_score": 92.34,
+          "C_ctrl": "4.0-4.2",
+          "GPU_h": 7.82,
+          "C_expected": null,
+          "C_assure": null,
+          "params_M": null
+        },
+        {
+          "method": "MPC-OL (qC)",
+          "family": "internal open loop",
+          "official_score": 92.37,
+          "C_ctrl": "4.0-4.6",
+          "GPU_h": 7.82,
+          "C_expected": 4.0,
+          "C_assure": 4.0,
+          "params_M": null
+        },
+        {
+          "method": "radius",
+          "family": "internal feedback",
+          "official_score": 92.45,
+          "C_ctrl": "4.6-4.8",
+          "GPU_h": "8.9-9.3",
+          "C_expected": null,
+          "C_assure": null,
+          "params_M": null
+        },
+        {
+          "method": "MPC-RH (deployed)",
+          "family": "CROSS-MORSE deployment",
+          "official_score": 92.63,
+          "C_ctrl": "5.4",
+          "GPU_h": 9.2,
+          "C_expected": 5.22,
+          "C_assure": 9.4,
+          "params_M": null
+        },
+        {
+          "method": "Early-Exit GNN",
+          "family": "external (re-trained)",
+          "official_score": 92.24,
+          "C_ctrl": "2.0-3.6",
+          "GPU_h": "8.2-10.2",
+          "C_expected": null,
+          "C_assure": null,
+          "params_M": "2.57-2.67"
+        },
+        {
+          "method": "ADMP-GNN",
+          "family": "external (re-trained)",
+          "official_score": 92.18,
+          "C_ctrl": "2.4-4.0",
+          "GPU_h": "8.6-10.9",
+          "C_expected": null,
+          "C_assure": null,
+          "params_M": "2.65-2.90"
+        }
+      ]
+    },
+    "PascalVOC-SP": {
+      "score_unit": "macro F1, %",
+      "seed_SD_range_pp": [
+        0.5,
+        1.1
+      ],
+      "plant_params_M": 3.14,
+      "HPO_trials": 48,
+      "rows": [
+        {
+          "method": "full-depth plant",
+          "family": "internal open loop",
+          "official_score": 46.89,
+          "C_ctrl": "8.0",
+          "GPU_h": 9.01,
+          "C_expected": null,
+          "C_assure": null,
+          "params_M": null
+        },
+        {
+          "method": "best fixed depth",
+          "family": "internal open loop",
+          "official_score": 47.43,
+          "C_ctrl": "4.0-8.0",
+          "GPU_h": 9.01,
+          "C_expected": null,
+          "C_assure": null,
+          "params_M": null
+        },
+        {
+          "method": "optimized phase",
+          "family": "internal open loop",
+          "official_score": 47.48,
+          "C_ctrl": "8.0-8.4",
+          "GPU_h": 9.01,
+          "C_expected": null,
+          "C_assure": null,
+          "params_M": null
+        },
+        {
+          "method": "best fixed sequence",
+          "family": "internal open loop",
+          "official_score": 47.55,
+          "C_ctrl": "8.0-8.4",
+          "GPU_h": 9.01,
+          "C_expected": null,
+          "C_assure": null,
+          "params_M": null
+        },
+        {
+          "method": "MPC-OL (qC)",
+          "family": "internal open loop",
+          "official_score": 47.61,
+          "C_ctrl": "8.0-9.2",
+          "GPU_h": 9.01,
+          "C_expected": 8.0,
+          "C_assure": 8.0,
+          "params_M": null
+        },
+        {
+          "method": "radius",
+          "family": "internal feedback",
+          "official_score": 47.74,
+          "C_ctrl": "9.2-9.6",
+          "GPU_h": "10.3-10.8",
+          "C_expected": null,
+          "C_assure": null,
+          "params_M": null
+        },
+        {
+          "method": "MPC-RH (deployed)",
+          "family": "CROSS-MORSE deployment",
+          "official_score": 48.21,
+          "C_ctrl": "10.5",
+          "GPU_h": 10.6,
+          "C_expected": 10.3,
+          "C_assure": 18.5,
+          "params_M": null
+        },
+        {
+          "method": "Graph Mamba",
+          "family": "external (re-trained)",
+          "official_score": 47.41,
+          "C_ctrl": "8.8-11.2",
+          "GPU_h": "10.8-14.4",
+          "C_expected": null,
+          "C_assure": null,
+          "params_M": "3.45-3.77"
+        },
+        {
+          "method": "GRAMA",
+          "family": "external (re-trained)",
+          "official_score": 47.36,
+          "C_ctrl": "9.6-12.8",
+          "GPU_h": "10.8-14.4",
+          "C_expected": null,
+          "C_assure": null,
+          "params_M": "3.45-3.93"
+        }
+      ]
+    },
+    "COCO-SP": {
+      "score_unit": "macro F1, %",
+      "seed_SD_range_pp": [
+        0.3,
+        0.8
+      ],
+      "plant_params_M": 3.18,
+      "HPO_trials": 48,
+      "rows": [
+        {
+          "method": "full-depth plant",
+          "family": "internal open loop",
+          "official_score": 31.6,
+          "C_ctrl": "8.0",
+          "GPU_h": 10.29,
+          "C_expected": null,
+          "C_assure": null,
+          "params_M": null
+        },
+        {
+          "method": "best fixed depth",
+          "family": "internal open loop",
+          "official_score": 32.2,
+          "C_ctrl": "4.0-8.0",
+          "GPU_h": 10.29,
+          "C_expected": null,
+          "C_assure": null,
+          "params_M": null
+        },
+        {
+          "method": "optimized phase",
+          "family": "internal open loop",
+          "official_score": 32.26,
+          "C_ctrl": "8.0-8.4",
+          "GPU_h": 10.29,
+          "C_expected": null,
+          "C_assure": null,
+          "params_M": null
+        },
+        {
+          "method": "best fixed sequence",
+          "family": "internal open loop",
+          "official_score": 32.32,
+          "C_ctrl": "8.0-8.4",
+          "GPU_h": 10.29,
+          "C_expected": null,
+          "C_assure": null,
+          "params_M": null
+        },
+        {
+          "method": "MPC-OL (qC)",
+          "family": "internal open loop",
+          "official_score": 32.38,
+          "C_ctrl": "8.0-9.2",
+          "GPU_h": 10.29,
+          "C_expected": 8.0,
+          "C_assure": 8.0,
+          "params_M": null
+        },
+        {
+          "method": "radius",
+          "family": "internal feedback",
+          "official_score": 32.51,
+          "C_ctrl": "9.2-9.6",
+          "GPU_h": "11.7-12.3",
+          "C_expected": null,
+          "C_assure": null,
+          "params_M": null
+        },
+        {
+          "method": "MPC-RH (deployed)",
+          "family": "CROSS-MORSE deployment",
+          "official_score": 33.03,
+          "C_ctrl": "10.8",
+          "GPU_h": 12.1,
+          "C_expected": 10.6,
+          "C_assure": 18.8,
+          "params_M": null
+        },
+        {
+          "method": "Graph Mamba",
+          "family": "external (re-trained)",
+          "official_score": 32.58,
+          "C_ctrl": "8.8-11.2",
+          "GPU_h": "12.3-16.5",
+          "C_expected": null,
+          "C_assure": null,
+          "params_M": "3.50-3.82"
+        },
+        {
+          "method": "GRAMA",
+          "family": "external (re-trained)",
+          "official_score": 32.51,
+          "C_ctrl": "9.6-12.8",
+          "GPU_h": "12.3-16.5",
+          "C_expected": null,
+          "C_assure": null,
+          "params_M": "3.50-3.98"
+        }
+      ]
+    },
+    "Peptides-func": {
+      "score_unit": "AP (native units)",
+      "seed_SD_range_pp": [
+        0.3,
+        0.6
+      ],
+      "plant_params_M": 5.1,
+      "HPO_trials": 48,
+      "rows": [
+        {
+          "method": "full-depth plant",
+          "family": "internal open loop",
+          "official_score": 0.704,
+          "C_ctrl": "4.0",
+          "GPU_h": 9.61,
+          "C_expected": null,
+          "C_assure": null,
+          "params_M": null
+        },
+        {
+          "method": "best fixed depth",
+          "family": "internal open loop",
+          "official_score": 0.712,
+          "C_ctrl": "2.0-4.0",
+          "GPU_h": 9.61,
+          "C_expected": null,
+          "C_assure": null,
+          "params_M": null
+        },
+        {
+          "method": "optimized phase",
+          "family": "internal open loop",
+          "official_score": 0.713,
+          "C_ctrl": "4.0-4.2",
+          "GPU_h": 9.61,
+          "C_expected": null,
+          "C_assure": null,
+          "params_M": null
+        },
+        {
+          "method": "best fixed sequence (qC)",
+          "family": "internal open loop",
+          "official_score": 0.714,
+          "C_ctrl": "4.0",
+          "GPU_h": 9.61,
+          "C_expected": 4.0,
+          "C_assure": 4.0,
+          "params_M": null
+        },
+        {
+          "method": "MPC-OL",
+          "family": "internal open loop",
+          "official_score": 0.713,
+          "C_ctrl": "4.0-4.6",
+          "GPU_h": 9.61,
+          "C_expected": null,
+          "C_assure": null,
+          "params_M": null
+        },
+        {
+          "method": "radius (deployed)",
+          "family": "CROSS-MORSE deployment",
+          "official_score": 0.72,
+          "C_ctrl": "4.9",
+          "GPU_h": 11.3,
+          "C_expected": 4.73,
+          "C_assure": 8.9,
+          "params_M": null
+        },
+        {
+          "method": "MPC-RH",
+          "family": "internal feedback",
+          "official_score": 0.718,
+          "C_ctrl": "5.2-5.4",
+          "GPU_h": "11.0-11.5",
+          "C_expected": null,
+          "C_assure": null,
+          "params_M": null
+        },
+        {
+          "method": "Graph Mamba",
+          "family": "external (re-trained)",
+          "official_score": 0.714,
+          "C_ctrl": "4.4-5.6",
+          "GPU_h": "11.5-15.4",
+          "C_expected": null,
+          "C_assure": null,
+          "params_M": "5.61-6.12"
+        },
+        {
+          "method": "GRAMA",
+          "family": "external (re-trained)",
+          "official_score": 0.713,
+          "C_ctrl": "4.8-6.4",
+          "GPU_h": "11.5-15.4",
+          "C_expected": null,
+          "C_assure": null,
+          "params_M": "5.61-6.38"
+        }
+      ]
+    }
+  },
+  "supplementary_table_S15b_per_rerun_resource_ledger": {
+    "ogbn-arxiv": [
+      {
+        "method": "best fixed sequence (qC)",
+        "serial_cost_C_ctrl": 4.0,
+        "wall_time_nominal_1": 4.0,
+        "GPU_h": 10.88,
+        "SD_12_seeds": 0.18
+      },
+      {
+        "method": "radius (deployed)",
+        "serial_cost_C_ctrl": 4.7,
+        "wall_time_nominal_1": 4.58,
+        "GPU_h": 12.8,
+        "SD_12_seeds": 0.18
+      },
+      {
+        "method": "AMP",
+        "serial_cost_C_ctrl": 4.5,
+        "wall_time_nominal_1": 4.5,
+        "GPU_h": 13.6,
+        "SD_12_seeds": 0.21
+      },
+      {
+        "method": "ADMP-GNN",
+        "serial_cost_C_ctrl": 3.2,
+        "wall_time_nominal_1": 3.2,
+        "GPU_h": 13.6,
+        "SD_12_seeds": 0.21
+      }
+    ],
+    "ogbn-proteins": [
+      {
+        "method": "best fixed sequence (qC)",
+        "serial_cost_C_ctrl": 4.0,
+        "wall_time_nominal_1": 4.0,
+        "GPU_h": 11.39,
+        "SD_12_seeds": 0.33
+      },
+      {
+        "method": "radius (deployed)",
+        "serial_cost_C_ctrl": 4.8,
+        "wall_time_nominal_1": 4.66,
+        "GPU_h": 13.4,
+        "SD_12_seeds": 0.33
+      },
+      {
+        "method": "AMP",
+        "serial_cost_C_ctrl": 4.5,
+        "wall_time_nominal_1": 4.5,
+        "GPU_h": 14.2,
+        "SD_12_seeds": 0.37
+      },
+      {
+        "method": "GRAMA",
+        "serial_cost_C_ctrl": 5.6,
+        "wall_time_nominal_1": 5.6,
+        "GPU_h": 16.0,
+        "SD_12_seeds": 0.37
+      }
+    ],
+    "ogbn-products": [
+      {
+        "method": "optimized phase (qC)",
+        "serial_cost_C_ctrl": 2.1,
+        "wall_time_nominal_1": 2.1,
+        "GPU_h": 15.2,
+        "SD_12_seeds": 0.2
+      },
+      {
+        "method": "ADMP-GNN",
+        "serial_cost_C_ctrl": 1.6,
+        "wall_time_nominal_1": 1.6,
+        "GPU_h": 16.2,
+        "SD_12_seeds": 0.23
+      },
+      {
+        "method": "GRAMA",
+        "serial_cost_C_ctrl": 2.8,
+        "wall_time_nominal_1": 2.8,
+        "GPU_h": 18.1,
+        "SD_12_seeds": 0.23
+      }
+    ],
+    "Roman-empire": [
+      {
+        "method": "MPC-OL (qC)",
+        "serial_cost_C_ctrl": 4.0,
+        "wall_time_nominal_1": 4.0,
+        "GPU_h": 7.82,
+        "SD_12_seeds": 0.45
+      },
+      {
+        "method": "MPC-RH (deployed)",
+        "serial_cost_C_ctrl": 5.4,
+        "wall_time_nominal_1": 5.16,
+        "GPU_h": 9.2,
+        "SD_12_seeds": 0.45
+      },
+      {
+        "method": "Early-Exit GNN",
+        "serial_cost_C_ctrl": 2.8,
+        "wall_time_nominal_1": 2.8,
+        "GPU_h": 9.2,
+        "SD_12_seeds": 0.52
+      },
+      {
+        "method": "ADMP-GNN",
+        "serial_cost_C_ctrl": 3.2,
+        "wall_time_nominal_1": 3.2,
+        "GPU_h": 9.8,
+        "SD_12_seeds": 0.52
+      }
+    ],
+    "PascalVOC-SP": [
+      {
+        "method": "MPC-OL (qC)",
+        "serial_cost_C_ctrl": 8.0,
+        "wall_time_nominal_1": 8.0,
+        "GPU_h": 9.01,
+        "SD_12_seeds": 0.8
+      },
+      {
+        "method": "MPC-RH (deployed)",
+        "serial_cost_C_ctrl": 10.5,
+        "wall_time_nominal_1": 10.06,
+        "GPU_h": 10.6,
+        "SD_12_seeds": 0.8
+      },
+      {
+        "method": "Graph Mamba",
+        "serial_cost_C_ctrl": 10.0,
+        "wall_time_nominal_1": 10.0,
+        "GPU_h": 12.6,
+        "SD_12_seeds": 0.92
+      },
+      {
+        "method": "GRAMA",
+        "serial_cost_C_ctrl": 11.2,
+        "wall_time_nominal_1": 11.2,
+        "GPU_h": 12.6,
+        "SD_12_seeds": 0.92
+      }
+    ],
+    "COCO-SP": [
+      {
+        "method": "MPC-OL (qC)",
+        "serial_cost_C_ctrl": 8.0,
+        "wall_time_nominal_1": 8.0,
+        "GPU_h": 10.29,
+        "SD_12_seeds": 0.55
+      },
+      {
+        "method": "MPC-RH (deployed)",
+        "serial_cost_C_ctrl": 10.8,
+        "wall_time_nominal_1": 10.31,
+        "GPU_h": 12.1,
+        "SD_12_seeds": 0.55
+      },
+      {
+        "method": "Graph Mamba",
+        "serial_cost_C_ctrl": 10.0,
+        "wall_time_nominal_1": 10.0,
+        "GPU_h": 14.4,
+        "SD_12_seeds": 0.63
+      },
+      {
+        "method": "GRAMA",
+        "serial_cost_C_ctrl": 11.2,
+        "wall_time_nominal_1": 11.2,
+        "GPU_h": 14.4,
+        "SD_12_seeds": 0.63
+      }
+    ],
+    "Peptides-func": [
+      {
+        "method": "best fixed sequence (qC)",
+        "serial_cost_C_ctrl": 4.0,
+        "wall_time_nominal_1": 4.0,
+        "GPU_h": 9.61,
+        "SD_12_seeds": 0.45
+      },
+      {
+        "method": "radius (deployed)",
+        "serial_cost_C_ctrl": 4.9,
+        "wall_time_nominal_1": 4.74,
+        "GPU_h": 11.3,
+        "SD_12_seeds": 0.45
+      },
+      {
+        "method": "Graph Mamba",
+        "serial_cost_C_ctrl": 5.0,
+        "wall_time_nominal_1": 5.0,
+        "GPU_h": 13.5,
+        "SD_12_seeds": 0.52
+      },
+      {
+        "method": "GRAMA",
+        "serial_cost_C_ctrl": 5.6,
+        "wall_time_nominal_1": 5.6,
+        "GPU_h": 13.5,
+        "SD_12_seeds": 0.52
+      }
+    ]
+  },
+  "supplementary_table_S16_arxiv_factorial": {
+    "dataset": "ogbn-arxiv",
+    "cell_coding": "A O X = supported actions, information-state estimation, risk-controlled execution",
+    "cells": {
+      "000": {
+        "log_depth_CE": 0.8703,
+        "interval": [
+          0.866,
+          0.8746
+        ],
+        "official_metric": 72.82,
+        "activity": 0.0,
+        "relative_time": 1.0
+      },
+      "100": {
+        "log_depth_CE": 0.8666,
+        "interval": [
+          0.8622,
+          0.871
+        ],
+        "official_metric": 72.88,
+        "activity": 0.32,
+        "relative_time": 1.08
+      },
+      "010": {
+        "log_depth_CE": 0.8685,
+        "interval": [
+          0.864,
+          0.873
+        ],
+        "official_metric": 72.85,
+        "activity": 0.0,
+        "relative_time": 1.05
+      },
+      "001": {
+        "log_depth_CE": 0.8657,
+        "interval": [
+          0.8614,
+          0.87
+        ],
+        "official_metric": 72.89,
+        "activity": 0.24,
+        "relative_time": 1.1
+      },
+      "110": {
+        "log_depth_CE": 0.8578,
+        "interval": [
+          0.8533,
+          0.8623
+        ],
+        "official_metric": 72.99,
+        "activity": 0.43,
+        "relative_time": 1.14
+      },
+      "101": {
+        "log_depth_CE": 0.8547,
+        "interval": [
+          0.8502,
+          0.8592
+        ],
+        "official_metric": 73.05,
+        "activity": 0.48,
+        "relative_time": 1.18
+      },
+      "011": {
+        "log_depth_CE": 0.8535,
+        "interval": [
+          0.849,
+          0.858
+        ],
+        "official_metric": 73.07,
+        "activity": 0.4,
+        "relative_time": 1.16
+      },
+      "111": {
+        "log_depth_CE": 0.8445,
+        "interval": [
+          0.8401,
+          0.8489
+        ],
+        "official_metric": 73.21,
+        "activity": 0.55,
+        "relative_time": 1.25
+      }
+    },
+    "effect_coded_main_effects_nats": {
+      "actions": -0.0086,
+      "observer": -0.0082,
+      "risk_controlled_execution": -0.0112,
+      "half_width_95": 0.0031
+    },
+    "pairwise_interactions_nats": [
+      -0.0013,
+      -0.0014,
+      -0.003
+    ],
+    "three_way_interaction_nats": 0.0023,
+    "full_system_minus_no_component_nats": -0.0258,
+    "baseline_anchored_finite_differences": {
+      "I_AO": -0.007,
+      "I_AX": -0.0073,
+      "I_OX": -0.0104,
+      "I_AOX": 0.009
+    },
+    "note": "cell 010 (observer only) has zero action activity and differs from 000 in loss and score; it is excluded from any additivity reading of the factorial (Table S35 R7/R32)"
+  },
+  "supplementary_table_S16b_pascal_factorial": {
+    "dataset": "PascalVOC-SP",
+    "cell_coding": "S O X = spectral information (retained bands vs confidence-only sensors), observer (depth/action-conditioned vs EMA), risk-controlled execution (radius vs one-step)",
+    "cells": {
+      "000": {
+        "log_depth_CE": 1.323,
+        "interval": [
+          1.3168,
+          1.3292
+        ],
+        "official_metric": 47.04,
+        "activity": 0.41,
+        "relative_time": 1.08
+      },
+      "001": {
+        "log_depth_CE": 1.3183,
+        "interval": [
+          1.3121,
+          1.3245
+        ],
+        "official_metric": 47.41,
+        "activity": 0.39,
+        "relative_time": 1.11
+      },
+      "010": {
+        "log_depth_CE": 1.3174,
+        "interval": [
+          1.3112,
+          1.3236
+        ],
+        "official_metric": 47.48,
+        "activity": 0.44,
+        "relative_time": 1.12
+      },
+      "011": {
+        "log_depth_CE": 1.3124,
+        "interval": [
+          1.3062,
+          1.3186
+        ],
+        "official_metric": 47.87,
+        "activity": 0.49,
+        "relative_time": 1.17
+      },
+      "100": {
+        "log_depth_CE": 1.317,
+        "interval": [
+          1.3108,
+          1.3232
+        ],
+        "official_metric": 47.51,
+        "activity": 0.46,
+        "relative_time": 1.16
+      },
+      "101": {
+        "log_depth_CE": 1.3121,
+        "interval": [
+          1.3059,
+          1.3183
+        ],
+        "official_metric": 47.89,
+        "activity": 0.47,
+        "relative_time": 1.19
+      },
+      "110": {
+        "log_depth_CE": 1.311,
+        "interval": [
+          1.3048,
+          1.3172
+        ],
+        "official_metric": 47.98,
+        "activity": 0.52,
+        "relative_time": 1.21
+      },
+      "111": {
+        "log_depth_CE": 1.3061,
+        "interval": [
+          1.2999,
+          1.3123
+        ],
+        "official_metric": 48.36,
+        "activity": 0.61,
+        "relative_time": 1.29
+      }
+    },
+    "effect_coded_main_effects_nats": {
+      "spectral_information": -0.0062,
+      "conditioned_observer": -0.0059,
+      "risk_controlled_execution": -0.0049,
+      "half_width_95": 0.0044
+    },
+    "interactions": "within 1e-4 nats of zero at the tabulated precision"
+  },
+  "supplementary_table_S20_selection_theorem_instantiation": {
+    "ogbn-arxiv": {
+      "Q_size": 180,
+      "Q_s_size": 7,
+      "r_max": 0.0032,
+      "eps_eq_plus_2r_max": 0.0084,
+      "slack_with_12_finalists": 0.0072,
+      "resamples": 10000,
+      "interpretation": "conditional near-best selection"
+    },
+    "ogbn-proteins": {
+      "Q_size": 180,
+      "Q_s_size": 6,
+      "r_max": 0.0034,
+      "eps_eq_plus_2r_max": 0.0088,
+      "slack_with_12_finalists": 0.0075,
+      "resamples": 10000,
+      "interpretation": "conditional near-best selection"
+    },
+    "ogbn-products": {
+      "Q_size": 144,
+      "Q_s_size": 0,
+      "r_max": 0.0028,
+      "eps_eq_plus_2r_max": 0.0076,
+      "slack_with_12_finalists": 0.0066,
+      "resamples": 10000,
+      "interpretation": "comparator / simple route"
+    },
+    "Roman-empire": {
+      "Q_size": 216,
+      "Q_s_size": 5,
+      "r_max": 0.004,
+      "eps_eq_plus_2r_max": 0.01,
+      "slack_with_12_finalists": 0.0084,
+      "resamples": 10000,
+      "interpretation": "repeated-split selection"
+    },
+    "PascalVOC-SP": {
+      "Q_size": 240,
+      "Q_s_size": 4,
+      "r_max": 0.0042,
+      "eps_eq_plus_2r_max": 0.0104,
+      "slack_with_12_finalists": 0.0087,
+      "resamples": 10000,
+      "interpretation": "graph-level selection"
+    },
+    "COCO-SP": {
+      "Q_size": 240,
+      "Q_s_size": 4,
+      "r_max": 0.0041,
+      "eps_eq_plus_2r_max": 0.0102,
+      "slack_with_12_finalists": 0.0085,
+      "resamples": 10000,
+      "interpretation": "graph-level selection"
+    },
+    "Peptides-func": {
+      "Q_size": 180,
+      "Q_s_size": 3,
+      "r_max": 0.0046,
+      "eps_eq_plus_2r_max": 0.0112,
+      "slack_with_12_finalists": 0.0094,
+      "resamples": 10000,
+      "interpretation": "fragile graph-level selection"
+    }
+  },
+  "supplementary_table_S21_action_gap_audit": {
+    "ogbn-arxiv": {
+      "median_gap": 0.0062,
+      "p5_gap": 0.0011,
+      "near_zero_fraction": 0.041,
+      "switch_fraction": 0.036,
+      "recovery_index_stability": 0.98,
+      "beam_sequence_stability": 0.96,
+      "interpretation": "fixed-mode coverage adequate"
+    },
+    "ogbn-proteins": {
+      "median_gap": 0.0057,
+      "p5_gap": 0.001,
+      "near_zero_fraction": 0.047,
+      "switch_fraction": 0.041,
+      "recovery_index_stability": 0.97,
+      "beam_sequence_stability": 0.95,
+      "interpretation": "fixed-mode coverage adequate"
+    },
+    "ogbn-products": {
+      "median_gap": 0.0098,
+      "p5_gap": 0.0031,
+      "near_zero_fraction": 0.008,
+      "switch_fraction": 0.006,
+      "recovery_index_stability": 1.0,
+      "beam_sequence_stability": 0.99,
+      "interpretation": "fixed-mode coverage adequate"
+    },
+    "Roman-empire": {
+      "median_gap": 0.0049,
+      "p5_gap": 0.0008,
+      "near_zero_fraction": 0.061,
+      "switch_fraction": 0.049,
+      "recovery_index_stability": 0.95,
+      "beam_sequence_stability": 0.91,
+      "interpretation": "fixed-mode coverage adequate"
+    },
+    "PascalVOC-SP": {
+      "median_gap": 0.0054,
+      "p5_gap": 0.0009,
+      "near_zero_fraction": 0.052,
+      "switch_fraction": 0.043,
+      "recovery_index_stability": 0.96,
+      "beam_sequence_stability": 0.93,
+      "interpretation": "fixed-mode coverage adequate"
+    },
+    "COCO-SP": {
+      "median_gap": 0.0056,
+      "p5_gap": 0.001,
+      "near_zero_fraction": 0.049,
+      "switch_fraction": 0.041,
+      "recovery_index_stability": 0.96,
+      "beam_sequence_stability": 0.94,
+      "interpretation": "fixed-mode coverage adequate"
+    },
+    "Peptides-func": {
+      "median_gap": 0.0036,
+      "p5_gap": 0.0005,
+      "near_zero_fraction": 0.094,
+      "switch_fraction": 0.079,
+      "recovery_index_stability": 0.91,
+      "beam_sequence_stability": 0.88,
+      "interpretation": "boundary; retain fixed-mode-only wording"
+    }
+  },
+  "supplementary_table_S22_trajectory_tube_audit": {
+    "ogbn-arxiv": {
+      "beta_median": 0.96,
+      "beta_95": 1.08,
+      "M_eps_op": 0.0018,
+      "reference_term": 0.0007,
+      "tube_coverage": 0.96,
+      "mode_stable_coverage": 0.964,
+      "violation_rate": 0.036,
+      "final_bound": 0.018,
+      "bound_unit": "CE",
+      "observed_error_median": 0.0048,
+      "observed_error_p95": 0.0065
+    },
+    "Roman-empire": {
+      "beta_median": 0.98,
+      "beta_95": 1.12,
+      "M_eps_op": 0.0024,
+      "reference_term": 0.0011,
+      "tube_coverage": 0.94,
+      "mode_stable_coverage": 0.951,
+      "violation_rate": 0.049,
+      "final_bound": 0.025,
+      "bound_unit": "CE",
+      "observed_error_median": 0.0062,
+      "observed_error_p95": 0.009
+    },
+    "PascalVOC-SP": {
+      "beta_median": 0.97,
+      "beta_95": 1.1,
+      "M_eps_op": 0.0021,
+      "reference_term": 0.0009,
+      "tube_coverage": 0.97,
+      "mode_stable_coverage": 0.957,
+      "violation_rate": 0.043,
+      "final_bound": 0.022,
+      "bound_unit": "CE",
+      "observed_error_median": 0.0053,
+      "observed_error_p95": 0.0078
+    },
+    "COCO-SP": {
+      "beta_median": 0.98,
+      "beta_95": 1.11,
+      "M_eps_op": 0.0022,
+      "reference_term": 0.0009,
+      "tube_coverage": 0.96,
+      "mode_stable_coverage": 0.959,
+      "violation_rate": 0.041,
+      "final_bound": 0.024,
+      "bound_unit": "CE",
+      "observed_error_median": 0.0057,
+      "observed_error_p95": 0.0082
+    },
+    "Peptides-func": {
+      "beta_median": 0.95,
+      "beta_95": 1.06,
+      "M_eps_op": 0.0014,
+      "reference_term": 0.0006,
+      "tube_coverage": 0.96,
+      "mode_stable_coverage": 0.921,
+      "violation_rate": 0.079,
+      "final_bound": 0.011,
+      "bound_unit": "BCE",
+      "observed_error_median": 0.0031,
+      "observed_error_p95": 0.0049
+    }
+  },
+  "supplementary_table_S23_assurance_and_expected_compute": {
+    "ogbn-arxiv": {
+      "route_E": "radius/4",
+      "controller_cost": 4.7,
+      "comparator_cost": 4.0,
+      "fallback_probability": 0.118,
+      "assurance_serial_cost": 8.7,
+      "expected_serial_cost": 4.617,
+      "wall_time_overhead_pct": 13,
+      "r": 0.014,
+      "GPU_GiB": 15.1,
+      "CPU_GiB": 21.0,
+      "qualification_GPU_h_cross_table": 12.8,
+      "lean_effect": 0.93
+    },
+    "ogbn-proteins": {
+      "route_E": "radius/4",
+      "controller_cost": 4.8,
+      "comparator_cost": 4.0,
+      "fallback_probability": 0.147,
+      "assurance_serial_cost": 8.8,
+      "expected_serial_cost": 4.682,
+      "wall_time_overhead_pct": 14,
+      "r": 0.583,
+      "GPU_GiB": 37.1,
+      "CPU_GiB": 44.0,
+      "qualification_GPU_h_cross_table": 13.4,
+      "lean_effect": 0.92
+    },
+    "ogbn-products": {
+      "route_E": "qC/phase/2",
+      "controller_cost": 0.0,
+      "comparator_cost": 2.1,
+      "fallback_probability": null,
+      "assurance_serial_cost": 2.1,
+      "expected_serial_cost": 2.1,
+      "wall_time_overhead_pct": 0,
+      "r": 0.049,
+      "GPU_GiB": 64.5,
+      "CPU_GiB": 118.0,
+      "qualification_GPU_h_cross_table": 15.2,
+      "lean_effect": 1.0
+    },
+    "Roman-empire": {
+      "route_E": "MPC-RH/4",
+      "controller_cost": 5.4,
+      "comparator_cost": 4.0,
+      "fallback_probability": 0.129,
+      "assurance_serial_cost": 9.4,
+      "expected_serial_cost": 5.219,
+      "wall_time_overhead_pct": 25,
+      "r": 0.004,
+      "GPU_GiB": 12.4,
+      "CPU_GiB": 18.0,
+      "qualification_GPU_h_cross_table": 9.2,
+      "lean_effect": 0.91
+    },
+    "PascalVOC-SP": {
+      "route_E": "MPC-RH/8",
+      "controller_cost": 10.5,
+      "comparator_cost": 8.0,
+      "fallback_probability": 0.081,
+      "assurance_serial_cost": 18.5,
+      "expected_serial_cost": 10.298,
+      "wall_time_overhead_pct": 24,
+      "r": 0.044,
+      "GPU_GiB": 6.1,
+      "CPU_GiB": 12.0,
+      "qualification_GPU_h_cross_table": 10.6,
+      "lean_effect": 0.94
+    },
+    "COCO-SP": {
+      "route_E": "MPC-RH/8",
+      "controller_cost": 10.8,
+      "comparator_cost": 8.0,
+      "fallback_probability": 0.071,
+      "assurance_serial_cost": 18.8,
+      "expected_serial_cost": 10.601,
+      "wall_time_overhead_pct": 27,
+      "r": 0.044,
+      "GPU_GiB": 7.8,
+      "CPU_GiB": 16.0,
+      "qualification_GPU_h_cross_table": 12.1,
+      "lean_effect": 0.95
+    },
+    "Peptides-func": {
+      "route_E": "radius/4",
+      "controller_cost": 4.9,
+      "comparator_cost": 4.0,
+      "fallback_probability": 0.188,
+      "assurance_serial_cost": 8.9,
+      "expected_serial_cost": 4.731,
+      "wall_time_overhead_pct": 15,
+      "r": 0.016,
+      "GPU_GiB": 18.6,
+      "CPU_GiB": 25.0,
+      "qualification_GPU_h_cross_table": 11.3,
+      "lean_effect": 0.9
+    }
+  },
+  "supplementary_table_S23b_nominal_execution_time_and_amortization": {
+    "ogbn-arxiv": {
+      "W_nom_MAC": 11500000000000.0,
+      "throughput_anchor_s": 14.89,
+      "training_time_anchor_s": [
+        4.32,
+        8.64
+      ],
+      "t_nom_measured_s": 9.54,
+      "t_nom_reference_range_s": [
+        4.32,
+        14.89
+      ],
+      "M_star_t_nom_thousand_input_s": 112,
+      "M_star_inputs": 12000.0,
+      "M_star_range": [
+        7500.0,
+        26000.0
+      ],
+      "analytical_reference": "geometric mean of both anchors"
+    },
+    "ogbn-proteins": {
+      "W_nom_MAC": 7040000000000.0,
+      "throughput_anchor_s": 9.22,
+      "training_time_anchor_s": [
+        7.2,
+        14.4
+      ],
+      "t_nom_measured_s": 9.69,
+      "t_nom_reference_range_s": [
+        7.2,
+        14.4
+      ],
+      "M_star_t_nom_thousand_input_s": 106,
+      "M_star_inputs": 11000.0,
+      "M_star_range": [
+        7400.0,
+        15000.0
+      ],
+      "analytical_reference": "geometric mean of both anchors"
+    },
+    "Roman-empire": {
+      "W_nom_MAC": 859000000000.0,
+      "throughput_anchor_s": 1.4,
+      "training_time_anchor_s": [
+        0.68,
+        1.35
+      ],
+      "t_nom_measured_s": 1.16,
+      "t_nom_reference_range_s": [
+        0.68,
+        1.4
+      ],
+      "M_star_t_nom_thousand_input_s": 41,
+      "M_star_inputs": 35000.0,
+      "M_star_range": [
+        29000.0,
+        60000.0
+      ],
+      "analytical_reference": "geometric mean of both anchors"
+    },
+    "PascalVOC-SP": {
+      "W_nom_MAC": null,
+      "throughput_anchor_s": null,
+      "training_time_anchor_ms": [
+        0.52,
+        1.04
+      ],
+      "t_nom_measured_ms": 0.73,
+      "t_nom_reference_range_ms": [
+        0.52,
+        1.04
+      ],
+      "M_star_t_nom_thousand_input_s": 25,
+      "M_star_inputs": 34000000.0,
+      "M_star_range": [
+        24000000.0,
+        48000000.0
+      ],
+      "analytical_reference": "training-time anchor (launch-bound)"
+    },
+    "COCO-SP": {
+      "W_nom_MAC": null,
+      "throughput_anchor_s": null,
+      "training_time_anchor_ms": [
+        0.05,
+        0.09
+      ],
+      "t_nom_measured_ms": 0.73,
+      "t_nom_reference_range_ms": [
+        0.52,
+        1.04
+      ],
+      "M_star_t_nom_thousand_input_s": 25,
+      "M_star_inputs": 34000000.0,
+      "M_star_range": [
+        24000000.0,
+        48000000.0
+      ],
+      "analytical_reference": "shares the PascalVOC-SP anchor (same backbone, depth and graph size); its own quotient is not used"
+    },
+    "Peptides-func": {
+      "W_nom_MAC": null,
+      "throughput_anchor_s": null,
+      "training_time_anchor_ms": [
+        0.4,
+        0.79
+      ],
+      "t_nom_measured_ms": 0.56,
+      "t_nom_reference_range_ms": [
+        0.4,
+        0.79
+      ],
+      "M_star_t_nom_thousand_input_s": 83,
+      "M_star_inputs": 150000000.0,
+      "M_star_range": [
+        100000000.0,
+        210000000.0
+      ],
+      "analytical_reference": "training-time anchor (launch-bound)"
+    }
+  },
+  "supplementary_table_S26b_ensemble_law_and_break_even": {
+    "ogbn-arxiv": {
+      "l_plant_nats": 0.87,
+      "D_inf_hat": 0.0305,
+      "D_inf_band": [
+        0.0261,
+        0.0348
+      ],
+      "kappa_hat": 0.035,
+      "break_even_expected": [
+        0.0009,
+        0.0012
+      ],
+      "break_even_assurance": [
+        0.0035,
+        0.0047
+      ],
+      "measured_abs_Delta": 0.0045,
+      "extra_checkpoints_E16_20": 8,
+      "extra_GPU_h": 14.4
+    },
+    "ogbn-proteins": {
+      "l_plant_nats": 0.25,
+      "D_inf_hat": 0.0088,
+      "D_inf_band": [
+        0.0075,
+        0.01
+      ],
+      "kappa_hat": 0.035,
+      "break_even_expected": [
+        0.0003,
+        0.0004
+      ],
+      "break_even_assurance": [
+        0.001,
+        0.0014
+      ],
+      "measured_abs_Delta": 0.0038,
+      "extra_checkpoints_E16_20": 8,
+      "extra_GPU_h": 19.2
+    },
+    "Roman-empire": {
+      "l_plant_nats": 0.25,
+      "D_inf_hat": 0.0088,
+      "D_inf_band": [
+        0.0075,
+        0.01
+      ],
+      "kappa_hat": 0.035,
+      "break_even_expected": [
+        0.0004,
+        0.0006
+      ],
+      "break_even_assurance": [
+        0.0011,
+        0.0014
+      ],
+      "measured_abs_Delta": 0.0057,
+      "extra_checkpoints_E16_20": 8,
+      "extra_GPU_h": 3.6
+    },
+    "PascalVOC-SP": {
+      "l_plant_nats": 1.3,
+      "D_inf_hat": 0.0455,
+      "D_inf_band": [
+        0.039,
+        0.052
+      ],
+      "kappa_hat": 0.035,
+      "break_even_expected": [
+        0.0011,
+        0.0015
+      ],
+      "break_even_assurance": [
+        0.0028,
+        0.0037
+      ],
+      "measured_abs_Delta": 0.0084,
+      "extra_checkpoints_E16_20": 8,
+      "extra_GPU_h": 8.8
+    },
+    "COCO-SP": {
+      "l_plant_nats": 2.0,
+      "D_inf_hat": 0.07,
+      "D_inf_band": [
+        0.06,
+        0.08
+      ],
+      "kappa_hat": 0.035,
+      "break_even_expected": [
+        0.0018,
+        0.0025
+      ],
+      "break_even_assurance": [
+        0.0043,
+        0.0057
+      ],
+      "measured_abs_Delta": 0.0091,
+      "extra_checkpoints_E16_20": 8,
+      "extra_GPU_h": 10.4
+    },
+    "Peptides-func": {
+      "l_plant_nats": 0.22,
+      "D_inf_hat": 0.0077,
+      "D_inf_band": [
+        0.0066,
+        0.0088
+      ],
+      "kappa_hat": 0.035,
+      "break_even_expected": [
+        0.0003,
+        0.0003
+      ],
+      "break_even_assurance": [
+        0.0009,
+        0.0012
+      ],
+      "measured_abs_Delta": 0.003,
+      "extra_checkpoints_E16_20": 8,
+      "extra_GPU_h": 7.2
+    }
+  },
+  "supplementary_table_S30_oracle_dispersion": {
+    "ogbn-arxiv": {
+      "median_oracle_depth": 24,
+      "IQR": [
+        14,
+        40
+      ],
+      "fraction_oracle_differs_from_qC": 0.38,
+      "per_input_SD_clipped_effect": null,
+      "phi_x_grid": [
+        0.2,
+        0.55
+      ],
+      "phi_x_central": 0.35
+    },
+    "ogbn-proteins": {
+      "median_oracle_depth": 28,
+      "IQR": [
+        16,
+        48
+      ],
+      "fraction_oracle_differs_from_qC": 0.35,
+      "per_input_SD_clipped_effect": null,
+      "phi_x_grid": [
+        0.2,
+        0.55
+      ],
+      "phi_x_central": 0.35
+    },
+    "ogbn-products": {
+      "median_oracle_depth": 16,
+      "IQR": [
+        14,
+        18
+      ],
+      "fraction_oracle_differs_from_qC": 0.2,
+      "per_input_SD_clipped_effect": null,
+      "phi_x_grid": null,
+      "phi_x_central": null
+    },
+    "Roman-empire": {
+      "median_oracle_depth": 18,
+      "IQR": [
+        10,
+        34
+      ],
+      "fraction_oracle_differs_from_qC": 0.63,
+      "per_input_SD_clipped_effect": null,
+      "phi_x_grid": [
+        0.1,
+        0.45
+      ],
+      "phi_x_central": 0.25
+    },
+    "PascalVOC-SP": {
+      "median_oracle_depth": 40,
+      "IQR": [
+        24,
+        96
+      ],
+      "fraction_oracle_differs_from_qC": 0.71,
+      "per_input_SD_clipped_effect": 0.0146,
+      "phi_x_grid": [
+        0.1,
+        0.45
+      ],
+      "phi_x_central": 0.25
+    },
+    "COCO-SP": {
+      "median_oracle_depth": 36,
+      "IQR": [
+        20,
+        88
+      ],
+      "fraction_oracle_differs_from_qC": 0.69,
+      "per_input_SD_clipped_effect": 0.0162,
+      "phi_x_grid": [
+        0.1,
+        0.45
+      ],
+      "phi_x_central": 0.25
+    },
+    "Peptides-func": {
+      "median_oracle_depth": 30,
+      "IQR": [
+        22,
+        46
+      ],
+      "fraction_oracle_differs_from_qC": 0.45,
+      "per_input_SD_clipped_effect": 0.0112,
+      "phi_x_grid": [
+        0.2,
+        0.55
+      ],
+      "phi_x_central": 0.35
+    }
+  },
+  "supplementary_table_S34_budget_aware_rule": {
+    "ogbn-arxiv": {
+      "gap_median_mnats": 6.2,
+      "gap_p5_mnats": 1.1,
+      "switch_fraction": 0.036,
+      "skip_rate": 0.86,
+      "retained_fraction_r_B": 0.969,
+      "present_overhead_pct": 15.4,
+      "qB_overhead_pct": 6.0,
+      "p1": 0.01,
+      "qB_overhead_at_p1_zero_pct": 5.5
+    },
+    "ogbn-proteins": {
+      "gap_median_mnats": 5.7,
+      "gap_p5_mnats": 1.0,
+      "switch_fraction": 0.041,
+      "skip_rate": 0.84,
+      "retained_fraction_r_B": 0.966,
+      "present_overhead_pct": 17.1,
+      "qB_overhead_pct": 6.7,
+      "p1": 0.01,
+      "qB_overhead_at_p1_zero_pct": 6.2
+    },
+    "Roman-empire": {
+      "gap_median_mnats": 4.9,
+      "gap_p5_mnats": 0.8,
+      "switch_fraction": 0.049,
+      "skip_rate": 0.79,
+      "retained_fraction_r_B": 0.961,
+      "present_overhead_pct": 30.5,
+      "qB_overhead_pct": 11.2,
+      "p1": 0.01,
+      "qB_overhead_at_p1_zero_pct": 10.8
+    },
+    "PascalVOC-SP": {
+      "gap_median_mnats": 5.4,
+      "gap_p5_mnats": 0.9,
+      "switch_fraction": 0.043,
+      "skip_rate": 0.82,
+      "retained_fraction_r_B": 0.965,
+      "present_overhead_pct": 28.7,
+      "qB_overhead_pct": 10.0,
+      "p1": 0.01,
+      "qB_overhead_at_p1_zero_pct": 9.5
+    },
+    "COCO-SP": {
+      "gap_median_mnats": 5.6,
+      "gap_p5_mnats": 1.0,
+      "switch_fraction": 0.041,
+      "skip_rate": 0.84,
+      "retained_fraction_r_B": 0.966,
+      "present_overhead_pct": 32.5,
+      "qB_overhead_pct": 10.5,
+      "p1": 0.01,
+      "qB_overhead_at_p1_zero_pct": 10.0
+    },
+    "Peptides-func": {
+      "gap_median_mnats": 3.6,
+      "gap_p5_mnats": 0.5,
+      "switch_fraction": 0.079,
+      "skip_rate": 0.69,
+      "retained_fraction_r_B": 0.946,
+      "present_overhead_pct": 18.3,
+      "qB_overhead_pct": 9.4,
+      "p1": 0.01,
+      "qB_overhead_at_p1_zero_pct": 9.0
+    }
+  },
+  "supplementary_table_S37_input_fallback_counts": {
+    "PascalVOC-SP": {
+      "numerator": 116,
+      "denominator": 1429,
+      "rate": 0.081,
+      "denominator_note": "official test split graphs"
+    },
+    "COCO-SP": {
+      "numerator": 355,
+      "denominator": 5000,
+      "rate": 0.071,
+      "denominator_note": "official test split graphs"
+    },
+    "Peptides-func": {
+      "numerator": 438,
+      "denominator": 2331,
+      "rate": 0.188,
+      "denominator_note": "official test split graphs"
+    }
+  },
+  "supplementary_table_S41_qualification_cost_components": {
+    "ogbn-arxiv": {
+      "backbone_training_GPU_h_per_seed": 1.8,
+      "exploration_logging": 0.77,
+      "fitting": 0.29,
+      "nested_selection": 0.67,
+      "confirmation": 0.1,
+      "admission": 0.1,
+      "total_qualification_increment_GPU_h": 1.92
+    },
+    "ogbn-proteins": {
+      "backbone_training_GPU_h_per_seed": 2.4,
+      "exploration_logging": 0.8,
+      "fitting": 0.3,
+      "nested_selection": 0.7,
+      "confirmation": 0.1,
+      "admission": 0.1,
+      "total_qualification_increment_GPU_h": 2.01
+    },
+    "ogbn-products": {
+      "backbone_training_GPU_h_per_seed": 4.8,
+      "exploration_logging": null,
+      "fitting": null,
+      "nested_selection": null,
+      "confirmation": null,
+      "admission": null,
+      "total_qualification_increment_GPU_h": null,
+      "qualification_increment_derived_from_table_S15_GPU_h": 2.28,
+      "note": "the per-seed training time is Table S5's measured 4.8 h/seed; Table S41 has no products row; the abstract range 1.4-2.3 GPU-hours is spanned by Roman-empire (1.38) and products, whose increment is the Table S15 difference 15.2 - 12.92 = 2.28 GPU-h"
+    },
+    "Roman-empire": {
+      "backbone_training_GPU_h_per_seed": 0.45,
+      "exploration_logging": 0.55,
+      "fitting": 0.21,
+      "nested_selection": 0.48,
+      "confirmation": 0.07,
+      "admission": 0.07,
+      "total_qualification_increment_GPU_h": 1.38
+    },
+    "PascalVOC-SP": {
+      "backbone_training_GPU_h_per_seed": 1.1,
+      "exploration_logging": 0.64,
+      "fitting": 0.24,
+      "nested_selection": 0.56,
+      "confirmation": 0.08,
+      "admission": 0.08,
+      "total_qualification_increment_GPU_h": 1.59
+    },
+    "COCO-SP": {
+      "backbone_training_GPU_h_per_seed": 1.3,
+      "exploration_logging": 0.72,
+      "fitting": 0.27,
+      "nested_selection": 0.63,
+      "confirmation": 0.09,
+      "admission": 0.09,
+      "total_qualification_increment_GPU_h": 1.81
+    },
+    "Peptides-func": {
+      "backbone_training_GPU_h_per_seed": 0.9,
+      "exploration_logging": 0.68,
+      "fitting": 0.25,
+      "nested_selection": 0.59,
+      "confirmation": 0.08,
+      "admission": 0.08,
+      "total_qualification_increment_GPU_h": 1.69
+    }
+  },
+  "supplementary_table_S42_power_of_budget_matched_test": {
+    "ogbn-arxiv": {
+      "unit": "32 buffered cores",
+      "paired_SE_nats": 0.00099,
+      "MDE_mnats_0.05": 2.79,
+      "MDE_mnats_holm": 3.32,
+      "reported_margin_mnats": 2.93,
+      "margin_range": [
+        2.02,
+        3.6
+      ],
+      "power_at_unit_pct": 84,
+      "power_range": [
+        53,
+        95
+      ],
+      "power_holm_step_pct": 67,
+      "power_seed_paired_pct": [
+        93,
+        100
+      ],
+      "power_ensemble_spend_pct": 55
+    },
+    "ogbn-proteins": {
+      "unit": "32 buffered cores",
+      "paired_SE_nats": 0.00084,
+      "MDE_mnats_0.05": 2.35,
+      "MDE_mnats_holm": 2.8,
+      "reported_margin_mnats": 2.47,
+      "margin_range": [
+        1.71,
+        3.04
+      ],
+      "power_at_unit_pct": 84,
+      "power_range": [
+        53,
+        95
+      ],
+      "power_holm_step_pct": 67,
+      "power_seed_paired_pct": [
+        93,
+        100
+      ],
+      "power_ensemble_spend_pct": 75
+    },
+    "Roman-empire": {
+      "unit": "10 official splits",
+      "paired_SE_nats": 0.00183,
+      "MDE_mnats_0.05": 5.12,
+      "MDE_mnats_holm": 6.1,
+      "reported_margin_mnats": 4.29,
+      "margin_range": [
+        3.15,
+        5.15
+      ],
+      "power_at_unit_pct": 65,
+      "power_range": [
+        41,
+        80
+      ],
+      "power_holm_step_pct": 44,
+      "power_seed_paired_pct": [
+        76,
+        100
+      ],
+      "power_ensemble_spend_pct": 55
+    },
+    "PascalVOC-SP": {
+      "unit": "850 confirmation graphs (fixed ensemble)",
+      "paired_SE_nats": 0.0005,
+      "MDE_mnats_0.05": 1.41,
+      "MDE_mnats_holm": 1.68,
+      "reported_margin_mnats": 6.32,
+      "margin_range": [
+        4.63,
+        7.58
+      ],
+      "power_at_unit_pct": 100,
+      "power_range": [
+        100,
+        100
+      ],
+      "power_holm_step_pct": 100,
+      "power_seed_paired_pct": [
+        100,
+        100
+      ],
+      "power_ensemble_spend_pct": 100
+    },
+    "COCO-SP": {
+      "unit": "11329 confirmation graphs (fixed ensemble)",
+      "paired_SE_nats": 0.00015,
+      "MDE_mnats_0.05": 0.43,
+      "MDE_mnats_holm": 0.51,
+      "reported_margin_mnats": 6.79,
+      "margin_range": [
+        4.98,
+        8.15
+      ],
+      "power_at_unit_pct": 100,
+      "power_range": [
+        100,
+        100
+      ],
+      "power_holm_step_pct": 100,
+      "power_seed_paired_pct": [
+        100,
+        100
+      ],
+      "power_ensemble_spend_pct": 100
+    },
+    "Peptides-func": {
+      "unit": "1087 confirmation graphs (fixed ensemble)",
+      "paired_SE_nats": 0.00034,
+      "MDE_mnats_0.05": 0.95,
+      "MDE_mnats_holm": 1.14,
+      "reported_margin_mnats": 1.97,
+      "margin_range": [
+        1.36,
+        2.42
+      ],
+      "power_at_unit_pct": 100,
+      "power_range": [
+        98,
+        100
+      ],
+      "power_holm_step_pct": 100,
+      "power_seed_paired_pct": [
+        100,
+        100
+      ],
+      "power_ensemble_spend_pct": 100
+    }
+  },
+  "supplementary_table_S44_per_input_cost_model": {
+    "ogbn-arxiv": {
+      "r": 0.013,
+      "v": 0.093,
+      "o_ctrl": 0.175,
+      "f_bar": 0.25,
+      "o_fix": 0.152,
+      "f99_low_central_high": [
+        0.35,
+        0.45,
+        0.6
+      ],
+      "C_099_low_central_high": [
+        4.74,
+        4.77,
+        4.83
+      ],
+      "overhead_pct_low_central_high": [
+        18,
+        19,
+        21
+      ]
+    },
+    "ogbn-proteins": {
+      "r": 0.583,
+      "v": 2.578,
+      "o_ctrl": 0.2,
+      "f_bar": 0.063,
+      "f_bar_note": "identity",
+      "o_fix": 0.038,
+      "f99_low_central_high": [
+        0.16,
+        0.26,
+        0.41
+      ],
+      "C_099_low_central_high": [
+        5.83,
+        6.86,
+        8.41
+      ],
+      "overhead_pct_low_central_high": [
+        46,
+        72,
+        110
+      ]
+    },
+    "Roman-empire": {
+      "r": 0.004,
+      "v": 0.026,
+      "o_ctrl": 0.35,
+      "f_bar": 0.25,
+      "o_fix": 0.343,
+      "f99_low_central_high": [
+        0.35,
+        0.45,
+        0.6
+      ],
+      "C_099_low_central_high": [
+        5.41,
+        5.42,
+        5.44
+      ],
+      "overhead_pct_low_central_high": [
+        35,
+        36,
+        36
+      ]
+    },
+    "PascalVOC-SP": {
+      "r": 0.044,
+      "v": 0.296,
+      "o_ctrl": 0.312,
+      "f_bar": 0.25,
+      "o_fix": 0.238,
+      "f99_low_central_high": [
+        0.35,
+        0.45,
+        0.6
+      ],
+      "C_099_low_central_high": [
+        10.74,
+        10.97,
+        11.33
+      ],
+      "overhead_pct_low_central_high": [
+        34,
+        37,
+        42
+      ]
+    },
+    "COCO-SP": {
+      "r": 0.044,
+      "v": 0.296,
+      "o_ctrl": 0.35,
+      "f_bar": 0.25,
+      "o_fix": 0.276,
+      "f99_low_central_high": [
+        0.35,
+        0.45,
+        0.6
+      ],
+      "C_099_low_central_high": [
+        11.04,
+        11.27,
+        11.63
+      ],
+      "overhead_pct_low_central_high": [
+        38,
+        41,
+        45
+      ]
+    },
+    "Peptides-func": {
+      "r": 0.016,
+      "v": 0.11,
+      "o_ctrl": 0.225,
+      "f_bar": 0.25,
+      "o_fix": 0.198,
+      "f99_low_central_high": [
+        0.35,
+        0.45,
+        0.6
+      ],
+      "C_099_low_central_high": [
+        4.94,
+        4.99,
+        5.05
+      ],
+      "overhead_pct_low_central_high": [
+        24,
+        25,
+        26
+      ]
+    }
+  },
+  "supplementary_table_S45_inserted_site_attribution": {
+    "PascalVOC-SP": {
+      "native_site_fraction": 0.047,
+      "arm1_native_open_loop": 0.0021,
+      "arm2_inserted_open_loop": 0.0,
+      "arm1prime_native_feedback": -0.0018,
+      "arm1prime_range": [
+        -0.0027,
+        -0.0009
+      ],
+      "arm3_inserted_feedback_deployed": -0.0084,
+      "paired_SE": 0.0005,
+      "retained_share_arm1prime": 0.22
+    },
+    "COCO-SP": {
+      "native_site_fraction": 0.047,
+      "arm1_native_open_loop": 0.0022,
+      "arm2_inserted_open_loop": 0.0,
+      "arm1prime_native_feedback": -0.002,
+      "arm1prime_range": [
+        -0.0029,
+        -0.001
+      ],
+      "arm3_inserted_feedback_deployed": -0.0091,
+      "paired_SE": 0.00015,
+      "retained_share_arm1prime": 0.22
+    },
+    "Peptides-func": {
+      "native_site_fraction": 0.125,
+      "arm1_native_open_loop": 0.0006,
+      "arm2_inserted_open_loop": 0.0,
+      "arm1prime_native_feedback": -0.0011,
+      "arm1prime_range": [
+        -0.0016,
+        -0.0005
+      ],
+      "arm3_inserted_feedback_deployed": -0.003,
+      "paired_SE": 0.00034,
+      "retained_share_arm1prime": 0.35
+    }
+  },
+  "supplementary_table_S46_budget_matched_frontier": {
+    "ogbn-arxiv": {
+      "ceiling": 1.15,
+      "feedback_effect_mnats": -4.5,
+      "E3_predictor": -1.6,
+      "E3_range": [
+        -0.9,
+        -2.5
+      ],
+      "E4_distilled": -1.4,
+      "E4_range": [
+        -0.8,
+        -2.2
+      ],
+      "E5_no_observation_replanning": -1.3,
+      "E5_range": [
+        -1.0,
+        -1.6
+      ],
+      "E6_qB_effect": -4.4,
+      "E6_overhead_pct": 6,
+      "E6_overhead_range": [
+        5,
+        11
+      ],
+      "present_overhead_pct": 15
+    },
+    "ogbn-proteins": {
+      "ceiling": 1.17,
+      "feedback_effect_mnats": -3.8,
+      "E3_predictor": -1.3,
+      "E3_range": [
+        -0.8,
+        -2.1
+      ],
+      "E4_distilled": -1.2,
+      "E4_range": [
+        -0.7,
+        -1.9
+      ],
+      "E5_no_observation_replanning": -1.1,
+      "E5_range": [
+        -0.9,
+        -1.3
+      ],
+      "E6_qB_effect": -3.7,
+      "E6_overhead_pct": 7,
+      "E6_overhead_range": [
+        6,
+        12
+      ],
+      "present_overhead_pct": 17
+    },
+    "Roman-empire": {
+      "ceiling": 1.3,
+      "feedback_effect_mnats": -5.7,
+      "E3_predictor": -1.4,
+      "E3_range": [
+        -0.6,
+        -2.6
+      ],
+      "E4_distilled": -1.3,
+      "E4_range": [
+        -0.5,
+        -2.3
+      ],
+      "E5_no_observation_replanning": -0.5,
+      "E5_range": [
+        -0.2,
+        -0.9
+      ],
+      "E6_qB_effect": -5.5,
+      "E6_overhead_pct": 11,
+      "E6_overhead_range": [
+        8,
+        19
+      ],
+      "present_overhead_pct": 30
+    },
+    "PascalVOC-SP": {
+      "ceiling": 1.29,
+      "feedback_effect_mnats": -8.4,
+      "E3_predictor": -2.1,
+      "E3_range": [
+        -0.8,
+        -3.8
+      ],
+      "E4_distilled": -1.9,
+      "E4_range": [
+        -0.8,
+        -3.4
+      ],
+      "E5_no_observation_replanning": -0.7,
+      "E5_range": [
+        -0.3,
+        -1.3
+      ],
+      "E6_qB_effect": -8.1,
+      "E6_overhead_pct": 10,
+      "E6_overhead_range": [
+        8,
+        18
+      ],
+      "present_overhead_pct": 29
+    },
+    "COCO-SP": {
+      "ceiling": 1.33,
+      "feedback_effect_mnats": -9.1,
+      "E3_predictor": -2.3,
+      "E3_range": [
+        -0.9,
+        -4.1
+      ],
+      "E4_distilled": -2.0,
+      "E4_range": [
+        -0.8,
+        -3.7
+      ],
+      "E5_no_observation_replanning": -0.7,
+      "E5_range": [
+        -0.3,
+        -1.4
+      ],
+      "E6_qB_effect": -8.7,
+      "E6_overhead_pct": 10,
+      "E6_overhead_range": [
+        9,
+        20
+      ],
+      "present_overhead_pct": 33
+    },
+    "Peptides-func": {
+      "ceiling": 1.18,
+      "feedback_effect_mnats": -3.0,
+      "E3_predictor": -1.1,
+      "E3_range": [
+        -0.6,
+        -1.7
+      ],
+      "E4_distilled": -1.0,
+      "E4_range": [
+        -0.5,
+        -1.5
+      ],
+      "E5_no_observation_replanning": -0.8,
+      "E5_range": [
+        -0.7,
+        -1.1
+      ],
+      "E6_qB_effect": -2.9,
+      "E6_overhead_pct": 9,
+      "E6_overhead_range": [
+        6,
+        13
+      ],
+      "present_overhead_pct": 18
+    }
+  },
+  "supplementary_table_S47_decision_boundary_and_power": {
+    "ogbn-arxiv": {
+      "phi_grid": [
+        0.2,
+        0.55
+      ],
+      "phi_central": 0.35,
+      "phi_FB_contract": 1,
+      "phi_B_contract": 0.969,
+      "phi_FB_ensemble": [
+        0.79,
+        0.84
+      ],
+      "phi_B_ensemble": [
+        0.922,
+        0.934
+      ],
+      "margin_FB_E3_mnats": 2.9,
+      "margin_range": [
+        2.0,
+        3.6
+      ],
+      "MDE_unit": 2.8,
+      "MDE_seed_paired": [
+        2.4,
+        0.8
+      ],
+      "power_unit_pct": 84,
+      "power_unit_range": [
+        53,
+        95
+      ],
+      "power_seed_paired_pct": [
+        93,
+        100
+      ]
+    },
+    "ogbn-proteins": {
+      "phi_grid": [
+        0.2,
+        0.55
+      ],
+      "phi_central": 0.35,
+      "phi_FB_contract": 1,
+      "phi_B_contract": 0.966,
+      "phi_FB_ensemble": [
+        0.92,
+        0.94
+      ],
+      "phi_B_ensemble": [
+        0.946,
+        0.951
+      ],
+      "margin_FB_E3_mnats": 2.5,
+      "margin_range": [
+        1.7,
+        3.0
+      ],
+      "MDE_unit": 2.4,
+      "MDE_seed_paired": [
+        2.1,
+        0.7
+      ],
+      "power_unit_pct": 84,
+      "power_unit_range": [
+        53,
+        95
+      ],
+      "power_seed_paired_pct": [
+        93,
+        100
+      ]
+    },
+    "Roman-empire": {
+      "phi_grid": [
+        0.1,
+        0.45
+      ],
+      "phi_central": 0.25,
+      "phi_FB_contract": 1,
+      "phi_B_contract": 0.961,
+      "phi_FB_ensemble": [
+        0.91,
+        0.93
+      ],
+      "phi_B_ensemble": [
+        0.938,
+        0.943
+      ],
+      "margin_FB_E3_mnats": 4.3,
+      "margin_range": [
+        3.1,
+        5.1
+      ],
+      "MDE_unit": 5.1,
+      "MDE_seed_paired": [
+        4.5,
+        1.5
+      ],
+      "power_unit_pct": 65,
+      "power_unit_range": [
+        41,
+        80
+      ],
+      "power_seed_paired_pct": [
+        76,
+        100
+      ]
+    },
+    "PascalVOC-SP": {
+      "phi_grid": [
+        0.1,
+        0.45
+      ],
+      "phi_central": 0.25,
+      "phi_FB_contract": 1,
+      "phi_B_contract": 0.965,
+      "phi_FB_ensemble": [
+        0.84,
+        0.88
+      ],
+      "phi_B_ensemble": [
+        0.929,
+        0.938
+      ],
+      "margin_FB_E3_mnats": 6.3,
+      "margin_range": [
+        4.6,
+        7.6
+      ],
+      "MDE_unit": 1.4,
+      "MDE_seed_paired": [
+        1.7,
+        0.4
+      ],
+      "power_unit_pct": 100,
+      "power_unit_range": [
+        100,
+        100
+      ],
+      "power_seed_paired_pct": [
+        100,
+        100
+      ]
+    },
+    "COCO-SP": {
+      "phi_grid": [
+        0.1,
+        0.45
+      ],
+      "phi_central": 0.25,
+      "phi_FB_contract": 1,
+      "phi_B_contract": 0.966,
+      "phi_FB_ensemble": [
+        0.75,
+        0.81
+      ],
+      "phi_B_ensemble": [
+        0.913,
+        0.926
+      ],
+      "margin_FB_E3_mnats": 6.8,
+      "margin_range": [
+        5.0,
+        8.1
+      ],
+      "MDE_unit": 0.4,
+      "MDE_seed_paired": [
+        0.5,
+        0.1
+      ],
+      "power_unit_pct": 100,
+      "power_unit_range": [
+        100,
+        100
+      ],
+      "power_seed_paired_pct": [
+        100,
+        100
+      ]
+    },
+    "Peptides-func": {
+      "phi_grid": [
+        0.2,
+        0.55
+      ],
+      "phi_central": 0.35,
+      "phi_FB_contract": 1,
+      "phi_B_contract": 0.946,
+      "phi_FB_ensemble": [
+        0.9,
+        0.93
+      ],
+      "phi_B_ensemble": [
+        0.908,
+        0.918
+      ],
+      "margin_FB_E3_mnats": 2.0,
+      "margin_range": [
+        1.4,
+        2.4
+      ],
+      "MDE_unit": 1.0,
+      "MDE_seed_paired": [
+        1.1,
+        0.3
+      ],
+      "power_unit_pct": 100,
+      "power_unit_range": [
+        98,
+        100
+      ],
+      "power_seed_paired_pct": [
+        100,
+        100
+      ]
+    }
+  },
+  "_availability": {
+    "q0_absolute_test_loss": {
+      "status": "not_tabulated",
+      "value": null,
+      "reason": "The upstream predictor is defined, but these PDFs do not provide an absolute test-loss table for q0."
+    },
+    "q0_absolute_official_test_score": {
+      "status": "not_tabulated",
+      "value": null,
+      "reason": "The full-depth plant rows of Table S15 are qN, not the upstream q0."
+    },
+    "qN_qC_qD_absolute_test_losses": {
+      "status": "not_tabulated",
+      "value": null,
+      "reason": "The main result is paired qD-minus-qC loss. Table S26 reference plant-loss levels and Table S16 depth-integrated losses are different estimands and are not substituted."
+    },
+    "qN_qC_qD_absolute_official_test_scores": {
+      "status": "author_reported",
+      "source_registry_key": "supplementary_table_S15_method_comparison"
+    },
+    "paper_run_observation_records": {
+      "status": "not_bundled",
+      "value": null,
+      "reason": "The PDFs and table registry are bundled; the full manuscript-run prediction, checkpoint, seed and timing archives are not bundled. Result-binding templates are not populated historical run identities."
+    },
+    "corrected_support_ESS_and_max_weight": {
+      "status": "not_tabulated",
+      "value": null,
+      "reason": "The inconsistent dataset-level pairs are withdrawn; Table S7 requires common per-cell weight records (E19)."
+    }
+  },
+  "_interpretation_notes": {
+    "reported_admission": "Admission is descriptive for every reported benchmark. Single-graph units are dependent; PascalVOC-SP, COCO-SP and Peptides-func reused validation for confirmation and admission. Their Table S13 values do not instantiate Theorem 2.",
+    "confirmation_split_sensitivity": "Table S14b holds effects fixed and rescales standard errors; its intervals and label-retention probabilities are analytical sensitivity, not a measured separated-data rerun and not a repair of validation reuse.",
+    "registered_selection_audit": "The registered epsilon_eq=0.002 upper-limit rule reproduces four of seven reported selections on representative rows. Roman, Pascal and COCO differ. The full executed selector trace is not supplied; a different point-estimate reading matching those rows does not identify that trace.",
+    "peptides_score_discrepancy": {
+      "main_paired_gain_AP": 0.0058,
+      "S26_qD_score_AP": 0.72,
+      "S26_qC_score_AP": 0.714,
+      "S26_score_difference_AP": 0.006,
+      "difference_minus_main_paired_gain_AP": 0.0002,
+      "interpretation": "The 0.0002 AP difference exceeds the 0.0001 maximum rounding discrepancy for two scores printed to four decimals. Main Table 1 is retained for the paired estimate. Unrounded per-seed records are not tabulated."
+    },
+    "cost_quantities": "Expected branch cost, observed maximum (not tabulated), modelled C_0.99 tail quantile, assurance two-branch configuration and Algorithm S3 hard cap are distinct quantities.",
+    "configuration_ranges": "Tables S45, S46 and S46b report configuration ranges, not paired 95% confidence intervals. S46b does not tabulate arm-level adjusted P values, actual-work observations or budget-mismatch values.",
+    "uncertainty_hierarchy": "Main test intervals include seed and evaluation-unit resampling; Table S13 admission moments condition on a fixed ensemble. The 93–98% seed-share calculation is a lower bound under the two-way model across different stages, not estimated variance components.",
+    "withdrawn_support_summaries": "No withdrawn dataset-level ESS/max-weight pair is used as a support measurement. Illustrative ESS values in Table S28 are analytical reference counts only."
+  },
+  "supplementary_table_S12b_nested_open_loop_comparison": {
+    "ogbn-arxiv": [
+      {
+        "route": "best-depth",
+        "nested_Delta_s_nats": 0.00099
+      },
+      {
+        "route": "learned-stop",
+        "nested_Delta_s_nats": 0.00083
+      },
+      {
+        "route": "phase",
+        "nested_Delta_s_nats": 0.00064
+      },
+      {
+        "route": "fixed-sequence",
+        "nested_Delta_s_nats": 0
+      },
+      {
+        "route": "MPC-OL",
+        "nested_Delta_s_nats": 0.0002
+      }
+    ],
+    "ogbn-proteins": [
+      {
+        "route": "best-depth",
+        "nested_Delta_s_nats": 0.00092
+      },
+      {
+        "route": "learned-stop",
+        "nested_Delta_s_nats": 0.00078
+      },
+      {
+        "route": "phase",
+        "nested_Delta_s_nats": 0.00062
+      },
+      {
+        "route": "fixed-sequence",
+        "nested_Delta_s_nats": 0
+      },
+      {
+        "route": "MPC-OL",
+        "nested_Delta_s_nats": 0.0002
+      }
+    ],
+    "Roman-empire": [
+      {
+        "route": "best-depth",
+        "nested_Delta_s_nats": 0.00205
+      },
+      {
+        "route": "learned-stop",
+        "nested_Delta_s_nats": 0.00181
+      },
+      {
+        "route": "phase",
+        "nested_Delta_s_nats": 0.00152
+      },
+      {
+        "route": "fixed-sequence",
+        "nested_Delta_s_nats": 0.00083
+      },
+      {
+        "route": "MPC-OL",
+        "nested_Delta_s_nats": 0
+      }
+    ],
+    "PascalVOC-SP": [
+      {
+        "route": "best-depth",
+        "nested_Delta_s_nats": 0.00282
+      },
+      {
+        "route": "learned-stop",
+        "nested_Delta_s_nats": 0.00246
+      },
+      {
+        "route": "phase",
+        "nested_Delta_s_nats": 0.0021
+      },
+      {
+        "route": "fixed-sequence",
+        "nested_Delta_s_nats": 0.0011
+      },
+      {
+        "route": "MPC-OL",
+        "nested_Delta_s_nats": 0
+      }
+    ],
+    "COCO-SP": [
+      {
+        "route": "best-depth",
+        "nested_Delta_s_nats": 0.00293
+      },
+      {
+        "route": "learned-stop",
+        "nested_Delta_s_nats": 0.0026
+      },
+      {
+        "route": "phase",
+        "nested_Delta_s_nats": 0.0022
+      },
+      {
+        "route": "fixed-sequence",
+        "nested_Delta_s_nats": 0.00116
+      },
+      {
+        "route": "MPC-OL",
+        "nested_Delta_s_nats": 0
+      }
+    ],
+    "Peptides-func": [
+      {
+        "route": "best-depth",
+        "nested_Delta_s_nats": 0.0008
+      },
+      {
+        "route": "learned-stop",
+        "nested_Delta_s_nats": 0.00068
+      },
+      {
+        "route": "phase",
+        "nested_Delta_s_nats": 0.00055
+      },
+      {
+        "route": "fixed-sequence",
+        "nested_Delta_s_nats": 0
+      },
+      {
+        "route": "MPC-OL",
+        "nested_Delta_s_nats": 0.0002
+      }
+    ]
+  },
+  "supplementary_table_S7_support_audit": {
+    "ogbn-arxiv": {
+      "trajectories": 12800,
+      "minimum_count": 128,
+      "minimum_propensity": 0.052,
+      "qualified_fraction": 0.92,
+      "corrected_minimum_ESS": null,
+      "corrected_maximum_normalized_weight": null,
+      "corrected_weight_summary_status": "not tabulated; common per-cell E19 records required"
+    },
+    "ogbn-proteins": {
+      "trajectories": 14400,
+      "minimum_count": 144,
+      "minimum_propensity": 0.054,
+      "qualified_fraction": 0.95,
+      "corrected_minimum_ESS": null,
+      "corrected_maximum_normalized_weight": null,
+      "corrected_weight_summary_status": "not tabulated; common per-cell E19 records required"
+    },
+    "ogbn-products": {
+      "trajectories": 19200,
+      "minimum_count": 192,
+      "minimum_propensity": 0.058,
+      "qualified_fraction": 0.98,
+      "corrected_minimum_ESS": null,
+      "corrected_maximum_normalized_weight": null,
+      "corrected_weight_summary_status": "not tabulated; common per-cell E19 records required"
+    },
+    "Roman-empire": {
+      "trajectories": 9600,
+      "minimum_count": 96,
+      "minimum_propensity": 0.051,
+      "qualified_fraction": 0.9,
+      "corrected_minimum_ESS": null,
+      "corrected_maximum_normalized_weight": null,
+      "corrected_weight_summary_status": "not tabulated; common per-cell E19 records required"
+    },
+    "PascalVOC-SP": {
+      "trajectories": 20480,
+      "minimum_count": 128,
+      "minimum_propensity": 0.052,
+      "qualified_fraction": 0.93,
+      "corrected_minimum_ESS": null,
+      "corrected_maximum_normalized_weight": null,
+      "corrected_weight_summary_status": "not tabulated; common per-cell E19 records required"
+    },
+    "COCO-SP": {
+      "trajectories": 32000,
+      "minimum_count": 200,
+      "minimum_propensity": 0.061,
+      "qualified_fraction": 0.98,
+      "corrected_minimum_ESS": null,
+      "corrected_maximum_normalized_weight": null,
+      "corrected_weight_summary_status": "not tabulated; common per-cell E19 records required"
+    },
+    "Peptides-func": {
+      "trajectories": 24000,
+      "minimum_count": 150,
+      "minimum_propensity": 0.056,
+      "qualified_fraction": 0.95,
+      "corrected_minimum_ESS": null,
+      "corrected_maximum_normalized_weight": null,
+      "corrected_weight_summary_status": "not tabulated; common per-cell E19 records required"
+    }
+  }
+}

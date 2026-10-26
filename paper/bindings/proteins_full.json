@@ -1,0 +1,80 @@
+{
+  "schema_version": "result-binding-1",
+  "status": "template_prefilled_with_reported_values",
+  "_how_to_complete": "Run `python -B scripts/compare_with_manuscript.py <run> --emit-binding <path>` on the completed full-profile run; it fills run_identities from the sealed stage manifests and sets status to author_completed with the relationship you declare. Then run `python -B scripts/check_result_binding.py <run> <path>`.",
+  "manuscript_identifier": "CROSS-MORSE: Cross-Spectral Control of Message Passing in Frozen Graph Neural Networks; Scientific Reports submission, revised 2026-10-24",
+  "relationship_to_manuscript": null,
+  "run_identities": {
+    "source_sha256": null,
+    "config_sha256": null,
+    "unit_sha256": null,
+    "dataset": "ogbn-proteins"
+  },
+  "expected_profile": "full",
+  "expected_config": "configs/proteins_full.json",
+  "results": [
+    {
+      "manuscript_location": "Main Table 1, ogbn-proteins, final effect over qC: paired BCE (nats)",
+      "artifact": "final/results_summary.json",
+      "json_pointer": "/paired_qD_minus_qC_loss/mean",
+      "reported_value": -0.0038,
+      "absolute_tolerance": 5e-05
+    },
+    {
+      "manuscript_location": "Main Table 1, ogbn-proteins, lower end of the 95% paired-loss interval",
+      "artifact": "final/results_summary.json",
+      "json_pointer": "/paired_qD_minus_qC_loss/lower",
+      "reported_value": -0.0068,
+      "absolute_tolerance": 5e-05
+    },
+    {
+      "manuscript_location": "Main Table 1, ogbn-proteins, upper end of the 95% paired-loss interval",
+      "artifact": "final/results_summary.json",
+      "json_pointer": "/paired_qD_minus_qC_loss/upper",
+      "reported_value": -0.0008,
+      "absolute_tolerance": 5e-05
+    },
+    {
+      "manuscript_location": "Main Table 1, ogbn-proteins, official ROC-AUC gain over qC (percentage points)",
+      "artifact": "final/results_summary.json",
+      "json_pointer": "/paired_qD_minus_qC_metric_pp/mean",
+      "reported_value": 0.11,
+      "absolute_tolerance": 0.005
+    },
+    {
+      "manuscript_location": "Main Table 1, ogbn-proteins, lower end of the 95% official-gain interval (pp)",
+      "artifact": "final/results_summary.json",
+      "json_pointer": "/paired_qD_minus_qC_metric_pp/lower",
+      "reported_value": 0.03,
+      "absolute_tolerance": 0.005
+    },
+    {
+      "manuscript_location": "Main Table 1, ogbn-proteins, upper end of the 95% official-gain interval (pp)",
+      "artifact": "final/results_summary.json",
+      "json_pointer": "/paired_qD_minus_qC_metric_pp/upper",
+      "reported_value": 0.19,
+      "absolute_tolerance": 0.005
+    },
+    {
+      "manuscript_location": "Supplementary Table S15, ogbn-proteins, 'radius (deployed)' official test score",
+      "artifact": "final/results_summary.json",
+      "json_pointer": "/models/qD/metric_percent",
+      "reported_value": 87.26,
+      "absolute_tolerance": 0.005
+    },
+    {
+      "manuscript_location": "Supplementary Table S15, ogbn-proteins, 'best fixed sequence (qC)' official test score",
+      "artifact": "final/results_summary.json",
+      "json_pointer": "/models/qC/metric_percent",
+      "reported_value": 87.15,
+      "absolute_tolerance": 0.005
+    },
+    {
+      "manuscript_location": "Supplementary Table S15, ogbn-proteins, 'full-depth plant' official test score",
+      "artifact": "final/results_summary.json",
+      "json_pointer": "/models/qN/metric_percent",
+      "reported_value": 87.02,
+      "absolute_tolerance": 0.005
+    }
+  ]
+}

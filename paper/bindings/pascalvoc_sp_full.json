@@ -1,0 +1,80 @@
+{
+  "schema_version": "result-binding-1",
+  "status": "template_prefilled_with_reported_values",
+  "_how_to_complete": "Run `python -B scripts/compare_with_manuscript.py <run> --emit-binding <path>` on the completed full-profile run; it fills run_identities from the sealed stage manifests and sets status to author_completed with the relationship you declare. Then run `python -B scripts/check_result_binding.py <run> <path>`.",
+  "manuscript_identifier": "CROSS-MORSE: Cross-Spectral Control of Message Passing in Frozen Graph Neural Networks; Scientific Reports submission, revised 2026-10-24",
+  "relationship_to_manuscript": null,
+  "run_identities": {
+    "source_sha256": null,
+    "config_sha256": null,
+    "unit_sha256": null,
+    "dataset": "PascalVOC-SP"
+  },
+  "expected_profile": "full",
+  "expected_config": "configs/pascalvoc_sp_full.json",
+  "results": [
+    {
+      "manuscript_location": "Main Table 1, PascalVOC-SP, final effect over qC: paired CE (nats)",
+      "artifact": "final/results_summary.json",
+      "json_pointer": "/paired_qD_minus_qC_loss/mean",
+      "reported_value": -0.00842,
+      "absolute_tolerance": 5e-06
+    },
+    {
+      "manuscript_location": "Main Table 1, PascalVOC-SP, lower end of the 95% paired-loss interval",
+      "artifact": "final/results_summary.json",
+      "json_pointer": "/paired_qD_minus_qC_loss/lower",
+      "reported_value": -0.01278,
+      "absolute_tolerance": 5e-06
+    },
+    {
+      "manuscript_location": "Main Table 1, PascalVOC-SP, upper end of the 95% paired-loss interval",
+      "artifact": "final/results_summary.json",
+      "json_pointer": "/paired_qD_minus_qC_loss/upper",
+      "reported_value": -0.00406,
+      "absolute_tolerance": 5e-06
+    },
+    {
+      "manuscript_location": "Main Table 1, PascalVOC-SP, official macro F1 gain over qC (percentage points)",
+      "artifact": "final/results_summary.json",
+      "json_pointer": "/paired_qD_minus_qC_metric_pp/mean",
+      "reported_value": 0.6,
+      "absolute_tolerance": 0.005
+    },
+    {
+      "manuscript_location": "Main Table 1, PascalVOC-SP, lower end of the 95% official-gain interval (pp)",
+      "artifact": "final/results_summary.json",
+      "json_pointer": "/paired_qD_minus_qC_metric_pp/lower",
+      "reported_value": 0.38,
+      "absolute_tolerance": 0.005
+    },
+    {
+      "manuscript_location": "Main Table 1, PascalVOC-SP, upper end of the 95% official-gain interval (pp)",
+      "artifact": "final/results_summary.json",
+      "json_pointer": "/paired_qD_minus_qC_metric_pp/upper",
+      "reported_value": 0.82,
+      "absolute_tolerance": 0.005
+    },
+    {
+      "manuscript_location": "Supplementary Table S15, PascalVOC-SP, 'MPC-RH (deployed)' official test score",
+      "artifact": "final/results_summary.json",
+      "json_pointer": "/models/qD/metric_percent",
+      "reported_value": 48.21,
+      "absolute_tolerance": 0.005
+    },
+    {
+      "manuscript_location": "Supplementary Table S15, PascalVOC-SP, 'MPC-OL (qC)' official test score",
+      "artifact": "final/results_summary.json",
+      "json_pointer": "/models/qC/metric_percent",
+      "reported_value": 47.61,
+      "absolute_tolerance": 0.005
+    },
+    {
+      "manuscript_location": "Supplementary Table S15, PascalVOC-SP, 'full-depth plant' official test score",
+      "artifact": "final/results_summary.json",
+      "json_pointer": "/models/qN/metric_percent",
+      "reported_value": 46.89,
+      "absolute_tolerance": 0.005
+    }
+  ]
+}

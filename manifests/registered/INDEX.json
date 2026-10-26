@@ -1,0 +1,20 @@
+{
+ "manifests": [
+  "arxiv_full.json",
+  "arxiv_pilot.json",
+  "coco_sp_full.json",
+  "coco_sp_pilot.json",
+  "pascalvoc_sp_full.json",
+  "pascalvoc_sp_pilot.json",
+  "peptides_func_full.json",
+  "peptides_func_pilot.json",
+  "products_full.json",
+  "products_pilot.json",
+  "proteins_full.json",
+  "proteins_pilot.json",
+  "roman_empire_full.json",
+  "roman_empire_pilot.json"
+ ],
+ "note": "registered design of every shipped configuration; what a run will use, not what a run did use",
+ "schema": "cross-morse-registered-manifest-1"
+}

@@ -1,0 +1,16 @@
+{
+  "valid": true,
+  "run_root": "/workspace/scratch/2aa93dc25af6/review_work_20261025/validation_current/coco_sp",
+  "stages": [
+    "prepare",
+    "train",
+    "explore",
+    "fit",
+    "select",
+    "confirm",
+    "admit",
+    "evaluate"
+  ],
+  "complete": true,
+  "scope": "actual file/model/parent integrity; not scientific-result reproduction or a security sandbox"
+}

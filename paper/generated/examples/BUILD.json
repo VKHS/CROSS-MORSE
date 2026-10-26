@@ -1,0 +1,105 @@
+{
+ "datasets": [
+  "ogbn-arxiv",
+  "ogbn-products",
+  "ogbn-proteins",
+  "Roman-empire",
+  "PascalVOC-SP",
+  "COCO-SP",
+  "Peptides-func"
+ ],
+ "evidence": {
+  "arxiv": "evidence/arxiv.json",
+  "coco_sp": "evidence/coco_sp.json",
+  "pascalvoc_sp": "evidence/pascalvoc_sp.json",
+  "peptides_func": "evidence/peptides_func.json",
+  "products": "evidence/products.json",
+  "proteins": "evidence/proteins.json",
+  "roman_empire": "evidence/roman_empire.json"
+ },
+ "figures": {
+  "F1": {
+   "png": "F1.png",
+   "svg": "F1.svg"
+  },
+  "F2": {
+   "png": "F2.png",
+   "svg": "F2.svg"
+  },
+  "F3": {
+   "png": "F3.png",
+   "svg": "F3.svg"
+  },
+  "F4": {
+   "png": "F4.png",
+   "svg": "F4.svg"
+  },
+  "F5": {
+   "png": "F5.png",
+   "svg": "F5.svg"
+  },
+  "F6": {
+   "png": "F6.png",
+   "svg": "F6.svg"
+  }
+ },
+ "label": "examples",
+ "synthetic_examples": true,
+ "tables": {
+  "M1": {
+   "csv": "M1.csv",
+   "md": "M1.md",
+   "tex": "M1.tex"
+  },
+  "S12": {
+   "csv": "S12.csv",
+   "md": "S12.md",
+   "tex": "S12.tex"
+  },
+  "S12c": {
+   "csv": "S12c.csv",
+   "md": "S12c.md",
+   "tex": "S12c.tex"
+  },
+  "S13": {
+   "csv": "S13.csv",
+   "md": "S13.md",
+   "tex": "S13.tex"
+  },
+  "S14": {
+   "csv": "S14.csv",
+   "md": "S14.md",
+   "tex": "S14.tex"
+  },
+  "S15": {
+   "csv": "S15.csv",
+   "md": "S15.md",
+   "tex": "S15.tex"
+  },
+  "S23": {
+   "csv": "S23.csv",
+   "md": "S23.md",
+   "tex": "S23.tex"
+  },
+  "S4": {
+   "csv": "S4.csv",
+   "md": "S4.md",
+   "tex": "S4.tex"
+  },
+  "S41": {
+   "csv": "S41.csv",
+   "md": "S41.md",
+   "tex": "S41.tex"
+  },
+  "T1": {
+   "csv": "T1.csv",
+   "md": "T1.md",
+   "tex": "T1.tex"
+  },
+  "T2": {
+   "csv": "T2.csv",
+   "md": "T2.md",
+   "tex": "T2.tex"
+  }
+ }
+}

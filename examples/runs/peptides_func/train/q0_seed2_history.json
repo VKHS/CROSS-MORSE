@@ -1,0 +1,38 @@
+[
+  {
+    "epoch": 0,
+    "internal_fit_val_ap": 1.0,
+    "internal_fit_val_bce": 0.7558411061763763,
+    "internal_fit_val_loss": 0.7558411061763763,
+    "internal_fit_val_metric": 1.0,
+    "loss_name": "bce",
+    "lr": 0.0003,
+    "metric_name": "ap",
+    "train_bce": 0.7080157674275912,
+    "train_loss": 0.7080157674275912
+  },
+  {
+    "epoch": 1,
+    "internal_fit_val_ap": 1.0,
+    "internal_fit_val_bce": 0.7539084553718567,
+    "internal_fit_val_loss": 0.7539084553718567,
+    "internal_fit_val_metric": 1.0,
+    "loss_name": "bce",
+    "lr": 0.0003,
+    "metric_name": "ap",
+    "train_bce": 0.7036544841069442,
+    "train_loss": 0.7036544841069442
+  },
+  {
+    "epoch": 2,
+    "internal_fit_val_ap": 1.0,
+    "internal_fit_val_bce": 0.7523514032363892,
+    "internal_fit_val_loss": 0.7523514032363892,
+    "internal_fit_val_metric": 1.0,
+    "loss_name": "bce",
+    "lr": 0.0003,
+    "metric_name": "ap",
+    "train_bce": 0.7020734548568726,
+    "train_loss": 0.7020734548568726
+  }
+]

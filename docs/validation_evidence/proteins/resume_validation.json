@@ -1,0 +1,22 @@
+{
+  "status": "PASS",
+  "command": [
+    "/workspace/scratch/2aa93dc25af6/review_work_20261025/runtime_env/bin/python",
+    "-B",
+    "run_cross_morse_proteins.py",
+    "--profile",
+    "smoke",
+    "--device",
+    "cpu",
+    "--threads",
+    "2",
+    "--data-root",
+    "/workspace/scratch/2aa93dc25af6/review_work_20261025/validation_current/data",
+    "--output-dir",
+    "/workspace/scratch/2aa93dc25af6/review_work_20261025/validation_current/proteins",
+    "--resume"
+  ],
+  "sealed_outputs_checked": 293,
+  "sealed_outputs_unchanged": true,
+  "exact_comparator_fallback": true
+}

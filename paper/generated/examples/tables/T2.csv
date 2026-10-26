@@ -1,0 +1,10 @@
+# Gain and cost ledger (main Table 2) -- SYNTHETIC SOFTWARE EXAMPLES: these values are not benchmark results
+"# generated from 7 run(s) [examples]; runtime source 9e0154c11c0e; runs: ogbn-arxiv:arxiv, ogbn-products:products, ogbn-proteins:proteins, Roman-empire:roman_empire, PascalVOC-SP:pascalvoc_sp, COCO-SP:coco_sp, Peptides-func:peptides_func"
+Dataset,"q_C identity, E","deployed rule, E",C_qC,C_expected (overhead),C_assure (overhead),lambda* (mnats per nominal unit),qualification (GPU-h or CPU-h),test-stage effect over q_C
+ogbn-arxiv,"learned stop, E = 2, full","learned stop, E = 2, full",3.382,3.382 (+0%),3.382 (+0%),,0.0008 h (cpu),"+0.00 [+0.00, +0.00] pp; +0.00000 [+0.00000, +0.00000] CE"
+ogbn-products,"learned stop, E = 2, full","learned stop, E = 2, full",3.382,3.382 (+0%),3.382 (+0%),,0.0009 h (cpu),"+0.00 [+0.00, +0.00] pp; +0.00000 [+0.00000, +0.00000] CE"
+ogbn-proteins,"best depth, E = 1","best depth, E = 1",0.771,0.771 (+0%),0.771 (+0%),,0.0010 h (cpu),"+0.00 [+0.00, +0.00] pp; +0.00000 [+0.00000, +0.00000] BCE"
+Roman-empire,"fixed sequence, E = 1","fixed sequence, E = 1",0.781,0.781 (+0%),0.781 (+0%),,0.0008 h (cpu),"+0.00 [+0.00, +0.00] pp; +0.00000 [+0.00000, +0.00000] CE"
+PascalVOC-SP,"learned stop, E = 2, full","learned stop, E = 2, full",1.075,1.075 (+0%),1.075 (+0%),,0.0150 h (cpu),"+0.00 [+0.00, +0.00] pp; +0.00000 [+0.00000, +0.00000] CE"
+COCO-SP,"learned stop, E = 2, full","learned stop, E = 2, full",1.075,1.075 (+0%),1.075 (+0%),,0.0151 h (cpu),"+0.00 [+0.00, +0.00] pp; +0.00000 [+0.00000, +0.00000] CE"
+Peptides-func,"phase schedule, E = 2","phase schedule, E = 2",3.540,3.540 (+0%),3.540 (+0%),,0.0148 h (cpu),"+0.00 [+0.00, +0.00] pp; +0.00000 [+0.00000, +0.00000] BCE"

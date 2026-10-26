@@ -1,0 +1,35 @@
+{
+  "title": "CROSS-MORSE: Cross-Spectral Control of Message Passing in Frozen Graph Neural Networks (reference implementation)",
+  "upload_type": "software",
+  "publication_date": "2026-10-26",
+  "license": "BSD-3-Clause",
+  "creators": [
+    {
+      "name": "Khalili Sadaghiani, Abdolvahab",
+      "affiliation": "Link\u00f6ping University"
+    },
+    {
+      "name": "Nunez-Yanez, Jose",
+      "affiliation": "Link\u00f6ping University"
+    }
+  ],
+  "description": "Research package of CROSS-MORSE (post-training transport control for frozen graph neural networks on seven benchmarks): implementation with a sealed eight-stage lifecycle, dataset adapters, Slurm launchers with the Arrhenius site profile, environment specifications, seven complete synthetic example runs, the run-archive contract (pack, verify, deposit, ingest) and the scripts that build the manuscript's run-derived tables and figures from completed run directories. Companion to the manuscript submitted to Scientific Reports.",
+  "keywords": [
+    "graph neural networks",
+    "adaptive message passing",
+    "cross-spectral analysis",
+    "nominal-relative control",
+    "model predictive control",
+    "risk-aware deployment",
+    "reproducibility"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "https://github.com/VKHS/CROSS-MORSE",
+      "relation": "isSupplementTo",
+      "resource_type": "software",
+      "scheme": "url"
+    }
+  ],
+  "access_right": "open"
+}

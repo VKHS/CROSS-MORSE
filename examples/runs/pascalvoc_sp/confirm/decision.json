@@ -1,0 +1,14 @@
+{
+  "alpha": 0.05,
+  "comparator_index": 9,
+  "confirmed_index": 9,
+  "contrasts": [],
+  "downgrades": [],
+  "holm_family": "predeclared contrasts supplied for the registered dataset and policy family",
+  "holm_family_size": 0,
+  "independent_graph_guarantee": false,
+  "membership_in_Qs_or_qC": true,
+  "method": "held-out point-margin plus Holm significance against zero; Supplementary S11",
+  "provisional_index": 9,
+  "qM_index": 9
+}

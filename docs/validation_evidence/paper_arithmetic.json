@@ -1,0 +1,5678 @@
+{
+  "schema_version": "paper-constants-1",
+  "checks": [
+    {
+      "group": "S6",
+      "check": "number of registered actions",
+      "actual": 10,
+      "expected": 10,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S6",
+      "check": "A0 exploration probability",
+      "actual": 0.28,
+      "expected": 0.28,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S6",
+      "check": "A0 rho",
+      "actual": 0.0,
+      "expected": 0.0,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S6",
+      "check": "A0 nu",
+      "actual": 0.7,
+      "expected": 0.7,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S6",
+      "check": "A0 alpha",
+      "actual": 0.25,
+      "expected": 0.25,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S6",
+      "check": "A0 eta",
+      "actual": null,
+      "expected": null,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S6",
+      "check": "A0 truncation order T",
+      "actual": null,
+      "expected": null,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S6",
+      "check": "A0 is a transport action",
+      "actual": "transport",
+      "expected": "transport",
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S6",
+      "check": "A1 exploration probability",
+      "actual": 0.09,
+      "expected": 0.09,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S6",
+      "check": "A1 rho",
+      "actual": 0.2,
+      "expected": 0.2,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S6",
+      "check": "A1 nu",
+      "actual": 0.55,
+      "expected": 0.55,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S6",
+      "check": "A1 alpha",
+      "actual": 0.25,
+      "expected": 0.25,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S6",
+      "check": "A1 eta",
+      "actual": null,
+      "expected": null,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S6",
+      "check": "A1 truncation order T",
+      "actual": null,
+      "expected": null,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S6",
+      "check": "A1 is a transport action",
+      "actual": "transport",
+      "expected": "transport",
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S6",
+      "check": "A2 exploration probability",
+      "actual": 0.09,
+      "expected": 0.09,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S6",
+      "check": "A2 rho",
+      "actual": 0.2,
+      "expected": 0.2,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S6",
+      "check": "A2 nu",
+      "actual": 0.85,
+      "expected": 0.85,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S6",
+      "check": "A2 alpha",
+      "actual": 0.2,
+      "expected": 0.2,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S6",
+      "check": "A2 eta",
+      "actual": null,
+      "expected": null,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S6",
+      "check": "A2 truncation order T",
+      "actual": null,
+      "expected": null,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S6",
+      "check": "A2 is a transport action",
+      "actual": "transport",
+      "expected": "transport",
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S6",
+      "check": "A3 exploration probability",
+      "actual": 0.09,
+      "expected": 0.09,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S6",
+      "check": "A3 rho",
+      "actual": 0.25,
+      "expected": 0.25,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S6",
+      "check": "A3 nu",
+      "actual": 0.7,
+      "expected": 0.7,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S6",
+      "check": "A3 alpha",
+      "actual": 0.25,
+      "expected": 0.25,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S6",
+      "check": "A3 eta",
+      "actual": 0.5,
+      "expected": 0.5,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S6",
+      "check": "A3 truncation order T",
+      "actual": 8,
+      "expected": 8,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S6",
+      "check": "A3 is a transport action",
+      "actual": "transport",
+      "expected": "transport",
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S6",
+      "check": "A4 exploration probability",
+      "actual": 0.09,
+      "expected": 0.09,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S6",
+      "check": "A4 rho",
+      "actual": 0.3,
+      "expected": 0.3,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S6",
+      "check": "A4 nu",
+      "actual": 0.65,
+      "expected": 0.65,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S6",
+      "check": "A4 alpha",
+      "actual": 0.35,
+      "expected": 0.35,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S6",
+      "check": "A4 eta",
+      "actual": 0.5,
+      "expected": 0.5,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S6",
+      "check": "A4 truncation order T",
+      "actual": 8,
+      "expected": 8,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S6",
+      "check": "A4 is a transport action",
+      "actual": "transport",
+      "expected": "transport",
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S6",
+      "check": "A5 exploration probability",
+      "actual": 0.09,
+      "expected": 0.09,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S6",
+      "check": "A5 rho",
+      "actual": 0.3,
+      "expected": 0.3,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S6",
+      "check": "A5 nu",
+      "actual": 0.7,
+      "expected": 0.7,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S6",
+      "check": "A5 alpha",
+      "actual": 0.2,
+      "expected": 0.2,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S6",
+      "check": "A5 eta",
+      "actual": 0.2,
+      "expected": 0.2,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S6",
+      "check": "A5 truncation order T",
+      "actual": 8,
+      "expected": 8,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S6",
+      "check": "A5 is a transport action",
+      "actual": "transport",
+      "expected": "transport",
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S6",
+      "check": "A6 exploration probability",
+      "actual": 0.09,
+      "expected": 0.09,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S6",
+      "check": "A6 rho",
+      "actual": 0.35,
+      "expected": 0.35,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S6",
+      "check": "A6 nu",
+      "actual": 0.6,
+      "expected": 0.6,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S6",
+      "check": "A6 alpha",
+      "actual": 0.35,
+      "expected": 0.35,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S6",
+      "check": "A6 eta",
+      "actual": 0.2,
+      "expected": 0.2,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S6",
+      "check": "A6 truncation order T",
+      "actual": 8,
+      "expected": 8,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S6",
+      "check": "A6 is a transport action",
+      "actual": "transport",
+      "expected": "transport",
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S6",
+      "check": "A7 exploration probability",
+      "actual": 0.08,
+      "expected": 0.08,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S6",
+      "check": "A7 rho",
+      "actual": 0.25,
+      "expected": 0.25,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S6",
+      "check": "A7 nu",
+      "actual": 0.5,
+      "expected": 0.5,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S6",
+      "check": "A7 alpha",
+      "actual": 0.4,
+      "expected": 0.4,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S6",
+      "check": "A7 eta",
+      "actual": 0.08,
+      "expected": 0.08,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S6",
+      "check": "A7 truncation order T",
+      "actual": 8,
+      "expected": 8,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S6",
+      "check": "A7 is a transport action",
+      "actual": "transport",
+      "expected": "transport",
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S6",
+      "check": "A8 exploration probability",
+      "actual": 0.05,
+      "expected": 0.05,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S6",
+      "check": "A8 is a direct recovery action",
+      "actual": true,
+      "expected": true,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S6",
+      "check": "A9 exploration probability",
+      "actual": 0.05,
+      "expected": 0.05,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S6",
+      "check": "A9 is a direct recovery action",
+      "actual": true,
+      "expected": true,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S6",
+      "check": "exploration probabilities sum",
+      "actual": 1.0,
+      "expected": 1.0,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S6b",
+      "check": "A0 kernel hops",
+      "actual": 1.0,
+      "expected": 1.0,
+      "tolerance": 0.0005,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S6b",
+      "check": "A0 executed range (hops/step)",
+      "actual": 0.7,
+      "expected": 0.7,
+      "tolerance": 0.0005,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S6b",
+      "check": "A0 executed identity coefficient",
+      "actual": 0.30000000000000004,
+      "expected": 0.3,
+      "tolerance": 0.0005,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S6b",
+      "check": "A0 kernel identity mass (one-step kernel)",
+      "actual": null,
+      "expected": null,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S6b",
+      "check": "A0 maximum reach (hops)",
+      "actual": 1,
+      "expected": 1,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S6b",
+      "check": "A0 sparse products per step",
+      "actual": 1,
+      "expected": 1,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S6b",
+      "check": "A1 kernel hops",
+      "actual": 1.0,
+      "expected": 1.0,
+      "tolerance": 0.0005,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S6b",
+      "check": "A1 executed range (hops/step)",
+      "actual": 0.55,
+      "expected": 0.55,
+      "tolerance": 0.0005,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S6b",
+      "check": "A1 executed identity coefficient",
+      "actual": 0.44999999999999996,
+      "expected": 0.45,
+      "tolerance": 0.0005,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S6b",
+      "check": "A1 kernel identity mass (one-step kernel)",
+      "actual": null,
+      "expected": null,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S6b",
+      "check": "A1 maximum reach (hops)",
+      "actual": 1,
+      "expected": 1,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S6b",
+      "check": "A1 sparse products per step",
+      "actual": 1,
+      "expected": 1,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S6b",
+      "check": "A2 kernel hops",
+      "actual": 1.0,
+      "expected": 1.0,
+      "tolerance": 0.0005,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S6b",
+      "check": "A2 executed range (hops/step)",
+      "actual": 0.85,
+      "expected": 0.85,
+      "tolerance": 0.0005,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S6b",
+      "check": "A2 executed identity coefficient",
+      "actual": 0.15000000000000002,
+      "expected": 0.15,
+      "tolerance": 0.0005,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S6b",
+      "check": "A2 kernel identity mass (one-step kernel)",
+      "actual": null,
+      "expected": null,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S6b",
+      "check": "A2 maximum reach (hops)",
+      "actual": 1,
+      "expected": 1,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S6b",
+      "check": "A2 sparse products per step",
+      "actual": 1,
+      "expected": 1,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S6b",
+      "check": "A3 kernel hops",
+      "actual": 0.9951171875,
+      "expected": 0.995,
+      "tolerance": 0.0005,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S6b",
+      "check": "A3 executed range (hops/step)",
+      "actual": 0.69658203125,
+      "expected": 0.697,
+      "tolerance": 0.0005,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S6b",
+      "check": "A3 executed identity coefficient",
+      "actual": 0.38784179687500003,
+      "expected": 0.388,
+      "tolerance": 0.0005,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S6b",
+      "check": "A3 kernel identity mass",
+      "actual": 0.001953125,
+      "expected": 0.002,
+      "tolerance": 5e-05,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S6b",
+      "check": "A3 maximum reach (hops)",
+      "actual": 8,
+      "expected": 8,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S6b",
+      "check": "A3 sparse products per step",
+      "actual": 8,
+      "expected": 8,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S6b",
+      "check": "A4 kernel hops",
+      "actual": 0.994140625,
+      "expected": 0.994,
+      "tolerance": 0.0005,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S6b",
+      "check": "A4 executed range (hops/step)",
+      "actual": 0.64619140625,
+      "expected": 0.646,
+      "tolerance": 0.0005,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S6b",
+      "check": "A4 executed identity coefficient",
+      "actual": 0.447880859375,
+      "expected": 0.448,
+      "tolerance": 0.0005,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S6b",
+      "check": "A4 kernel identity mass",
+      "actual": 0.001953125,
+      "expected": 0.002,
+      "tolerance": 5e-05,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S6b",
+      "check": "A4 maximum reach (hops)",
+      "actual": 8,
+      "expected": 8,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S6b",
+      "check": "A4 sparse products per step",
+      "actual": 8,
+      "expected": 8,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S6b",
+      "check": "A5 kernel hops",
+      "actual": 1.3765508608,
+      "expected": 1.377,
+      "tolerance": 0.0005,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S6b",
+      "check": "A5 executed range (hops/step)",
+      "actual": 0.96358560256,
+      "expected": 0.964,
+      "tolerance": 0.0005,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S6b",
+      "check": "A5 executed identity coefficient",
+      "actual": 0.37018572288000007,
+      "expected": 0.37,
+      "tolerance": 0.0005,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S6b",
+      "check": "A5 kernel identity mass",
+      "actual": 0.13421772800000006,
+      "expected": 0.1342,
+      "tolerance": 5e-05,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S6b",
+      "check": "A5 maximum reach (hops)",
+      "actual": 8,
+      "expected": 8,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S6b",
+      "check": "A5 sparse products per step",
+      "actual": 8,
+      "expected": 8,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S6b",
+      "check": "A6 kernel hops",
+      "actual": 1.4393093376000001,
+      "expected": 1.439,
+      "tolerance": 0.0005,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S6b",
+      "check": "A6 executed range (hops/step)",
+      "actual": 0.86358560256,
+      "expected": 0.864,
+      "tolerance": 0.0005,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S6b",
+      "check": "A6 executed identity coefficient",
+      "actual": 0.47018572288000005,
+      "expected": 0.47,
+      "tolerance": 0.0005,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S6b",
+      "check": "A6 kernel identity mass",
+      "actual": 0.13421772800000006,
+      "expected": 0.1342,
+      "tolerance": 5e-05,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S6b",
+      "check": "A6 maximum reach (hops)",
+      "actual": 8,
+      "expected": 8,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S6b",
+      "check": "A6 sparse products per step",
+      "actual": 8,
+      "expected": 8,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S6b",
+      "check": "A7 kernel hops",
+      "actual": 1.2051730131563971,
+      "expected": 1.205,
+      "tolerance": 0.0005,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S6b",
+      "check": "A7 executed range (hops/step)",
+      "actual": 0.6025865065781986,
+      "expected": 0.603,
+      "tolerance": 0.0005,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S6b",
+      "check": "A7 executed identity coefficient",
+      "actual": 0.5690201704108196,
+      "expected": 0.569,
+      "tolerance": 0.0005,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S6b",
+      "check": "A7 kernel identity mass",
+      "actual": 0.47216136328655683,
+      "expected": 0.4722,
+      "tolerance": 5e-05,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S6b",
+      "check": "A7 maximum reach (hops)",
+      "actual": 8,
+      "expected": 8,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S6b",
+      "check": "A7 sparse products per step",
+      "actual": 8,
+      "expected": 8,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S15b",
+      "check": "A1 band 0 sensitivity",
+      "actual": 0.04999999999999993,
+      "expected": 0.05,
+      "tolerance": 0.00501,
+      "status": "OK",
+      "note": "printed at two decimals; half-unit rounding"
+    },
+    {
+      "group": "S15b",
+      "check": "A1 band 1 sensitivity",
+      "actual": 0.09999999999999987,
+      "expected": 0.1,
+      "tolerance": 0.00501,
+      "status": "OK",
+      "note": "printed at two decimals; half-unit rounding"
+    },
+    {
+      "group": "S15b",
+      "check": "A1 band 2 sensitivity",
+      "actual": 0.1499999999999999,
+      "expected": 0.15,
+      "tolerance": 0.00501,
+      "status": "OK",
+      "note": "printed at two decimals; half-unit rounding"
+    },
+    {
+      "group": "S15b",
+      "check": "A1 band 3 sensitivity",
+      "actual": 0.19999999999999982,
+      "expected": 0.2,
+      "tolerance": 0.00501,
+      "status": "OK",
+      "note": "printed at two decimals; half-unit rounding"
+    },
+    {
+      "group": "S15b",
+      "check": "A1 band 4 sensitivity",
+      "actual": 0.24999999999999983,
+      "expected": 0.25,
+      "tolerance": 0.00501,
+      "status": "OK",
+      "note": "printed at two decimals; half-unit rounding"
+    },
+    {
+      "group": "S15b",
+      "check": "A1 band 5 sensitivity",
+      "actual": 0.2999999999999998,
+      "expected": 0.3,
+      "tolerance": 0.00501,
+      "status": "OK",
+      "note": "printed at two decimals; half-unit rounding"
+    },
+    {
+      "group": "S15b",
+      "check": "A2 band 0 sensitivity",
+      "actual": 0.04999999999999993,
+      "expected": 0.05,
+      "tolerance": 0.00501,
+      "status": "OK",
+      "note": "printed at two decimals; half-unit rounding"
+    },
+    {
+      "group": "S15b",
+      "check": "A2 band 1 sensitivity",
+      "actual": 0.10000000000000003,
+      "expected": 0.1,
+      "tolerance": 0.00501,
+      "status": "OK",
+      "note": "printed at two decimals; half-unit rounding"
+    },
+    {
+      "group": "S15b",
+      "check": "A2 band 2 sensitivity",
+      "actual": 0.15000000000000002,
+      "expected": 0.15,
+      "tolerance": 0.00501,
+      "status": "OK",
+      "note": "printed at two decimals; half-unit rounding"
+    },
+    {
+      "group": "S15b",
+      "check": "A2 band 3 sensitivity",
+      "actual": 0.20000000000000004,
+      "expected": 0.2,
+      "tolerance": 0.00501,
+      "status": "OK",
+      "note": "printed at two decimals; half-unit rounding"
+    },
+    {
+      "group": "S15b",
+      "check": "A2 band 4 sensitivity",
+      "actual": 0.2500000000000001,
+      "expected": 0.25,
+      "tolerance": 0.00501,
+      "status": "OK",
+      "note": "printed at two decimals; half-unit rounding"
+    },
+    {
+      "group": "S15b",
+      "check": "A2 band 5 sensitivity",
+      "actual": 0.30000000000000004,
+      "expected": 0.3,
+      "tolerance": 0.00501,
+      "status": "OK",
+      "note": "printed at two decimals; half-unit rounding"
+    },
+    {
+      "group": "S15b",
+      "check": "A3 band 0 sensitivity",
+      "actual": 0.014918462017508793,
+      "expected": 0.01,
+      "tolerance": 0.00501,
+      "status": "OK",
+      "note": "printed at two decimals; half-unit rounding"
+    },
+    {
+      "group": "S15b",
+      "check": "A3 band 1 sensitivity",
+      "actual": 0.047008453122618477,
+      "expected": 0.05,
+      "tolerance": 0.00501,
+      "status": "OK",
+      "note": "printed at two decimals; half-unit rounding"
+    },
+    {
+      "group": "S15b",
+      "check": "A3 band 2 sensitivity",
+      "actual": 0.08784179687499999,
+      "expected": 0.09,
+      "tolerance": 0.00501,
+      "status": "OK",
+      "note": "printed at two decimals; half-unit rounding"
+    },
+    {
+      "group": "S15b",
+      "check": "A3 band 3 sensitivity",
+      "actual": 0.13367513765051056,
+      "expected": 0.13,
+      "tolerance": 0.00501,
+      "status": "OK",
+      "note": "printed at two decimals; half-unit rounding"
+    },
+    {
+      "group": "S15b",
+      "check": "A3 band 4 sensitivity",
+      "actual": 0.18263679763707896,
+      "expected": 0.18,
+      "tolerance": 0.00501,
+      "status": "OK",
+      "note": "printed at two decimals; half-unit rounding"
+    },
+    {
+      "group": "S15b",
+      "check": "A3 band 5 sensitivity",
+      "actual": 0.23378906249999998,
+      "expected": 0.23,
+      "tolerance": 0.00501,
+      "status": "OK",
+      "note": "printed at two decimals; half-unit rounding"
+    },
+    {
+      "group": "S15b",
+      "check": "A4 band 0 sensitivity",
+      "actual": 0.03329009577189057,
+      "expected": 0.03,
+      "tolerance": 0.00501,
+      "status": "OK",
+      "note": "printed at two decimals; half-unit rounding"
+    },
+    {
+      "group": "S15b",
+      "check": "A4 band 1 sensitivity",
+      "actual": 0.08571418109853668,
+      "expected": 0.09,
+      "tolerance": 0.00501,
+      "status": "OK",
+      "note": "printed at two decimals; half-unit rounding"
+    },
+    {
+      "group": "S15b",
+      "check": "A4 band 2 sensitivity",
+      "actual": 0.14788085937499995,
+      "expected": 0.15,
+      "tolerance": 0.00501,
+      "status": "OK",
+      "note": "printed at two decimals; half-unit rounding"
+    },
+    {
+      "group": "S15b",
+      "check": "A4 band 3 sensitivity",
+      "actual": 0.21561896290580693,
+      "expected": 0.22,
+      "tolerance": 0.00501,
+      "status": "OK",
+      "note": "printed at two decimals; half-unit rounding"
+    },
+    {
+      "group": "S15b",
+      "check": "A4 band 4 sensitivity",
+      "actual": 0.2868429078432212,
+      "expected": 0.29,
+      "tolerance": 0.00501,
+      "status": "OK",
+      "note": "printed at two decimals; half-unit rounding"
+    },
+    {
+      "group": "S15b",
+      "check": "A4 band 5 sensitivity",
+      "actual": 0.3605078124999999,
+      "expected": 0.36,
+      "tolerance": 0.00501,
+      "status": "OK",
+      "note": "printed at two decimals; half-unit rounding"
+    },
+    {
+      "group": "S15b",
+      "check": "A5 band 0 sensitivity",
+      "actual": 0.02553744470884578,
+      "expected": 0.03,
+      "tolerance": 0.00501,
+      "status": "OK",
+      "note": "printed at two decimals; half-unit rounding"
+    },
+    {
+      "group": "S15b",
+      "check": "A5 band 1 sensitivity",
+      "actual": 0.02212849512062187,
+      "expected": 0.02,
+      "tolerance": 0.00501,
+      "status": "OK",
+      "note": "printed at two decimals; half-unit rounding"
+    },
+    {
+      "group": "S15b",
+      "check": "A5 band 2 sensitivity",
+      "actual": 0.07018572288000002,
+      "expected": 0.07,
+      "tolerance": 0.00501,
+      "status": "OK",
+      "note": "printed at two decimals; half-unit rounding"
+    },
+    {
+      "group": "S15b",
+      "check": "A5 band 3 sensitivity",
+      "actual": 0.131343843719433,
+      "expected": 0.13,
+      "tolerance": 0.00501,
+      "status": "OK",
+      "note": "printed at two decimals; half-unit rounding"
+    },
+    {
+      "group": "S15b",
+      "check": "A5 band 4 sensitivity",
+      "actual": 0.19567265879323276,
+      "expected": 0.2,
+      "tolerance": 0.00501,
+      "status": "OK",
+      "note": "printed at two decimals; half-unit rounding"
+    },
+    {
+      "group": "S15b",
+      "check": "A5 band 5 sensitivity",
+      "actual": 0.26465080320000006,
+      "expected": 0.26,
+      "tolerance": 0.00501,
+      "status": "OK",
+      "note": "printed at two decimals; half-unit rounding"
+    },
+    {
+      "group": "S15b",
+      "check": "A6 band 0 sensitivity",
+      "actual": 0.011204838212711565,
+      "expected": 0.01,
+      "tolerance": 0.00501,
+      "status": "OK",
+      "note": "printed at two decimals; half-unit rounding"
+    },
+    {
+      "group": "S15b",
+      "check": "A6 band 1 sensitivity",
+      "actual": 0.08212472627855505,
+      "expected": 0.08,
+      "tolerance": 0.00501,
+      "status": "OK",
+      "note": "printed at two decimals; half-unit rounding"
+    },
+    {
+      "group": "S15b",
+      "check": "A6 band 2 sensitivity",
+      "actual": 0.17018572288,
+      "expected": 0.17,
+      "tolerance": 0.00501,
+      "status": "OK",
+      "note": "printed at two decimals; half-unit rounding"
+    },
+    {
+      "group": "S15b",
+      "check": "A6 band 3 sensitivity",
+      "actual": 0.2646771770527663,
+      "expected": 0.26,
+      "tolerance": 0.00501,
+      "status": "OK",
+      "note": "printed at two decimals; half-unit rounding"
+    },
+    {
+      "group": "S15b",
+      "check": "A6 band 4 sensitivity",
+      "actual": 0.36233932545989933,
+      "expected": 0.36,
+      "tolerance": 0.00501,
+      "status": "OK",
+      "note": "printed at two decimals; half-unit rounding"
+    },
+    {
+      "group": "S15b",
+      "check": "A6 band 5 sensitivity",
+      "actual": 0.46465080319999996,
+      "expected": 0.46,
+      "tolerance": 0.00501,
+      "status": "OK",
+      "note": "printed at two decimals; half-unit rounding"
+    },
+    {
+      "group": "S15b",
+      "check": "A7 band 0 sensitivity",
+      "actual": 0.06789793476286488,
+      "expected": 0.07,
+      "tolerance": 0.00501,
+      "status": "OK",
+      "note": "printed at two decimals; half-unit rounding"
+    },
+    {
+      "group": "S15b",
+      "check": "A7 band 1 sensitivity",
+      "actual": 0.1651095680157202,
+      "expected": 0.17,
+      "tolerance": 0.00501,
+      "status": "OK",
+      "note": "printed at two decimals; half-unit rounding"
+    },
+    {
+      "group": "S15b",
+      "check": "A7 band 2 sensitivity",
+      "actual": 0.2690201704108196,
+      "expected": 0.27,
+      "tolerance": 0.00501,
+      "status": "OK",
+      "note": "printed at two decimals; half-unit rounding"
+    },
+    {
+      "group": "S15b",
+      "check": "A7 band 3 sensitivity",
+      "actual": 0.3750067485524369,
+      "expected": 0.38,
+      "tolerance": 0.00501,
+      "status": "OK",
+      "note": "printed at two decimals; half-unit rounding"
+    },
+    {
+      "group": "S15b",
+      "check": "A7 band 4 sensitivity",
+      "actual": 0.48196131228787753,
+      "expected": 0.48,
+      "tolerance": 0.00501,
+      "status": "OK",
+      "note": "printed at two decimals; half-unit rounding"
+    },
+    {
+      "group": "S15b",
+      "check": "A7 band 5 sensitivity",
+      "actual": 0.5916876775112703,
+      "expected": 0.59,
+      "tolerance": 0.00501,
+      "status": "OK",
+      "note": "printed at two decimals; half-unit rounding"
+    },
+    {
+      "group": "Eq5",
+      "check": "arxiv: epsilon_plant",
+      "actual": 0.004,
+      "expected": 0.004,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "Eq5",
+      "check": "arxiv: tau_PDD (fraction)",
+      "actual": 0.01,
+      "expected": 0.01,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "Eq5",
+      "check": "arxiv: tau_DIL",
+      "actual": 0.02,
+      "expected": 0.02,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "Eq5",
+      "check": "arxiv: tau_sup",
+      "actual": 0.8,
+      "expected": 0.8,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "Eq5",
+      "check": "arxiv: epsilon_headroom",
+      "actual": 0.003,
+      "expected": 0.003,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "Eq7",
+      "check": "arxiv: p_min",
+      "actual": 0.05,
+      "expected": 0.05,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "Eq7",
+      "check": "arxiv: n_min (ESS)",
+      "actual": 64,
+      "expected": 64,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "Eq7",
+      "check": "arxiv: omega_max*",
+      "actual": 0.2,
+      "expected": 0.2,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "Eq19",
+      "check": "arxiv: epsilon_R",
+      "actual": 0.003,
+      "expected": 0.003,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "Eq19",
+      "check": "arxiv: epsilon_eq",
+      "actual": 0.002,
+      "expected": 0.002,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "Eq19",
+      "check": "arxiv: delta_s",
+      "actual": 0.025,
+      "expected": 0.025,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "Eq19",
+      "check": "arxiv: selection resamples",
+      "actual": 10000,
+      "expected": 10000,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S2",
+      "check": "arxiv: outer folds",
+      "actual": 5,
+      "expected": 5,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S2",
+      "check": "arxiv: inner folds",
+      "actual": 4,
+      "expected": 4,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S2",
+      "check": "arxiv: plant seeds",
+      "actual": 12,
+      "expected": 12,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "Eq27",
+      "check": "arxiv: clip B",
+      "actual": 0.1,
+      "expected": 0.1,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "Eq27",
+      "check": "arxiv: delta_a",
+      "actual": 0.025,
+      "expected": 0.025,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "Eq27",
+      "check": "arxiv: epsilon_a",
+      "actual": 0.003,
+      "expected": 0.003,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "Eq27",
+      "check": "arxiv: admission rule",
+      "actual": "cluster_bootstrap",
+      "expected": "cluster_bootstrap",
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S9",
+      "check": "arxiv: observer state dimension",
+      "actual": 16,
+      "expected": 16,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S9",
+      "check": "arxiv: observer covariance rank",
+      "actual": 4,
+      "expected": 4,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S9",
+      "check": "arxiv: observer period",
+      "actual": 2,
+      "expected": 2,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S9",
+      "check": "arxiv: trajectory folds",
+      "actual": 5,
+      "expected": 5,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S9",
+      "check": "arxiv: horizons",
+      "actual": [
+        1,
+        4,
+        8,
+        16,
+        32
+      ],
+      "expected": [
+        1,
+        4,
+        8,
+        16,
+        32
+      ],
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S9",
+      "check": "arxiv: beam width",
+      "actual": 16,
+      "expected": 16,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S9",
+      "check": "arxiv: top-k",
+      "actual": 2,
+      "expected": 2,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S9",
+      "check": "arxiv: gamma",
+      "actual": 0.97,
+      "expected": 0.97,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S9",
+      "check": "arxiv: registered ensemble sizes",
+      "actual": [
+        1,
+        2,
+        4,
+        8,
+        12
+      ],
+      "expected": [
+        1,
+        2,
+        4,
+        8,
+        12
+      ],
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S9",
+      "check": "arxiv: controller epochs/patience/batch",
+      "actual": [
+        200,
+        20,
+        512
+      ],
+      "expected": [
+        200,
+        20,
+        512
+      ],
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S9",
+      "check": "arxiv: controller lr/weight decay",
+      "actual": [
+        0.001,
+        0.0001
+      ],
+      "expected": [
+        0.001,
+        0.0001
+      ],
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S8",
+      "check": "arxiv: Chebyshev degree",
+      "actual": 8,
+      "expected": 8,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S8",
+      "check": "arxiv: retained bands",
+      "actual": 3,
+      "expected": 3,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S7",
+      "check": "arxiv: exploration trajectories",
+      "actual": 12800,
+      "expected": 12800,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S5",
+      "check": "arxiv: controlled depth",
+      "actual": 256,
+      "expected": 256,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S5",
+      "check": "arxiv: hidden width",
+      "actual": 512,
+      "expected": 512,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S5",
+      "check": "arxiv: precision",
+      "actual": "bf16",
+      "expected": "bf16",
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S5",
+      "check": "arxiv: training epochs/patience",
+      "actual": [
+        500,
+        50
+      ],
+      "expected": [
+        500,
+        50
+      ],
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S5",
+      "check": "arxiv: optimizer lr/weight decay",
+      "actual": [
+        0.0003,
+        0.0001
+      ],
+      "expected": [
+        0.0003,
+        0.0001
+      ],
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S5",
+      "check": "arxiv: cosine schedule",
+      "actual": "cosine",
+      "expected": "cosine",
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S1",
+      "check": "arxiv: statistical units",
+      "actual": [
+        32,
+        "metis",
+        2
+      ],
+      "expected": [
+        32,
+        "metis",
+        2
+      ],
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S5",
+      "check": "arxiv: encoder layers",
+      "actual": 4,
+      "expected": 4,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "Eq5",
+      "check": "proteins: epsilon_plant",
+      "actual": 0.004,
+      "expected": 0.004,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "Eq5",
+      "check": "proteins: tau_PDD (fraction)",
+      "actual": 0.01,
+      "expected": 0.01,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "Eq5",
+      "check": "proteins: tau_DIL",
+      "actual": 0.02,
+      "expected": 0.02,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "Eq5",
+      "check": "proteins: tau_sup",
+      "actual": 0.8,
+      "expected": 0.8,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "Eq5",
+      "check": "proteins: epsilon_headroom",
+      "actual": 0.003,
+      "expected": 0.003,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "Eq7",
+      "check": "proteins: p_min",
+      "actual": 0.05,
+      "expected": 0.05,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "Eq7",
+      "check": "proteins: n_min (ESS)",
+      "actual": 64,
+      "expected": 64,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "Eq7",
+      "check": "proteins: omega_max*",
+      "actual": 0.2,
+      "expected": 0.2,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "Eq19",
+      "check": "proteins: epsilon_R",
+      "actual": 0.0015,
+      "expected": 0.0015,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "Eq19",
+      "check": "proteins: epsilon_eq",
+      "actual": 0.002,
+      "expected": 0.002,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "Eq19",
+      "check": "proteins: delta_s",
+      "actual": 0.025,
+      "expected": 0.025,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "Eq19",
+      "check": "proteins: selection resamples",
+      "actual": 10000,
+      "expected": 10000,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S2",
+      "check": "proteins: outer folds",
+      "actual": 5,
+      "expected": 5,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S2",
+      "check": "proteins: inner folds",
+      "actual": 4,
+      "expected": 4,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S2",
+      "check": "proteins: plant seeds",
+      "actual": 12,
+      "expected": 12,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "Eq27",
+      "check": "proteins: clip B",
+      "actual": 0.1,
+      "expected": 0.1,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "Eq27",
+      "check": "proteins: delta_a",
+      "actual": 0.025,
+      "expected": 0.025,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "Eq27",
+      "check": "proteins: epsilon_a",
+      "actual": 0.0015,
+      "expected": 0.0015,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "Eq27",
+      "check": "proteins: admission rule",
+      "actual": "cluster_bootstrap",
+      "expected": "cluster_bootstrap",
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S9",
+      "check": "proteins: observer state dimension",
+      "actual": 16,
+      "expected": 16,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S9",
+      "check": "proteins: observer covariance rank",
+      "actual": 4,
+      "expected": 4,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S9",
+      "check": "proteins: observer period",
+      "actual": 2,
+      "expected": 2,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S9",
+      "check": "proteins: trajectory folds",
+      "actual": 5,
+      "expected": 5,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S9",
+      "check": "proteins: horizons",
+      "actual": [
+        1,
+        4,
+        8,
+        16,
+        32
+      ],
+      "expected": [
+        1,
+        4,
+        8,
+        16,
+        32
+      ],
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S9",
+      "check": "proteins: beam width",
+      "actual": 16,
+      "expected": 16,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S9",
+      "check": "proteins: top-k",
+      "actual": 2,
+      "expected": 2,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S9",
+      "check": "proteins: gamma",
+      "actual": 0.97,
+      "expected": 0.97,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S9",
+      "check": "proteins: registered ensemble sizes",
+      "actual": [
+        1,
+        2,
+        4,
+        8,
+        12
+      ],
+      "expected": [
+        1,
+        2,
+        4,
+        8,
+        12
+      ],
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S9",
+      "check": "proteins: controller epochs/patience/batch",
+      "actual": [
+        200,
+        20,
+        512
+      ],
+      "expected": [
+        200,
+        20,
+        512
+      ],
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S9",
+      "check": "proteins: controller lr/weight decay",
+      "actual": [
+        0.001,
+        0.0001
+      ],
+      "expected": [
+        0.001,
+        0.0001
+      ],
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S8",
+      "check": "proteins: Chebyshev degree",
+      "actual": 8,
+      "expected": 8,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S8",
+      "check": "proteins: retained bands",
+      "actual": 3,
+      "expected": 3,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S7",
+      "check": "proteins: exploration trajectories",
+      "actual": 14400,
+      "expected": 14400,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S5",
+      "check": "proteins: controlled depth",
+      "actual": 128,
+      "expected": 128,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S5",
+      "check": "proteins: hidden width",
+      "actual": 512,
+      "expected": 512,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S5",
+      "check": "proteins: precision",
+      "actual": "bf16",
+      "expected": "bf16",
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S5",
+      "check": "proteins: training epochs/patience",
+      "actual": [
+        400,
+        40
+      ],
+      "expected": [
+        400,
+        40
+      ],
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S5",
+      "check": "proteins: optimizer lr/weight decay",
+      "actual": [
+        0.0002,
+        1e-05
+      ],
+      "expected": [
+        0.0002,
+        1e-05
+      ],
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S5",
+      "check": "proteins: cosine schedule",
+      "actual": "cosine",
+      "expected": "cosine",
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S1",
+      "check": "proteins: statistical units",
+      "actual": [
+        32,
+        "degree_stratified",
+        2
+      ],
+      "expected": [
+        32,
+        "degree_stratified",
+        2
+      ],
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S5",
+      "check": "proteins: encoder layers",
+      "actual": 4,
+      "expected": 4,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "Eq5",
+      "check": "products: epsilon_plant",
+      "actual": 0.004,
+      "expected": 0.004,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "Eq5",
+      "check": "products: tau_PDD (fraction)",
+      "actual": 0.01,
+      "expected": 0.01,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "Eq5",
+      "check": "products: tau_DIL",
+      "actual": 0.02,
+      "expected": 0.02,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "Eq5",
+      "check": "products: tau_sup",
+      "actual": 0.8,
+      "expected": 0.8,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "Eq5",
+      "check": "products: epsilon_headroom",
+      "actual": 0.003,
+      "expected": 0.003,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "Eq7",
+      "check": "products: p_min",
+      "actual": 0.05,
+      "expected": 0.05,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "Eq7",
+      "check": "products: n_min (ESS)",
+      "actual": 64,
+      "expected": 64,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "Eq7",
+      "check": "products: omega_max*",
+      "actual": 0.2,
+      "expected": 0.2,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "Eq19",
+      "check": "products: epsilon_R",
+      "actual": 0.003,
+      "expected": 0.003,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "Eq19",
+      "check": "products: epsilon_eq",
+      "actual": 0.002,
+      "expected": 0.002,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "Eq19",
+      "check": "products: delta_s",
+      "actual": 0.025,
+      "expected": 0.025,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "Eq19",
+      "check": "products: selection resamples",
+      "actual": 10000,
+      "expected": 10000,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S2",
+      "check": "products: outer folds",
+      "actual": 5,
+      "expected": 5,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S2",
+      "check": "products: inner folds",
+      "actual": 4,
+      "expected": 4,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S2",
+      "check": "products: plant seeds",
+      "actual": 12,
+      "expected": 12,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "Eq27",
+      "check": "products: clip B",
+      "actual": 0.1,
+      "expected": 0.1,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "Eq27",
+      "check": "products: delta_a",
+      "actual": 0.025,
+      "expected": 0.025,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "Eq27",
+      "check": "products: epsilon_a",
+      "actual": 0.003,
+      "expected": 0.003,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "Eq27",
+      "check": "products: admission rule",
+      "actual": "cluster_bootstrap",
+      "expected": "cluster_bootstrap",
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S9",
+      "check": "products: observer state dimension",
+      "actual": 16,
+      "expected": 16,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S9",
+      "check": "products: observer covariance rank",
+      "actual": 4,
+      "expected": 4,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S9",
+      "check": "products: observer period",
+      "actual": 2,
+      "expected": 2,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S9",
+      "check": "products: trajectory folds",
+      "actual": 5,
+      "expected": 5,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S9",
+      "check": "products: horizons",
+      "actual": [
+        1,
+        4,
+        8,
+        16,
+        32
+      ],
+      "expected": [
+        1,
+        4,
+        8,
+        16,
+        32
+      ],
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S9",
+      "check": "products: beam width",
+      "actual": 16,
+      "expected": 16,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S9",
+      "check": "products: top-k",
+      "actual": 2,
+      "expected": 2,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S9",
+      "check": "products: gamma",
+      "actual": 0.97,
+      "expected": 0.97,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S9",
+      "check": "products: registered ensemble sizes",
+      "actual": [
+        1,
+        2,
+        4,
+        8,
+        12
+      ],
+      "expected": [
+        1,
+        2,
+        4,
+        8,
+        12
+      ],
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S9",
+      "check": "products: controller epochs/patience/batch",
+      "actual": [
+        200,
+        20,
+        512
+      ],
+      "expected": [
+        200,
+        20,
+        512
+      ],
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S9",
+      "check": "products: controller lr/weight decay",
+      "actual": [
+        0.001,
+        0.0001
+      ],
+      "expected": [
+        0.001,
+        0.0001
+      ],
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S8",
+      "check": "products: Chebyshev degree",
+      "actual": 8,
+      "expected": 8,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S8",
+      "check": "products: retained bands",
+      "actual": 3,
+      "expected": 3,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S7",
+      "check": "products: exploration trajectories",
+      "actual": 19200,
+      "expected": 19200,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S5",
+      "check": "products: controlled depth",
+      "actual": 64,
+      "expected": 64,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S5",
+      "check": "products: hidden width",
+      "actual": 512,
+      "expected": 512,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S5",
+      "check": "products: precision",
+      "actual": "bf16",
+      "expected": "bf16",
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S5",
+      "check": "products: training epochs/patience",
+      "actual": [
+        300,
+        30
+      ],
+      "expected": [
+        300,
+        30
+      ],
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S5",
+      "check": "products: optimizer lr/weight decay",
+      "actual": [
+        0.0005,
+        1e-05
+      ],
+      "expected": [
+        0.0005,
+        1e-05
+      ],
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S5",
+      "check": "products: cosine schedule",
+      "actual": "cosine",
+      "expected": "cosine",
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S5",
+      "check": "products: training batch",
+      "actual": 65536,
+      "expected": 65536,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S1",
+      "check": "products: statistical units",
+      "actual": [
+        64,
+        "metis",
+        2
+      ],
+      "expected": [
+        64,
+        "metis",
+        2
+      ],
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S5",
+      "check": "products: encoder layers",
+      "actual": 3,
+      "expected": 3,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "Eq5",
+      "check": "roman_empire: epsilon_plant",
+      "actual": 0.004,
+      "expected": 0.004,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "Eq5",
+      "check": "roman_empire: tau_PDD (fraction)",
+      "actual": 0.01,
+      "expected": 0.01,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "Eq5",
+      "check": "roman_empire: tau_DIL",
+      "actual": 0.02,
+      "expected": 0.02,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "Eq5",
+      "check": "roman_empire: tau_sup",
+      "actual": 0.8,
+      "expected": 0.8,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "Eq5",
+      "check": "roman_empire: epsilon_headroom",
+      "actual": 0.003,
+      "expected": 0.003,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "Eq7",
+      "check": "roman_empire: p_min",
+      "actual": 0.05,
+      "expected": 0.05,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "Eq7",
+      "check": "roman_empire: n_min (ESS)",
+      "actual": 64,
+      "expected": 64,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "Eq7",
+      "check": "roman_empire: omega_max*",
+      "actual": 0.2,
+      "expected": 0.2,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "Eq19",
+      "check": "roman_empire: epsilon_R",
+      "actual": 0.003,
+      "expected": 0.003,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "Eq19",
+      "check": "roman_empire: epsilon_eq",
+      "actual": 0.002,
+      "expected": 0.002,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "Eq19",
+      "check": "roman_empire: delta_s",
+      "actual": 0.025,
+      "expected": 0.025,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "Eq19",
+      "check": "roman_empire: selection resamples",
+      "actual": 10000,
+      "expected": 10000,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S2",
+      "check": "roman_empire: outer folds",
+      "actual": 5,
+      "expected": 5,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S2",
+      "check": "roman_empire: inner folds",
+      "actual": 4,
+      "expected": 4,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S2",
+      "check": "roman_empire: plant seeds",
+      "actual": 12,
+      "expected": 12,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "Eq27",
+      "check": "roman_empire: clip B",
+      "actual": 0.1,
+      "expected": 0.1,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "Eq27",
+      "check": "roman_empire: delta_a",
+      "actual": 0.025,
+      "expected": 0.025,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "Eq27",
+      "check": "roman_empire: epsilon_a",
+      "actual": 0.003,
+      "expected": 0.003,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "Eq27",
+      "check": "roman_empire: admission rule",
+      "actual": "cluster_bootstrap",
+      "expected": "cluster_bootstrap",
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S9",
+      "check": "roman_empire: observer state dimension",
+      "actual": 16,
+      "expected": 16,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S9",
+      "check": "roman_empire: observer covariance rank",
+      "actual": 4,
+      "expected": 4,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S9",
+      "check": "roman_empire: observer period",
+      "actual": 2,
+      "expected": 2,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S9",
+      "check": "roman_empire: trajectory folds",
+      "actual": 5,
+      "expected": 5,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S9",
+      "check": "roman_empire: horizons",
+      "actual": [
+        1,
+        4,
+        8,
+        16,
+        32
+      ],
+      "expected": [
+        1,
+        4,
+        8,
+        16,
+        32
+      ],
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S9",
+      "check": "roman_empire: beam width",
+      "actual": 16,
+      "expected": 16,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S9",
+      "check": "roman_empire: top-k",
+      "actual": 2,
+      "expected": 2,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S9",
+      "check": "roman_empire: gamma",
+      "actual": 0.97,
+      "expected": 0.97,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S9",
+      "check": "roman_empire: registered ensemble sizes",
+      "actual": [
+        1,
+        2,
+        4,
+        8,
+        12
+      ],
+      "expected": [
+        1,
+        2,
+        4,
+        8,
+        12
+      ],
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S9",
+      "check": "roman_empire: controller epochs/patience/batch",
+      "actual": [
+        200,
+        20,
+        512
+      ],
+      "expected": [
+        200,
+        20,
+        512
+      ],
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S9",
+      "check": "roman_empire: controller lr/weight decay",
+      "actual": [
+        0.001,
+        0.0001
+      ],
+      "expected": [
+        0.001,
+        0.0001
+      ],
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S8",
+      "check": "roman_empire: Chebyshev degree",
+      "actual": 8,
+      "expected": 8,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S8",
+      "check": "roman_empire: retained bands",
+      "actual": 3,
+      "expected": 3,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S7",
+      "check": "roman_empire: exploration trajectories",
+      "actual": 9600,
+      "expected": 9600,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S5",
+      "check": "roman_empire: controlled depth",
+      "actual": 256,
+      "expected": 256,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S5",
+      "check": "roman_empire: hidden width",
+      "actual": 384,
+      "expected": 384,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S5",
+      "check": "roman_empire: precision",
+      "actual": "fp32",
+      "expected": "fp32",
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S5",
+      "check": "roman_empire: training epochs/patience",
+      "actual": [
+        800,
+        100
+      ],
+      "expected": [
+        800,
+        100
+      ],
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S5",
+      "check": "roman_empire: optimizer lr/weight decay",
+      "actual": [
+        0.001,
+        0.0005
+      ],
+      "expected": [
+        0.001,
+        0.0005
+      ],
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S5",
+      "check": "roman_empire: encoder layers",
+      "actual": 4,
+      "expected": 4,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "Eq5",
+      "check": "pascalvoc_sp: epsilon_plant",
+      "actual": 0.004,
+      "expected": 0.004,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "Eq5",
+      "check": "pascalvoc_sp: tau_PDD (fraction)",
+      "actual": 0.01,
+      "expected": 0.01,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "Eq5",
+      "check": "pascalvoc_sp: tau_DIL",
+      "actual": 0.02,
+      "expected": 0.02,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "Eq5",
+      "check": "pascalvoc_sp: tau_sup",
+      "actual": 0.8,
+      "expected": 0.8,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "Eq5",
+      "check": "pascalvoc_sp: epsilon_headroom",
+      "actual": 0.003,
+      "expected": 0.003,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "Eq7",
+      "check": "pascalvoc_sp: p_min",
+      "actual": 0.05,
+      "expected": 0.05,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "Eq7",
+      "check": "pascalvoc_sp: n_min (ESS)",
+      "actual": 64,
+      "expected": 64,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "Eq7",
+      "check": "pascalvoc_sp: omega_max*",
+      "actual": 0.2,
+      "expected": 0.2,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "Eq19",
+      "check": "pascalvoc_sp: epsilon_R",
+      "actual": 0.003,
+      "expected": 0.003,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "Eq19",
+      "check": "pascalvoc_sp: epsilon_eq",
+      "actual": 0.002,
+      "expected": 0.002,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "Eq19",
+      "check": "pascalvoc_sp: delta_s",
+      "actual": 0.025,
+      "expected": 0.025,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "Eq19",
+      "check": "pascalvoc_sp: selection resamples",
+      "actual": 10000,
+      "expected": 10000,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S2",
+      "check": "pascalvoc_sp: outer folds",
+      "actual": 5,
+      "expected": 5,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S2",
+      "check": "pascalvoc_sp: inner folds",
+      "actual": 4,
+      "expected": 4,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S2",
+      "check": "pascalvoc_sp: plant seeds",
+      "actual": 12,
+      "expected": 12,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "Eq27",
+      "check": "pascalvoc_sp: clip B",
+      "actual": 0.1,
+      "expected": 0.1,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "Eq27",
+      "check": "pascalvoc_sp: delta_a",
+      "actual": 0.025,
+      "expected": 0.025,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "Eq27",
+      "check": "pascalvoc_sp: epsilon_a",
+      "actual": 0.003,
+      "expected": 0.003,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "Eq27",
+      "check": "pascalvoc_sp: admission rule",
+      "actual": "empirical_bernstein",
+      "expected": "empirical_bernstein",
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S9",
+      "check": "pascalvoc_sp: observer state dimension",
+      "actual": 16,
+      "expected": 16,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S9",
+      "check": "pascalvoc_sp: observer covariance rank",
+      "actual": 4,
+      "expected": 4,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S9",
+      "check": "pascalvoc_sp: observer period",
+      "actual": 2,
+      "expected": 2,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S9",
+      "check": "pascalvoc_sp: trajectory folds",
+      "actual": 5,
+      "expected": 5,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S9",
+      "check": "pascalvoc_sp: horizons",
+      "actual": [
+        1,
+        4,
+        8,
+        16,
+        32
+      ],
+      "expected": [
+        1,
+        4,
+        8,
+        16,
+        32
+      ],
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S9",
+      "check": "pascalvoc_sp: beam width",
+      "actual": 16,
+      "expected": 16,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S9",
+      "check": "pascalvoc_sp: top-k",
+      "actual": 2,
+      "expected": 2,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S9",
+      "check": "pascalvoc_sp: gamma",
+      "actual": 0.97,
+      "expected": 0.97,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S9",
+      "check": "pascalvoc_sp: registered ensemble sizes",
+      "actual": [
+        1,
+        2,
+        4,
+        8,
+        12
+      ],
+      "expected": [
+        1,
+        2,
+        4,
+        8,
+        12
+      ],
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S9",
+      "check": "pascalvoc_sp: controller epochs/patience/batch",
+      "actual": [
+        200,
+        20,
+        512
+      ],
+      "expected": [
+        200,
+        20,
+        512
+      ],
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S9",
+      "check": "pascalvoc_sp: controller lr/weight decay",
+      "actual": [
+        0.001,
+        0.0001
+      ],
+      "expected": [
+        0.001,
+        0.0001
+      ],
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S8",
+      "check": "pascalvoc_sp: Chebyshev degree",
+      "actual": 8,
+      "expected": 8,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S8",
+      "check": "pascalvoc_sp: retained bands",
+      "actual": 3,
+      "expected": 3,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S7",
+      "check": "pascalvoc_sp: exploration trajectories",
+      "actual": 20480,
+      "expected": 20480,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S5",
+      "check": "pascalvoc_sp: controlled depth",
+      "actual": 128,
+      "expected": 128,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S5",
+      "check": "pascalvoc_sp: hidden width",
+      "actual": 128,
+      "expected": 128,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S5",
+      "check": "pascalvoc_sp: precision",
+      "actual": "bf16",
+      "expected": "bf16",
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S5",
+      "check": "pascalvoc_sp: training epochs/patience",
+      "actual": [
+        300,
+        30
+      ],
+      "expected": [
+        300,
+        30
+      ],
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S5",
+      "check": "pascalvoc_sp: optimizer lr/weight decay",
+      "actual": [
+        0.0005,
+        1e-05
+      ],
+      "expected": [
+        0.0005,
+        1e-05
+      ],
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S5",
+      "check": "pascalvoc_sp: graph batch size",
+      "actual": 32,
+      "expected": 32,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S5b",
+      "check": "pascalvoc_sp: native GPS blocks",
+      "actual": 6,
+      "expected": 6,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "Eq5",
+      "check": "coco_sp: epsilon_plant",
+      "actual": 0.004,
+      "expected": 0.004,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "Eq5",
+      "check": "coco_sp: tau_PDD (fraction)",
+      "actual": 0.01,
+      "expected": 0.01,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "Eq5",
+      "check": "coco_sp: tau_DIL",
+      "actual": 0.02,
+      "expected": 0.02,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "Eq5",
+      "check": "coco_sp: tau_sup",
+      "actual": 0.8,
+      "expected": 0.8,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "Eq5",
+      "check": "coco_sp: epsilon_headroom",
+      "actual": 0.003,
+      "expected": 0.003,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "Eq7",
+      "check": "coco_sp: p_min",
+      "actual": 0.05,
+      "expected": 0.05,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "Eq7",
+      "check": "coco_sp: n_min (ESS)",
+      "actual": 64,
+      "expected": 64,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "Eq7",
+      "check": "coco_sp: omega_max*",
+      "actual": 0.2,
+      "expected": 0.2,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "Eq19",
+      "check": "coco_sp: epsilon_R",
+      "actual": 0.003,
+      "expected": 0.003,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "Eq19",
+      "check": "coco_sp: epsilon_eq",
+      "actual": 0.002,
+      "expected": 0.002,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "Eq19",
+      "check": "coco_sp: delta_s",
+      "actual": 0.025,
+      "expected": 0.025,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "Eq19",
+      "check": "coco_sp: selection resamples",
+      "actual": 10000,
+      "expected": 10000,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S2",
+      "check": "coco_sp: outer folds",
+      "actual": 5,
+      "expected": 5,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S2",
+      "check": "coco_sp: inner folds",
+      "actual": 4,
+      "expected": 4,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S2",
+      "check": "coco_sp: plant seeds",
+      "actual": 12,
+      "expected": 12,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "Eq27",
+      "check": "coco_sp: clip B",
+      "actual": 0.1,
+      "expected": 0.1,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "Eq27",
+      "check": "coco_sp: delta_a",
+      "actual": 0.025,
+      "expected": 0.025,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "Eq27",
+      "check": "coco_sp: epsilon_a",
+      "actual": 0.003,
+      "expected": 0.003,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "Eq27",
+      "check": "coco_sp: admission rule",
+      "actual": "empirical_bernstein",
+      "expected": "empirical_bernstein",
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S9",
+      "check": "coco_sp: observer state dimension",
+      "actual": 16,
+      "expected": 16,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S9",
+      "check": "coco_sp: observer covariance rank",
+      "actual": 4,
+      "expected": 4,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S9",
+      "check": "coco_sp: observer period",
+      "actual": 2,
+      "expected": 2,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S9",
+      "check": "coco_sp: trajectory folds",
+      "actual": 5,
+      "expected": 5,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S9",
+      "check": "coco_sp: horizons",
+      "actual": [
+        1,
+        4,
+        8,
+        16,
+        32
+      ],
+      "expected": [
+        1,
+        4,
+        8,
+        16,
+        32
+      ],
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S9",
+      "check": "coco_sp: beam width",
+      "actual": 16,
+      "expected": 16,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S9",
+      "check": "coco_sp: top-k",
+      "actual": 2,
+      "expected": 2,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S9",
+      "check": "coco_sp: gamma",
+      "actual": 0.97,
+      "expected": 0.97,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S9",
+      "check": "coco_sp: registered ensemble sizes",
+      "actual": [
+        1,
+        2,
+        4,
+        8,
+        12
+      ],
+      "expected": [
+        1,
+        2,
+        4,
+        8,
+        12
+      ],
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S9",
+      "check": "coco_sp: controller epochs/patience/batch",
+      "actual": [
+        200,
+        20,
+        512
+      ],
+      "expected": [
+        200,
+        20,
+        512
+      ],
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S9",
+      "check": "coco_sp: controller lr/weight decay",
+      "actual": [
+        0.001,
+        0.0001
+      ],
+      "expected": [
+        0.001,
+        0.0001
+      ],
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S8",
+      "check": "coco_sp: Chebyshev degree",
+      "actual": 8,
+      "expected": 8,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S8",
+      "check": "coco_sp: retained bands",
+      "actual": 3,
+      "expected": 3,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S7",
+      "check": "coco_sp: exploration trajectories",
+      "actual": 32000,
+      "expected": 32000,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S5",
+      "check": "coco_sp: controlled depth",
+      "actual": 128,
+      "expected": 128,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S5",
+      "check": "coco_sp: hidden width",
+      "actual": 128,
+      "expected": 128,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S5",
+      "check": "coco_sp: precision",
+      "actual": "bf16",
+      "expected": "bf16",
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S5",
+      "check": "coco_sp: training epochs/patience",
+      "actual": [
+        300,
+        30
+      ],
+      "expected": [
+        300,
+        30
+      ],
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S5",
+      "check": "coco_sp: optimizer lr/weight decay",
+      "actual": [
+        0.0005,
+        1e-05
+      ],
+      "expected": [
+        0.0005,
+        1e-05
+      ],
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S5",
+      "check": "coco_sp: graph batch size",
+      "actual": 32,
+      "expected": 32,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S5b",
+      "check": "coco_sp: native GPS blocks",
+      "actual": 6,
+      "expected": 6,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "Eq5",
+      "check": "peptides_func: epsilon_plant",
+      "actual": 0.004,
+      "expected": 0.004,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "Eq5",
+      "check": "peptides_func: tau_PDD (fraction)",
+      "actual": 0.01,
+      "expected": 0.01,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "Eq5",
+      "check": "peptides_func: tau_DIL",
+      "actual": 0.02,
+      "expected": 0.02,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "Eq5",
+      "check": "peptides_func: tau_sup",
+      "actual": 0.8,
+      "expected": 0.8,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "Eq5",
+      "check": "peptides_func: epsilon_headroom",
+      "actual": 0.003,
+      "expected": 0.003,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "Eq7",
+      "check": "peptides_func: p_min",
+      "actual": 0.05,
+      "expected": 0.05,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "Eq7",
+      "check": "peptides_func: n_min (ESS)",
+      "actual": 64,
+      "expected": 64,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "Eq7",
+      "check": "peptides_func: omega_max*",
+      "actual": 0.2,
+      "expected": 0.2,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "Eq19",
+      "check": "peptides_func: epsilon_R",
+      "actual": 0.0015,
+      "expected": 0.0015,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "Eq19",
+      "check": "peptides_func: epsilon_eq",
+      "actual": 0.002,
+      "expected": 0.002,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "Eq19",
+      "check": "peptides_func: delta_s",
+      "actual": 0.025,
+      "expected": 0.025,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "Eq19",
+      "check": "peptides_func: selection resamples",
+      "actual": 10000,
+      "expected": 10000,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S2",
+      "check": "peptides_func: outer folds",
+      "actual": 5,
+      "expected": 5,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S2",
+      "check": "peptides_func: inner folds",
+      "actual": 4,
+      "expected": 4,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S2",
+      "check": "peptides_func: plant seeds",
+      "actual": 12,
+      "expected": 12,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "Eq27",
+      "check": "peptides_func: clip B",
+      "actual": 0.1,
+      "expected": 0.1,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "Eq27",
+      "check": "peptides_func: delta_a",
+      "actual": 0.025,
+      "expected": 0.025,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "Eq27",
+      "check": "peptides_func: epsilon_a",
+      "actual": 0.0015,
+      "expected": 0.0015,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "Eq27",
+      "check": "peptides_func: admission rule",
+      "actual": "empirical_bernstein",
+      "expected": "empirical_bernstein",
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S9",
+      "check": "peptides_func: observer state dimension",
+      "actual": 16,
+      "expected": 16,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S9",
+      "check": "peptides_func: observer covariance rank",
+      "actual": 4,
+      "expected": 4,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S9",
+      "check": "peptides_func: observer period",
+      "actual": 2,
+      "expected": 2,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S9",
+      "check": "peptides_func: trajectory folds",
+      "actual": 5,
+      "expected": 5,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S9",
+      "check": "peptides_func: horizons",
+      "actual": [
+        1,
+        4,
+        8,
+        16,
+        32
+      ],
+      "expected": [
+        1,
+        4,
+        8,
+        16,
+        32
+      ],
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S9",
+      "check": "peptides_func: beam width",
+      "actual": 16,
+      "expected": 16,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S9",
+      "check": "peptides_func: top-k",
+      "actual": 2,
+      "expected": 2,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S9",
+      "check": "peptides_func: gamma",
+      "actual": 0.97,
+      "expected": 0.97,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S9",
+      "check": "peptides_func: registered ensemble sizes",
+      "actual": [
+        1,
+        2,
+        4,
+        8,
+        12
+      ],
+      "expected": [
+        1,
+        2,
+        4,
+        8,
+        12
+      ],
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S9",
+      "check": "peptides_func: controller epochs/patience/batch",
+      "actual": [
+        200,
+        20,
+        512
+      ],
+      "expected": [
+        200,
+        20,
+        512
+      ],
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S9",
+      "check": "peptides_func: controller lr/weight decay",
+      "actual": [
+        0.001,
+        0.0001
+      ],
+      "expected": [
+        0.001,
+        0.0001
+      ],
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S8",
+      "check": "peptides_func: Chebyshev degree",
+      "actual": 8,
+      "expected": 8,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S8",
+      "check": "peptides_func: retained bands",
+      "actual": 3,
+      "expected": 3,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S7",
+      "check": "peptides_func: exploration trajectories",
+      "actual": 24000,
+      "expected": 24000,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S5",
+      "check": "peptides_func: controlled depth",
+      "actual": 64,
+      "expected": 64,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S5",
+      "check": "peptides_func: hidden width",
+      "actual": 128,
+      "expected": 128,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S5",
+      "check": "peptides_func: precision",
+      "actual": "bf16",
+      "expected": "bf16",
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S5",
+      "check": "peptides_func: training epochs/patience",
+      "actual": [
+        250,
+        30
+      ],
+      "expected": [
+        250,
+        30
+      ],
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S5",
+      "check": "peptides_func: optimizer lr/weight decay",
+      "actual": [
+        0.001,
+        1e-05
+      ],
+      "expected": [
+        0.001,
+        1e-05
+      ],
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S5",
+      "check": "peptides_func: graph batch size",
+      "actual": 128,
+      "expected": 128,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S5",
+      "check": "peptides_func: checkpoint rule",
+      "actual": "max_ap_bce_tiebreak",
+      "expected": "max_ap_bce_tiebreak",
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S5b",
+      "check": "peptides_func: native GINE layers",
+      "actual": 8,
+      "expected": 8,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "T1/T2",
+      "check": "arxiv: loss effect printed identically",
+      "actual": -0.0045,
+      "expected": -0.0045,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "T1",
+      "check": "arxiv: loss interval contains the point",
+      "actual": true,
+      "expected": true,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "T1",
+      "check": "arxiv: loss interval symmetric (bootstrap percentile)",
+      "actual": 4.336808689942018e-19,
+      "expected": 0.0,
+      "tolerance": 0.00011,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "T1",
+      "check": "arxiv: metric interval contains the point",
+      "actual": true,
+      "expected": true,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "T1/S15",
+      "check": "arxiv: official gain equals S15 deployed minus qC",
+      "actual": 0.06999999999999318,
+      "expected": 0.07,
+      "tolerance": 0.011,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "T2/S23",
+      "check": "arxiv: C_expected",
+      "actual": 4.617,
+      "expected": 4.62,
+      "tolerance": 0.005,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "T2/S23",
+      "check": "arxiv: C_qC",
+      "actual": 4.0,
+      "expected": 4.0,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "T2/S23",
+      "check": "arxiv: expected overhead (percent)",
+      "actual": 15,
+      "expected": 15,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "T2/S23",
+      "check": "arxiv: C_assure",
+      "actual": 8.7,
+      "expected": 8.7,
+      "tolerance": 0.05,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "T2/S23",
+      "check": "arxiv: assurance overhead (percent)",
+      "actual": 118,
+      "expected": 118,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "T2/S23",
+      "check": "arxiv: C_assure = controller + comparator (Eq. 32 two-branch)",
+      "actual": 8.7,
+      "expected": 8.7,
+      "tolerance": 0.0005,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S23",
+      "check": "arxiv: Eq. 32 expected cost from controller/comparator/fallback",
+      "actual": 4.6174,
+      "expected": 4.617,
+      "tolerance": 0.0015,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "T2/Def2",
+      "check": "arxiv: exchange rate lambda* (millinats)",
+      "actual": 7.293354943273906,
+      "expected": 7.29,
+      "tolerance": 0.01,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "T2/Def2",
+      "check": "arxiv: amortization M* t_nom (10^3 input-s)",
+      "actual": 112.02593192868719,
+      "expected": 112,
+      "tolerance": 0.5,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "T2/S23b",
+      "check": "arxiv: M* t_nom equals Table S23b",
+      "actual": 112,
+      "expected": 112,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S41",
+      "check": "arxiv: qualification components sum to the total",
+      "actual": 1.9300000000000002,
+      "expected": 1.92,
+      "tolerance": 0.011,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "Cor2",
+      "check": "arxiv: minimum admission J from Corollary 2 (integer part of the threshold)",
+      "actual": 1279,
+      "expected": 1279,
+      "tolerance": 0,
+      "status": "OK",
+      "note": "main text: 'J > 602 (Roman), 853 (proteins) and 1279 (arxiv)'"
+    },
+    {
+      "group": "T1/T2",
+      "check": "proteins: loss effect printed identically",
+      "actual": -0.0038,
+      "expected": -0.0038,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "T1",
+      "check": "proteins: loss interval contains the point",
+      "actual": true,
+      "expected": true,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "T1",
+      "check": "proteins: loss interval symmetric (bootstrap percentile)",
+      "actual": -4.336808689942018e-19,
+      "expected": 0.0,
+      "tolerance": 0.00011,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "T1",
+      "check": "proteins: metric interval contains the point",
+      "actual": true,
+      "expected": true,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "T1/S15",
+      "check": "proteins: official gain equals S15 deployed minus qC",
+      "actual": 0.10999999999999943,
+      "expected": 0.11,
+      "tolerance": 0.011,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "T2/S23",
+      "check": "proteins: C_expected",
+      "actual": 4.682,
+      "expected": 4.68,
+      "tolerance": 0.005,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "T2/S23",
+      "check": "proteins: C_qC",
+      "actual": 4.0,
+      "expected": 4.0,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "T2/S23",
+      "check": "proteins: expected overhead (percent)",
+      "actual": 17,
+      "expected": 17,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "T2/S23",
+      "check": "proteins: C_assure",
+      "actual": 8.8,
+      "expected": 8.8,
+      "tolerance": 0.05,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "T2/S23",
+      "check": "proteins: assurance overhead (percent)",
+      "actual": 120,
+      "expected": 120,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "T2/S23",
+      "check": "proteins: C_assure = controller + comparator (Eq. 32 two-branch)",
+      "actual": 8.8,
+      "expected": 8.8,
+      "tolerance": 0.0005,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S23",
+      "check": "proteins: Eq. 32 expected cost from controller/comparator/fallback",
+      "actual": 4.6823999999999995,
+      "expected": 4.682,
+      "tolerance": 0.0015,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "T2/Def2",
+      "check": "proteins: exchange rate lambda* (millinats)",
+      "actual": 5.571847507331375,
+      "expected": 5.57,
+      "tolerance": 0.01,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "T2/Def2",
+      "check": "proteins: amortization M* t_nom (10^3 input-s)",
+      "actual": 106.09970674486796,
+      "expected": 106,
+      "tolerance": 0.5,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "T2/S23b",
+      "check": "proteins: M* t_nom equals Table S23b",
+      "actual": 106,
+      "expected": 106,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S41",
+      "check": "proteins: qualification components sum to the total",
+      "actual": 2.0,
+      "expected": 2.01,
+      "tolerance": 0.011,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "Cor2",
+      "check": "proteins: minimum admission J from Corollary 2 (integer part of the threshold)",
+      "actual": 853,
+      "expected": 853,
+      "tolerance": 0,
+      "status": "OK",
+      "note": "main text: 'J > 602 (Roman), 853 (proteins) and 1279 (arxiv)'"
+    },
+    {
+      "group": "T1/T2",
+      "check": "products: loss effect printed identically",
+      "actual": 0.0,
+      "expected": 0.0,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "T1/S15",
+      "check": "products: official gain equals S15 deployed minus qC",
+      "actual": 0.0,
+      "expected": 0.0,
+      "tolerance": 0.011,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "T1/T2",
+      "check": "roman_empire: loss effect printed identically",
+      "actual": -0.00572,
+      "expected": -0.00572,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "T1",
+      "check": "roman_empire: loss interval contains the point",
+      "actual": true,
+      "expected": true,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "T1",
+      "check": "roman_empire: loss interval symmetric (bootstrap percentile)",
+      "actual": 0.0,
+      "expected": 0.0,
+      "tolerance": 0.00011,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "T1",
+      "check": "roman_empire: metric interval contains the point",
+      "actual": true,
+      "expected": true,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "T1/S15",
+      "check": "roman_empire: official gain equals S15 deployed minus qC",
+      "actual": 0.2599999999999909,
+      "expected": 0.26,
+      "tolerance": 0.011,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "T2/S23",
+      "check": "roman_empire: C_expected",
+      "actual": 5.219,
+      "expected": 5.22,
+      "tolerance": 0.005,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "T2/S23",
+      "check": "roman_empire: C_qC",
+      "actual": 4.0,
+      "expected": 4.0,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "T2/S23",
+      "check": "roman_empire: expected overhead (percent)",
+      "actual": 30,
+      "expected": 30,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "T2/S23",
+      "check": "roman_empire: C_assure",
+      "actual": 9.4,
+      "expected": 9.4,
+      "tolerance": 0.05,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "T2/S23",
+      "check": "roman_empire: assurance overhead (percent)",
+      "actual": 135,
+      "expected": 135,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "T2/S23",
+      "check": "roman_empire: C_assure = controller + comparator (Eq. 32 two-branch)",
+      "actual": 9.4,
+      "expected": 9.4,
+      "tolerance": 0.0005,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S23",
+      "check": "roman_empire: Eq. 32 expected cost from controller/comparator/fallback",
+      "actual": 5.2194,
+      "expected": 5.219,
+      "tolerance": 0.0015,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "T2/Def2",
+      "check": "roman_empire: exchange rate lambda* (millinats)",
+      "actual": 4.692370795734208,
+      "expected": 4.69,
+      "tolerance": 0.01,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "T2/Def2",
+      "check": "roman_empire: amortization M* t_nom (10^3 input-s)",
+      "actual": 40.75471698113206,
+      "expected": 41,
+      "tolerance": 0.5,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "T2/S23b",
+      "check": "roman_empire: M* t_nom equals Table S23b",
+      "actual": 41,
+      "expected": 41,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S41",
+      "check": "roman_empire: qualification components sum to the total",
+      "actual": 1.3800000000000001,
+      "expected": 1.38,
+      "tolerance": 0.011,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "Cor2",
+      "check": "roman_empire: minimum admission J from Corollary 2 (integer part of the threshold)",
+      "actual": 602,
+      "expected": 602,
+      "tolerance": 0,
+      "status": "OK",
+      "note": "main text: 'J > 602 (Roman), 853 (proteins) and 1279 (arxiv)'"
+    },
+    {
+      "group": "T1/T2",
+      "check": "pascalvoc_sp: loss effect printed identically",
+      "actual": -0.00842,
+      "expected": -0.00842,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "T1",
+      "check": "pascalvoc_sp: loss interval contains the point",
+      "actual": true,
+      "expected": true,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "T1",
+      "check": "pascalvoc_sp: loss interval symmetric (bootstrap percentile)",
+      "actual": -8.673617379884035e-19,
+      "expected": 0.0,
+      "tolerance": 0.00011,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "T1",
+      "check": "pascalvoc_sp: metric interval contains the point",
+      "actual": true,
+      "expected": true,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "T1/S15",
+      "check": "pascalvoc_sp: official gain equals S15 deployed minus qC",
+      "actual": 0.6000000000000014,
+      "expected": 0.6,
+      "tolerance": 0.011,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "T2/S23",
+      "check": "pascalvoc_sp: C_expected",
+      "actual": 10.298,
+      "expected": 10.3,
+      "tolerance": 0.005,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "T2/S23",
+      "check": "pascalvoc_sp: C_qC",
+      "actual": 8.0,
+      "expected": 8.0,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "T2/S23",
+      "check": "pascalvoc_sp: expected overhead (percent)",
+      "actual": 29,
+      "expected": 29,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "T2/S23",
+      "check": "pascalvoc_sp: C_assure",
+      "actual": 18.5,
+      "expected": 18.5,
+      "tolerance": 0.05,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "T2/S23",
+      "check": "pascalvoc_sp: assurance overhead (percent)",
+      "actual": 131,
+      "expected": 131,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "T2/S23",
+      "check": "pascalvoc_sp: C_assure = controller + comparator (Eq. 32 two-branch)",
+      "actual": 18.5,
+      "expected": 18.5,
+      "tolerance": 0.0005,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S23",
+      "check": "pascalvoc_sp: Eq. 32 expected cost from controller/comparator/fallback",
+      "actual": 10.2975,
+      "expected": 10.298,
+      "tolerance": 0.0015,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "T2/Def2",
+      "check": "pascalvoc_sp: exchange rate lambda* (millinats)",
+      "actual": 3.664055700609225,
+      "expected": 3.66,
+      "tolerance": 0.01,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "T2/Def2",
+      "check": "pascalvoc_sp: amortization M* t_nom (10^3 input-s)",
+      "actual": 24.908616187989555,
+      "expected": 25,
+      "tolerance": 0.5,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "T2/S23b",
+      "check": "pascalvoc_sp: M* t_nom equals Table S23b",
+      "actual": 25,
+      "expected": 25,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S41",
+      "check": "pascalvoc_sp: qualification components sum to the total",
+      "actual": 1.6,
+      "expected": 1.59,
+      "tolerance": 0.011,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "Eq27/S13",
+      "check": "pascalvoc_sp: Bernstein penalty",
+      "actual": 0.0025790665311673216,
+      "expected": 0.002578,
+      "tolerance": 5.1e-06,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "Eq27/S13",
+      "check": "pascalvoc_sp: U_a = D_bar + penalty",
+      "actual": -0.005781999999999999,
+      "expected": -0.005782,
+      "tolerance": 5.1e-06,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "Eq27/S13",
+      "check": "pascalvoc_sp: admission decision U_a <= -epsilon_a",
+      "actual": 1,
+      "expected": 1,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "T1/S13",
+      "check": "pascalvoc_sp: Table 1 U_a",
+      "actual": -0.00578,
+      "expected": -0.00578,
+      "tolerance": 5.1e-06,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "T1/S13",
+      "check": "pascalvoc_sp: Table 1 J",
+      "actual": 1428,
+      "expected": 1428,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S13",
+      "check": "pascalvoc_sp: epsilon_a by loss type",
+      "actual": 0.003,
+      "expected": 0.003,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S13",
+      "check": "pascalvoc_sp: sensitivity B=0.05 penalty",
+      "actual": 0.0018625473430636734,
+      "expected": 0.001863,
+      "tolerance": 5.1e-06,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S13",
+      "check": "pascalvoc_sp: sensitivity B=0.05 decision",
+      "actual": 1,
+      "expected": 1,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S13",
+      "check": "pascalvoc_sp: sensitivity B=0.20 penalty",
+      "actual": 0.004012104907374617,
+      "expected": 0.004012,
+      "tolerance": 5.1e-06,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S13",
+      "check": "pascalvoc_sp: sensitivity B=0.20 decision",
+      "actual": 1,
+      "expected": 1,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "T1/T2",
+      "check": "coco_sp: loss effect printed identically",
+      "actual": -0.00905,
+      "expected": -0.00905,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "T1",
+      "check": "coco_sp: loss interval contains the point",
+      "actual": true,
+      "expected": true,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "T1",
+      "check": "coco_sp: loss interval symmetric (bootstrap percentile)",
+      "actual": -8.673617379884035e-19,
+      "expected": 0.0,
+      "tolerance": 0.00011,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "T1",
+      "check": "coco_sp: metric interval contains the point",
+      "actual": true,
+      "expected": true,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "T1/S15",
+      "check": "coco_sp: official gain equals S15 deployed minus qC",
+      "actual": 0.6499999999999986,
+      "expected": 0.65,
+      "tolerance": 0.011,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "T2/S23",
+      "check": "coco_sp: C_expected",
+      "actual": 10.601,
+      "expected": 10.6,
+      "tolerance": 0.005,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "T2/S23",
+      "check": "coco_sp: C_qC",
+      "actual": 8.0,
+      "expected": 8.0,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "T2/S23",
+      "check": "coco_sp: expected overhead (percent)",
+      "actual": 33,
+      "expected": 33,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "T2/S23",
+      "check": "coco_sp: C_assure",
+      "actual": 18.8,
+      "expected": 18.8,
+      "tolerance": 0.05,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "T2/S23",
+      "check": "coco_sp: assurance overhead (percent)",
+      "actual": 135,
+      "expected": 135,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "T2/S23",
+      "check": "coco_sp: C_assure = controller + comparator (Eq. 32 two-branch)",
+      "actual": 18.8,
+      "expected": 18.8,
+      "tolerance": 0.0005,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S23",
+      "check": "coco_sp: Eq. 32 expected cost from controller/comparator/fallback",
+      "actual": 10.6012,
+      "expected": 10.601,
+      "tolerance": 0.0015,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "T2/Def2",
+      "check": "coco_sp: exchange rate lambda* (millinats)",
+      "actual": 3.479430988081506,
+      "expected": 3.48,
+      "tolerance": 0.01,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "T2/Def2",
+      "check": "coco_sp: amortization M* t_nom (10^3 input-s)",
+      "actual": 25.05190311418684,
+      "expected": 25,
+      "tolerance": 0.5,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "T2/S23b",
+      "check": "coco_sp: M* t_nom equals Table S23b",
+      "actual": 25,
+      "expected": 25,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S41",
+      "check": "coco_sp: qualification components sum to the total",
+      "actual": 1.8,
+      "expected": 1.81,
+      "tolerance": 0.011,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "Eq27/S13",
+      "check": "coco_sp: Bernstein penalty",
+      "actual": 0.0010880328228105814,
+      "expected": 0.001088,
+      "tolerance": 5.1e-06,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "Eq27/S13",
+      "check": "coco_sp: U_a = D_bar + penalty",
+      "actual": -0.007922,
+      "expected": -0.007922,
+      "tolerance": 5.1e-06,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "Eq27/S13",
+      "check": "coco_sp: admission decision U_a <= -epsilon_a",
+      "actual": 1,
+      "expected": 1,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "T1/S13",
+      "check": "coco_sp: Table 1 U_a",
+      "actual": -0.00792,
+      "expected": -0.00792,
+      "tolerance": 5.1e-06,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "T1/S13",
+      "check": "coco_sp: Table 1 J",
+      "actual": 5000,
+      "expected": 5000,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S13",
+      "check": "coco_sp: epsilon_a by loss type",
+      "actual": 0.003,
+      "expected": 0.003,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S13",
+      "check": "coco_sp: sensitivity B=0.05 penalty",
+      "actual": 0.000883497339429124,
+      "expected": 0.000883,
+      "tolerance": 5.1e-06,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S13",
+      "check": "coco_sp: sensitivity B=0.05 decision",
+      "actual": 1,
+      "expected": 1,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S13",
+      "check": "coco_sp: sensitivity B=0.20 penalty",
+      "actual": 0.0014971037895734965,
+      "expected": 0.001497,
+      "tolerance": 5.1e-06,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S13",
+      "check": "coco_sp: sensitivity B=0.20 decision",
+      "actual": 1,
+      "expected": 1,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "T1/T2",
+      "check": "peptides_func: loss effect printed identically",
+      "actual": -0.00303,
+      "expected": -0.00303,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "T1",
+      "check": "peptides_func: loss interval contains the point",
+      "actual": true,
+      "expected": true,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "T1",
+      "check": "peptides_func: loss interval symmetric (bootstrap percentile)",
+      "actual": 0.0,
+      "expected": 0.0,
+      "tolerance": 0.00011,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "T1",
+      "check": "peptides_func: metric interval contains the point",
+      "actual": true,
+      "expected": true,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "T1/S15/S26",
+      "check": "peptides_func: documented difference between absolute-score subtraction and paired gain (AP)",
+      "actual": 0.00020000000000000573,
+      "expected": 0.0002,
+      "tolerance": 1e-12,
+      "status": "OK",
+      "note": "Preserved discrepancy, not equality: S26 prints 0.7200-0.7140=0.0060 AP; main Table 1 reports 0.0058. S26 explicitly says four-decimal rounding alone cannot reconcile 0.0002 AP."
+    },
+    {
+      "group": "T2/S23",
+      "check": "peptides_func: C_expected",
+      "actual": 4.731,
+      "expected": 4.73,
+      "tolerance": 0.005,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "T2/S23",
+      "check": "peptides_func: C_qC",
+      "actual": 4.0,
+      "expected": 4.0,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "T2/S23",
+      "check": "peptides_func: expected overhead (percent)",
+      "actual": 18,
+      "expected": 18,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "T2/S23",
+      "check": "peptides_func: C_assure",
+      "actual": 8.9,
+      "expected": 8.9,
+      "tolerance": 0.05,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "T2/S23",
+      "check": "peptides_func: assurance overhead (percent)",
+      "actual": 123,
+      "expected": 123,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "T2/S23",
+      "check": "peptides_func: C_assure = controller + comparator (Eq. 32 two-branch)",
+      "actual": 8.9,
+      "expected": 8.9,
+      "tolerance": 0.0005,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S23",
+      "check": "peptides_func: Eq. 32 expected cost from controller/comparator/fallback",
+      "actual": 4.7308,
+      "expected": 4.731,
+      "tolerance": 0.0015,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "T2/Def2",
+      "check": "peptides_func: exchange rate lambda* (millinats)",
+      "actual": 4.145006839945282,
+      "expected": 4.15,
+      "tolerance": 0.01,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "T2/Def2",
+      "check": "peptides_func: amortization M* t_nom (10^3 input-s)",
+      "actual": 83.22845417236664,
+      "expected": 83,
+      "tolerance": 0.5,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "T2/S23b",
+      "check": "peptides_func: M* t_nom equals Table S23b",
+      "actual": 83,
+      "expected": 83,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S41",
+      "check": "peptides_func: qualification components sum to the total",
+      "actual": 1.68,
+      "expected": 1.69,
+      "tolerance": 0.011,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "Eq27/S13",
+      "check": "peptides_func: Bernstein penalty",
+      "actual": 0.0015659414871871482,
+      "expected": 0.001566,
+      "tolerance": 5.1e-06,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "Eq27/S13",
+      "check": "peptides_func: U_a = D_bar + penalty",
+      "actual": -0.001544,
+      "expected": -0.001544,
+      "tolerance": 5.1e-06,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "Eq27/S13",
+      "check": "peptides_func: admission decision U_a <= -epsilon_a",
+      "actual": 1,
+      "expected": 1,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "T1/S13",
+      "check": "peptides_func: Table 1 U_a",
+      "actual": -0.00154,
+      "expected": -0.00154,
+      "tolerance": 5.1e-06,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "T1/S13",
+      "check": "peptides_func: Table 1 J",
+      "actual": 2331,
+      "expected": 2331,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S13",
+      "check": "peptides_func: epsilon_a by loss type",
+      "actual": 0.0015,
+      "expected": 0.0015,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S13",
+      "check": "peptides_func: sensitivity B=0.05 penalty",
+      "actual": 0.0011271119243442703,
+      "expected": 0.001127,
+      "tolerance": 5.1e-06,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S13",
+      "check": "peptides_func: sensitivity B=0.05 decision",
+      "actual": 1,
+      "expected": 1,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S13",
+      "check": "peptides_func: sensitivity B=0.20 penalty",
+      "actual": 0.002443600612872904,
+      "expected": 0.002444,
+      "tolerance": 5.1e-06,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S13",
+      "check": "peptides_func: sensitivity B=0.20 decision",
+      "actual": 0,
+      "expected": 0,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "Cor2",
+      "check": "constant 14 B log(2/delta_a)/3 (nats)",
+      "actual": 2.0449457628478114,
+      "expected": 2.045,
+      "tolerance": 0.0005,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "Abstract",
+      "check": "expected overhead range 15-33%",
+      "actual": [
+        15,
+        33
+      ],
+      "expected": [
+        15,
+        33
+      ],
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "Abstract",
+      "check": "exchange-rate range 3.5-7.3 millinats",
+      "actual": [
+        3.5,
+        7.3
+      ],
+      "expected": [
+        3.5,
+        7.3
+      ],
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "Abstract",
+      "check": "paired CE-or-mean-BCE change 0 to -0.00905 nats",
+      "actual": [
+        0.0,
+        -0.00905
+      ],
+      "expected": [
+        0.0,
+        -0.00905
+      ],
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "Abstract",
+      "check": "official metrics up to 0.65 points",
+      "actual": 0.65,
+      "expected": 0.65,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "Abstract",
+      "check": "assurance configuration 118-135%",
+      "actual": [
+        118,
+        135
+      ],
+      "expected": [
+        118,
+        135
+      ],
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S41/S15",
+      "check": "arxiv: qualification increment equals S15 deployed GPU-h minus plant GPU-h",
+      "actual": 1.92,
+      "expected": 1.92,
+      "tolerance": 0.011,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S41/S15",
+      "check": "proteins: qualification increment equals S15 deployed GPU-h minus plant GPU-h",
+      "actual": 2.01,
+      "expected": 2.01,
+      "tolerance": 0.011,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S41/S15",
+      "check": "products: S15-derived qualification increment recorded",
+      "actual": 2.28,
+      "expected": 2.28,
+      "tolerance": 0.011,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S41/S15",
+      "check": "roman_empire: qualification increment equals S15 deployed GPU-h minus plant GPU-h",
+      "actual": 1.379999999999999,
+      "expected": 1.38,
+      "tolerance": 0.011,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S41/S15",
+      "check": "pascalvoc_sp: qualification increment equals S15 deployed GPU-h minus plant GPU-h",
+      "actual": 1.5899999999999999,
+      "expected": 1.59,
+      "tolerance": 0.011,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S41/S15",
+      "check": "coco_sp: qualification increment equals S15 deployed GPU-h minus plant GPU-h",
+      "actual": 1.8100000000000005,
+      "expected": 1.81,
+      "tolerance": 0.011,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "S41/S15",
+      "check": "peptides_func: qualification increment equals S15 deployed GPU-h minus plant GPU-h",
+      "actual": 1.6900000000000013,
+      "expected": 1.69,
+      "tolerance": 0.011,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "Abstract",
+      "check": "qualification 1.4-2.3 GPU-hours (Table S15 increments)",
+      "actual": [
+        1.4,
+        2.3
+      ],
+      "expected": [
+        1.4,
+        2.3
+      ],
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "Abstract",
+      "check": "plant training cost 7.8-12.9 GPU-hours",
+      "actual": [
+        7.8,
+        12.9
+      ],
+      "expected": [
+        7.8,
+        12.9
+      ],
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "Abstract",
+      "check": "training-plus-qualification multiplier 1.176x (arxiv)",
+      "actual": 1.176,
+      "expected": 1.176,
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    },
+    {
+      "group": "Abstract",
+      "check": "exploration budget 9,600-32,000 trajectories",
+      "actual": [
+        9600,
+        32000
+      ],
+      "expected": [
+        9600,
+        32000
+      ],
+      "tolerance": 0.0,
+      "status": "OK",
+      "note": ""
+    }
+  ],
+  "failures": 0
+}

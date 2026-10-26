@@ -1,0 +1,48 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cross-morse"
+# No release version: the repository is identified by its git commit and by the runtime source
+# fingerprint (`make fingerprint`). The distribution version is read from the sealed runtime.
+dynamic = ["version"]
+description = "CROSS-MORSE: cross-spectral control of message passing in frozen graph neural networks (reference implementation)"
+readme = "README.md"
+requires-python = ">=3.11"
+license = { file = "LICENSE" }
+authors = [
+  { name = "Abdolvahab Khalili Sadaghiani", email = "abdolvahab.khalili.sadaghiani@liu.se" },
+  { name = "Jose Nunez-Yanez" },
+]
+keywords = ["graph neural networks", "adaptive message passing", "cross-spectral analysis", "model predictive control", "reproducibility"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3 :: Only",
+  "License :: OSI Approved :: BSD License",
+  "Intended Audience :: Science/Research",
+  "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+# PyTorch is installed per host (CPU or CUDA build); see docs/GETTING_STARTED.md.
+dependencies = [
+  "numpy>=1.26,<3",
+  "scipy>=1.11,<2",
+  "ogb==1.3.6",
+  "pymetis>=2023.1",
+]
+
+[project.optional-dependencies]
+review = ["numpy>=1.26,<3"]
+plots = ["matplotlib>=3.8,<4"]
+
+[project.urls]
+Repository = "https://github.com/VKHS/CROSS-MORSE"
+Documentation = "https://github.com/VKHS/CROSS-MORSE/tree/main/docs"
+"Manuscript registry" = "https://github.com/VKHS/CROSS-MORSE/tree/main/paper"
+
+[tool.setuptools]
+packages = ["cross_morse"]
+include-package-data = false
+
+[tool.setuptools.dynamic]
+version = { attr = "cross_morse.__version__" }

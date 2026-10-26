@@ -1,0 +1,16 @@
+CROSS-MORSE: Cross-Spectral Control of Message Passing in Frozen Graph Neural Networks
+
+Copyright 2026 Abdolvahab Khalili Sadaghiani.
+Distributed under the BSD 3-Clause License reproduced in LICENSE.
+
+The CROSS-MORSE source-packaging and provenance utilities retain their attribution
+to Abdolvahab Khalili Sadaghiani. Frozen-model audits, ordered stage records,
+artifact manifests, scientific contracts and source validation inform the
+utilities in cross_morse/provenance.py, scripts/ and release/.
+
+The scientific scope and artifact contents are documented in
+docs/IMPLEMENTATION_CONTRACT.md and docs/RESULTS.md.
+
+The BSD 3-Clause license applies to the source code. The accompanying manuscript
+and supplementary PDFs are our research documents and retain their authors'
+copyright; no separate document license is asserted by this repository.

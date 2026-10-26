@@ -1,0 +1,10 @@
+"/workspace/scratch/2aa93dc25af6/review_work_20261025/runtime_env/bin/python" -B environment/check_environment.py
+{
+  "status": "PINNED_PACKAGES_MATCH",
+  "package_count": 53,
+  "differences": [],
+  "python": "3.12.14",
+  "observed_python": "3.12.14",
+  "python_patch_matches": true,
+  "scope": "package versions and Python major/minor/platform; not wheel hashes, native-library identity or GPU compatibility"
+}

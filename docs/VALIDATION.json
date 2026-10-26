@@ -1,0 +1,681 @@
+{
+  "arrhenius_gpu_execution_verified": false,
+  "bundled_examples": {
+    "best_predictor_checkpoints": 28,
+    "checkpoints_included": true,
+    "exploration_trajectories": 84,
+    "inventoried_bytes": 190197703,
+    "inventoried_files": 2170,
+    "inventories": [
+      "examples/inventory/arxiv.json",
+      "examples/inventory/proteins.json",
+      "examples/inventory/products.json",
+      "examples/inventory/roman_empire.json",
+      "examples/inventory/pascalvoc_sp.json",
+      "examples/inventory/coco_sp.json",
+      "examples/inventory/peptides_func.json"
+    ],
+    "npy_files": 588,
+    "npz_files": 189,
+    "numerical_views": "examples/generated/",
+    "pt_files": 350,
+    "recorded_transitions": 576,
+    "run_count": 7,
+    "scope": "Seven complete synthetic smoke archives; not historical benchmark runs",
+    "stage_sealed_artifacts": 2051,
+    "status": "PASS"
+  },
+  "comparison_unit_tests_use_reported_value_fixtures": true,
+  "environment": {
+    "cuda_runtime": null,
+    "device": "cpu",
+    "gpu": null,
+    "numpy": "2.3.5",
+    "packages": {
+      "jsonschema": "4.26.0",
+      "matplotlib": "3.10.8",
+      "ogb": "1.3.6",
+      "pymetis": "2025.2.2",
+      "scipy": "1.17.0"
+    },
+    "platform": "Linux-6.18.55-x86_64-with-glibc2.39",
+    "python": "3.12.14",
+    "smoke_precision": "fp32",
+    "threads": 2,
+    "torch": "2.10.0+cpu"
+  },
+  "fresh_clone_verification_2026_10_26": {
+    "archive_ingest_build_chain": "PASS (Peptides-func example, 311 files)",
+    "environment": {
+      "matplotlib": "3.11.2",
+      "numpy": "2.5.3",
+      "platform": "Linux x86_64",
+      "python": "3.13.17",
+      "torch": null
+    },
+    "example_paper_build": "11 tables (including S12c), 6 figures",
+    "make_reproduce": "PASS (7 runs, 28 predictors)",
+    "make_verify": "PASS",
+    "admitted_branch_fixture_test": "PASS",
+    "pytorch_suite_reexecuted": false,
+    "runtime_source_sha256_unchanged": true,
+    "test_no_torch": {
+      "errors": 0,
+      "failures": 0,
+      "modules": 13,
+      "skipped": 2,
+      "tests": 177
+    },
+    "selection_readings_fixture_test": "PASS",
+    "measurement_records_tests": "PASS"
+  },
+  "full_official_benchmark_training_executed": false,
+  "hosted_github_actions_executed": false,
+  "make_workflows": {
+    "environment": {
+      "command": [
+        "make",
+        "environment-check",
+        "PYTHON=/workspace/scratch/2aa93dc25af6/review_work_20261025/runtime_env/bin/python"
+      ],
+      "log": "validation_evidence/environment_check.log",
+      "matching_distributions": 53,
+      "pip_check_log": "validation_evidence/pip_check.log"
+    },
+    "paper": {
+      "command": [
+        "make",
+        "paper",
+        "diagrams-check",
+        "PYTHON=/workspace/scratch/2aa93dc25af6/review_work_20261025/runtime_env/bin/python",
+        "PAPER_FIGURE_ROOT=/workspace/scratch/2aa93dc25af6/review_work_20261025/qa/paper figures",
+        "DIAGRAM_ROOT=/workspace/scratch/2aa93dc25af6/review_work_20261025/qa/method diagrams"
+      ],
+      "diagram_svg_files": 5,
+      "log": "validation_evidence/make_paper.log",
+      "paper_figure_files": 8,
+      "regenerated_table_views_byte_identical": true,
+      "svg_png_source_checks": 5
+    },
+    "reproduce": {
+      "checkpoint_objects_loaded": false,
+      "command": [
+        "make",
+        "reproduce",
+        "PYTHON=/workspace/scratch/2aa93dc25af6/review_work_20261025/runtime_env/bin/python",
+        "REPORT_ROOT=/workspace/scratch/2aa93dc25af6/review_work_20261025/make_reports"
+      ],
+      "downloads_performed": false,
+      "log": "validation_evidence/make_reproduce.log",
+      "manifest_sha256": "82b356918bad0d9f338a539cad92b44e75b85aa3c9cfb5d980d3e672c7318741",
+      "outputs": [
+        "metrics.csv",
+        "metrics.md",
+        "replay.json",
+        "example_scores.svg",
+        "example_scores.png",
+        "reproduction_manifest.json"
+      ],
+      "training_performed": false
+    },
+    "status": "PASS"
+  },
+  "manuscript_agreement": "NOT_ASSESSED",
+  "observed_environment_lock": {
+    "environment_record": "environment/observed_environment.json",
+    "lock_scope": "Exact observed package versions; platform-specific wheel bytes are not hash-locked.",
+    "package_count": 53,
+    "requirements": "environment/requirements-cpu.lock",
+    "requirements_sha256": "19aed0700a80e932aebc562f6d046d7119db28f1e1e32e6904b3929b744a7554",
+    "scope": "Observed clean environment used for bundled synthetic examples and software validation; not the manuscript GPU environment.",
+    "status": "PASS"
+  },
+  "official_data_preparation": {
+    "all_ten_masks_disjoint_and_exhaustive": true,
+    "canonical_edge_entries": 65854,
+    "command": [
+      "/workspace/scratch/2aa93dc25af6/review_work_20261025/runtime_env/bin/python",
+      "-B",
+      "run_cross_morse_roman_empire.py",
+      "--profile",
+      "pilot",
+      "--stage",
+      "prepare",
+      "--split-index",
+      "0",
+      "--device",
+      "cpu",
+      "--threads",
+      "2",
+      "--data-root",
+      "/workspace/scratch/2aa93dc25af6/review_work_20261024/validation_current/official_data",
+      "--output-dir",
+      "/workspace/scratch/2aa93dc25af6/review_work_20261025/validation_current/roman_official_prepare"
+    ],
+    "dataset": "Roman-empire",
+    "features": 300,
+    "nodes": 22662,
+    "official_split_index": 0,
+    "official_split_sizes": {
+      "test": 5666,
+      "train": 11331,
+      "valid": 5665
+    },
+    "operation": "official raw-data preparation only",
+    "outputs": 18,
+    "prepared_fingerprint": "ef8bd8899875608774230c836161502cf63e47a6a22371ba7e583a2945f29671",
+    "role_sizes": {
+      "admit": 5665,
+      "confirm": 1134,
+      "explore": 2266,
+      "fit": 6798,
+      "fit_train": 6119,
+      "fit_val": 679,
+      "select": 1133,
+      "test": 5666
+    },
+    "source_file_sha256": "a58ba741d123bf892fe5c872138d07463d75a2e9012360b8dd78ac2d4766d428",
+    "source_sha256": "9e0154c11c0ebc67d533a84b6d6a80c4e77a8d76e6d2cc165bcff5897980b108",
+    "source_url": "https://github.com/yandex-research/heterophilous-graphs/raw/main/data/roman_empire.npz",
+    "stage_manifest_sha256": "77c046238b234b36523949371bf737efd75ac0a698167d4bce2f82e33ac445ab",
+    "status": "PASS",
+    "training_executed": false
+  },
+  "paper_arithmetic": {
+    "checks": 584,
+    "evidence": "validation_evidence/paper_arithmetic.json",
+    "scope": "Registered-constant, arithmetic, source-identity and transcription checks; not benchmark reproduction",
+    "status": "PASS"
+  },
+  "portable_evidence_export": {
+    "archive_sha256": "0639dfec84af71a069d962253aadbd752fb10fe870906bed6d57640084849ed6",
+    "benchmark_dataset": "Peptides-func",
+    "checkpoints_included": false,
+    "dataset": "synthetic",
+    "scientific_run": false,
+    "scope": "exporter verified copied numerical evidence and identical replay; synthetic software check",
+    "source_and_run_unmodified": true,
+    "status": "PASS"
+  },
+  "published_numbers_substituted_for_computed_results": false,
+  "schema_version": "validation-record-3",
+  "scope": "CPU task-specific synthetic lifecycle, replay, resume and evidence export; actual Roman-empire preparation; no full official benchmark training",
+  "smoke_runs": [
+    {
+      "admitted": false,
+      "candidate_count": 40,
+      "checkpoint_replay": "PASS",
+      "control_depth": 6,
+      "dataset": "ogbn-arxiv",
+      "deployed_route": "learned_stop",
+      "evidence_directory": "validation_evidence/arxiv",
+      "exact_fallback": true,
+      "exploration_trajectories": 12,
+      "fixture_dataset": "synthetic",
+      "fixture_outputs": 4,
+      "identities": {
+        "config_sha256": "2f97bcb6667d1a9c246183513885913fa3677cf4a54b9afb94c0f1c46df331e5",
+        "dataset": "synthetic",
+        "source_sha256": "9e0154c11c0ebc67d533a84b6d6a80c4e77a8d76e6d2cc165bcff5897980b108",
+        "unit_sha256": "97212529605501122bab96f5a6f71580e449955ec68b53142c0f08749c7f2b63"
+      },
+      "manifest_validation": "PASS",
+      "maximum_probability_difference": 0.0,
+      "metric": "accuracy",
+      "num_graphs": 1,
+      "num_nodes": 160,
+      "numeric_replay": "PASS",
+      "prediction_level": "node",
+      "predictors_checked": [
+        "q0",
+        "qN",
+        "qC",
+        "qD"
+      ],
+      "profile": "smoke",
+      "qC_qD_byte_identical": true,
+      "resume": {
+        "command": [
+          "/workspace/scratch/2aa93dc25af6/review_work_20261025/runtime_env/bin/python",
+          "-B",
+          "run_cross_morse_arxiv.py",
+          "--profile",
+          "smoke",
+          "--device",
+          "cpu",
+          "--threads",
+          "2",
+          "--data-root",
+          "/workspace/scratch/2aa93dc25af6/review_work_20261025/validation_current/data",
+          "--output-dir",
+          "/workspace/scratch/2aa93dc25af6/review_work_20261025/validation_current/arxiv",
+          "--resume"
+        ],
+        "exact_comparator_fallback": true,
+        "sealed_outputs_checked": 292,
+        "sealed_outputs_unchanged": true,
+        "status": "PASS"
+      },
+      "scientific_run": false,
+      "stages_completed": 8,
+      "training_epochs": 3,
+      "training_seeds": [
+        1,
+        2
+      ]
+    },
+    {
+      "admitted": false,
+      "candidate_count": 40,
+      "checkpoint_replay": "PASS",
+      "control_depth": 6,
+      "dataset": "ogbn-proteins",
+      "deployed_route": "best_depth",
+      "evidence_directory": "validation_evidence/proteins",
+      "exact_fallback": true,
+      "exploration_trajectories": 12,
+      "fixture_dataset": "synthetic",
+      "fixture_outputs": 4,
+      "identities": {
+        "config_sha256": "f5e80883a75806cad6a7c1ae4f0657dd3248e04855dd415ef05b5bd2127caf2b",
+        "dataset": "synthetic",
+        "source_sha256": "9e0154c11c0ebc67d533a84b6d6a80c4e77a8d76e6d2cc165bcff5897980b108",
+        "unit_sha256": "97212529605501122bab96f5a6f71580e449955ec68b53142c0f08749c7f2b63"
+      },
+      "manifest_validation": "PASS",
+      "maximum_probability_difference": 0.0,
+      "metric": "rocauc",
+      "num_graphs": 1,
+      "num_nodes": 160,
+      "numeric_replay": "PASS",
+      "prediction_level": "node",
+      "predictors_checked": [
+        "q0",
+        "qN",
+        "qC",
+        "qD"
+      ],
+      "profile": "smoke",
+      "qC_qD_byte_identical": true,
+      "resume": {
+        "command": [
+          "/workspace/scratch/2aa93dc25af6/review_work_20261025/runtime_env/bin/python",
+          "-B",
+          "run_cross_morse_proteins.py",
+          "--profile",
+          "smoke",
+          "--device",
+          "cpu",
+          "--threads",
+          "2",
+          "--data-root",
+          "/workspace/scratch/2aa93dc25af6/review_work_20261025/validation_current/data",
+          "--output-dir",
+          "/workspace/scratch/2aa93dc25af6/review_work_20261025/validation_current/proteins",
+          "--resume"
+        ],
+        "exact_comparator_fallback": true,
+        "sealed_outputs_checked": 293,
+        "sealed_outputs_unchanged": true,
+        "status": "PASS"
+      },
+      "scientific_run": false,
+      "stages_completed": 8,
+      "training_epochs": 3,
+      "training_seeds": [
+        1,
+        2
+      ]
+    },
+    {
+      "admitted": false,
+      "candidate_count": 40,
+      "checkpoint_replay": "PASS",
+      "control_depth": 6,
+      "dataset": "ogbn-products",
+      "deployed_route": "learned_stop",
+      "evidence_directory": "validation_evidence/products",
+      "exact_fallback": true,
+      "exploration_trajectories": 12,
+      "fixture_dataset": "synthetic",
+      "fixture_outputs": 4,
+      "identities": {
+        "config_sha256": "723c9eb663f1e68788ec50cf3deba3304425757a144228979e938cb57578e05d",
+        "dataset": "synthetic",
+        "source_sha256": "9e0154c11c0ebc67d533a84b6d6a80c4e77a8d76e6d2cc165bcff5897980b108",
+        "unit_sha256": "97212529605501122bab96f5a6f71580e449955ec68b53142c0f08749c7f2b63"
+      },
+      "manifest_validation": "PASS",
+      "maximum_probability_difference": 0.0,
+      "metric": "accuracy",
+      "num_graphs": 1,
+      "num_nodes": 160,
+      "numeric_replay": "PASS",
+      "prediction_level": "node",
+      "predictors_checked": [
+        "q0",
+        "qN",
+        "qC",
+        "qD"
+      ],
+      "profile": "smoke",
+      "qC_qD_byte_identical": true,
+      "resume": {
+        "command": [
+          "/workspace/scratch/2aa93dc25af6/review_work_20261025/runtime_env/bin/python",
+          "-B",
+          "run_cross_morse_products.py",
+          "--profile",
+          "smoke",
+          "--device",
+          "cpu",
+          "--threads",
+          "2",
+          "--data-root",
+          "/workspace/scratch/2aa93dc25af6/review_work_20261025/validation_current/data",
+          "--output-dir",
+          "/workspace/scratch/2aa93dc25af6/review_work_20261025/validation_current/products",
+          "--resume"
+        ],
+        "exact_comparator_fallback": true,
+        "sealed_outputs_checked": 292,
+        "sealed_outputs_unchanged": true,
+        "status": "PASS"
+      },
+      "scientific_run": false,
+      "stages_completed": 8,
+      "training_epochs": 3,
+      "training_seeds": [
+        1,
+        2
+      ]
+    },
+    {
+      "admitted": false,
+      "candidate_count": 40,
+      "checkpoint_replay": "PASS",
+      "control_depth": 6,
+      "dataset": "Roman-empire",
+      "deployed_route": "fixed_sequence",
+      "evidence_directory": "validation_evidence/roman_empire",
+      "exact_fallback": true,
+      "exploration_trajectories": 12,
+      "fixture_dataset": "synthetic",
+      "fixture_outputs": 4,
+      "identities": {
+        "config_sha256": "2b8da655efb76599067147c7e11b5dda4d6749741ad010d4518870e1e47eb873",
+        "dataset": "synthetic",
+        "source_sha256": "9e0154c11c0ebc67d533a84b6d6a80c4e77a8d76e6d2cc165bcff5897980b108",
+        "unit_sha256": "97212529605501122bab96f5a6f71580e449955ec68b53142c0f08749c7f2b63"
+      },
+      "manifest_validation": "PASS",
+      "maximum_probability_difference": 0.0,
+      "metric": "accuracy",
+      "num_graphs": 1,
+      "num_nodes": 160,
+      "numeric_replay": "PASS",
+      "prediction_level": "node",
+      "predictors_checked": [
+        "q0",
+        "qN",
+        "qC",
+        "qD"
+      ],
+      "profile": "smoke",
+      "qC_qD_byte_identical": true,
+      "resume": {
+        "command": [
+          "/workspace/scratch/2aa93dc25af6/review_work_20261025/runtime_env/bin/python",
+          "-B",
+          "run_cross_morse_roman_empire.py",
+          "--profile",
+          "smoke",
+          "--device",
+          "cpu",
+          "--threads",
+          "2",
+          "--data-root",
+          "/workspace/scratch/2aa93dc25af6/review_work_20261025/validation_current/data",
+          "--output-dir",
+          "/workspace/scratch/2aa93dc25af6/review_work_20261025/validation_current/roman_empire",
+          "--resume"
+        ],
+        "exact_comparator_fallback": true,
+        "sealed_outputs_checked": 292,
+        "sealed_outputs_unchanged": true,
+        "status": "PASS"
+      },
+      "scientific_run": false,
+      "stages_completed": 8,
+      "training_epochs": 3,
+      "training_seeds": [
+        1,
+        2
+      ]
+    },
+    {
+      "admitted": false,
+      "candidate_count": 40,
+      "checkpoint_replay": "PASS",
+      "control_depth": 8,
+      "dataset": "PascalVOC-SP",
+      "deployed_route": "learned_stop",
+      "evidence_directory": "validation_evidence/pascalvoc_sp",
+      "exact_fallback": true,
+      "exploration_trajectories": 12,
+      "fixture_dataset": "synthetic",
+      "fixture_outputs": 4,
+      "identities": {
+        "config_sha256": "922018f810bb925df20d0e43ee887ae74ac6cc321b45fb3402246d3945c12563",
+        "dataset": "synthetic",
+        "source_sha256": "9e0154c11c0ebc67d533a84b6d6a80c4e77a8d76e6d2cc165bcff5897980b108",
+        "unit_sha256": "2364a4ac52b0796d16a19b4fedfc2bc8d4fba6d62897ebf28c6f32c4f55ae7d2"
+      },
+      "manifest_validation": "PASS",
+      "maximum_probability_difference": 0.0,
+      "metric": "macro_f1",
+      "num_graphs": 80,
+      "num_nodes": 640,
+      "numeric_replay": "PASS",
+      "prediction_level": "node",
+      "predictors_checked": [
+        "q0",
+        "qN",
+        "qC",
+        "qD"
+      ],
+      "profile": "smoke",
+      "qC_qD_byte_identical": true,
+      "resume": {
+        "command": [
+          "/workspace/scratch/2aa93dc25af6/review_work_20261025/runtime_env/bin/python",
+          "-B",
+          "run_cross_morse_pascalvoc_sp.py",
+          "--profile",
+          "smoke",
+          "--device",
+          "cpu",
+          "--threads",
+          "2",
+          "--data-root",
+          "/workspace/scratch/2aa93dc25af6/review_work_20261025/validation_current/data",
+          "--output-dir",
+          "/workspace/scratch/2aa93dc25af6/review_work_20261025/validation_current/pascalvoc_sp",
+          "--resume"
+        ],
+        "exact_comparator_fallback": true,
+        "sealed_outputs_checked": 294,
+        "sealed_outputs_unchanged": true,
+        "status": "PASS"
+      },
+      "scientific_run": false,
+      "stages_completed": 8,
+      "training_epochs": 3,
+      "training_seeds": [
+        1,
+        2
+      ]
+    },
+    {
+      "admitted": false,
+      "candidate_count": 40,
+      "checkpoint_replay": "PASS",
+      "control_depth": 8,
+      "dataset": "COCO-SP",
+      "deployed_route": "learned_stop",
+      "evidence_directory": "validation_evidence/coco_sp",
+      "exact_fallback": true,
+      "exploration_trajectories": 12,
+      "fixture_dataset": "synthetic",
+      "fixture_outputs": 4,
+      "identities": {
+        "config_sha256": "51bdd5f83258fb9cc6332f114f60e0067f86081ad93d8b8de8f4eb43000e8a58",
+        "dataset": "synthetic",
+        "source_sha256": "9e0154c11c0ebc67d533a84b6d6a80c4e77a8d76e6d2cc165bcff5897980b108",
+        "unit_sha256": "2364a4ac52b0796d16a19b4fedfc2bc8d4fba6d62897ebf28c6f32c4f55ae7d2"
+      },
+      "manifest_validation": "PASS",
+      "maximum_probability_difference": 0.0,
+      "metric": "macro_f1",
+      "num_graphs": 80,
+      "num_nodes": 640,
+      "numeric_replay": "PASS",
+      "prediction_level": "node",
+      "predictors_checked": [
+        "q0",
+        "qN",
+        "qC",
+        "qD"
+      ],
+      "profile": "smoke",
+      "qC_qD_byte_identical": true,
+      "resume": {
+        "command": [
+          "/workspace/scratch/2aa93dc25af6/review_work_20261025/runtime_env/bin/python",
+          "-B",
+          "run_cross_morse_coco_sp.py",
+          "--profile",
+          "smoke",
+          "--device",
+          "cpu",
+          "--threads",
+          "2",
+          "--data-root",
+          "/workspace/scratch/2aa93dc25af6/review_work_20261025/validation_current/data",
+          "--output-dir",
+          "/workspace/scratch/2aa93dc25af6/review_work_20261025/validation_current/coco_sp",
+          "--resume"
+        ],
+        "exact_comparator_fallback": true,
+        "sealed_outputs_checked": 294,
+        "sealed_outputs_unchanged": true,
+        "status": "PASS"
+      },
+      "scientific_run": false,
+      "stages_completed": 8,
+      "training_epochs": 3,
+      "training_seeds": [
+        1,
+        2
+      ]
+    },
+    {
+      "admitted": false,
+      "candidate_count": 40,
+      "checkpoint_replay": "PASS",
+      "control_depth": 8,
+      "dataset": "Peptides-func",
+      "deployed_route": "phase",
+      "evidence_directory": "validation_evidence/peptides_func",
+      "exact_fallback": true,
+      "exploration_trajectories": 12,
+      "fixture_dataset": "synthetic",
+      "fixture_outputs": 4,
+      "identities": {
+        "config_sha256": "286b22b6af7a6faefa617db030931ef522bef77157294b536089634410ea53da",
+        "dataset": "synthetic",
+        "source_sha256": "9e0154c11c0ebc67d533a84b6d6a80c4e77a8d76e6d2cc165bcff5897980b108",
+        "unit_sha256": "921f7a501d28cfdcbe38e7a08af9574c8492406aeb0e5c6652d2f47bfeb54f3e"
+      },
+      "manifest_validation": "PASS",
+      "maximum_probability_difference": 0.0,
+      "metric": "ap",
+      "num_graphs": 80,
+      "num_nodes": 640,
+      "numeric_replay": "PASS",
+      "prediction_level": "graph",
+      "predictors_checked": [
+        "q0",
+        "qN",
+        "qC",
+        "qD"
+      ],
+      "profile": "smoke",
+      "qC_qD_byte_identical": true,
+      "resume": {
+        "command": [
+          "/workspace/scratch/2aa93dc25af6/review_work_20261025/runtime_env/bin/python",
+          "-B",
+          "run_cross_morse_peptides_func.py",
+          "--profile",
+          "smoke",
+          "--device",
+          "cpu",
+          "--threads",
+          "2",
+          "--data-root",
+          "/workspace/scratch/2aa93dc25af6/review_work_20261025/validation_current/data",
+          "--output-dir",
+          "/workspace/scratch/2aa93dc25af6/review_work_20261025/validation_current/peptides_func",
+          "--resume"
+        ],
+        "exact_comparator_fallback": true,
+        "sealed_outputs_checked": 294,
+        "sealed_outputs_unchanged": true,
+        "status": "PASS"
+      },
+      "scientific_run": false,
+      "stages_completed": 8,
+      "training_epochs": 3,
+      "training_seeds": [
+        1,
+        2
+      ]
+    }
+  ],
+  "source_sha256": "9e0154c11c0ebc67d533a84b6d6a80c4e77a8d76e6d2cc165bcff5897980b108",
+  "stage_schema_validation": {
+    "manifests_checked": 57,
+    "schema": "release/schemas/stage_manifest.schema.json",
+    "status": "PASS",
+    "validator": "jsonschema.Draft202012Validator with FormatChecker"
+  },
+  "status": "PASS",
+  "unit_tests": {
+    "command": [
+      "/workspace/scratch/2aa93dc25af6/review_work_20261025/runtime_env/bin/python",
+      "-B",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tests",
+      "-v"
+    ],
+    "discovered": 346,
+    "environment_overrides": {
+      "MPLCONFIGDIR": "/workspace/scratch/2aa93dc25af6/review_work_20261025/validation_current/mplconfig",
+      "OMP_NUM_THREADS": "2",
+      "OPENBLAS_NUM_THREADS": "2"
+    },
+    "errors": 0,
+    "failures": 0,
+    "log": "validation_evidence/unit_tests.log",
+    "passed": 345,
+    "seconds": 24.41,
+    "skip_reason": "private cluster profile is intentionally not part of the public source",
+    "skipped": 1,
+    "status": "PASS"
+  },
+  "validation_date_utc": "2026-10-25"
+}

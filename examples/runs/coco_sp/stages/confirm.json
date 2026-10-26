@@ -1,0 +1,15 @@
+{
+  "config_sha256": "51bdd5f83258fb9cc6332f114f60e0067f86081ad93d8b8de8f4eb43000e8a58",
+  "label_accesses": [
+    {
+      "nodes": 40,
+      "role": "confirm",
+      "stage": "confirm"
+    }
+  ],
+  "manifest_sha256": "f3af2c5336794ef821680f4017827b81cc477f9fff2f16b974ffe2903c347655",
+  "seconds_this_attempt": 0.26925373100038996,
+  "source_sha256": "9e0154c11c0ebc67d533a84b6d6a80c4e77a8d76e6d2cc165bcff5897980b108",
+  "stage": "confirm",
+  "status": "COMPLETE"
+}

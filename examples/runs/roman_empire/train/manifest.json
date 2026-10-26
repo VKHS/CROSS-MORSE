@@ -1,0 +1,279 @@
+{
+  "checkpoints": [
+    {
+      "active_parameter_count": 1092,
+      "baseline": true,
+      "best_internal_fit_val_ce": 1.3200715780258179,
+      "best_internal_fit_val_loss": 1.3200715780258179,
+      "best_internal_fit_val_metric": 0.4,
+      "checkpoint_rule": "min_loss",
+      "checkpoint_selection_labels": "fit_val only",
+      "checkpoint_sha256": "90ae4d8a588e77db67074c300f116174a94ab27df478de420a624c54acc6e318",
+      "epochs_completed": 3,
+      "execution": "exact full-graph sparse transport",
+      "graph_batch_size": null,
+      "instrumentation": {
+        "backbone": "heterophily",
+        "controlled_depth": 6,
+        "dense_chunk_size": 0,
+        "inserted_site_count": 0,
+        "native_site_count": 6,
+        "parameter_count": 1668,
+        "site_indexing": "zero-based transition d to d+1",
+        "task": {
+          "dataset": "Roman-empire",
+          "metric": "accuracy",
+          "num_outputs": 4,
+          "prediction_level": "node",
+          "task_type": "multiclass"
+        },
+        "transport_history_definition": "kernel transport mass and expected kernel hops before source retention; inserted A0 bypass=0/0; designated native A0 mean aggregation=1/1; other transports use registered nu and kernel hop moment; hybrid resets=0/0; these are transport descriptors, not complete block work or effective output displacement"
+      },
+      "official_validation_used": false,
+      "parameter_count": 1668,
+      "schedule": "constant",
+      "seconds_this_attempt": 0.01761598600023717,
+      "seed": 1,
+      "task": {
+        "dataset": "Roman-empire",
+        "metric": "accuracy",
+        "num_outputs": 4,
+        "prediction_level": "node",
+        "task_type": "multiclass"
+      }
+    },
+    {
+      "active_parameter_count": 1668,
+      "baseline": false,
+      "best_internal_fit_val_ce": 0.9118404388427734,
+      "best_internal_fit_val_loss": 0.9118404388427734,
+      "best_internal_fit_val_metric": 0.6,
+      "checkpoint_rule": "min_loss",
+      "checkpoint_selection_labels": "fit_val only",
+      "checkpoint_sha256": "289fc59e092fa3f6203b9ad5c46e0fad7fee2efacce57cd309a96201066a0bae",
+      "epochs_completed": 3,
+      "execution": "exact full-graph sparse transport",
+      "graph_batch_size": null,
+      "instrumentation": {
+        "backbone": "heterophily",
+        "controlled_depth": 6,
+        "dense_chunk_size": 0,
+        "inserted_site_count": 0,
+        "native_site_count": 6,
+        "parameter_count": 1668,
+        "site_indexing": "zero-based transition d to d+1",
+        "task": {
+          "dataset": "Roman-empire",
+          "metric": "accuracy",
+          "num_outputs": 4,
+          "prediction_level": "node",
+          "task_type": "multiclass"
+        },
+        "transport_history_definition": "kernel transport mass and expected kernel hops before source retention; inserted A0 bypass=0/0; designated native A0 mean aggregation=1/1; other transports use registered nu and kernel hop moment; hybrid resets=0/0; these are transport descriptors, not complete block work or effective output displacement"
+      },
+      "official_validation_used": false,
+      "parameter_count": 1668,
+      "schedule": "constant",
+      "seconds_this_attempt": 0.03973971599998549,
+      "seed": 1,
+      "task": {
+        "dataset": "Roman-empire",
+        "metric": "accuracy",
+        "num_outputs": 4,
+        "prediction_level": "node",
+        "task_type": "multiclass"
+      }
+    },
+    {
+      "active_parameter_count": 1092,
+      "baseline": true,
+      "best_internal_fit_val_ce": 1.3347524404525757,
+      "best_internal_fit_val_loss": 1.3347524404525757,
+      "best_internal_fit_val_metric": 0.6,
+      "checkpoint_rule": "min_loss",
+      "checkpoint_selection_labels": "fit_val only",
+      "checkpoint_sha256": "1aa4fd966b7bcba4e096d353ff70db3f458f6192b89c2122e4832b3973824b47",
+      "epochs_completed": 3,
+      "execution": "exact full-graph sparse transport",
+      "graph_batch_size": null,
+      "instrumentation": {
+        "backbone": "heterophily",
+        "controlled_depth": 6,
+        "dense_chunk_size": 0,
+        "inserted_site_count": 0,
+        "native_site_count": 6,
+        "parameter_count": 1668,
+        "site_indexing": "zero-based transition d to d+1",
+        "task": {
+          "dataset": "Roman-empire",
+          "metric": "accuracy",
+          "num_outputs": 4,
+          "prediction_level": "node",
+          "task_type": "multiclass"
+        },
+        "transport_history_definition": "kernel transport mass and expected kernel hops before source retention; inserted A0 bypass=0/0; designated native A0 mean aggregation=1/1; other transports use registered nu and kernel hop moment; hybrid resets=0/0; these are transport descriptors, not complete block work or effective output displacement"
+      },
+      "official_validation_used": false,
+      "parameter_count": 1668,
+      "schedule": "constant",
+      "seconds_this_attempt": 0.016990943000109837,
+      "seed": 2,
+      "task": {
+        "dataset": "Roman-empire",
+        "metric": "accuracy",
+        "num_outputs": 4,
+        "prediction_level": "node",
+        "task_type": "multiclass"
+      }
+    },
+    {
+      "active_parameter_count": 1668,
+      "baseline": false,
+      "best_internal_fit_val_ce": 1.294493317604065,
+      "best_internal_fit_val_loss": 1.294493317604065,
+      "best_internal_fit_val_metric": 0.6,
+      "checkpoint_rule": "min_loss",
+      "checkpoint_selection_labels": "fit_val only",
+      "checkpoint_sha256": "fe485f35f58a241b8680d5e7319b7f22d3f85a2196b11ef33795e3008a239aa9",
+      "epochs_completed": 3,
+      "execution": "exact full-graph sparse transport",
+      "graph_batch_size": null,
+      "instrumentation": {
+        "backbone": "heterophily",
+        "controlled_depth": 6,
+        "dense_chunk_size": 0,
+        "inserted_site_count": 0,
+        "native_site_count": 6,
+        "parameter_count": 1668,
+        "site_indexing": "zero-based transition d to d+1",
+        "task": {
+          "dataset": "Roman-empire",
+          "metric": "accuracy",
+          "num_outputs": 4,
+          "prediction_level": "node",
+          "task_type": "multiclass"
+        },
+        "transport_history_definition": "kernel transport mass and expected kernel hops before source retention; inserted A0 bypass=0/0; designated native A0 mean aggregation=1/1; other transports use registered nu and kernel hop moment; hybrid resets=0/0; these are transport descriptors, not complete block work or effective output displacement"
+      },
+      "official_validation_used": false,
+      "parameter_count": 1668,
+      "schedule": "constant",
+      "seconds_this_attempt": 0.036218428000211134,
+      "seed": 2,
+      "task": {
+        "dataset": "Roman-empire",
+        "metric": "accuracy",
+        "num_outputs": 4,
+        "prediction_level": "node",
+        "task_type": "multiclass"
+      }
+    }
+  ],
+  "entry_audit": {
+    "depth_accuracy": [
+      0.0,
+      0.6,
+      0.6,
+      0.6
+    ],
+    "depth_ce": [
+      1.7094261646270752,
+      1.0465102195739746,
+      1.1434710025787354,
+      1.073732614517212
+    ],
+    "depth_gate_pass": true,
+    "depth_grid": [
+      1,
+      2,
+      4,
+      6
+    ],
+    "depth_loss": [
+      1.7094261646270752,
+      1.0465102195739746,
+      1.1434710025787354,
+      1.073732614517212
+    ],
+    "depth_metric": [
+      0.0,
+      0.6,
+      0.6,
+      0.6
+    ],
+    "dil_gap": -0.11400060436425186,
+    "dil_log_depth": 1.207541420248175,
+    "dil_reference": "feature-only q0 loss repeated on the depth grid (reconstruction choice)",
+    "identity_pass": true,
+    "initial_entry_pass": false,
+    "instrumentation": {
+      "backbone": "heterophily",
+      "controlled_depth": 6,
+      "dense_chunk_size": 0,
+      "inserted_site_count": 0,
+      "native_site_count": 6,
+      "parameter_count": 1668,
+      "site_indexing": "zero-based transition d to d+1",
+      "task": {
+        "dataset": "Roman-empire",
+        "metric": "accuracy",
+        "num_outputs": 4,
+        "prediction_level": "node",
+        "task_type": "multiclass"
+      },
+      "transport_history_definition": "kernel transport mass and expected kernel hops before source retention; inserted A0 bypass=0/0; designated native A0 mean aggregation=1/1; other transports use registered nu and kernel hop moment; hybrid resets=0/0; these are transport descriptors, not complete block work or effective output displacement"
+    },
+    "labels": "internal D_fit validation",
+    "loss_name": "ce",
+    "metric_available": true,
+    "metric_name": "accuracy",
+    "nominal_identity": [
+      {
+        "absolute_fit_val_loss_deviation": 0.0,
+        "loss_tolerance": 1e-06,
+        "max_relative_state_error": 0.0,
+        "pass": true,
+        "seed": 1,
+        "state_tolerance": 1e-05
+      },
+      {
+        "absolute_fit_val_loss_deviation": 0.0,
+        "loss_tolerance": 1e-06,
+        "max_relative_state_error": 0.0,
+        "pass": true,
+        "seed": 2,
+        "state_tolerance": 1e-05
+      }
+    ],
+    "pdd_fraction": 0.0,
+    "plant_gate_pass": false,
+    "plant_vs_q0": {
+      "bootstrap_replicates": 80,
+      "bootstrap_seed": 314160,
+      "independent_graph_guarantee": false,
+      "interval_level": 0.95,
+      "lower": -0.5215843826532364,
+      "mean": -0.2478094220161438,
+      "method": "paired whole-unit bootstrap; descriptive when units are dependent",
+      "one_sided_alpha": 0.025,
+      "p_greater_zero": 0.9259259259259259,
+      "p_less_zero": 0.08641975308641975,
+      "se": 0.15631997769298295,
+      "units": 4,
+      "upper": 0.03141855001449585,
+      "valid_interval": true,
+      "weight_sum": 5.0,
+      "weighting": "fixed_unit_weight_ratio"
+    },
+    "risk_weighting": "node-weighted statistical cores",
+    "statistical_scope": "descriptive dependent-core bootstrap",
+    "task": {
+      "dataset": "Roman-empire",
+      "metric": "accuracy",
+      "num_outputs": 4,
+      "prediction_level": "node",
+      "task_type": "multiclass"
+    }
+  },
+  "weights_frozen_after_training": true
+}

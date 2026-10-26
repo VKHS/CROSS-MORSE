@@ -1,0 +1,48 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+.env
+*.env
+# Private site profile with allocation identifiers (copy of configs/arrhenius-site.env.example).
+configs/arrhenius.env.example
+configs/active.env.example
+docs/private/
+/data/*
+!/data/README.md
+!/data/sources.json
+/datasets/
+# Ingested official run archives live at their DOI; only the index and the contract are tracked.
+/runs/*
+!/runs/README.md
+!/runs/index.json
+/outputs/
+/checkpoints/
+/trajectories/
+/cache/
+/logs/
+/reports/
+/exports/
+/deposits/
+/build/
+/dist/
+*.pt
+*.pth
+*.ckpt
+*.zip
+*.npz
+*.npy
+!tests/fixtures/**
+# Intentional synthetic example artifacts are audited before public export.
+!/examples/runs/*/**/*.pt
+!/examples/runs/*/**/*.pth
+!/examples/runs/*/**/*.ckpt
+!/examples/runs/*/**/*.npz
+!/examples/runs/*/**/*.npy
+!/examples/runs/*/**/*.zip
+# Membership index arrays copied next to the official-run manifests.
+!/manifests/**/*.npz
+*.egg-info/

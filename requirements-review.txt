@@ -1,0 +1,3 @@
+# Numeric review does not need torch, OGB, PyMetis or checkpoint deserialization.
+# NumPy version used by the recorded local numeric replay checks.
+numpy==2.3.5

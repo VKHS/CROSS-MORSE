@@ -1,0 +1,26 @@
+"/workspace/scratch/2aa93dc25af6/review_work_20261025/runtime_env/bin/python" -B scripts/render_reported_results.py
+wrote /workspace/scratch/2aa93dc25af6/review_work_20261025/source/CROSS-MORSE/paper/REPORTED_RESULTS.md
+"/workspace/scratch/2aa93dc25af6/review_work_20261025/runtime_env/bin/python" -B scripts/render_paper_results.py
+Verified 2 supplied PDFs and 32 table groups; generated views written. No benchmark execution performed.
+"/workspace/scratch/2aa93dc25af6/review_work_20261025/runtime_env/bin/python" -B scripts/plot_paper_summary.py --output-dir "/workspace/scratch/2aa93dc25af6/review_work_20261025/qa/paper figures"
+mkdir -p failed for path /root/.config/matplotlib: [Errno 30] Read-only file system: '/root/.config'
+Matplotlib created a temporary cache directory at /tmp/matplotlib-m1rw6m7j because there was an issue with the default path (/root/.config/matplotlib); it is highly recommended to set the MPLCONFIGDIR environment variable to a writable directory, in particular to speed up the import of Matplotlib and to better support multiprocessing.
+/workspace/scratch/2aa93dc25af6/review_work_20261025/qa/paper figures/reported_results.svg
+/workspace/scratch/2aa93dc25af6/review_work_20261025/qa/paper figures/reported_results.png
+"/workspace/scratch/2aa93dc25af6/review_work_20261025/runtime_env/bin/python" -B scripts/plot_registry_figures.py --output-dir "/workspace/scratch/2aa93dc25af6/review_work_20261025/qa/paper figures/registry"
+mkdir -p failed for path /root/.config/matplotlib: [Errno 30] Read-only file system: '/root/.config'
+Matplotlib created a temporary cache directory at /tmp/matplotlib-k_taepgp because there was an issue with the default path (/root/.config/matplotlib); it is highly recommended to set the MPLCONFIGDIR environment variable to a writable directory, in particular to speed up the import of Matplotlib and to better support multiprocessing.
+/workspace/scratch/2aa93dc25af6/review_work_20261025/qa/paper figures/registry/registry_admission_arithmetic.png
+/workspace/scratch/2aa93dc25af6/review_work_20261025/qa/paper figures/registry/registry_deployment_economics.png
+/workspace/scratch/2aa93dc25af6/review_work_20261025/qa/paper figures/registry/registry_gain_and_cost.png
+/workspace/scratch/2aa93dc25af6/review_work_20261025/qa/paper figures/registry/registry_mechanism_contrasts.png
+/workspace/scratch/2aa93dc25af6/review_work_20261025/qa/paper figures/registry/registry_selection_geometry.png
+/workspace/scratch/2aa93dc25af6/review_work_20261025/qa/paper figures/registry/registry_spectral_fingerprint.png
+"/workspace/scratch/2aa93dc25af6/review_work_20261025/runtime_env/bin/python" -B scripts/draw_diagrams.py --output-dir "/workspace/scratch/2aa93dc25af6/review_work_20261025/qa/method diagrams"
+wrote /workspace/scratch/2aa93dc25af6/review_work_20261025/qa/method diagrams/architecture.svg
+wrote /workspace/scratch/2aa93dc25af6/review_work_20261025/qa/method diagrams/control_depth.svg
+wrote /workspace/scratch/2aa93dc25af6/review_work_20261025/qa/method diagrams/lifecycle.svg
+wrote /workspace/scratch/2aa93dc25af6/review_work_20261025/qa/method diagrams/policy_families.svg
+wrote /workspace/scratch/2aa93dc25af6/review_work_20261025/qa/method diagrams/review_workflow.svg
+"/workspace/scratch/2aa93dc25af6/review_work_20261025/runtime_env/bin/python" -B scripts/draw_diagrams.py --check --png
+5 figure(s) match their committed SVG and PNG source fingerprints

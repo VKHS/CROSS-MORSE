@@ -1,0 +1,14 @@
+* text=auto eol=lf
+*.png binary
+*.jpg binary
+*.pdf binary
+*.zip binary
+*.npz binary
+*.npy binary
+*.pt binary
+# Sealed run artifacts are hashed byte-for-byte by their stage manifests;
+# never normalize their line endings.
+examples/runs/** -text
+runs/** -text
+# deposited measurement records are hashed byte for byte
+records/*/** -text

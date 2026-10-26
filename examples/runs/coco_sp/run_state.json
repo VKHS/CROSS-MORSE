@@ -1,0 +1,19 @@
+{
+  "config_sha256": "51bdd5f83258fb9cc6332f114f60e0067f86081ad93d8b8de8f4eb43000e8a58",
+  "dataset": "synthetic",
+  "implementation": "CROSS-MORSE",
+  "last_complete_stage": "evaluate",
+  "profile": "smoke",
+  "scientific_run": false,
+  "source_sha256": "9e0154c11c0ebc67d533a84b6d6a80c4e77a8d76e6d2cc165bcff5897980b108",
+  "status": "COMPLETE",
+  "task": {
+    "dataset": "COCO-SP",
+    "metric": "macro_f1",
+    "num_outputs": 4,
+    "prediction_level": "node",
+    "task_type": "multiclass"
+  },
+  "test_labels_accessed": true,
+  "version": "1.0.0"
+}

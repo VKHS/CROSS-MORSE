@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="770" viewBox="0 0 1280 770" role="img" aria-labelledby="title desc">
+<title id="title">CROSS-MORSE feedback and deployment decisions</title>
+<desc id="desc">The full-graph state produces label-free measurements. An observer and feedback policy choose a registered transport or reset action, yielding the next state with a frozen predictor. In a separate held-out protocol, a selected and confirmed candidate is admitted against an open-loop comparator. Passing deploys the candidate; rejection returns the comparator predictions exactly. Fixed schedules and plan-once MPC do not use repeated policy feedback.</desc>
+<defs>
+<marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10Z" fill="#617995"/></marker>
+<marker id="feedback" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10Z" fill="#168c80"/></marker>
+</defs>
+<rect x="0" y="0" width="1280" height="770" rx="20" fill="#ffffff" stroke="#e1e7ee"/>
+<text x="36" y="50" font-family="DejaVu Sans, Arial, sans-serif" font-size="30" font-weight="700" fill="#10223b" >Frozen predictor. Adaptive transport.</text>
+<text x="36" y="84" font-family="DejaVu Sans, Arial, sans-serif" font-size="18" font-weight="400" fill="#4b637e" >A label-free feedback loop and a separate held-out deployment decision.</text>
+<rect x="28" y="113" width="1224" height="302" rx="18" fill="#f7f9fc" stroke="#dbe4ee"/>
+<text x="50" y="146" font-family="DejaVu Sans, Arial, sans-serif" font-size="14" font-weight="700" fill="#425e7d" letter-spacing="1.8">01  FEEDBACK ROUTES</text>
+<rect x="50" y="180" width="240" height="121" rx="14" fill="#eef4ff" stroke="#bdd2ed"/>
+<text x="69" y="215" font-family="DejaVu Sans, Arial, sans-serif" font-size="20" font-weight="700" fill="#142c48" >Full-graph state</text>
+<text x="69" y="247" font-family="DejaVu Sans, Arial, sans-serif" font-size="16" font-weight="400" fill="#38536d" >Hₜ from the frozen GNN</text>
+<text x="69" y="273" font-family="DejaVu Sans, Arial, sans-serif" font-size="16" font-weight="400" fill="#38536d" >One graph, every depth</text>
+<rect x="357" y="180" width="240" height="121" rx="14" fill="#eaf8f5" stroke="#b3dcd4"/>
+<text x="376" y="215" font-family="DejaVu Sans, Arial, sans-serif" font-size="20" font-weight="700" fill="#142c48" >Measurements</text>
+<text x="376" y="247" font-family="DejaVu Sans, Arial, sans-serif" font-size="16" font-weight="400" fill="#38536d" >Spectral + confidence</text>
+<text x="376" y="273" font-family="DejaVu Sans, Arial, sans-serif" font-size="16" font-weight="400" fill="#38536d" >No evaluation labels</text>
+<rect x="664" y="180" width="240" height="121" rx="14" fill="#eaf8f5" stroke="#b3dcd4"/>
+<text x="683" y="215" font-family="DejaVu Sans, Arial, sans-serif" font-size="20" font-weight="700" fill="#142c48" >Observer + policy</text>
+<text x="683" y="247" font-family="DejaVu Sans, Arial, sans-serif" font-size="16" font-weight="400" fill="#38536d" >Estimate the state</text>
+<text x="683" y="273" font-family="DejaVu Sans, Arial, sans-serif" font-size="16" font-weight="400" fill="#38536d" >Choose action aₜ</text>
+<rect x="971" y="180" width="257" height="121" rx="14" fill="#fff7e8" stroke="#ecd3a7"/>
+<text x="990" y="215" font-family="DejaVu Sans, Arial, sans-serif" font-size="20" font-weight="700" fill="#142c48" >Registered action</text>
+<text x="990" y="247" font-family="DejaVu Sans, Arial, sans-serif" font-size="16" font-weight="400" fill="#38536d" >A0–A7: transport</text>
+<text x="990" y="273" font-family="DejaVu Sans, Arial, sans-serif" font-size="16" font-weight="400" fill="#38536d" >A8/A9: direct resets</text>
+<path d="M294,240 H348" fill="none" stroke="#617995" stroke-width="2.4" marker-end="url(#arrow)"/>
+<path d="M601,240 H655" fill="none" stroke="#617995" stroke-width="2.4" marker-end="url(#arrow)"/>
+<path d="M908,240 H962" fill="none" stroke="#617995" stroke-width="2.4" marker-end="url(#arrow)"/>
+<path d="M1099,302 V350 H170 V307" fill="none" stroke="#168c80" stroke-width="2.7" marker-end="url(#feedback)"/>
+<rect x="373" y="333" width="524" height="33" rx="4" fill="#f7f9fc" stroke="none"/>
+<text x="388" y="355" font-family="DejaVu Sans, Arial, sans-serif" font-size="18" font-weight="500" fill="#08796e" >Frozen update or direct reset → next state Hₜ₊₁</text>
+<text x="50" y="393" font-family="DejaVu Sans, Arial, sans-serif" font-size="15" font-weight="400" fill="#4b637e" >The fixed prediction head produces probabilities. Evaluation labels never enter this loop.</text>
+<rect x="28" y="438" width="1224" height="245" rx="18" fill="#fcfaf5" stroke="#e6dcc7"/>
+<text x="50" y="472" font-family="DejaVu Sans, Arial, sans-serif" font-size="14" font-weight="700" fill="#76603b" letter-spacing="1.8">02  HELD-OUT DECISION</text>
+<rect x="51" y="499" width="333" height="65" rx="12" fill="#ffffff" stroke="#d7e0eb"/>
+<text x="69" y="525" font-family="DejaVu Sans, Arial, sans-serif" font-size="19" font-weight="700" fill="#142c48" >qC  ·  Open-loop comparator</text>
+<text x="69" y="548" font-family="DejaVu Sans, Arial, sans-serif" font-size="14" font-weight="400" fill="#4b637e" >Selected from open-loop routes</text>
+<rect x="51" y="585" width="333" height="65" rx="12" fill="#ffffff" stroke="#d7e0eb"/>
+<text x="69" y="611" font-family="DejaVu Sans, Arial, sans-serif" font-size="19" font-weight="700" fill="#142c48" >qM  ·  Confirmed candidate</text>
+<text x="69" y="634" font-family="DejaVu Sans, Arial, sans-serif" font-size="14" font-weight="400" fill="#4b637e" >Selected and confirmed before admission</text>
+<rect x="500" y="529" width="249" height="94" rx="14" fill="#fff0ce" stroke="#dfbc77"/>
+<text x="522" y="563" font-family="DejaVu Sans, Arial, sans-serif" font-size="22" font-weight="700" fill="#63491c" >Admission</text>
+<text x="522" y="593" font-family="DejaVu Sans, Arial, sans-serif" font-size="15" font-weight="400" fill="#6c5b3e" >Official validation labels</text>
+<path d="M385,531 H437 V558 H490" stroke="#617995" fill="none" stroke-width="2.2" marker-end="url(#arrow)"/>
+<path d="M385,617 H437 V591 H490" stroke="#617995" fill="none" stroke-width="2.2" marker-end="url(#arrow)"/>
+<rect x="887" y="499" width="341" height="65" rx="12" fill="#eaf8f5" stroke="#b3dcd4"/>
+<text x="905" y="525" font-family="DejaVu Sans, Arial, sans-serif" font-size="18" font-weight="700" fill="#0f665d" >PASS  ·  Deploy the candidate</text>
+<text x="905" y="548" font-family="DejaVu Sans, Arial, sans-serif" font-size="14" font-weight="400" fill="#3b665f" >Lock qD before test evaluation</text>
+<rect x="887" y="585" width="341" height="65" rx="12" fill="#eef4ff" stroke="#bdd2ed"/>
+<text x="905" y="611" font-family="DejaVu Sans, Arial, sans-serif" font-size="18" font-weight="700" fill="#254c7a" >REJECT  ·  Return qC exactly</text>
+<text x="905" y="634" font-family="DejaVu Sans, Arial, sans-serif" font-size="14" font-weight="400" fill="#465e7b" >Use identical comparator predictions</text>
+<path d="M750,558 H816 V531 H878" stroke="#617995" fill="none" stroke-width="2.2" marker-end="url(#arrow)"/>
+<path d="M750,591 H816 V617 H878" stroke="#617995" fill="none" stroke-width="2.2" marker-end="url(#arrow)"/>
+<text x="36" y="721" font-family="DejaVu Sans, Arial, sans-serif" font-size="15" font-weight="400" fill="#4b637e" >Scope: the top loop illustrates feedback routes; fixed schedules and MPC-OL do not repeatedly replan.</text>
+<text x="36" y="746" font-family="DejaVu Sans, Arial, sans-serif" font-size="14" font-weight="400" fill="#657990" >One graph per episode · task-aware metrics and statistical units · architecture schematic, not measured results</text>
+</svg>

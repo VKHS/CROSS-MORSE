@@ -1,0 +1,66 @@
+{
+  "schema_version": "3.0",
+  "release_type": "research-source-with-run-archive-contract",
+  "repository_url": "https://github.com/VKHS/CROSS-MORSE",
+  "code_archive_doi": null,
+  "scientific_scope": [
+    "ogbn-arxiv",
+    "ogbn-products",
+    "ogbn-proteins",
+    "Roman-empire",
+    "PascalVOC-SP",
+    "COCO-SP",
+    "Peptides-func"
+  ],
+  "original_trained_weights_included": false,
+  "original_result_archives_included": false,
+  "full_official_dataset_runs_verified": [],
+  "one_command_original_tables_reproduction_claimed": false,
+  "published_numbers_inserted_as_computed_results": false,
+  "official_datasets_redistributed": false,
+  "all_paper_dataset_adapters_implemented": true,
+  "all_external_baselines_and_hpo_reproduced": false,
+  "all_E1_E20_audits_reproduced": false,
+  "full_graph_execution_for_products": true,
+  "partition_local_execution_for_products": false,
+  "bundled_synthetic_examples_included": true,
+  "bundled_examples_are_benchmark_results": false,
+  "bundled_example_run_roots": [
+    "examples/runs/arxiv",
+    "examples/runs/products",
+    "examples/runs/proteins",
+    "examples/runs/roman_empire",
+    "examples/runs/pascalvoc_sp",
+    "examples/runs/coco_sp",
+    "examples/runs/peptides_func"
+  ],
+  "run_archive_contract": {
+    "pack": "scripts/archive_run.py",
+    "ingest": "scripts/ingest_run.py",
+    "index": "runs/index.json",
+    "tables_and_figures": "scripts/build_paper.py (make tables, make figures)",
+    "manifests": "scripts/run_manifests.py (make manifests)",
+    "availability_statement": "scripts/availability.py (make availability, make availability-check)"
+  },
+  "manuscript_registry": {
+    "role": "values transcribed from the manuscript with page provenance, used only to compare run-derived values with the manuscript (make compare); never a source for tables or figures",
+    "registered_constants": "paper/registered_constants.json",
+    "reported_results": "paper/reported_results.json",
+    "claims_ledger": "paper/claims_ledger.md",
+    "known_differences": "paper/KNOWN_DIFFERENCES.md",
+    "constant_check": "scripts/check_paper_constants.py",
+    "run_comparison": "scripts/compare_with_manuscript.py",
+    "values_are_transcribed_not_computed": true
+  },
+  "data_use_sequence": "separated (pre-registered): confirmation on D_confirm, admission on the untouched official validation split (Supplementary Table S39)",
+  "validated_runtime_source_sha256": "9e0154c11c0ebc67d533a84b6d6a80c4e77a8d76e6d2cc165bcff5897980b108",
+  "site_profile_policy": "configs/arrhenius-site.env.example ships the Arrhenius partition, architecture, module, environment and storage layout; the NAISS allocation and storage project identifiers are placeholders filled from the project's NAISS page before submitting jobs",
+  "measurement_records_contract": {
+    "specs": "records/specs.json",
+    "tool": "scripts/records.py (make records-index, make records-check, make records-tables)",
+    "index": "records/index.json",
+    "record_sets": 10,
+    "trace": "every summary value is re-read from its raw log at its printed precision"
+  },
+  "manuscript_documents": "identified by SHA-256, byte size and page count in paper/sources.json; not distributed"
+}

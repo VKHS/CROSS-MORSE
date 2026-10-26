@@ -1,0 +1,74 @@
+{
+  "claim_scope": "registered dataset execution or synthetic validation; manuscript agreement requires result artifact bindings",
+  "config_sha256": "51bdd5f83258fb9cc6332f114f60e0067f86081ad93d8b8de8f4eb43000e8a58",
+  "created_utc": "2026-10-25T19:04:23.313533+00:00",
+  "dataset": "synthetic",
+  "evaluator": null,
+  "inputs": [],
+  "model_audit": null,
+  "outputs": [
+    {
+      "bytes": 1815,
+      "path": "action_registry.json",
+      "sha256": "6dda7a004f82a77c140474da0a3a2bb58e533149e3c5806bf2eaad131b104cad"
+    },
+    {
+      "bytes": 2934,
+      "path": "config.json",
+      "sha256": "a77663c4fae86832678ed6942f354765880276dcdd091193dcd79848b413736d"
+    },
+    {
+      "bytes": 3485,
+      "path": "environment.json",
+      "sha256": "0c9fd228c221ad336877ef58d981b3ddbb816bf246b266887cbb2b6d95c7d902"
+    },
+    {
+      "bytes": 0,
+      "path": "prepared/.prepare.lock",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 5396,
+      "path": "prepared/clusters.npz",
+      "sha256": "03d651c9e2e000cf1c5381a36448db454c284e1efb4288454187dc906686964a"
+    },
+    {
+      "bytes": 69346,
+      "path": "prepared/graph.npz",
+      "sha256": "fa47f1426fe9c1bad65d0aa24ef6217f56be3bfd5de45a54b09d46f76e0704c5"
+    },
+    {
+      "bytes": 2838,
+      "path": "prepared/graph_splits.npz",
+      "sha256": "84a72e9153abc3bb7b9f996170a29678a162f9b6930629ba4707743a2dcba031"
+    },
+    {
+      "bytes": 11941,
+      "path": "prepared/metadata.json",
+      "sha256": "665fc2c3d513d314f0f650ee9b741daba4db3e0b1f4a83300afce7833738fffc"
+    },
+    {
+      "bytes": 1386,
+      "path": "prepared/official_splits.npz",
+      "sha256": "a4cd9951c7009f98a225426bf62f619f09c36753ae6223515ca81fbd3f148c44"
+    },
+    {
+      "bytes": 8886,
+      "path": "prepared/splits.npz",
+      "sha256": "2364a4ac52b0796d16a19b4fedfc2bc8d4fba6d62897ebf28c6f32c4f55ae7d2"
+    },
+    {
+      "bytes": 55443,
+      "path": "provenance/evaluator.py",
+      "sha256": "1adaf12cfd31c68c4207f7796063eb5856353bfe63be43b91ee6fdff8e452050"
+    }
+  ],
+  "parent_manifest": null,
+  "schema_version": "1.1",
+  "scientific_role": "auxiliary",
+  "source_sha256": "9e0154c11c0ebc67d533a84b6d6a80c4e77a8d76e6d2cc165bcff5897980b108",
+  "stage": "prepare",
+  "stage_index": 0,
+  "unit_manifest_path": "prepared/splits.npz",
+  "unit_sha256": "2364a4ac52b0796d16a19b4fedfc2bc8d4fba6d62897ebf28c6f32c4f55ae7d2"
+}

@@ -1,0 +1,53 @@
+name: Manuscript correspondence
+description: Report a disagreement between the manuscript, the registry in paper/, the code constants or a regenerated run.
+title: "[Manuscript] "
+labels: ["manuscript-registry"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Three things are compared here: the manuscript, its transcription in `paper/registered_constants.json` and
+        `paper/reported_results.json`, and what the code or a run produces. Say which two disagree.
+        `python -B scripts/check_paper_constants.py` and `python -B scripts/compare_with_manuscript.py <run>`
+        print the comparison; paste the relevant lines.
+  - type: dropdown
+    id: kind
+    attributes:
+      label: Kind of disagreement
+      options:
+        - Transcription error (registry differs from the manuscript)
+        - Code constant differs from the registered constant
+        - Regenerated run differs from the reported value
+        - Ledger arithmetic (a derived table does not follow from its inputs)
+        - A known difference in paper/KNOWN_DIFFERENCES.md needs a status change
+    validations:
+      required: true
+  - type: input
+    id: location
+    attributes:
+      label: Manuscript location
+      description: Table, figure, equation or page; for the registry, the JSON key.
+    validations:
+      required: true
+  - type: input
+    id: dataset
+    attributes:
+      label: Dataset
+  - type: textarea
+    id: values
+    attributes:
+      label: Values
+      description: Manuscript value, registry value, code/run value, units and the statistical unit (core, split, graph).
+    validations:
+      required: true
+  - type: textarea
+    id: output
+    attributes:
+      label: Check output
+      description: Output of check_paper_constants.py or compare_with_manuscript.py, or the failing test.
+      render: text
+  - type: input
+    id: identity
+    attributes:
+      label: Source identity
+      description: Output of `python -B scripts/source_fingerprint.py` and, for a run, its source/config/unit hashes.

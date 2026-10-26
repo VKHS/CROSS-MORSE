@@ -1,0 +1,64 @@
+{
+  "dataset": "ogbn-arxiv",
+  "fixture": "synthetic",
+  "stages": {
+    "smoke": {
+      "command": [
+        "/workspace/scratch/2aa93dc25af6/review_work_20261025/runtime_env/bin/python",
+        "-B",
+        "run_cross_morse_arxiv.py",
+        "--profile",
+        "smoke",
+        "--device",
+        "cpu",
+        "--threads",
+        "2",
+        "--data-root",
+        "/workspace/scratch/2aa93dc25af6/review_work_20261025/validation_current/data",
+        "--output-dir",
+        "/workspace/scratch/2aa93dc25af6/review_work_20261025/validation_current/arxiv"
+      ],
+      "exit_code": 0
+    },
+    "manifest": {
+      "command": [
+        "/workspace/scratch/2aa93dc25af6/review_work_20261025/runtime_env/bin/python",
+        "-B",
+        "scripts/validate_run_manifest.py",
+        "/workspace/scratch/2aa93dc25af6/review_work_20261025/validation_current/arxiv",
+        "--require-complete",
+        "--json"
+      ],
+      "exit_code": 0
+    },
+    "numeric_replay": {
+      "command": [
+        "/workspace/scratch/2aa93dc25af6/review_work_20261025/runtime_env/bin/python",
+        "-B",
+        "scripts/reproduce_results.py",
+        "/workspace/scratch/2aa93dc25af6/review_work_20261025/validation_current/arxiv",
+        "--output",
+        "/workspace/scratch/2aa93dc25af6/review_work_20261025/validation_current/reports/arxiv/numeric_replay.json"
+      ],
+      "exit_code": 0
+    },
+    "checkpoint_replay": {
+      "command": [
+        "/workspace/scratch/2aa93dc25af6/review_work_20261025/runtime_env/bin/python",
+        "-B",
+        "scripts/evaluate_checkpoints.py",
+        "/workspace/scratch/2aa93dc25af6/review_work_20261025/validation_current/arxiv",
+        "--trust-local-checkpoints",
+        "--device",
+        "cpu",
+        "--threads",
+        "2",
+        "--output",
+        "/workspace/scratch/2aa93dc25af6/review_work_20261025/validation_current/reports/arxiv/checkpoint_replay.json"
+      ],
+      "exit_code": 0
+    }
+  },
+  "status": "PASS",
+  "seconds": 11.29782485961914
+}

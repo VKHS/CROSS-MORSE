@@ -1,0 +1,141 @@
+{
+  "schema_version": "2.0",
+  "implementation_identity": "CROSS-MORSE multi-dataset research implementation",
+  "supported_datasets": {
+    "ogbn-arxiv": "implemented",
+    "ogbn-products": "implemented",
+    "ogbn-proteins": "implemented",
+    "Roman-empire": "implemented",
+    "PascalVOC-SP": "implemented",
+    "COCO-SP": "implemented",
+    "Peptides-func": "implemented",
+    "synthetic": "small task-specific validation fixtures"
+  },
+  "unimplemented_datasets": [],
+  "method_identity": {
+    "plant_and_head_trained_before_controller": true,
+    "plant_and_head_frozen_after_train": true,
+    "freeze_baseline_captured_before_explore": true,
+    "separate_backbone_and_head_state_hashes": true,
+    "actual_bfloat16_state_hashing_supported": true,
+    "online_decisions_label_free": true,
+    "generic_third_party_runtime_hook_adapter_implemented": false,
+    "adapter_scope": "owned dataset-specific frozen plants with native and inserted transport dispatch"
+  },
+  "stage_to_scientific_role": {
+    "prepare": "auxiliary",
+    "train": "D_fit",
+    "explore": "D_explore",
+    "fit": "D_explore",
+    "select": "D_select",
+    "confirm": "D_confirm",
+    "admit": "D_admit",
+    "evaluate": "D_test"
+  },
+  "data_roles": [
+    {
+      "name": "D_fit",
+      "allocation": "60% of official training, with internal fit_train/fit_val partition",
+      "use": "train/checkpoint predictor and training-only qualification"
+    },
+    {
+      "name": "D_explore",
+      "allocation": "20% of official training",
+      "use": "logged trajectories; observer, critic, sequence-model fitting and empirical calibration"
+    },
+    {
+      "name": "D_select",
+      "allocation": "10% of official training",
+      "use": "nested comparator reconstruction and finite-family selection"
+    },
+    {
+      "name": "D_confirm",
+      "allocation": "10% of official training",
+      "use": "frozen confirmation contrasts; eligible downgrades only"
+    },
+    {
+      "name": "D_admit",
+      "allocation": "official validation",
+      "use": "one fixed policy versus one fixed comparator"
+    },
+    {
+      "name": "D_test",
+      "allocation": "official test",
+      "use": "final reporting after deployment is sealed; no subsequent decisions"
+    }
+  ],
+  "provenance": {
+    "actual_artifacts_verified": true,
+    "hash_linked_immediate_parents": true,
+    "original_source_configuration_and_split_identities_verified": true,
+    "input_artifacts_must_match_earlier_sealed_outputs": true,
+    "evaluation_output_allowlist": true,
+    "security_sandbox_claimed": false,
+    "scope": "workflow integrity and accidental-mutation detection; no authenticated external trust anchor"
+  },
+  "inference_scope": {
+    "single_graph_datasets": "descriptive dependent-core analysis",
+    "independent_graph_datasets": "equal-graph risk; conditional clipped empirical-Bernstein admission under the stated independence assumptions",
+    "Roman-empire_campaign": "ten official masks; descriptive split-level paired Student-t summary; no independence of overlapping graph masks asserted"
+  },
+  "independent_graph_or_finite_sample_conformal_guarantee_claimed": false,
+  "fallback_contract": "registered internal recovery remains allowed; unrecoverable runtime failure and rejected global admission use the frozen comparator branch",
+  "reproduction_claim": "Numerical and checkpoint replay of completed runs; manuscript comparisons require explicit artifact bindings.",
+  "calibration": {
+    "protocol": "trajectory_holdout_v2",
+    "group": "complete graph across all seeds/trajectories for graph datasets; seed_index/trajectory for a single graph",
+    "fit_fraction": 0.6,
+    "radius_fraction": 0.2,
+    "assessment_fraction": 0.2,
+    "default_alpha": 0.05,
+    "status": "EMPIRICAL_ONLY",
+    "closed_loop_sequence_coverage": "NOT_MEASURED"
+  },
+  "headroom": "one complete evaluated global candidate; per-core optimistic mixture is diagnostic only",
+  "input_gate": "exact prepared graph collection/schema; novel-input service routing is not implemented",
+  "tasks": {
+    "ogbn-arxiv": {
+      "task_type": "multiclass",
+      "prediction_level": "node",
+      "metric": "accuracy",
+      "num_outputs": 40
+    },
+    "ogbn-products": {
+      "task_type": "multiclass",
+      "prediction_level": "node",
+      "metric": "accuracy",
+      "num_outputs": 47
+    },
+    "ogbn-proteins": {
+      "task_type": "multilabel",
+      "prediction_level": "node",
+      "metric": "rocauc",
+      "num_outputs": 112
+    },
+    "Roman-empire": {
+      "task_type": "multiclass",
+      "prediction_level": "node",
+      "metric": "accuracy",
+      "num_outputs": 18
+    },
+    "PascalVOC-SP": {
+      "task_type": "multiclass",
+      "prediction_level": "node",
+      "metric": "macro_f1",
+      "num_outputs": 21
+    },
+    "COCO-SP": {
+      "task_type": "multiclass",
+      "prediction_level": "node",
+      "metric": "macro_f1",
+      "num_outputs": 81
+    },
+    "Peptides-func": {
+      "task_type": "multilabel",
+      "prediction_level": "graph",
+      "metric": "ap",
+      "num_outputs": 10
+    }
+  },
+  "nonlinear_metrics": "Recompute macro F1, ROC-AUC and AP on paired observations in every whole-unit resample, including reconstructed comparators."
+}

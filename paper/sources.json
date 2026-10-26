@@ -1,0 +1,352 @@
+{
+ "schema_version": "paper-sources-1",
+ "page_numbering": "one-based PDF page; printed page numbers agree for these files",
+ "documents": {
+  "main": {
+   "bundled_path": null,
+   "sha256": "82c8c3fada494c25670095dd9a9a31e504a2da464fe41ec6fbe1511761b4ba8c",
+   "byte_size": 4893007,
+   "pages": 20,
+   "role": "main",
+   "content_status": "not distributed with the repository; identified by SHA-256, byte size and page count",
+   "document": "main manuscript"
+  },
+  "supplementary": {
+   "bundled_path": null,
+   "sha256": "2ea7c8f041777939c7ced7f73b9d593db15e96072c3ce86ae2c342d30800fd65",
+   "byte_size": 6751830,
+   "pages": 39,
+   "role": "supplementary",
+   "content_status": "not distributed with the repository; identified by SHA-256, byte size and page count",
+   "document": "supplementary information"
+  }
+ },
+ "interpretation_precedence": "Use the 20-page main manuscript for its current claims and scope; keep explicitly disclosed supplementary discrepancies visible rather than harmonizing values.",
+ "table_groups": {
+  "abstract_and_section_claims": {
+   "source": "main",
+   "pages": [
+    1,
+    2,
+    11,
+    12,
+    14
+   ],
+   "label": "Abstract and results",
+   "evidence_kind": "mixed",
+   "note": "Loss/metric/cost summaries describe author measurements; exchange rates and amortization are derived. The legacy paired_CE key includes mean BCE."
+  },
+  "main_table_1_policy_and_deployment_ledger": {
+   "source": "main",
+   "pages": [
+    11
+   ],
+   "label": "Table 1",
+   "evidence_kind": "author_reported_measurements",
+   "note": "Official test paired effects; intervals reported at 95%. All reported admission is descriptive. Multi-graph confirmation/admission reused validation."
+  },
+  "main_table_2_gain_and_cost_ledger": {
+   "source": "main",
+   "pages": [
+    14
+   ],
+   "label": "Table 2",
+   "evidence_kind": "mixed",
+   "note": "C_expected uses the measured branch ledger. C_assure is a separate two-branch configuration. C_099 and ranges are a tail-scenario model. Exchange rates and amortization are derived from effects and costs; not new measurements."
+  },
+  "supplementary_table_S4_target_qualification": {
+   "source": "supplementary",
+   "pages": [
+    3
+   ],
+   "label": "Table S4",
+   "evidence_kind": "author_reported_measurements",
+   "note": "Multi-graph values are post-decision validation diagnostics, not tabulated training-only qualification. phi_registry has a different denominator from the S7 qualified fraction."
+  },
+  "supplementary_table_S6c_sensing_cost_identity": {
+   "source": "supplementary",
+   "pages": [
+    5
+   ],
+   "label": "Table S6c",
+   "evidence_kind": "derived_arithmetic",
+   "note": "Printed values retained at source precision."
+  },
+  "supplementary_table_S12_selection_ledger": {
+   "source": "supplementary",
+   "pages": [
+    8,
+    9
+   ],
+   "label": "Table S12",
+   "evidence_kind": "author_reported_measurements",
+   "note": "Retained outer-fold representative configurations, not the complete candidate-level selection trace. Their open-loop reselection optimism differs from nested S12b."
+  },
+  "supplementary_table_S12c_selection_rule_audit": {
+   "source": "supplementary",
+   "pages": [
+    9
+   ],
+   "label": "Table S12c",
+   "evidence_kind": "derived_arithmetic",
+   "note": "Registered upper-limit rule matches four of seven representative selections; the full executed trace is not supplied."
+  },
+  "supplementary_table_S13_independent_graph_admission": {
+   "source": "supplementary",
+   "pages": [
+    9,
+    10
+   ],
+   "label": "Table S13",
+   "evidence_kind": "mixed",
+   "note": "D_bar/S2/J are reported fixed-ensemble admission moments; Ua and penalty are derived. Sensitivity holds those moments fixed while changing B, not a measured re-clipping run. Validation reuse makes Ua descriptive."
+  },
+  "supplementary_table_S14_mechanism_contrasts_submitted_protocol": {
+   "source": "supplementary",
+   "pages": [
+    10
+   ],
+   "label": "Table S14",
+   "evidence_kind": "author_reported_measurements",
+   "note": "Printed values retained at source precision."
+  },
+  "supplementary_table_S14b_separated_data_sensitivity": {
+   "source": "supplementary",
+   "pages": [
+    10,
+    11
+   ],
+   "label": "Table S14b",
+   "evidence_kind": "analytical_sensitivity",
+   "note": "Effects fixed; SE scaled by sqrt(J_old/J_new) and Holm family re-formed. No observed separated-data replicate is implied."
+  },
+  "supplementary_table_S14b_unchanged_contrasts": {
+   "source": "supplementary",
+   "pages": [
+    10,
+    11
+   ],
+   "label": "Table S14b",
+   "evidence_kind": "analytical_sensitivity",
+   "note": "Six source contrasts retain their unit and reported statistics; Holm adjustments are re-formed in the analytical family."
+  },
+  "supplementary_table_S15_method_comparison": {
+   "source": "supplementary",
+   "pages": [
+    11,
+    12
+   ],
+   "label": "Table S15",
+   "evidence_kind": "mixed",
+   "note": "Official scores are author-reported rerun measurements. Resource ranges are declared references; S15b supplies per-rerun costs. Full-depth plant is qN, not q0."
+  },
+  "supplementary_table_S15b_per_rerun_resource_ledger": {
+   "source": "supplementary",
+   "pages": [
+    12
+   ],
+   "label": "Table S15b",
+   "evidence_kind": "author_reported_measurements",
+   "note": "Printed values retained at source precision."
+  },
+  "supplementary_table_S16_arxiv_factorial": {
+   "source": "supplementary",
+   "pages": [
+    12,
+    13,
+    38
+   ],
+   "label": "Table S16 and Figure S17d",
+   "evidence_kind": "mixed",
+   "note": "Cells are reported measurements. Cell010 is excluded from additivity interpretation because its trajectory/integration domain is unspecified. Figure S17d uncertainty assumes independence; joint covariance is not printed."
+  },
+  "supplementary_table_S16b_pascal_factorial": {
+   "source": "supplementary",
+   "pages": [
+    13
+   ],
+   "label": "Table S16b",
+   "evidence_kind": "mixed",
+   "note": "Measured decision-capable cells; effect-coded contrasts derived from them. Paired uncertainty requires their joint covariance, which is not supplied here."
+  },
+  "supplementary_table_S20_selection_theorem_instantiation": {
+   "source": "supplementary",
+   "pages": [
+    15
+   ],
+   "label": "Table S20",
+   "evidence_kind": "mixed",
+   "note": "Reported empirical radii and family sizes; near-best slack is arithmetic and exceeds selected effect sizes. Conditional coverage is an assumption, not established by this table."
+  },
+  "supplementary_table_S21_action_gap_audit": {
+   "source": "supplementary",
+   "pages": [
+    16
+   ],
+   "label": "Table S21",
+   "evidence_kind": "author_reported_measurements",
+   "note": "Printed values retained at source precision."
+  },
+  "supplementary_table_S22_trajectory_tube_audit": {
+   "source": "supplementary",
+   "pages": [
+    16
+   ],
+   "label": "Table S22",
+   "evidence_kind": "mixed",
+   "note": "Empirical plug-in tube using sampled Lipschitz quantiles, not the worst-case deterministic bound. Violation is the complement of mode-stable coverage."
+  },
+  "supplementary_table_S23_assurance_and_expected_compute": {
+   "source": "supplementary",
+   "pages": [
+    16
+   ],
+   "label": "Table S23",
+   "evidence_kind": "mixed",
+   "note": "Reported controller/comparator work, fallback, wall time, memory and qualification; expected and assurance costs use branch accounting. Maximum per-input cost not tabulated. Source GPU-hour units retain the R15 mismatch."
+  },
+  "supplementary_table_S23b_nominal_execution_time_and_amortization": {
+   "source": "supplementary",
+   "pages": [
+    16,
+    17
+   ],
+   "label": "Table S23b",
+   "evidence_kind": "mixed",
+   "note": "tnom is author-reported measured timing; anchor/reference ranges and M_star are analytical/derived."
+  },
+  "supplementary_table_S26b_ensemble_law_and_break_even": {
+   "source": "supplementary",
+   "pages": [
+    18
+   ],
+   "label": "Table S26b",
+   "evidence_kind": "mixed",
+   "note": "D_infinity is the reported fit on the evaluated integer ensemble grid; bands/break-even are sensitivity model. Additional eight checkpoints beyond the 12 primary seeds are diagnostic cost."
+  },
+  "supplementary_table_S30_oracle_dispersion": {
+   "source": "supplementary",
+   "pages": [
+    20
+   ],
+   "label": "Table S30",
+   "evidence_kind": "mixed",
+   "note": "Oracle-depth summaries reported; clipped-effect SD derived from S13. Retained-share grid is analytical, not a bound on an independently trained predictor."
+  },
+  "supplementary_table_S34_budget_aware_rule": {
+   "source": "supplementary",
+   "pages": [
+    22
+   ],
+   "label": "Table S34",
+   "evidence_kind": "mixed",
+   "note": "Acquisition/execution outcomes reported; fixed-threshold gap and retained-fraction formulas are analytical references. Certificate constants and full acquisition traces are not tabulated."
+  },
+  "supplementary_table_S37_input_fallback_counts": {
+   "source": "supplementary",
+   "pages": [
+    25,
+    26
+   ],
+   "label": "Table S37; provenance classified in Table S31 p32",
+   "evidence_kind": "derived_arithmetic",
+   "note": "Supplied counts equal reported fraction times official test size, rounded; Table S31 calls this derived. Do not interpret them as a bundled independent event log."
+  },
+  "supplementary_table_S41_qualification_cost_components": {
+   "source": "supplementary",
+   "pages": [
+    27
+   ],
+   "label": "Table S41",
+   "evidence_kind": "mixed",
+   "note": "Six measured component totals; accounting-unit mismatch with per-checkpoint S5 remains. Products total is an explicitly derived S15 difference, not a S41 row."
+  },
+  "supplementary_table_S42_power_of_budget_matched_test": {
+   "source": "supplementary",
+   "pages": [
+    27
+   ],
+   "label": "Table S42",
+   "evidence_kind": "analytical_sensitivity",
+   "note": "Analytical power/SE sensitivity from other reported contrasts, not observed E3 rejection frequencies."
+  },
+  "supplementary_table_S44_per_input_cost_model": {
+   "source": "supplementary",
+   "pages": [
+    28
+   ],
+   "label": "Table S44",
+   "evidence_kind": "analytical_sensitivity",
+   "note": "Modelled99th-percentile cost from resolvent-frequency scenarios; not observed maximum or hard cap."
+  },
+  "supplementary_table_S45_inserted_site_attribution": {
+   "source": "supplementary",
+   "pages": [
+    29
+   ],
+   "label": "Table S45",
+   "evidence_kind": "mixed",
+   "note": "Arm point values and configuration ranges reported; arm2 is qC identity. Paired SE borrowed from S42 unit; no arm-specific paired CI is tabulated."
+  },
+  "supplementary_table_S46_budget_matched_frontier": {
+   "source": "supplementary",
+   "pages": [
+    29
+   ],
+   "label": "Tables S46 and S46b",
+   "evidence_kind": "author_reported_measurements",
+   "note": "Central arm outcomes and configuration ranges are author-reported. Ranges are not paired CIs; S46b does not tabulate arm-level adjusted P, actual-work observations or budget mismatch."
+  },
+  "supplementary_table_S47_decision_boundary_and_power": {
+   "source": "supplementary",
+   "pages": [
+    29,
+    30
+   ],
+   "label": "Table S47",
+   "evidence_kind": "analytical_sensitivity",
+   "note": "Analytical retained-share grid, crossovers and power; central reported effect margins summarized. The ensemble-spend model uses extra assumptions outside the fixed-checkpoint deployment contract."
+  },
+  "supplementary_table_S12b_nested_open_loop_comparison": {
+   "source": "supplementary",
+   "pages": [
+    9
+   ],
+   "label": "Table S12b",
+   "evidence_kind": "author_reported_measurements",
+   "note": "Printed values retained at source precision."
+  },
+  "supplementary_table_S7_support_audit": {
+   "source": "supplementary",
+   "pages": [
+    5
+   ],
+   "label": "Table S7",
+   "evidence_kind": "author_reported_measurements",
+   "note": "Counts, propensities and fractions are retained author-reported summaries. Corrected common per-cell ESS/max-weight summaries are not tabulated, so these fractions do not independently validate support."
+  }
+ },
+ "verification": {
+  "date": "2026-10-24",
+  "method": "Full text review of both PDFs; visual page checks for main11,14 and supplementary9,10,11,12,29. Numeric arithmetic checks are separate from empirical replication.",
+  "main_visually_checked_pages": [
+   11,
+   14
+  ],
+  "supplementary_visually_checked_pages": [
+   9,
+   10,
+   11,
+   12,
+   29
+  ]
+ },
+ "missing_historical_records": [
+  "unrounded per-seed and per-unit observations",
+  "manuscript-run checkpoint and prediction identities",
+  "complete candidate-level executed selection trace",
+  "corrected common per-cell support-weight summaries",
+  "executed sensor sketch width/period/resolvent frequency",
+  "arm-level E3-E6 paired confidence intervals, adjusted P values and actual-work observations"
+ ]
+}

@@ -1,0 +1,222 @@
+{
+  "arrhenius_gpu_execution_verified": false,
+  "artifact_policy": "The research-source package intentionally includes seven complete synthetic smoke runs under examples/runs/<stem>, with predictor/controller checkpoints, optimizer states, predictions, prepared fixture data, stage seals and checksums. They are software-validation examples, not historical manuscript runs or official benchmark results. Official dataset caches, private infrastructure and ordinary user runs remain outside the source package. Portable numerical review bundles omit these example archives and all checkpoint assets.",
+  "bundled_example_inventories": "examples/inventory/",
+  "bundled_example_run_roots": [
+    "examples/runs/arxiv",
+    "examples/runs/products",
+    "examples/runs/proteins",
+    "examples/runs/roman_empire",
+    "examples/runs/pascalvoc_sp",
+    "examples/runs/coco_sp",
+    "examples/runs/peptides_func"
+  ],
+  "bundled_examples_are_benchmark_results": false,
+  "bundled_synthetic_examples_included": true,
+  "complete_bundled_resume_artifacts": true,
+  "entrypoints": {
+    "COCO-SP": "run_cross_morse_coco_sp.py",
+    "PascalVOC-SP": "run_cross_morse_pascalvoc_sp.py",
+    "Peptides-func": "run_cross_morse_peptides_func.py",
+    "Roman-empire": "run_cross_morse_roman_empire.py",
+    "ogbn-arxiv": "run_cross_morse_arxiv.py",
+    "ogbn-products": "run_cross_morse_products.py",
+    "ogbn-proteins": "run_cross_morse_proteins.py",
+    "synthetic": "run_cross_morse.py"
+  },
+  "full_official_dataset_runs_verified": [],
+  "implemented_datasets": [
+    "ogbn-arxiv",
+    "ogbn-products",
+    "ogbn-proteins",
+    "Roman-empire",
+    "PascalVOC-SP",
+    "COCO-SP",
+    "Peptides-func"
+  ],
+  "manuscript_registry": "paper/README.md",
+  "not_implemented_datasets": [],
+  "official_data_preparation_verified": [
+    "Roman-empire"
+  ],
+  "profiles": {
+    "COCO-SP": {
+      "full": {
+        "benchmark_dataset": "COCO-SP",
+        "config": "configs/coco_sp_full.json",
+        "dataset": "COCO-SP",
+        "purpose": "registered paper-scale configuration; execution produces the results"
+      },
+      "pilot": {
+        "benchmark_dataset": "COCO-SP",
+        "config": "configs/coco_sp_pilot.json",
+        "dataset": "COCO-SP",
+        "purpose": "official data with reduced model and development computation"
+      },
+      "smoke": {
+        "benchmark_dataset": "COCO-SP",
+        "config": "configs/coco_sp_smoke.json",
+        "dataset": "synthetic",
+        "purpose": "small task-specific software fixture"
+      }
+    },
+    "PascalVOC-SP": {
+      "full": {
+        "benchmark_dataset": "PascalVOC-SP",
+        "config": "configs/pascalvoc_sp_full.json",
+        "dataset": "PascalVOC-SP",
+        "purpose": "registered paper-scale configuration; execution produces the results"
+      },
+      "pilot": {
+        "benchmark_dataset": "PascalVOC-SP",
+        "config": "configs/pascalvoc_sp_pilot.json",
+        "dataset": "PascalVOC-SP",
+        "purpose": "official data with reduced model and development computation"
+      },
+      "smoke": {
+        "benchmark_dataset": "PascalVOC-SP",
+        "config": "configs/pascalvoc_sp_smoke.json",
+        "dataset": "synthetic",
+        "purpose": "small task-specific software fixture"
+      }
+    },
+    "Peptides-func": {
+      "full": {
+        "benchmark_dataset": "Peptides-func",
+        "config": "configs/peptides_func_full.json",
+        "dataset": "Peptides-func",
+        "purpose": "registered paper-scale configuration; execution produces the results"
+      },
+      "pilot": {
+        "benchmark_dataset": "Peptides-func",
+        "config": "configs/peptides_func_pilot.json",
+        "dataset": "Peptides-func",
+        "purpose": "official data with reduced model and development computation"
+      },
+      "smoke": {
+        "benchmark_dataset": "Peptides-func",
+        "config": "configs/peptides_func_smoke.json",
+        "dataset": "synthetic",
+        "purpose": "small task-specific software fixture"
+      }
+    },
+    "Roman-empire": {
+      "full": {
+        "benchmark_dataset": "Roman-empire",
+        "config": "configs/roman_empire_full.json",
+        "dataset": "Roman-empire",
+        "purpose": "registered paper-scale configuration; execution produces the results"
+      },
+      "pilot": {
+        "benchmark_dataset": "Roman-empire",
+        "config": "configs/roman_empire_pilot.json",
+        "dataset": "Roman-empire",
+        "purpose": "official data with reduced model and development computation"
+      },
+      "smoke": {
+        "benchmark_dataset": "Roman-empire",
+        "config": "configs/roman_empire_smoke.json",
+        "dataset": "synthetic",
+        "purpose": "small task-specific software fixture"
+      }
+    },
+    "ogbn-arxiv": {
+      "full": {
+        "benchmark_dataset": "ogbn-arxiv",
+        "config": "configs/arxiv_full.json",
+        "dataset": "ogbn-arxiv",
+        "purpose": "registered paper-scale configuration; execution produces the results"
+      },
+      "pilot": {
+        "benchmark_dataset": "ogbn-arxiv",
+        "config": "configs/arxiv_pilot.json",
+        "dataset": "ogbn-arxiv",
+        "purpose": "official data with reduced model and development computation"
+      },
+      "smoke": {
+        "benchmark_dataset": "ogbn-arxiv",
+        "config": "configs/arxiv_smoke.json",
+        "dataset": "synthetic",
+        "purpose": "small task-specific software fixture"
+      }
+    },
+    "ogbn-products": {
+      "full": {
+        "benchmark_dataset": "ogbn-products",
+        "config": "configs/products_full.json",
+        "dataset": "ogbn-products",
+        "purpose": "registered paper-scale configuration; execution produces the results"
+      },
+      "pilot": {
+        "benchmark_dataset": "ogbn-products",
+        "config": "configs/products_pilot.json",
+        "dataset": "ogbn-products",
+        "purpose": "official data with reduced model and development computation"
+      },
+      "smoke": {
+        "benchmark_dataset": "ogbn-products",
+        "config": "configs/products_smoke.json",
+        "dataset": "synthetic",
+        "purpose": "small task-specific software fixture"
+      }
+    },
+    "ogbn-proteins": {
+      "full": {
+        "benchmark_dataset": "ogbn-proteins",
+        "config": "configs/proteins_full.json",
+        "dataset": "ogbn-proteins",
+        "purpose": "registered paper-scale configuration; execution produces the results"
+      },
+      "pilot": {
+        "benchmark_dataset": "ogbn-proteins",
+        "config": "configs/proteins_pilot.json",
+        "dataset": "ogbn-proteins",
+        "purpose": "official data with reduced model and development computation"
+      },
+      "smoke": {
+        "benchmark_dataset": "ogbn-proteins",
+        "config": "configs/proteins_smoke.json",
+        "dataset": "synthetic",
+        "purpose": "small task-specific software fixture"
+      }
+    }
+  },
+  "published_numerical_results_reproduced": false,
+  "release_kind": "research_implementation",
+  "schema_version": "2.0",
+  "scope_notes": [
+    "Nine core policy families and the eight-stage lifecycle are available on all seven datasets.",
+    "Each task uses its declared loss, prediction axis and official metric.",
+    "Independent graph episodes reset predictor/controller/anchor state; graph-level predictions pool within one graph.",
+    "Roman-empire supports all ten official masks and a separate split-summary campaign.",
+    "Synthetic checks establish software behavior, not benchmark performance.",
+    "External baseline HPO, optional qB and E3/E4/E5 campaigns are outside this implementation.",
+    "Manuscript agreement requires explicit bindings to the corresponding result-producing artifacts.",
+    "The manuscript's registered constants and reported results are kept as transcriptions in paper/ and verified against the executable registry and the full profiles by scripts/check_paper_constants.py.",
+    "Known differences between this source and the manuscript are itemized with status in paper/KNOWN_DIFFERENCES.md."
+  ],
+  "shell_entrypoints": {
+    "COCO-SP": "run_cross_morse_coco_sp.sh",
+    "PascalVOC-SP": "run_cross_morse_pascalvoc_sp.sh",
+    "Peptides-func": "run_cross_morse_peptides_func.sh",
+    "Roman-empire": "run_cross_morse_roman_empire.sh",
+    "ogbn-arxiv": "run_cross_morse_arxiv.sh",
+    "ogbn-products": "run_cross_morse_products.sh",
+    "ogbn-proteins": "run_cross_morse_proteins.sh"
+  },
+  "task_specific_cpu_smoke_verified": [
+    "ogbn-arxiv",
+    "ogbn-proteins",
+    "ogbn-products",
+    "Roman-empire",
+    "PascalVOC-SP",
+    "COCO-SP",
+    "Peptides-func"
+  ],
+  "test_only_datasets": [
+    "synthetic"
+  ],
+  "validated_runtime_source_sha256": "9e0154c11c0ebc67d533a84b6d6a80c4e77a8d76e6d2cc165bcff5897980b108",
+  "validation_date_utc": "2026-10-25",
+  "validation_record": "docs/VALIDATION.json"
+}

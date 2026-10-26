@@ -1,0 +1,100 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="834" viewBox="0 0 1080 834" role="img" aria-labelledby="title desc">
+<title id="title">Nine routes and their information contracts</title>
+<desc id="desc">Six open-loop families commit a schedule or stopping depth using development data and, where declared, the initial input. Three feedback families repeatedly use the current label-free state. MPC-OL plans once and completes with nominal transport; MPC-RH replans and executes one action. Selection chooses the strongest registered open-loop comparator before comparing feedback. Confirmation and admission can return that comparator. This diagram contains no measured route outcomes.</desc>
+<metadata id="diagram-contract">{"MPC_OL": {"A9_allowed": false, "intermediate_observations_change_plan": false, "replans": false, "tail": "nominal"}, "MPC_RH": {"executes": "first_action", "replans": true}, "contains_measured_results": false, "feedback": ["One-step", "Radius", "MPC-RH"], "kind": "policy_information", "open_loop": ["Nominal", "Best depth", "Learned stop", "Phase schedule", "Fixed sequence", "MPC-OL"]}</metadata>
+<defs><marker id="arrow-94611c" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#94611c"/></marker></defs>
+<rect x="0.5" y="0.5" width="1079" height="833" rx="18" fill="#ffffff" stroke="#d8e1e8" stroke-width="1"/>
+<text x="40.0" y="44.0" text-anchor="start" dominant-baseline="middle" font-family="'DejaVu Sans', Arial, 'Helvetica Neue', sans-serif" font-size="28" fill="#172b3a" font-weight="700"><tspan dy="-0" font-size="28">Nine routes, distinguished by information and timing</tspan></text>
+<text x="40.0" y="79.0" text-anchor="start" dominant-baseline="middle" font-family="'DejaVu Sans', Arial, 'Helvetica Neue', sans-serif" font-size="17" fill="#526171"><tspan dy="-0" font-size="17">The same frozen plant is evaluated under different decision rules.</tspan></text>
+<rect x="32.0" y="112.0" width="1016.0" height="314.0" rx="14" fill="#f4f6f8" stroke="#d1dbe3" stroke-width="1.2"/>
+<rect x="32.0" y="112.0" width="6.0" height="314.0" rx="3" fill="#526171" stroke="none"/>
+<text x="50.0" y="129.0" text-anchor="start" dominant-baseline="middle" font-family="'DejaVu Sans', Arial, 'Helvetica Neue', sans-serif" font-size="16" fill="#526171" font-weight="600" letter-spacing="0.8"><tspan dy="-0" font-size="16">OPEN LOOP · commit before rollout; the initial input may condition the plan</tspan></text>
+<g id="ol_0" data-phase="">
+<rect x="52.0" y="162.0" width="308.0" height="104.0" rx="9" fill="#ffffff" stroke="#d1dbe3" stroke-width="1.2"/>
+<rect x="52.0" y="162.0" width="308.0" height="4.0" rx="2" fill="#526171" stroke="none"/>
+<text x="63.0" y="189.1" text-anchor="start" dominant-baseline="middle" font-family="'DejaVu Sans', Arial, 'Helvetica Neue', sans-serif" font-size="19" fill="#526171" font-weight="600"><tspan dy="-0" font-size="19">Nominal</tspan></text>
+<text x="63.0" y="216.3" text-anchor="start" dominant-baseline="middle" font-family="'DejaVu Sans', Arial, 'Helvetica Neue', sans-serif" font-size="16" fill="#172b3a"><tspan dy="-0" font-size="16">A0 at every site</tspan></text>
+<text x="63.0" y="238.3" text-anchor="start" dominant-baseline="middle" font-family="'DejaVu Sans', Arial, 'Helvetica Neue', sans-serif" font-size="16" fill="#172b3a"><tspan dy="-0" font-size="16">full nominal depth</tspan></text>
+</g>
+<g id="ol_1" data-phase="">
+<rect x="380.0" y="162.0" width="308.0" height="104.0" rx="9" fill="#ffffff" stroke="#d1dbe3" stroke-width="1.2"/>
+<rect x="380.0" y="162.0" width="308.0" height="4.0" rx="2" fill="#526171" stroke="none"/>
+<text x="391.0" y="189.1" text-anchor="start" dominant-baseline="middle" font-family="'DejaVu Sans', Arial, 'Helvetica Neue', sans-serif" font-size="19" fill="#526171" font-weight="600"><tspan dy="-0" font-size="19">Best depth</tspan></text>
+<text x="391.0" y="216.3" text-anchor="start" dominant-baseline="middle" font-family="'DejaVu Sans', Arial, 'Helvetica Neue', sans-serif" font-size="16" fill="#172b3a"><tspan dy="-0" font-size="16">development-selected depth</tspan></text>
+<text x="391.0" y="238.3" text-anchor="start" dominant-baseline="middle" font-family="'DejaVu Sans', Arial, 'Helvetica Neue', sans-serif" font-size="16" fill="#172b3a"><tspan dy="-0" font-size="16">nominal transport until stop</tspan></text>
+</g>
+<g id="ol_2" data-phase="">
+<rect x="708.0" y="162.0" width="308.0" height="104.0" rx="9" fill="#ffffff" stroke="#d1dbe3" stroke-width="1.2"/>
+<rect x="708.0" y="162.0" width="308.0" height="4.0" rx="2" fill="#526171" stroke="none"/>
+<text x="719.0" y="189.1" text-anchor="start" dominant-baseline="middle" font-family="'DejaVu Sans', Arial, 'Helvetica Neue', sans-serif" font-size="19" fill="#526171" font-weight="600"><tspan dy="-0" font-size="19">Learned stop</tspan></text>
+<text x="719.0" y="216.3" text-anchor="start" dominant-baseline="middle" font-family="'DejaVu Sans', Arial, 'Helvetica Neue', sans-serif" font-size="16" fill="#172b3a"><tspan dy="-0" font-size="16">initial measurements</tspan></text>
+<text x="719.0" y="238.3" text-anchor="start" dominant-baseline="middle" font-family="'DejaVu Sans', Arial, 'Helvetica Neue', sans-serif" font-size="16" fill="#172b3a"><tspan dy="-0" font-size="16">nearest-template stop depth</tspan></text>
+</g>
+<g id="ol_3" data-phase="">
+<rect x="52.0" y="284.0" width="308.0" height="104.0" rx="9" fill="#ffffff" stroke="#d1dbe3" stroke-width="1.2"/>
+<rect x="52.0" y="284.0" width="308.0" height="4.0" rx="2" fill="#526171" stroke="none"/>
+<text x="63.0" y="311.1" text-anchor="start" dominant-baseline="middle" font-family="'DejaVu Sans', Arial, 'Helvetica Neue', sans-serif" font-size="19" fill="#526171" font-weight="600"><tspan dy="-0" font-size="19">Phase schedule</tspan></text>
+<text x="63.0" y="338.3" text-anchor="start" dominant-baseline="middle" font-family="'DejaVu Sans', Arial, 'Helvetica Neue', sans-serif" font-size="16" fill="#172b3a"><tspan dy="-0" font-size="16">registered action phases</tspan></text>
+<text x="63.0" y="360.3" text-anchor="start" dominant-baseline="middle" font-family="'DejaVu Sans', Arial, 'Helvetica Neue', sans-serif" font-size="16" fill="#172b3a"><tspan dy="-0" font-size="16">fixed switch boundaries</tspan></text>
+</g>
+<g id="ol_4" data-phase="">
+<rect x="380.0" y="284.0" width="308.0" height="104.0" rx="9" fill="#ffffff" stroke="#d1dbe3" stroke-width="1.2"/>
+<rect x="380.0" y="284.0" width="308.0" height="4.0" rx="2" fill="#526171" stroke="none"/>
+<text x="391.0" y="311.1" text-anchor="start" dominant-baseline="middle" font-family="'DejaVu Sans', Arial, 'Helvetica Neue', sans-serif" font-size="19" fill="#526171" font-weight="600"><tspan dy="-0" font-size="19">Fixed sequence</tspan></text>
+<text x="391.0" y="338.3" text-anchor="start" dominant-baseline="middle" font-family="'DejaVu Sans', Arial, 'Helvetica Neue', sans-serif" font-size="16" fill="#172b3a"><tspan dy="-0" font-size="16">exploration-derived proposal</tspan></text>
+<text x="391.0" y="360.3" text-anchor="start" dominant-baseline="middle" font-family="'DejaVu Sans', Arial, 'Helvetica Neue', sans-serif" font-size="16" fill="#172b3a"><tspan dy="-0" font-size="16">execute the registered sequence</tspan></text>
+</g>
+<g id="ol_5" data-phase="">
+<rect x="708.0" y="284.0" width="308.0" height="104.0" rx="9" fill="#ffffff" stroke="#d1dbe3" stroke-width="1.2"/>
+<rect x="708.0" y="284.0" width="308.0" height="4.0" rx="2" fill="#526171" stroke="none"/>
+<text x="719.0" y="311.1" text-anchor="start" dominant-baseline="middle" font-family="'DejaVu Sans', Arial, 'Helvetica Neue', sans-serif" font-size="19" fill="#526171" font-weight="600"><tspan dy="-0" font-size="19">MPC-OL</tspan></text>
+<text x="719.0" y="338.3" text-anchor="start" dominant-baseline="middle" font-family="'DejaVu Sans', Arial, 'Helvetica Neue', sans-serif" font-size="16" fill="#172b3a"><tspan dy="-0" font-size="16">plan once from the initial state</tspan></text>
+<text x="719.0" y="360.3" text-anchor="start" dominant-baseline="middle" font-family="'DejaVu Sans', Arial, 'Helvetica Neue', sans-serif" font-size="16" fill="#172b3a"><tspan dy="-0" font-size="16">nominal completion after horizon</tspan></text>
+</g>
+<rect x="32.0" y="448.0" width="1016.0" height="206.0" rx="14" fill="#edf7f4" stroke="#b9dcd2" stroke-width="1.2"/>
+<rect x="32.0" y="448.0" width="6.0" height="206.0" rx="3" fill="#16776b" stroke="none"/>
+<text x="50.0" y="465.0" text-anchor="start" dominant-baseline="middle" font-family="'DejaVu Sans', Arial, 'Helvetica Neue', sans-serif" font-size="16" fill="#16776b" font-weight="600" letter-spacing="0.8"><tspan dy="-0" font-size="16">FEEDBACK · use the current label-free state at each decision</tspan></text>
+<g id="fb_0" data-phase="">
+<rect x="52.0" y="500.0" width="308.0" height="104.0" rx="9" fill="#ffffff" stroke="#b9dcd2" stroke-width="1.2"/>
+<rect x="52.0" y="500.0" width="308.0" height="4.0" rx="2" fill="#16776b" stroke="none"/>
+<text x="63.0" y="527.1" text-anchor="start" dominant-baseline="middle" font-family="'DejaVu Sans', Arial, 'Helvetica Neue', sans-serif" font-size="19" fill="#16776b" font-weight="600"><tspan dy="-0" font-size="19">One-step</tspan></text>
+<text x="63.0" y="554.3" text-anchor="start" dominant-baseline="middle" font-family="'DejaVu Sans', Arial, 'Helvetica Neue', sans-serif" font-size="16" fill="#172b3a"><tspan dy="-0" font-size="16">minimize the critic mean</tspan></text>
+<text x="63.0" y="576.3" text-anchor="start" dominant-baseline="middle" font-family="'DejaVu Sans', Arial, 'Helvetica Neue', sans-serif" font-size="16" fill="#172b3a"><tspan dy="-0" font-size="16">over supported actions</tspan></text>
+</g>
+<g id="fb_1" data-phase="">
+<rect x="380.0" y="500.0" width="308.0" height="104.0" rx="9" fill="#ffffff" stroke="#b9dcd2" stroke-width="1.2"/>
+<rect x="380.0" y="500.0" width="308.0" height="4.0" rx="2" fill="#16776b" stroke="none"/>
+<text x="391.0" y="527.1" text-anchor="start" dominant-baseline="middle" font-family="'DejaVu Sans', Arial, 'Helvetica Neue', sans-serif" font-size="19" fill="#16776b" font-weight="600"><tspan dy="-0" font-size="19">Radius</tspan></text>
+<text x="391.0" y="554.3" text-anchor="start" dominant-baseline="middle" font-family="'DejaVu Sans', Arial, 'Helvetica Neue', sans-serif" font-size="16" fill="#172b3a"><tspan dy="-0" font-size="16">mean + κ scale + empirical radius</tspan></text>
+<text x="391.0" y="576.3" text-anchor="start" dominant-baseline="middle" font-family="'DejaVu Sans', Arial, 'Helvetica Neue', sans-serif" font-size="16" fill="#172b3a"><tspan dy="-0" font-size="16">plus the registered ρ penalty</tspan></text>
+</g>
+<g id="fb_2" data-phase="">
+<rect x="708.0" y="500.0" width="308.0" height="104.0" rx="9" fill="#ffffff" stroke="#b9dcd2" stroke-width="1.2"/>
+<rect x="708.0" y="500.0" width="308.0" height="4.0" rx="2" fill="#16776b" stroke="none"/>
+<text x="719.0" y="527.1" text-anchor="start" dominant-baseline="middle" font-family="'DejaVu Sans', Arial, 'Helvetica Neue', sans-serif" font-size="19" fill="#16776b" font-weight="600"><tspan dy="-0" font-size="19">MPC-RH</tspan></text>
+<text x="719.0" y="554.3" text-anchor="start" dominant-baseline="middle" font-family="'DejaVu Sans', Arial, 'Helvetica Neue', sans-serif" font-size="16" fill="#172b3a"><tspan dy="-0" font-size="16">replan with consequence models</tspan></text>
+<text x="719.0" y="576.3" text-anchor="start" dominant-baseline="middle" font-family="'DejaVu Sans', Arial, 'Helvetica Neue', sans-serif" font-size="16" fill="#172b3a"><tspan dy="-0" font-size="16">execute the first action; observe</tspan></text>
+</g>
+<text x="52.0" y="633.0" text-anchor="start" dominant-baseline="middle" font-family="'DejaVu Sans', Arial, 'Helvetica Neue', sans-serif" font-size="16" fill="#526171"><tspan dy="-0" font-size="16">MPC settings: horizons {1, 4, 8, 16, 32}; beam 16; top-2; discount γ = 0.97.</tspan></text>
+<g id="comparator" data-phase="">
+<rect x="52.0" y="704.0" width="280.0" height="80.0" rx="9" fill="#ffffff" stroke="#d1dbe3" stroke-width="1.2"/>
+<rect x="52.0" y="704.0" width="280.0" height="4.0" rx="2" fill="#526171" stroke="none"/>
+<text x="63.0" y="731.1" text-anchor="start" dominant-baseline="middle" font-family="'DejaVu Sans', Arial, 'Helvetica Neue', sans-serif" font-size="19" fill="#526171" font-weight="600"><tspan dy="-0" font-size="19">Select q</tspan><tspan dy="4.18" font-size="13.68">C</tspan></text>
+<text x="63.0" y="758.3" text-anchor="start" dominant-baseline="middle" font-family="'DejaVu Sans', Arial, 'Helvetica Neue', sans-serif" font-size="16" fill="#172b3a"><tspan dy="-0" font-size="16">strongest registered open loop</tspan></text>
+</g>
+<g id="qualify" data-phase="">
+<rect x="400.0" y="704.0" width="280.0" height="80.0" rx="9" fill="#ffffff" stroke="#e7d0a7" stroke-width="1.2"/>
+<rect x="400.0" y="704.0" width="280.0" height="4.0" rx="2" fill="#94611c" stroke="none"/>
+<text x="411.0" y="731.1" text-anchor="start" dominant-baseline="middle" font-family="'DejaVu Sans', Arial, 'Helvetica Neue', sans-serif" font-size="19" fill="#94611c" font-weight="600"><tspan dy="-0" font-size="19">Compare + confirm</tspan></text>
+<text x="411.0" y="758.3" text-anchor="start" dominant-baseline="middle" font-family="'DejaVu Sans', Arial, 'Helvetica Neue', sans-serif" font-size="16" fill="#172b3a"><tspan dy="-0" font-size="16">eligible feedback or q</tspan><tspan dy="3.52" font-size="11.52">C</tspan></text>
+</g>
+<g id="deploy" data-phase="">
+<rect x="748.0" y="704.0" width="280.0" height="80.0" rx="9" fill="#ffffff" stroke="#b8cce3" stroke-width="1.2"/>
+<rect x="748.0" y="704.0" width="280.0" height="4.0" rx="2" fill="#315e91" stroke="none"/>
+<text x="759.0" y="731.1" text-anchor="start" dominant-baseline="middle" font-family="'DejaVu Sans', Arial, 'Helvetica Neue', sans-serif" font-size="19" fill="#315e91" font-weight="600"><tspan dy="-0" font-size="19">Admit and lock q</tspan><tspan dy="4.18" font-size="13.68">D</tspan></text>
+<text x="759.0" y="758.3" text-anchor="start" dominant-baseline="middle" font-family="'DejaVu Sans', Arial, 'Helvetica Neue', sans-serif" font-size="16" fill="#172b3a"><tspan dy="-0" font-size="16">candidate or exact q</tspan><tspan dy="3.52" font-size="11.52">C</tspan><tspan dy="-3.52" font-size="16"> return</tspan></text>
+</g>
+<path data-source="comparator" data-target="qualify" data-role="flow" d="M 332.0,744.0 L 400.0,744.0" fill="none" stroke="#94611c" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrow-94611c)"/>
+<path data-source="qualify" data-target="deploy" data-role="flow" d="M 680.0,744.0 L 748.0,744.0" fill="none" stroke="#94611c" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrow-94611c)"/>
+<text x="40.0" y="815.0" text-anchor="start" dominant-baseline="middle" font-family="'DejaVu Sans', Arial, 'Helvetica Neue', sans-serif" font-size="15.5" fill="#526171"><tspan dy="-0" font-size="15.5">Profiles, horizons, coefficients and ensemble sizes are registered before selection. Sources: Eq. 15; Tables S9–S11.</tspan></text>
+</svg>

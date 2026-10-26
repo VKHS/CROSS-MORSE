@@ -1,0 +1,8 @@
+{
+  "counting_unit": "complete graph across all seeds and trajectories",
+  "full_graph_execution": true,
+  "independent_graph_episodes": true,
+  "labels": "D_explore",
+  "propensity_source": "Supplementary Table S6",
+  "trajectories": 12
+}

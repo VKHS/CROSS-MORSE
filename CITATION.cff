@@ -1,0 +1,45 @@
+cff-version: 1.2.0
+message: "If you use this software, cite the CROSS-MORSE manuscript and this repository, naming the source commit and its runtime identity (make fingerprint) and the run record you used."
+title: "CROSS-MORSE: Cross-Spectral Control of Message Passing in Frozen Graph Neural Networks (reference implementation)"
+type: software
+date-released: "2026-10-26"
+license: BSD-3-Clause
+repository-code: "https://github.com/VKHS/CROSS-MORSE"
+url: "https://github.com/VKHS/CROSS-MORSE"
+authors:
+  - family-names: "Khalili Sadaghiani"
+    given-names: "Abdolvahab"
+    affiliation: "Linköping University, Linköping, Sweden"
+    email: "abdolvahab.khalili.sadaghiani@liu.se"
+  - family-names: "Nunez-Yanez"
+    given-names: "Jose"
+    affiliation: "Linköping University, Linköping, Sweden"
+keywords:
+  - graph neural networks
+  - adaptive message passing
+  - cross-spectral analysis
+  - nominal-relative control
+  - model predictive control
+  - risk-aware deployment
+  - reproducibility
+abstract: >-
+  Post-training transport control for frozen graph neural networks: a common adapter at the native aggregation call,
+  a registered ten-action transport family, label-free cross-spectral and confidence measurements, a conditioned
+  observer with one-step and sequence risk models, nine policy families compared against the strongest cross-fitted
+  open-loop comparator, held-out mechanism confirmation and statistically regimed admission with exact comparator
+  fallback. Seven-dataset implementation (ogbn-arxiv, ogbn-proteins, ogbn-products, Roman-empire, PascalVOC-SP,
+  COCO-SP, Peptides-func) with a sealed eight-stage lifecycle, numerical replay, checkpoint re-execution and a
+  machine-readable registry of the manuscript's constants and reported results.
+preferred-citation:
+  type: article
+  title: "CROSS-MORSE: Cross-Spectral Control of Message Passing in Frozen Graph Neural Networks"
+  authors:
+    - family-names: "Khalili Sadaghiani"
+      given-names: "Abdolvahab"
+      affiliation: "Linköping University, Linköping, Sweden"
+    - family-names: "Nunez-Yanez"
+      given-names: "Jose"
+      affiliation: "Linköping University, Linköping, Sweden"
+  journal: "Scientific Reports"
+  year: 2026
+  notes: "Manuscript under review."

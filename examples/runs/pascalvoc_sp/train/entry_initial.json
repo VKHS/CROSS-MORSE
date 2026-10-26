@@ -1,0 +1,114 @@
+{
+  "depth_ce": [
+    1.44735699146986,
+    1.4454328045248985,
+    1.4454328045248985,
+    1.408346887677908
+  ],
+  "depth_gate_pass": false,
+  "depth_grid": [
+    1,
+    2,
+    4,
+    8
+  ],
+  "depth_loss": [
+    1.44735699146986,
+    1.4454328045248985,
+    1.4454328045248985,
+    1.408346887677908
+  ],
+  "depth_macro_f1": [
+    0.15833333333333333,
+    0.2839285714285714,
+    0.2839285714285714,
+    0.34444444444444444
+  ],
+  "depth_metric": [
+    0.15833333333333333,
+    0.2839285714285714,
+    0.2839285714285714,
+    0.34444444444444444
+  ],
+  "dil_gap": 0.05509271038075281,
+  "dil_log_depth": 1.4395725162078936,
+  "dil_reference": "feature-only q0 loss repeated on the depth grid (reconstruction choice)",
+  "identity_pass": true,
+  "initial_entry_pass": false,
+  "instrumentation": {
+    "backbone": "gps",
+    "controlled_depth": 8,
+    "dense_chunk_size": 0,
+    "global_attention": "unchanged graph-local branch",
+    "inserted_nominal": "literal identity",
+    "inserted_site_count": 6,
+    "native_aggregation": "nonnegative degree-normalized linear mean",
+    "native_position_choice": "first site in each block interval",
+    "native_site_count": 2,
+    "native_sites": [
+      1,
+      4
+    ],
+    "parameter_count": 5876,
+    "site_indexing": "zero-based transition d to d+1",
+    "task": {
+      "dataset": "PascalVOC-SP",
+      "metric": "macro_f1",
+      "num_outputs": 4,
+      "prediction_level": "node",
+      "task_type": "multiclass"
+    },
+    "transport_history_definition": "kernel transport mass and expected kernel hops before source retention; inserted A0 bypass=0/0; designated native A0 mean aggregation=1/1; other transports use registered nu and kernel hop moment; hybrid resets=0/0; these are transport descriptors, not complete block work or effective output displacement"
+  },
+  "labels": "internal D_fit validation",
+  "loss_name": "ce",
+  "metric_available": true,
+  "metric_name": "macro_f1",
+  "nominal_identity": [
+    {
+      "absolute_fit_val_loss_deviation": 0.0,
+      "loss_tolerance": 0.0001,
+      "max_relative_state_error": 0.0,
+      "pass": true,
+      "seed": 1,
+      "state_tolerance": 1e-05
+    },
+    {
+      "absolute_fit_val_loss_deviation": 0.0,
+      "loss_tolerance": 0.0001,
+      "max_relative_state_error": 0.0,
+      "pass": true,
+      "seed": 2,
+      "state_tolerance": 1e-05
+    }
+  ],
+  "pdd_fraction": 0.0,
+  "plant_gate_pass": false,
+  "plant_vs_q0": {
+    "bootstrap_replicates": 80,
+    "bootstrap_seed": 314160,
+    "independent_graph_guarantee": false,
+    "interval_level": 0.95,
+    "lower": -0.0878906324505806,
+    "mean": 0.023867081850767136,
+    "method": "paired whole-unit bootstrap; descriptive when units are dependent",
+    "one_sided_alpha": 0.025,
+    "p_greater_zero": 0.19753086419753085,
+    "p_less_zero": 0.8148148148148148,
+    "se": 0.0740543314368012,
+    "units": 2,
+    "upper": 0.13562479615211487,
+    "valid_interval": true,
+    "weight_sum": 2.0,
+    "weighting": "equal_unit"
+  },
+  "risk_weighting": "equal graphs after within-graph mean",
+  "statistical_scope": "descriptive whole-graph bootstrap",
+  "task": {
+    "dataset": "PascalVOC-SP",
+    "metric": "macro_f1",
+    "num_outputs": 4,
+    "prediction_level": "node",
+    "task_type": "multiclass"
+  }
+}

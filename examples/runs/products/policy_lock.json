@@ -1,0 +1,24 @@
+{
+  "admission_sha256": "b957f5b0e205d8c45b50d2a91d771392fd5c4edffcde78087306bb6da2e85360",
+  "anchor_rule": "finite_measurements_entropy_le_0.99_v2",
+  "calibration_protocol": "trajectory_holdout_v2",
+  "comparator_hash": "fce702bb8c7c7cef54009fb6e06f6654f1ed2aabcb9088e1bb7c8d9e109a31a6",
+  "comparator_index": 9,
+  "config_sha256": "723c9eb663f1e68788ec50cf3deba3304425757a144228979e938cb57578e05d",
+  "confirmed_hash": "fce702bb8c7c7cef54009fb6e06f6654f1ed2aabcb9088e1bb7c8d9e109a31a6",
+  "confirmed_index": 9,
+  "deployed_hash": "fce702bb8c7c7cef54009fb6e06f6654f1ed2aabcb9088e1bb7c8d9e109a31a6",
+  "deployed_index": 9,
+  "model_hashes": {
+    "fit/full/controller.pt": "aad10c717554ef4fb268d93db6fd75a0a525ca5a79d47e92c3bd750fc4bad0bd",
+    "fit/lean/controller.pt": "220fd7f353f316cf4f7c1d5f84359eb63fd74d1d0beb14a70aa8c7d098aa3fcc",
+    "train/plant_seed1_best.pt": "6852ca69ac8e1abd59eefa5c612d2e3e6c3b4d18b5f1ebbaff2952f33a39b474",
+    "train/plant_seed2_best.pt": "bb1319d4ce8555a7e6b63d160c4116174269ca643c8942a6c252fa141f6cb9c0",
+    "train/q0_seed1_best.pt": "592d6247628906bab74a3bcd86dafb391c216d23b57bb77e32fad4146ac322bf",
+    "train/q0_seed2_best.pt": "ccaa8a6773988185efeb2ab2fdbde304a78de6ac6444491664695bb005eaef7d"
+  },
+  "registry_sha256": "821bdb25a62b0c03f6c3e76ab23b1670ac8d1f3641e8dab2bb8230c968295ab1",
+  "score_contract": "mean_kappa_sigma_radius_transport_v2",
+  "static_gate": "exact prepared graph schema and feature fingerprint; no unseen-input generalization claimed",
+  "test_labels_accessed": false
+}

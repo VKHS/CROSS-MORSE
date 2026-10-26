@@ -1,0 +1,112 @@
+[
+  {
+    "alpha": 0.25,
+    "eta": null,
+    "id": 0,
+    "mode": "transport",
+    "name": "nominal",
+    "nu": 0.7,
+    "order": 8,
+    "probability": 0.28,
+    "rho": 0.0
+  },
+  {
+    "alpha": 0.25,
+    "eta": null,
+    "id": 1,
+    "mode": "transport",
+    "name": "weak_local",
+    "nu": 0.55,
+    "order": 8,
+    "probability": 0.09,
+    "rho": 0.2
+  },
+  {
+    "alpha": 0.2,
+    "eta": null,
+    "id": 2,
+    "mode": "transport",
+    "name": "strong_local",
+    "nu": 0.85,
+    "order": 8,
+    "probability": 0.09,
+    "rho": 0.2
+  },
+  {
+    "alpha": 0.25,
+    "eta": 0.5,
+    "id": 3,
+    "mode": "transport",
+    "name": "short_safe",
+    "nu": 0.7,
+    "order": 8,
+    "probability": 0.09,
+    "rho": 0.25
+  },
+  {
+    "alpha": 0.35,
+    "eta": 0.5,
+    "id": 4,
+    "mode": "transport",
+    "name": "short_recovery",
+    "nu": 0.65,
+    "order": 8,
+    "probability": 0.09,
+    "rho": 0.3
+  },
+  {
+    "alpha": 0.2,
+    "eta": 0.2,
+    "id": 5,
+    "mode": "transport",
+    "name": "medium",
+    "nu": 0.7,
+    "order": 8,
+    "probability": 0.09,
+    "rho": 0.3
+  },
+  {
+    "alpha": 0.35,
+    "eta": 0.2,
+    "id": 6,
+    "mode": "transport",
+    "name": "medium_recovery",
+    "nu": 0.6,
+    "order": 8,
+    "probability": 0.09,
+    "rho": 0.35
+  },
+  {
+    "alpha": 0.4,
+    "eta": 0.08,
+    "id": 7,
+    "mode": "transport",
+    "name": "long_conservative",
+    "nu": 0.5,
+    "order": 8,
+    "probability": 0.08,
+    "rho": 0.25
+  },
+  {
+    "alpha": 1.0,
+    "eta": null,
+    "id": 8,
+    "mode": "source",
+    "name": "source_reset",
+    "nu": 0.0,
+    "order": 8,
+    "probability": 0.05,
+    "rho": 0.0
+  },
+  {
+    "alpha": 1.0,
+    "eta": null,
+    "id": 9,
+    "mode": "last_safe",
+    "name": "last_safe_reset",
+    "nu": 0.0,
+    "order": 8,
+    "probability": 0.05,
+    "rho": 0.0
+  }
+]

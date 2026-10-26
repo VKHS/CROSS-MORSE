@@ -1,0 +1,8 @@
+{
+  "counting_unit": "one checkpoint, one full randomized action trajectory",
+  "full_graph_execution": true,
+  "independent_graph_episodes": false,
+  "labels": "D_explore",
+  "propensity_source": "Supplementary Table S6",
+  "trajectories": 12
+}

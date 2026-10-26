@@ -1,0 +1,121 @@
+{
+ "datasets": [
+  "ogbn-arxiv",
+  "ogbn-products",
+  "ogbn-proteins",
+  "Roman-empire",
+  "PascalVOC-SP",
+  "COCO-SP",
+  "Peptides-func"
+ ],
+ "label": "examples",
+ "runs": {
+  "COCO-SP": {
+   "config_sha256": "51bdd5f83258fb9cc6332f114f60e0067f86081ad93d8b8de8f4eb43000e8a58",
+   "profile": "smoke",
+   "run_name": "coco_sp",
+   "scientific_run": false,
+   "source_sha256": "9e0154c11c0ebc67d533a84b6d6a80c4e77a8d76e6d2cc165bcff5897980b108"
+  },
+  "PascalVOC-SP": {
+   "config_sha256": "922018f810bb925df20d0e43ee887ae74ac6cc321b45fb3402246d3945c12563",
+   "profile": "smoke",
+   "run_name": "pascalvoc_sp",
+   "scientific_run": false,
+   "source_sha256": "9e0154c11c0ebc67d533a84b6d6a80c4e77a8d76e6d2cc165bcff5897980b108"
+  },
+  "Peptides-func": {
+   "config_sha256": "286b22b6af7a6faefa617db030931ef522bef77157294b536089634410ea53da",
+   "profile": "smoke",
+   "run_name": "peptides_func",
+   "scientific_run": false,
+   "source_sha256": "9e0154c11c0ebc67d533a84b6d6a80c4e77a8d76e6d2cc165bcff5897980b108"
+  },
+  "Roman-empire": {
+   "config_sha256": "2b8da655efb76599067147c7e11b5dda4d6749741ad010d4518870e1e47eb873",
+   "profile": "smoke",
+   "run_name": "roman_empire",
+   "scientific_run": false,
+   "source_sha256": "9e0154c11c0ebc67d533a84b6d6a80c4e77a8d76e6d2cc165bcff5897980b108"
+  },
+  "ogbn-arxiv": {
+   "config_sha256": "2f97bcb6667d1a9c246183513885913fa3677cf4a54b9afb94c0f1c46df331e5",
+   "profile": "smoke",
+   "run_name": "arxiv",
+   "scientific_run": false,
+   "source_sha256": "9e0154c11c0ebc67d533a84b6d6a80c4e77a8d76e6d2cc165bcff5897980b108"
+  },
+  "ogbn-products": {
+   "config_sha256": "723c9eb663f1e68788ec50cf3deba3304425757a144228979e938cb57578e05d",
+   "profile": "smoke",
+   "run_name": "products",
+   "scientific_run": false,
+   "source_sha256": "9e0154c11c0ebc67d533a84b6d6a80c4e77a8d76e6d2cc165bcff5897980b108"
+  },
+  "ogbn-proteins": {
+   "config_sha256": "f5e80883a75806cad6a7c1ae4f0657dd3248e04855dd415ef05b5bd2127caf2b",
+   "profile": "smoke",
+   "run_name": "proteins",
+   "scientific_run": false,
+   "source_sha256": "9e0154c11c0ebc67d533a84b6d6a80c4e77a8d76e6d2cc165bcff5897980b108"
+  }
+ },
+ "synthetic_examples": true,
+ "tables": {
+  "M1": {
+   "csv": "M1.csv",
+   "md": "M1.md",
+   "tex": "M1.tex"
+  },
+  "S12": {
+   "csv": "S12.csv",
+   "md": "S12.md",
+   "tex": "S12.tex"
+  },
+  "S12c": {
+   "csv": "S12c.csv",
+   "md": "S12c.md",
+   "tex": "S12c.tex"
+  },
+  "S13": {
+   "csv": "S13.csv",
+   "md": "S13.md",
+   "tex": "S13.tex"
+  },
+  "S14": {
+   "csv": "S14.csv",
+   "md": "S14.md",
+   "tex": "S14.tex"
+  },
+  "S15": {
+   "csv": "S15.csv",
+   "md": "S15.md",
+   "tex": "S15.tex"
+  },
+  "S23": {
+   "csv": "S23.csv",
+   "md": "S23.md",
+   "tex": "S23.tex"
+  },
+  "S4": {
+   "csv": "S4.csv",
+   "md": "S4.md",
+   "tex": "S4.tex"
+  },
+  "S41": {
+   "csv": "S41.csv",
+   "md": "S41.md",
+   "tex": "S41.tex"
+  },
+  "T1": {
+   "csv": "T1.csv",
+   "md": "T1.md",
+   "tex": "T1.tex"
+  },
+  "T2": {
+   "csv": "T2.csv",
+   "md": "T2.md",
+   "tex": "T2.tex"
+  }
+ }
+}

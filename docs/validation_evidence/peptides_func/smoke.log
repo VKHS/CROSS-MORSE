@@ -1,0 +1,80 @@
+[stage] prepare
+[stage] train
+[train] q0 seed=1 epoch=1/3 fit-val BCE=0.648948 ap=0.500000
+[train] q0 seed=1 epoch=2/3 fit-val BCE=0.648954 ap=0.500000
+[train] q0 seed=1 epoch=3/3 fit-val BCE=0.649389 ap=0.500000
+[train] plant seed=1 epoch=1/3 fit-val BCE=0.642320 ap=0.500000
+[train] plant seed=1 epoch=2/3 fit-val BCE=0.639699 ap=0.500000
+[train] plant seed=1 epoch=3/3 fit-val BCE=0.634807 ap=0.500000
+[train] q0 seed=2 epoch=1/3 fit-val BCE=0.755841 ap=1.000000
+[train] q0 seed=2 epoch=2/3 fit-val BCE=0.753908 ap=1.000000
+[train] q0 seed=2 epoch=3/3 fit-val BCE=0.752351 ap=1.000000
+[train] plant seed=2 epoch=1/3 fit-val BCE=0.843845 ap=0.500000
+[train] plant seed=2 epoch=2/3 fit-val BCE=0.815332 ap=0.500000
+[train] plant seed=2 epoch=3/3 fit-val BCE=0.792435 ap=0.500000
+[stage] explore
+[explore] trajectory 1/12 seed=1 loss=0.825669
+[explore] trajectory 2/12 seed=2 loss=0.825481
+[explore] trajectory 3/12 seed=1 loss=0.721078
+[explore] trajectory 4/12 seed=2 loss=0.600951
+[explore] trajectory 5/12 seed=1 loss=0.665826
+[explore] trajectory 6/12 seed=2 loss=0.736734
+[explore] trajectory 7/12 seed=1 loss=0.823386
+[explore] trajectory 8/12 seed=2 loss=0.682512
+[explore] trajectory 9/12 seed=1 loss=0.804027
+[explore] trajectory 10/12 seed=2 loss=0.682646
+[explore] trajectory 11/12 seed=1 loss=0.825669
+[explore] trajectory 12/12 seed=2 loss=0.807820
+[stage] fit
+[stage] select
+[select/predict] 1/40 nominal E=1 none
+[select/predict] 2/40 nominal E=2 none
+[select/predict] 3/40 best_depth E=1 none
+[select/predict] 4/40 best_depth E=2 none
+[select/predict] 5/40 best_depth E=1 none
+[select/predict] 6/40 best_depth E=2 none
+[select/predict] 7/40 best_depth E=1 none
+[select/predict] 8/40 best_depth E=2 none
+[select/predict] 9/40 learned_stop E=1 full
+[select/predict] 10/40 learned_stop E=2 full
+[select/predict] 11/40 phase E=1 none
+[select/predict] 12/40 phase E=2 none
+[select/predict] 13/40 phase E=1 none
+[select/predict] 14/40 phase E=2 none
+[select/predict] 15/40 fixed_sequence E=1 none
+[select/predict] 16/40 fixed_sequence E=2 none
+[select/predict] 17/40 mpc_ol E=1 lean
+[select/predict] 18/40 mpc_ol E=2 lean
+[select/predict] 19/40 mpc_ol E=1 lean
+[select/predict] 20/40 mpc_ol E=2 lean
+[select/predict] 21/40 one_step E=1 lean
+[select/predict] 22/40 one_step E=2 lean
+[select/predict] 23/40 radius E=1 lean
+[select/predict] 24/40 radius E=2 lean
+[select/predict] 25/40 mpc_rh E=1 lean
+[select/predict] 26/40 mpc_rh E=2 lean
+[select/predict] 27/40 mpc_rh E=1 lean
+[select/predict] 28/40 mpc_rh E=2 lean
+[select/predict] 29/40 mpc_ol E=1 full
+[select/predict] 30/40 mpc_ol E=2 full
+[select/predict] 31/40 mpc_ol E=1 full
+[select/predict] 32/40 mpc_ol E=2 full
+[select/predict] 33/40 one_step E=1 full
+[select/predict] 34/40 one_step E=2 full
+[select/predict] 35/40 radius E=1 full
+[select/predict] 36/40 radius E=2 full
+[select/predict] 37/40 mpc_rh E=1 full
+[select/predict] 38/40 mpc_rh E=2 full
+[select/predict] 39/40 mpc_rh E=1 full
+[select/predict] 40/40 mpc_rh E=2 full
+[stage] confirm
+[stage] admit
+[stage] evaluate
+{
+  "dataset": "synthetic",
+  "profile": "smoke",
+  "admitted": false,
+  "metric": "ap",
+  "test_metric": 0.5612905392667297,
+  "route": "phase"
+}

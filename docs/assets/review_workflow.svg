@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="788" viewBox="0 0 1080 788" role="img" aria-labelledby="title desc">
+<title id="title">From a sealed run to reviewable evidence</title>
+<desc id="desc">A completed run records resolved settings, stage manifests, numeric observations, policy decisions and checkpoint identities. Three review paths check different objects: numeric replay recomputes decisions from saved observations; checkpoint replay recomputes predictions from trusted frozen weights and the prepared graph; a portable review bundle checks numeric evidence without shipping weights or prepared data. New official-data experiments and manuscript registry values retain separate provenance. Record consistency alone does not establish original experiment chronology.</desc>
+<metadata id="diagram-contract">{"checkpoint_replay_requires": ["prepared_graph", "trusted_checkpoints"], "kind": "evidence_artifacts", "numeric_replay_runs_predictor": false, "original_chronology_authenticated": false, "portable_bundle_includes_checkpoints": false}</metadata>
+<defs><marker id="arrow-7e8e9b" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#7e8e9b"/></marker><marker id="arrow-526171" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#526171"/></marker><marker id="arrow-315e91" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#315e91"/></marker><marker id="arrow-16776b" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#16776b"/></marker></defs>
+<rect x="0.5" y="0.5" width="1079" height="787" rx="18" fill="#ffffff" stroke="#d8e1e8" stroke-width="1"/>
+<text x="40.0" y="44.0" text-anchor="start" dominant-baseline="middle" font-family="'DejaVu Sans', Arial, 'Helvetica Neue', sans-serif" font-size="28" fill="#172b3a" font-weight="700"><tspan dy="-0" font-size="28">From a sealed run to reviewable evidence</tspan></text>
+<text x="40.0" y="79.0" text-anchor="start" dominant-baseline="middle" font-family="'DejaVu Sans', Arial, 'Helvetica Neue', sans-serif" font-size="17" fill="#526171"><tspan dy="-0" font-size="17">Numeric replay, checkpoint replay and portable review answer different questions.</tspan></text>
+<g id="run" data-phase="">
+<rect x="52.0" y="124.0" width="976.0" height="108.0" rx="9" fill="#ffffff" stroke="#d1dbe3" stroke-width="1.2"/>
+<rect x="52.0" y="124.0" width="976.0" height="4.0" rx="2" fill="#526171" stroke="none"/>
+<text x="63.0" y="152.9" text-anchor="start" dominant-baseline="middle" font-family="'DejaVu Sans', Arial, 'Helvetica Neue', sans-serif" font-size="21" fill="#526171" font-weight="600"><tspan dy="-0" font-size="21">A completed, sealed run</tspan></text>
+<text x="63.0" y="182.8" text-anchor="start" dominant-baseline="middle" font-family="'DejaVu Sans', Arial, 'Helvetica Neue', sans-serif" font-size="18" fill="#172b3a"><tspan dy="-0" font-size="18">resolved config + source identity · stage manifests · policy lock</tspan></text>
+<text x="63.0" y="207.8" text-anchor="start" dominant-baseline="middle" font-family="'DejaVu Sans', Arial, 'Helvetica Neue', sans-serif" font-size="18" fill="#172b3a"><tspan dy="-0" font-size="18">observed predictions + paired units · decisions + checkpoint identities</tspan></text>
+</g>
+<g id="numeric" data-phase="">
+<rect x="52.0" y="300.0" width="300.0" height="228.0" rx="9" fill="#ffffff" stroke="#d1dbe3" stroke-width="1.2"/>
+<rect x="52.0" y="300.0" width="300.0" height="4.0" rx="2" fill="#526171" stroke="none"/>
+<text x="63.0" y="326.2" text-anchor="start" dominant-baseline="middle" font-family="'DejaVu Sans', Arial, 'Helvetica Neue', sans-serif" font-size="18" fill="#526171" font-weight="600"><tspan dy="-0" font-size="18">Recompute decisions</tspan></text>
+<text x="63.0" y="352.4" text-anchor="start" dominant-baseline="middle" font-family="'DejaVu Sans', Arial, 'Helvetica Neue', sans-serif" font-size="17" fill="#172b3a"><tspan dy="-0" font-size="17">saved numeric observations</tspan></text>
+<text x="63.0" y="376.4" text-anchor="start" dominant-baseline="middle" font-family="'DejaVu Sans', Arial, 'Helvetica Neue', sans-serif" font-size="17" fill="#172b3a"><tspan dy="-0" font-size="17">and sealed decision records</tspan></text>
+</g>
+<line x1="64.0" y1="413.0" x2="340.0" y2="413.0" stroke="#d8e1e8" stroke-width="1.2" stroke-linecap="round"/>
+<text x="64.0" y="440.0" text-anchor="start" dominant-baseline="middle" font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, 'DejaVu Sans Mono', monospace" font-size="16" fill="#526171"><tspan dy="-0" font-size="16">reproduce_results.py</tspan></text>
+<g id="numeric_output" data-phase="">
+<rect x="52.0" y="560.0" width="300.0" height="88.0" rx="9" fill="#ffffff" stroke="#d1dbe3" stroke-width="1.2"/>
+<text x="63.0" y="585.3" text-anchor="start" dominant-baseline="middle" font-family="'DejaVu Sans', Arial, 'Helvetica Neue', sans-serif" font-size="17" fill="#526171" font-weight="600"><tspan dy="-0" font-size="17">Checks</tspan></text>
+<text x="63.0" y="610.1" text-anchor="start" dominant-baseline="middle" font-family="'DejaVu Sans', Arial, 'Helvetica Neue', sans-serif" font-size="16" fill="#172b3a"><tspan dy="-0" font-size="16">Paired statistics + gate decisions</tspan></text>
+</g>
+<path data-source="run" data-target="numeric" data-role="flow" d="M 540.0,232.0 L 540.0,256.0 Q 540.0,266.0 530.0,266.0 L 212.0,266.0 Q 202.0,266.0 202.0,276.0 L 202.0,300.0" fill="none" stroke="#7e8e9b" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrow-7e8e9b)"/>
+<path data-source="numeric" data-target="numeric_output" data-role="flow" d="M 202.0,528.0 L 202.0,560.0" fill="none" stroke="#526171" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrow-526171)"/>
+<g id="checkpoint" data-phase="">
+<rect x="390.0" y="300.0" width="300.0" height="228.0" rx="9" fill="#ffffff" stroke="#b8cce3" stroke-width="1.2"/>
+<rect x="390.0" y="300.0" width="300.0" height="4.0" rx="2" fill="#315e91" stroke="none"/>
+<text x="401.0" y="326.2" text-anchor="start" dominant-baseline="middle" font-family="'DejaVu Sans', Arial, 'Helvetica Neue', sans-serif" font-size="18" fill="#315e91" font-weight="600"><tspan dy="-0" font-size="18">Reexecute predictions</tspan></text>
+<text x="401.0" y="352.4" text-anchor="start" dominant-baseline="middle" font-family="'DejaVu Sans', Arial, 'Helvetica Neue', sans-serif" font-size="17" fill="#172b3a"><tspan dy="-0" font-size="17">prepared graph</tspan></text>
+<text x="401.0" y="376.4" text-anchor="start" dominant-baseline="middle" font-family="'DejaVu Sans', Arial, 'Helvetica Neue', sans-serif" font-size="17" fill="#172b3a"><tspan dy="-0" font-size="17">and trusted frozen checkpoints</tspan></text>
+</g>
+<line x1="402.0" y1="413.0" x2="678.0" y2="413.0" stroke="#d8e1e8" stroke-width="1.2" stroke-linecap="round"/>
+<text x="402.0" y="440.0" text-anchor="start" dominant-baseline="middle" font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, 'DejaVu Sans Mono', monospace" font-size="16" fill="#315e91"><tspan dy="-0" font-size="16">evaluate_checkpoints.py</tspan></text>
+<g id="checkpoint_output" data-phase="">
+<rect x="390.0" y="560.0" width="300.0" height="88.0" rx="9" fill="#ffffff" stroke="#b8cce3" stroke-width="1.2"/>
+<text x="401.0" y="585.3" text-anchor="start" dominant-baseline="middle" font-family="'DejaVu Sans', Arial, 'Helvetica Neue', sans-serif" font-size="17" fill="#315e91" font-weight="600"><tspan dy="-0" font-size="17">Checks</tspan></text>
+<text x="401.0" y="610.1" text-anchor="start" dominant-baseline="middle" font-family="'DejaVu Sans', Arial, 'Helvetica Neue', sans-serif" font-size="16" fill="#172b3a"><tspan dy="-0" font-size="16">Fresh predictions + identity</tspan></text>
+<text x="401.0" y="632.1" text-anchor="start" dominant-baseline="middle" font-family="'DejaVu Sans', Arial, 'Helvetica Neue', sans-serif" font-size="16" fill="#172b3a"><tspan dy="-0" font-size="16">checks</tspan></text>
+</g>
+<path data-source="run" data-target="checkpoint" data-role="flow" d="M 540.0,232.0 L 540.0,256.0 Q 540.0,266.0 540.0,276.0 L 540.0,300.0" fill="none" stroke="#7e8e9b" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrow-7e8e9b)"/>
+<path data-source="checkpoint" data-target="checkpoint_output" data-role="flow" d="M 540.0,528.0 L 540.0,560.0" fill="none" stroke="#315e91" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrow-315e91)"/>
+<g id="bundle" data-phase="">
+<rect x="728.0" y="300.0" width="300.0" height="228.0" rx="9" fill="#ffffff" stroke="#b9dcd2" stroke-width="1.2"/>
+<rect x="728.0" y="300.0" width="300.0" height="4.0" rx="2" fill="#16776b" stroke="none"/>
+<text x="739.0" y="326.2" text-anchor="start" dominant-baseline="middle" font-family="'DejaVu Sans', Arial, 'Helvetica Neue', sans-serif" font-size="18" fill="#16776b" font-weight="600"><tspan dy="-0" font-size="18">Export portable evidence</tspan></text>
+<text x="739.0" y="352.4" text-anchor="start" dominant-baseline="middle" font-family="'DejaVu Sans', Arial, 'Helvetica Neue', sans-serif" font-size="17" fill="#172b3a"><tspan dy="-0" font-size="17">numeric records + manifests</tspan></text>
+<text x="739.0" y="376.4" text-anchor="start" dominant-baseline="middle" font-family="'DejaVu Sans', Arial, 'Helvetica Neue', sans-serif" font-size="17" fill="#172b3a"><tspan dy="-0" font-size="17">without graph data or weights</tspan></text>
+</g>
+<line x1="740.0" y1="413.0" x2="1016.0" y2="413.0" stroke="#d8e1e8" stroke-width="1.2" stroke-linecap="round"/>
+<text x="740.0" y="440.0" text-anchor="start" dominant-baseline="middle" font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, 'DejaVu Sans Mono', monospace" font-size="16" fill="#16776b"><tspan dy="-0" font-size="16">build_review_bundle.py</tspan></text>
+<text x="740.0" y="467.0" text-anchor="start" dominant-baseline="middle" font-family="'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, 'DejaVu Sans Mono', monospace" font-size="16" fill="#16776b"><tspan dy="-0" font-size="16">verify_review_bundle.py</tspan></text>
+<g id="bundle_output" data-phase="">
+<rect x="728.0" y="560.0" width="300.0" height="88.0" rx="9" fill="#ffffff" stroke="#b9dcd2" stroke-width="1.2"/>
+<text x="739.0" y="585.3" text-anchor="start" dominant-baseline="middle" font-family="'DejaVu Sans', Arial, 'Helvetica Neue', sans-serif" font-size="17" fill="#16776b" font-weight="600"><tspan dy="-0" font-size="17">Checks</tspan></text>
+<text x="739.0" y="610.1" text-anchor="start" dominant-baseline="middle" font-family="'DejaVu Sans', Arial, 'Helvetica Neue', sans-serif" font-size="16" fill="#172b3a"><tspan dy="-0" font-size="16">A separately verifiable review</tspan></text>
+<text x="739.0" y="632.1" text-anchor="start" dominant-baseline="middle" font-family="'DejaVu Sans', Arial, 'Helvetica Neue', sans-serif" font-size="16" fill="#172b3a"><tspan dy="-0" font-size="16">bundle</tspan></text>
+</g>
+<path data-source="run" data-target="bundle" data-role="flow" d="M 540.0,232.0 L 540.0,256.0 Q 540.0,266.0 550.0,266.0 L 868.0,266.0 Q 878.0,266.0 878.0,276.0 L 878.0,300.0" fill="none" stroke="#7e8e9b" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrow-7e8e9b)"/>
+<path data-source="bundle" data-target="bundle_output" data-role="flow" d="M 878.0,528.0 L 878.0,560.0" fill="none" stroke="#16776b" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrow-16776b)"/>
+<circle cx="540.0" cy="266.0" r="3.5" fill="#526171" stroke="none"/>
+<rect x="32.0" y="678.0" width="1016.0" height="76.0" rx="9" fill="#f4f6f8" stroke="#d8e1e8" stroke-width="1"/>
+<text x="52.0" y="703.0" text-anchor="start" dominant-baseline="middle" font-family="'DejaVu Sans', Arial, 'Helvetica Neue', sans-serif" font-size="17" fill="#172b3a"><tspan dy="-0" font-size="17">Paper registry: reported measurements and derived calculations.</tspan></text>
+<text x="52.0" y="732.0" text-anchor="start" dominant-baseline="middle" font-family="'DejaVu Sans', Arial, 'Helvetica Neue', sans-serif" font-size="16" fill="#526171"><tspan dy="-0" font-size="16">New run: its own data, frozen weights, decisions and measured costs. Compare with provenance intact.</tspan></text>
+<text x="40.0" y="771.0" text-anchor="start" dominant-baseline="middle" font-family="'DejaVu Sans', Arial, 'Helvetica Neue', sans-serif" font-size="16" fill="#526171"><tspan dy="-0" font-size="16">These checks verify records and execution; they do not authenticate the original experiments' chronology.</tspan></text>
+</svg>

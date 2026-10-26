@@ -1,0 +1,26 @@
+"/workspace/scratch/2aa93dc25af6/review_work_20261025/runtime_env/bin/python" -B scripts/artifact_inventory.py --check-static
+PASS: seven official source definitions and 21 configured profiles
+PASS: 292 sealed artifacts; synthetic / ogbn-arxiv; tensor loading and numerical replay not performed
+PASS: 292 sealed artifacts; synthetic / ogbn-products; tensor loading and numerical replay not performed
+PASS: 293 sealed artifacts; synthetic / ogbn-proteins; tensor loading and numerical replay not performed
+PASS: 292 sealed artifacts; synthetic / Roman-empire; tensor loading and numerical replay not performed
+PASS: 294 sealed artifacts; synthetic / PascalVOC-SP; tensor loading and numerical replay not performed
+PASS: 294 sealed artifacts; synthetic / COCO-SP; tensor loading and numerical replay not performed
+PASS: 294 sealed artifacts; synthetic / Peptides-func; tensor loading and numerical replay not performed
+"/workspace/scratch/2aa93dc25af6/review_work_20261025/runtime_env/bin/python" -B scripts/reproduce_examples.py --runs-root "examples/runs" \
+  --output-dir "/workspace/scratch/2aa93dc25af6/review_work_20261025/make_reports" --figures
+{
+  "complete_runs": 7,
+  "files": [
+    "example_scores.png",
+    "example_scores.svg",
+    "metrics.csv",
+    "metrics.md",
+    "replay.json"
+  ],
+  "output_directory": "/workspace/scratch/2aa93dc25af6/review_work_20261025/make_reports",
+  "predictors": 28,
+  "scope": "Synthetic software examples; not official benchmark scores or manuscript reproduction.",
+  "status": "PASS"
+}
+

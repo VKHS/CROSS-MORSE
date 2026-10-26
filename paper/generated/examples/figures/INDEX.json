@@ -1,0 +1,47 @@
+{
+ "datasets": [
+  "ogbn-arxiv",
+  "ogbn-products",
+  "ogbn-proteins",
+  "Roman-empire",
+  "PascalVOC-SP",
+  "COCO-SP",
+  "Peptides-func"
+ ],
+ "figures": {
+  "F1": {
+   "png": "F1.png",
+   "svg": "F1.svg"
+  },
+  "F2": {
+   "png": "F2.png",
+   "svg": "F2.svg"
+  },
+  "F3": {
+   "png": "F3.png",
+   "svg": "F3.svg"
+  },
+  "F4": {
+   "png": "F4.png",
+   "svg": "F4.svg"
+  },
+  "F5": {
+   "png": "F5.png",
+   "svg": "F5.svg"
+  },
+  "F6": {
+   "png": "F6.png",
+   "svg": "F6.svg"
+  }
+ },
+ "label": "examples",
+ "synthetic_examples": true,
+ "titles": {
+  "F1": "Paired test effect against expected serial overhead",
+  "F2": "Method map: official score against serial cost",
+  "F3": "Selection geometry: simultaneous intervals per route family",
+  "F4": "Depth dynamics of the frozen plant at entry",
+  "F5": "Qualification time by stage",
+  "F6": "Held-out mechanism contrasts"
+ }
+}

@@ -1,0 +1,50 @@
+{
+  "active_parameter_count": 276,
+  "baseline": true,
+  "best_internal_fit_val_ce": 1.444758951663971,
+  "best_internal_fit_val_loss": 1.444758951663971,
+  "best_internal_fit_val_metric": 0.09375,
+  "checkpoint_rule": "min_loss",
+  "checkpoint_selection_labels": "fit_val only",
+  "checkpoint_sha256": "ac49852fc47524927216a63697be3caff1a84cdfc2c5a2842838e294851ebea3",
+  "epochs_completed": 3,
+  "execution": "whole-graph episodes with gradient accumulation",
+  "graph_batch_size": 2,
+  "instrumentation": {
+    "backbone": "gps",
+    "controlled_depth": 8,
+    "dense_chunk_size": 0,
+    "global_attention": "unchanged graph-local branch",
+    "inserted_nominal": "literal identity",
+    "inserted_site_count": 6,
+    "native_aggregation": "nonnegative degree-normalized linear mean",
+    "native_position_choice": "first site in each block interval",
+    "native_site_count": 2,
+    "native_sites": [
+      1,
+      4
+    ],
+    "parameter_count": 5876,
+    "site_indexing": "zero-based transition d to d+1",
+    "task": {
+      "dataset": "COCO-SP",
+      "metric": "macro_f1",
+      "num_outputs": 4,
+      "prediction_level": "node",
+      "task_type": "multiclass"
+    },
+    "transport_history_definition": "kernel transport mass and expected kernel hops before source retention; inserted A0 bypass=0/0; designated native A0 mean aggregation=1/1; other transports use registered nu and kernel hop moment; hybrid resets=0/0; these are transport descriptors, not complete block work or effective output displacement"
+  },
+  "official_validation_used": false,
+  "parameter_count": 5876,
+  "schedule": "constant",
+  "seconds_this_attempt": 0.106028817999686,
+  "seed": 2,
+  "task": {
+    "dataset": "COCO-SP",
+    "metric": "macro_f1",
+    "num_outputs": 4,
+    "prediction_level": "node",
+    "task_type": "multiclass"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "config_sha256": "2b8da655efb76599067147c7e11b5dda4d6749741ad010d4518870e1e47eb873",
+  "dataset": "synthetic",
+  "implementation": "CROSS-MORSE",
+  "last_complete_stage": "evaluate",
+  "profile": "smoke",
+  "scientific_run": false,
+  "source_sha256": "9e0154c11c0ebc67d533a84b6d6a80c4e77a8d76e6d2cc165bcff5897980b108",
+  "status": "COMPLETE",
+  "task": {
+    "dataset": "Roman-empire",
+    "metric": "accuracy",
+    "num_outputs": 4,
+    "prediction_level": "node",
+    "task_type": "multiclass"
+  },
+  "test_labels_accessed": true,
+  "version": "1.0.0"
+}

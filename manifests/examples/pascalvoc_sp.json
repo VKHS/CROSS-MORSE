@@ -1,0 +1,196 @@
+{
+ "benchmark_dataset": "PascalVOC-SP",
+ "data_kind": "synthetic",
+ "dataset": "PascalVOC-SP",
+ "environment": {
+  "cuda_runtime": null,
+  "cudnn_deterministic": false,
+  "deterministic_algorithms_enabled": false,
+  "device": "cpu",
+  "gpu": null,
+  "machine": "x86_64",
+  "numpy": "2.3.5",
+  "platform": "Linux-6.18.55-x86_64-with-glibc2.39",
+  "precision": "fp32",
+  "python": "3.12.14",
+  "python_implementation": "CPython",
+  "tf32_matmul": false,
+  "torch": "2.10.0+cpu"
+ },
+ "identities": {
+  "config_sha256": "922018f810bb925df20d0e43ee887ae74ac6cc321b45fb3402246d3945c12563",
+  "prepared_fingerprint": "52ab05eed398c455693ed2cecb76be7e440840291dbc270a1e62b7699248593c",
+  "source_sha256": "9e0154c11c0ebc67d533a84b6d6a80c4e77a8d76e6d2cc165bcff5897980b108",
+  "unit_sha256": "2364a4ac52b0796d16a19b4fedfc2bc8d4fba6d62897ebf28c6f32c4f55ae7d2"
+ },
+ "is_benchmark_data": false,
+ "packages": {
+  "CairoSVG": "2.9.1",
+  "Jinja2": "3.1.6",
+  "MarkupSafe": "3.0.3",
+  "attrs": "26.1.0",
+  "cairocffi": "1.7.1",
+  "certifi": "2026.10.23",
+  "cffi": "2.1.1",
+  "charset-normalizer": "3.5.2",
+  "cloudpickle": "3.1.2",
+  "contourpy": "1.4.0",
+  "cssselect2": "0.10.1",
+  "cycler": "0.12.1",
+  "defusedxml": "0.7.1",
+  "filelock": "3.32.3",
+  "fonttools": "4.67.0",
+  "fsspec": "2026.7.0",
+  "idna": "3.20",
+  "joblib": "1.6.0",
+  "jsonschema": "4.26.0",
+  "jsonschema-specifications": "2025.9.1",
+  "kiwisolver": "1.5.1",
+  "littleutils": "0.2.4",
+  "matplotlib": "3.10.8",
+  "mpmath": "1.3.0",
+  "narwhals": "2.27.1",
+  "networkx": "3.6.1",
+  "numpy": "2.3.5",
+  "ogb": "1.3.6",
+  "outdated": "0.2.2",
+  "packaging": "26.3",
+  "pandas": "3.1.0",
+  "pillow": "13.0.0",
+  "pip": "25.0.1",
+  "pycparser": "3.12",
+  "pymetis": "2025.2.2",
+  "pyparsing": "3.3.3",
+  "python-dateutil": "3.0.0",
+  "referencing": "0.37.0",
+  "requests": "2.34.2",
+  "rpds-py": "2026.9.1",
+  "scikit-learn": "1.9.1",
+  "scipy": "1.17.0",
+  "setuptools": "78.1.0",
+  "six": "1.17.0",
+  "sympy": "1.14.0",
+  "threadpoolctl": "3.7.0",
+  "tinycss2": "1.5.1",
+  "torch": "2.10.0+cpu",
+  "tqdm": "4.70.1",
+  "typing_extensions": "4.16.0",
+  "tzdata": "2026.5",
+  "urllib3": "2.8.0",
+  "webencodings": "0.6.1"
+ },
+ "policy_lock": {
+  "comparator_hash": "45cbcd011171797345aabca18578a18facc059768609030abe5032f3f206e96d",
+  "deployed_hash": "45cbcd011171797345aabca18578a18facc059768609030abe5032f3f206e96d",
+  "model_hashes": {
+   "fit/full/controller.pt": "4a7e4b9f844f2be51ebdd6050097bf80445d7c96fb900102c72b976d5bbd8e42",
+   "fit/lean/controller.pt": "d08ecebaeb21114fc1de939fbbdbb0b0a63db45edf21eb9e01320de694539173",
+   "train/plant_seed1_best.pt": "fac7666435fec78eaa7307c1fa0fde6bee1dfaf658c9ec88f20b59445971f866",
+   "train/plant_seed2_best.pt": "591494d5b84a5d809cc18c0eedf9fe62380d0d1196fd10a5f082f2a5cb575ee1",
+   "train/q0_seed1_best.pt": "13cd292b88b1297c5218302163aa4e034248a35a0cd1c49ad97f61360aad7a2c",
+   "train/q0_seed2_best.pt": "874d5d578cee36ac9b96acba4bc337aa26314052ddc1951aae799dc3cf85fce6"
+  }
+ },
+ "profile": "smoke",
+ "run_name": "pascalvoc_sp",
+ "schema": "cross-morse-run-manifest-1",
+ "scientific_run": false,
+ "seeds": {
+  "bootstrap_seeds": {
+   "admission": 314165,
+   "final": 314166,
+   "selection": 314163
+  },
+  "ensemble_seeds": {
+   "qC": [
+    1,
+    2
+   ],
+   "qD": [
+    1,
+    2
+   ]
+  },
+  "partition_seed": 314159,
+  "split_index": null,
+  "training_seeds": [
+   1,
+   2
+  ]
+ },
+ "source_data": {
+  "num_features": 12,
+  "num_graphs": 80,
+  "num_nodes": 640,
+  "num_outputs": 4,
+  "source": "synthetic_fixture",
+  "source_array_hashes": {
+   "edge_attr": "ed7f3f8baf7374abe128a30b4298d4d0221fe3351a1b822c1a6f8859fe884186",
+   "edge_index": "f86c4776fa6490ca23b371a8d38e65849f077dff65a5f31164f26f2ac89a47fe",
+   "edge_ptr": "3d9edc70ae3b78834f628cfda853561d1452061fa47270ddb7f9eb3e9c5024c3",
+   "graph_ptr": "3d9edc70ae3b78834f628cfda853561d1452061fa47270ddb7f9eb3e9c5024c3",
+   "x": "8f8107030a9b3b508f444e88330a77af1453920edb4bc7ff0a1d9f098ea472b5",
+   "y": "1a1588f1358645f86e97e088ef1dd87cf934c8b8888d2bdef25a219c9780ce43"
+  }
+ },
+ "splits": {
+  "arrays": {
+   "clusters.npz": {
+    "bytes": 5396,
+    "sha256": "03d651c9e2e000cf1c5381a36448db454c284e1efb4288454187dc906686964a"
+   },
+   "graph_splits.npz": {
+    "bytes": 2838,
+    "sha256": "84a72e9153abc3bb7b9f996170a29678a162f9b6930629ba4707743a2dcba031"
+   },
+   "official_splits.npz": {
+    "bytes": 1386,
+    "sha256": "a4cd9951c7009f98a225426bf62f619f09c36753ae6223515ca81fbd3f148c44"
+   },
+   "splits.npz": {
+    "bytes": 8886,
+    "sha256": "2364a4ac52b0796d16a19b4fedfc2bc8d4fba6d62897ebf28c6f32c4f55ae7d2"
+   }
+  },
+  "graph_role_hashes": {
+   "admit": "7b86ae5df463f539c44f8c419a342743278834db03e3b6d56ac2cda1191dba0b",
+   "confirm": "6b1403021ab1c0cdbe3036bcb0f9fdd2785172dee3b19a6e94d5a71e254a1cb1",
+   "explore": "5a1e12e6cc684d887f7e39c0adfe5f5e8ea22c60d91de3414f2c7aae17a982d5",
+   "fit": "1456b3aa892e065d8145fd0e582295a4de86025395bd21775730de859c70026b",
+   "fit_train": "87ec3ae85086aa18e61a3006867bd5521509f9e8a2700745e7eeb6572eac857d",
+   "fit_val": "926756e2a57d399ee2f16a158bb34424bdd198b02f29c7dde54d90f12c8aa9f5",
+   "select": "90be4dabbf06e201a8d8ef2739f24c154d3e5349c5bc247f696c5ff373045604",
+   "test": "6de7fc5496bd5d95edcf676cbd6a3f0b059b2a7cab0271d82b7d8edce72cab2b"
+  },
+  "independent_graphs": true,
+  "official_split_axis": "graph",
+  "official_split_hashes": {
+   "test": "6de7fc5496bd5d95edcf676cbd6a3f0b059b2a7cab0271d82b7d8edce72cab2b",
+   "train": "754b8443e0a432e68aa4db16e15632a93b3f44eb9dea251398f56a30d371991a",
+   "valid": "7b86ae5df463f539c44f8c419a342743278834db03e3b6d56ac2cda1191dba0b"
+  },
+  "role_hashes": {
+   "admit": "c61e76e0940fb9c05b8cbae09f5bc1c0afb3ade9e1adfa6cf3f6fc3e4de78528",
+   "confirm": "608e314f8232bb7597df13465c793b74c25b5c2e6708e261ea7fc73c03af99dc",
+   "explore": "a1e6af1906379ae7a9784d67200ebe9b146782150793395fa326ad691490af3a",
+   "fit": "d310813d4d38dc8d02eb7ff4a3b0d6cfc3a7e6904b4dbcacf6f31357e6e961df",
+   "fit_train": "d4293e0f35eafb7bffc8fa0b825e72cd0ae72145cc6100ac8509696bf7418f25",
+   "fit_val": "c3bd1b840bbb9c9e6e4b3420ddad71f9b8f9cb91585a9091c05ab6cbd81ba451",
+   "select": "7bd9b19872a1c675260fb3393cd7bc9592edfaa1e3fee271086b75dfb10417b1",
+   "test": "920a840ddfd127d1923c4ca378e28ae5f6634aa2e60e8c3be61838db6b487d16"
+  },
+  "rule": "seeded permutation of official train; floor cuts at 60%,80%,90%; remaining units in confirm",
+  "sizes": {
+   "admit": 128,
+   "confirm": 40,
+   "explore": 80,
+   "fit": 224,
+   "fit_train": 208,
+   "fit_val": 16,
+   "select": 40,
+   "test": 128
+  },
+  "statistical_unit": "complete graph",
+  "unit": "graph"
+ }
+}

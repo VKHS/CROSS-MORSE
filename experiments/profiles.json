@@ -1,0 +1,1716 @@
+{
+  "dataset_count": 7,
+  "profile_count": 21,
+  "profiles": [
+    {
+      "admission": {
+        "alpha": 0.025,
+        "bootstrap_reps": 80,
+        "clip": 0.1,
+        "epsilon_a": 0.003,
+        "epsilon_metric": 0.001,
+        "rule": "cluster_bootstrap"
+      },
+      "config_sha256": "2f97bcb6667d1a9c246183513885913fa3677cf4a54b9afb94c0f1c46df331e5",
+      "data": {
+        "buffer_hops": 2,
+        "download": false,
+        "feature_standardization": false,
+        "internal_val_fraction": 0.1,
+        "num_clusters": 8,
+        "partitioner": "balanced",
+        "synthetic_classes": 4,
+        "synthetic_features": 12,
+        "synthetic_nodes": 160
+      },
+      "data_kind": "synthetic",
+      "dataset": "ogbn-arxiv",
+      "file_sha256": "ce5f54aa2c1f883f991bab57dc0ee359e926e085161d0a221b491f7091963487",
+      "master_and_split_seed": 314159,
+      "model": {
+        "activation": "relu",
+        "backbone": "shared_transport",
+        "checkpoint_segment": 3,
+        "depth": 6,
+        "dropout": 0.1,
+        "encoder_layers": 4,
+        "hidden_dim": 16,
+        "precision": "fp32"
+      },
+      "offline_trajectories": 12,
+      "path": "configs/arxiv_smoke.json",
+      "profile": "smoke",
+      "scientific_run": false,
+      "selection": {
+        "alpha": 0.025,
+        "bootstrap_reps": 80,
+        "enforce_entry_contract": false,
+        "epsilon_eq": 0.002,
+        "epsilon_metric": 0.001,
+        "epsilon_r": 0.003,
+        "inner_folds": 3,
+        "max_normalized_work": 18.0,
+        "outer_folds": 4
+      },
+      "split_index_default": null,
+      "task": {
+        "metric": "accuracy",
+        "num_outputs": 4,
+        "prediction_axis": "node",
+        "type": "multiclass"
+      },
+      "training": {
+        "checkpoint_rule": "min_loss",
+        "epochs": 3,
+        "grad_clip": 1.0,
+        "lr": 0.0003,
+        "patience": 3,
+        "schedule": "cosine",
+        "seeds": [
+          1,
+          2
+        ],
+        "weight_decay": 0.0001
+      },
+      "training_seeds": [
+        1,
+        2
+      ]
+    },
+    {
+      "admission": {
+        "alpha": 0.025,
+        "bootstrap_reps": 500,
+        "clip": 0.1,
+        "epsilon_a": 0.003,
+        "epsilon_metric": 0.001,
+        "rule": "cluster_bootstrap"
+      },
+      "config_sha256": "8a80815f499330dfc450734f3c141b4f3af0e72599da8d15d456a4a899ff91da",
+      "data": {
+        "buffer_hops": 2,
+        "download": true,
+        "feature_standardization": false,
+        "internal_val_fraction": 0.1,
+        "num_clusters": 32,
+        "partitioner": "metis"
+      },
+      "data_kind": "ogbn-arxiv",
+      "dataset": "ogbn-arxiv",
+      "file_sha256": "5e489d5f1fe1db6f69042c25695aad301b6c7b0360a50091baa8d72ffd99d909",
+      "master_and_split_seed": 314159,
+      "model": {
+        "activation": "relu",
+        "backbone": "shared_transport",
+        "checkpoint_segment": 8,
+        "depth": 32,
+        "dropout": 0.1,
+        "encoder_layers": 4,
+        "hidden_dim": 128,
+        "precision": "bf16"
+      },
+      "offline_trajectories": 24,
+      "path": "configs/arxiv_pilot.json",
+      "profile": "pilot",
+      "scientific_run": false,
+      "selection": {
+        "alpha": 0.025,
+        "bootstrap_reps": 500,
+        "enforce_entry_contract": false,
+        "epsilon_eq": 0.002,
+        "epsilon_metric": 0.001,
+        "epsilon_r": 0.003,
+        "inner_folds": 4,
+        "max_normalized_work": 18.0,
+        "outer_folds": 5
+      },
+      "split_index_default": null,
+      "task": {
+        "metric": "accuracy",
+        "num_outputs": 40,
+        "prediction_axis": "node",
+        "type": "multiclass"
+      },
+      "training": {
+        "checkpoint_rule": "min_loss",
+        "epochs": 30,
+        "grad_clip": 1.0,
+        "lr": 0.0003,
+        "patience": 8,
+        "schedule": "cosine",
+        "seeds": [
+          1,
+          2
+        ],
+        "weight_decay": 0.0001
+      },
+      "training_seeds": [
+        1,
+        2
+      ]
+    },
+    {
+      "admission": {
+        "alpha": 0.025,
+        "bootstrap_reps": 10000,
+        "clip": 0.1,
+        "epsilon_a": 0.003,
+        "epsilon_metric": 0.001,
+        "rule": "cluster_bootstrap"
+      },
+      "config_sha256": "f15da379dac45d0f3d992754a8203840b02b8f2aa8e84372aba19f73526478af",
+      "data": {
+        "buffer_hops": 2,
+        "download": true,
+        "feature_standardization": false,
+        "internal_val_fraction": 0.1,
+        "num_clusters": 32,
+        "partitioner": "metis"
+      },
+      "data_kind": "ogbn-arxiv",
+      "dataset": "ogbn-arxiv",
+      "file_sha256": "c5a9bc42a208e9c4762b130aef04044bf02b4953effde05a558c28c950888337",
+      "master_and_split_seed": 314159,
+      "model": {
+        "activation": "relu",
+        "backbone": "shared_transport",
+        "checkpoint_segment": 16,
+        "depth": 256,
+        "dropout": 0.1,
+        "encoder_layers": 4,
+        "hidden_dim": 512,
+        "precision": "bf16"
+      },
+      "offline_trajectories": 12800,
+      "path": "configs/arxiv_full.json",
+      "profile": "full",
+      "scientific_run": true,
+      "selection": {
+        "alpha": 0.025,
+        "bootstrap_reps": 10000,
+        "enforce_entry_contract": true,
+        "epsilon_eq": 0.002,
+        "epsilon_metric": 0.001,
+        "epsilon_r": 0.003,
+        "inner_folds": 4,
+        "max_normalized_work": 18.0,
+        "outer_folds": 5
+      },
+      "split_index_default": null,
+      "task": {
+        "metric": "accuracy",
+        "num_outputs": 40,
+        "prediction_axis": "node",
+        "type": "multiclass"
+      },
+      "training": {
+        "checkpoint_rule": "min_loss",
+        "epochs": 500,
+        "grad_clip": 1.0,
+        "lr": 0.0003,
+        "patience": 50,
+        "schedule": "cosine",
+        "seeds": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "weight_decay": 0.0001
+      },
+      "training_seeds": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ]
+    },
+    {
+      "admission": {
+        "alpha": 0.025,
+        "bootstrap_reps": 80,
+        "clip": 0.1,
+        "epsilon_a": 0.003,
+        "epsilon_metric": 0.001,
+        "rule": "cluster_bootstrap"
+      },
+      "config_sha256": "723c9eb663f1e68788ec50cf3deba3304425757a144228979e938cb57578e05d",
+      "data": {
+        "buffer_hops": 2,
+        "download": false,
+        "feature_standardization": false,
+        "internal_val_fraction": 0.1,
+        "num_clusters": 8,
+        "partitioner": "balanced",
+        "synthetic_classes": 4,
+        "synthetic_features": 12,
+        "synthetic_nodes": 160
+      },
+      "data_kind": "synthetic",
+      "dataset": "ogbn-products",
+      "file_sha256": "85565bfdad78e5f590b407072d8b252188976a16d83b0ea3f617015389544c52",
+      "master_and_split_seed": 314159,
+      "model": {
+        "activation": "relu",
+        "backbone": "shared_transport",
+        "checkpoint_segment": 3,
+        "dense_chunk_size": 64,
+        "depth": 6,
+        "dropout": 0.1,
+        "encoder_layers": 4,
+        "hidden_dim": 16,
+        "precision": "fp32"
+      },
+      "offline_trajectories": 12,
+      "path": "configs/products_smoke.json",
+      "profile": "smoke",
+      "scientific_run": false,
+      "selection": {
+        "alpha": 0.025,
+        "bootstrap_reps": 80,
+        "enforce_entry_contract": false,
+        "epsilon_eq": 0.002,
+        "epsilon_metric": 0.001,
+        "epsilon_r": 0.003,
+        "inner_folds": 3,
+        "max_normalized_work": 18.0,
+        "outer_folds": 4
+      },
+      "split_index_default": null,
+      "task": {
+        "metric": "accuracy",
+        "num_outputs": 4,
+        "prediction_axis": "node",
+        "type": "multiclass"
+      },
+      "training": {
+        "checkpoint_rule": "min_loss",
+        "epochs": 3,
+        "grad_clip": 1.0,
+        "lr": 0.0003,
+        "patience": 3,
+        "schedule": "cosine",
+        "seeds": [
+          1,
+          2
+        ],
+        "weight_decay": 0.0001
+      },
+      "training_seeds": [
+        1,
+        2
+      ]
+    },
+    {
+      "admission": {
+        "alpha": 0.025,
+        "bootstrap_reps": 500,
+        "clip": 0.1,
+        "epsilon_a": 0.003,
+        "epsilon_metric": 0.001,
+        "rule": "cluster_bootstrap"
+      },
+      "config_sha256": "123af660eea4dd7a0cfdb131dcab14a47acb2340e7175b2b092951f389a33798",
+      "data": {
+        "buffer_hops": 2,
+        "download": true,
+        "feature_standardization": false,
+        "internal_val_fraction": 0.1,
+        "num_clusters": 64,
+        "partitioner": "metis"
+      },
+      "data_kind": "ogbn-products",
+      "dataset": "ogbn-products",
+      "file_sha256": "aed5343aee8c9b1918d21808e886ad967ff813b6aa7a3415e0f2731480032f69",
+      "master_and_split_seed": 314159,
+      "model": {
+        "activation": "relu",
+        "backbone": "shared_transport",
+        "checkpoint_segment": 8,
+        "dense_chunk_size": 8192,
+        "depth": 32,
+        "dropout": 0.1,
+        "encoder_layers": 4,
+        "hidden_dim": 128,
+        "precision": "bf16"
+      },
+      "offline_trajectories": 24,
+      "path": "configs/products_pilot.json",
+      "profile": "pilot",
+      "scientific_run": false,
+      "selection": {
+        "alpha": 0.025,
+        "bootstrap_reps": 500,
+        "enforce_entry_contract": false,
+        "epsilon_eq": 0.002,
+        "epsilon_metric": 0.001,
+        "epsilon_r": 0.003,
+        "inner_folds": 4,
+        "max_normalized_work": 18.0,
+        "outer_folds": 5
+      },
+      "split_index_default": null,
+      "task": {
+        "metric": "accuracy",
+        "num_outputs": 47,
+        "prediction_axis": "node",
+        "type": "multiclass"
+      },
+      "training": {
+        "checkpoint_rule": "min_loss",
+        "epochs": 30,
+        "grad_clip": 1.0,
+        "lr": 0.0005,
+        "patience": 8,
+        "schedule": "cosine",
+        "seeds": [
+          1,
+          2
+        ],
+        "weight_decay": 1e-05
+      },
+      "training_seeds": [
+        1,
+        2
+      ]
+    },
+    {
+      "admission": {
+        "alpha": 0.025,
+        "bootstrap_reps": 10000,
+        "clip": 0.1,
+        "epsilon_a": 0.003,
+        "epsilon_metric": 0.001,
+        "rule": "cluster_bootstrap"
+      },
+      "config_sha256": "d7a6ea70935773a5996b307024b30ad09d8a8572f2773dbbc50e8c27d0497242",
+      "data": {
+        "buffer_hops": 2,
+        "download": true,
+        "feature_standardization": false,
+        "internal_val_fraction": 0.1,
+        "num_clusters": 64,
+        "partitioner": "metis"
+      },
+      "data_kind": "ogbn-products",
+      "dataset": "ogbn-products",
+      "file_sha256": "260a65fbe17ce2e05c6f14ba7bf357afafffc2185719735f8c5c91e2a0ba227a",
+      "master_and_split_seed": 314159,
+      "model": {
+        "activation": "relu",
+        "backbone": "shared_transport",
+        "checkpoint_segment": 8,
+        "dense_chunk_size": 65536,
+        "depth": 64,
+        "dropout": 0.1,
+        "encoder_layers": 3,
+        "hidden_dim": 512,
+        "precision": "bf16"
+      },
+      "offline_trajectories": 19200,
+      "path": "configs/products_full.json",
+      "profile": "full",
+      "scientific_run": true,
+      "selection": {
+        "alpha": 0.025,
+        "bootstrap_reps": 10000,
+        "enforce_entry_contract": true,
+        "epsilon_eq": 0.002,
+        "epsilon_metric": 0.001,
+        "epsilon_r": 0.003,
+        "inner_folds": 4,
+        "max_normalized_work": 18.0,
+        "outer_folds": 5
+      },
+      "split_index_default": null,
+      "task": {
+        "metric": "accuracy",
+        "num_outputs": 47,
+        "prediction_axis": "node",
+        "type": "multiclass"
+      },
+      "training": {
+        "batch_size": 65536,
+        "checkpoint_rule": "min_loss",
+        "epochs": 300,
+        "grad_clip": 1.0,
+        "lr": 0.0005,
+        "patience": 30,
+        "schedule": "cosine",
+        "seeds": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "weight_decay": 1e-05
+      },
+      "training_seeds": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ]
+    },
+    {
+      "admission": {
+        "alpha": 0.025,
+        "bootstrap_reps": 80,
+        "clip": 0.1,
+        "epsilon_a": 0.003,
+        "epsilon_metric": 0.001,
+        "rule": "cluster_bootstrap"
+      },
+      "config_sha256": "f5e80883a75806cad6a7c1ae4f0657dd3248e04855dd415ef05b5bd2127caf2b",
+      "data": {
+        "buffer_hops": 2,
+        "download": false,
+        "feature_standardization": false,
+        "internal_val_fraction": 0.1,
+        "num_clusters": 8,
+        "partitioner": "balanced",
+        "synthetic_classes": 4,
+        "synthetic_features": 12,
+        "synthetic_nodes": 160
+      },
+      "data_kind": "synthetic",
+      "dataset": "ogbn-proteins",
+      "file_sha256": "3a093fcff11cd3f5223aacb256a8333653a83219c0e090dd8b59de9507d2f9af",
+      "master_and_split_seed": 314159,
+      "model": {
+        "activation": "relu",
+        "backbone": "edge_weighted_transport",
+        "checkpoint_segment": 3,
+        "depth": 6,
+        "dropout": 0.1,
+        "encoder_layers": 4,
+        "hidden_dim": 16,
+        "precision": "fp32"
+      },
+      "offline_trajectories": 12,
+      "path": "configs/proteins_smoke.json",
+      "profile": "smoke",
+      "scientific_run": false,
+      "selection": {
+        "alpha": 0.025,
+        "bootstrap_reps": 80,
+        "enforce_entry_contract": false,
+        "epsilon_eq": 0.002,
+        "epsilon_metric": 0.001,
+        "epsilon_r": 0.003,
+        "inner_folds": 3,
+        "max_normalized_work": 18.0,
+        "outer_folds": 4
+      },
+      "split_index_default": null,
+      "task": {
+        "metric": "rocauc",
+        "num_outputs": 4,
+        "prediction_axis": "node",
+        "type": "multilabel"
+      },
+      "training": {
+        "checkpoint_rule": "min_loss",
+        "epochs": 3,
+        "grad_clip": 1.0,
+        "lr": 0.0003,
+        "patience": 3,
+        "schedule": "cosine",
+        "seeds": [
+          1,
+          2
+        ],
+        "weight_decay": 0.0001
+      },
+      "training_seeds": [
+        1,
+        2
+      ]
+    },
+    {
+      "admission": {
+        "alpha": 0.025,
+        "bootstrap_reps": 500,
+        "clip": 0.1,
+        "epsilon_a": 0.0015,
+        "epsilon_metric": 0.001,
+        "rule": "cluster_bootstrap"
+      },
+      "config_sha256": "00e36af500ed72f3dce4a8734103cacbcba9693538e89557fc1d500e87d09f8f",
+      "data": {
+        "buffer_hops": 2,
+        "download": true,
+        "feature_standardization": false,
+        "internal_val_fraction": 0.1,
+        "num_clusters": 32,
+        "partitioner": "degree_stratified"
+      },
+      "data_kind": "ogbn-proteins",
+      "dataset": "ogbn-proteins",
+      "file_sha256": "e08cc8377abd05abc462edb0698438c116ed6d4bd1074cd6267b36d0190f1edc",
+      "master_and_split_seed": 314159,
+      "model": {
+        "activation": "relu",
+        "backbone": "edge_weighted_transport",
+        "checkpoint_segment": 8,
+        "depth": 32,
+        "dropout": 0.1,
+        "encoder_layers": 4,
+        "hidden_dim": 128,
+        "precision": "bf16"
+      },
+      "offline_trajectories": 24,
+      "path": "configs/proteins_pilot.json",
+      "profile": "pilot",
+      "scientific_run": false,
+      "selection": {
+        "alpha": 0.025,
+        "bootstrap_reps": 500,
+        "enforce_entry_contract": false,
+        "epsilon_eq": 0.002,
+        "epsilon_metric": 0.001,
+        "epsilon_r": 0.0015,
+        "inner_folds": 4,
+        "max_normalized_work": 18.0,
+        "outer_folds": 5
+      },
+      "split_index_default": null,
+      "task": {
+        "metric": "rocauc",
+        "num_outputs": 112,
+        "prediction_axis": "node",
+        "type": "multilabel"
+      },
+      "training": {
+        "checkpoint_rule": "min_loss",
+        "epochs": 30,
+        "grad_clip": 1.0,
+        "lr": 0.0002,
+        "patience": 8,
+        "schedule": "cosine",
+        "seeds": [
+          1,
+          2
+        ],
+        "weight_decay": 1e-05
+      },
+      "training_seeds": [
+        1,
+        2
+      ]
+    },
+    {
+      "admission": {
+        "alpha": 0.025,
+        "bootstrap_reps": 10000,
+        "clip": 0.1,
+        "epsilon_a": 0.0015,
+        "epsilon_metric": 0.001,
+        "rule": "cluster_bootstrap"
+      },
+      "config_sha256": "21561d307f615f12dd905dbbfcd0037aa164cc99193c8d051be26998ab4cd611",
+      "data": {
+        "buffer_hops": 2,
+        "download": true,
+        "feature_standardization": false,
+        "internal_val_fraction": 0.1,
+        "num_clusters": 32,
+        "partitioner": "degree_stratified"
+      },
+      "data_kind": "ogbn-proteins",
+      "dataset": "ogbn-proteins",
+      "file_sha256": "ce0c01f6c6ed4aa5962797d1935f3a7e4a339fb8f26048ef951f1d337ec93eb5",
+      "master_and_split_seed": 314159,
+      "model": {
+        "activation": "relu",
+        "backbone": "edge_weighted_transport",
+        "checkpoint_segment": 16,
+        "depth": 128,
+        "dropout": 0.1,
+        "encoder_layers": 4,
+        "hidden_dim": 512,
+        "precision": "bf16"
+      },
+      "offline_trajectories": 14400,
+      "path": "configs/proteins_full.json",
+      "profile": "full",
+      "scientific_run": true,
+      "selection": {
+        "alpha": 0.025,
+        "bootstrap_reps": 10000,
+        "enforce_entry_contract": true,
+        "epsilon_eq": 0.002,
+        "epsilon_metric": 0.001,
+        "epsilon_r": 0.0015,
+        "inner_folds": 4,
+        "max_normalized_work": 18.0,
+        "outer_folds": 5
+      },
+      "split_index_default": null,
+      "task": {
+        "metric": "rocauc",
+        "num_outputs": 112,
+        "prediction_axis": "node",
+        "type": "multilabel"
+      },
+      "training": {
+        "checkpoint_rule": "min_loss",
+        "epochs": 400,
+        "grad_clip": 1.0,
+        "lr": 0.0002,
+        "patience": 40,
+        "schedule": "cosine",
+        "seeds": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "weight_decay": 1e-05
+      },
+      "training_seeds": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ]
+    },
+    {
+      "admission": {
+        "alpha": 0.025,
+        "bootstrap_reps": 80,
+        "clip": 0.1,
+        "epsilon_a": 0.003,
+        "epsilon_metric": 0.001,
+        "rule": "cluster_bootstrap"
+      },
+      "config_sha256": "2b8da655efb76599067147c7e11b5dda4d6749741ad010d4518870e1e47eb873",
+      "data": {
+        "buffer_hops": 2,
+        "download": false,
+        "feature_standardization": false,
+        "internal_val_fraction": 0.1,
+        "num_clusters": 8,
+        "partitioner": "balanced",
+        "split_index": 0,
+        "synthetic_classes": 4,
+        "synthetic_features": 12,
+        "synthetic_nodes": 160
+      },
+      "data_kind": "synthetic",
+      "dataset": "Roman-empire",
+      "file_sha256": "6e5d53ff9f6e7932b764312c43461cc2c8662096595e008c83c4151ea274a2fa",
+      "master_and_split_seed": 314159,
+      "model": {
+        "activation": "relu",
+        "backbone": "heterophily",
+        "checkpoint_segment": 3,
+        "depth": 6,
+        "dropout": 0.1,
+        "encoder_layers": 4,
+        "hidden_dim": 16,
+        "precision": "fp32"
+      },
+      "offline_trajectories": 12,
+      "path": "configs/roman_empire_smoke.json",
+      "profile": "smoke",
+      "scientific_run": false,
+      "selection": {
+        "alpha": 0.025,
+        "bootstrap_reps": 80,
+        "enforce_entry_contract": false,
+        "epsilon_eq": 0.002,
+        "epsilon_metric": 0.001,
+        "epsilon_r": 0.003,
+        "inner_folds": 3,
+        "max_normalized_work": 18.0,
+        "outer_folds": 4
+      },
+      "split_index_default": 0,
+      "task": {
+        "metric": "accuracy",
+        "num_outputs": 4,
+        "prediction_axis": "node",
+        "type": "multiclass"
+      },
+      "training": {
+        "checkpoint_rule": "min_loss",
+        "epochs": 3,
+        "grad_clip": 1.0,
+        "lr": 0.0003,
+        "patience": 3,
+        "schedule": "constant",
+        "seeds": [
+          1,
+          2
+        ],
+        "weight_decay": 0.0001
+      },
+      "training_seeds": [
+        1,
+        2
+      ]
+    },
+    {
+      "admission": {
+        "alpha": 0.025,
+        "bootstrap_reps": 500,
+        "clip": 0.1,
+        "epsilon_a": 0.003,
+        "epsilon_metric": 0.001,
+        "rule": "cluster_bootstrap"
+      },
+      "config_sha256": "b8bfef0ca9d57ec0abe7cdf2c5ff0bb1b62a0032939be7219cb07fc9e4ee0a53",
+      "data": {
+        "buffer_hops": 2,
+        "download": true,
+        "feature_standardization": false,
+        "internal_val_fraction": 0.1,
+        "num_clusters": 32,
+        "partitioner": "metis",
+        "split_index": 0
+      },
+      "data_kind": "Roman-empire",
+      "dataset": "Roman-empire",
+      "file_sha256": "86d3171fb5dc44185f09a7b5af95c2c5dc55692b0e85f3dc077d14628b222bd8",
+      "master_and_split_seed": 314159,
+      "model": {
+        "activation": "relu",
+        "backbone": "heterophily",
+        "checkpoint_segment": 8,
+        "depth": 32,
+        "dropout": 0.1,
+        "encoder_layers": 4,
+        "hidden_dim": 128,
+        "precision": "fp32"
+      },
+      "offline_trajectories": 24,
+      "path": "configs/roman_empire_pilot.json",
+      "profile": "pilot",
+      "scientific_run": false,
+      "selection": {
+        "alpha": 0.025,
+        "bootstrap_reps": 500,
+        "enforce_entry_contract": false,
+        "epsilon_eq": 0.002,
+        "epsilon_metric": 0.001,
+        "epsilon_r": 0.003,
+        "inner_folds": 4,
+        "max_normalized_work": 18.0,
+        "outer_folds": 5
+      },
+      "split_index_default": 0,
+      "task": {
+        "metric": "accuracy",
+        "num_outputs": 18,
+        "prediction_axis": "node",
+        "type": "multiclass"
+      },
+      "training": {
+        "checkpoint_rule": "min_loss",
+        "epochs": 30,
+        "grad_clip": 1.0,
+        "lr": 0.001,
+        "patience": 8,
+        "schedule": "constant",
+        "seeds": [
+          1,
+          2
+        ],
+        "weight_decay": 0.0005
+      },
+      "training_seeds": [
+        1,
+        2
+      ]
+    },
+    {
+      "admission": {
+        "alpha": 0.025,
+        "bootstrap_reps": 10000,
+        "clip": 0.1,
+        "epsilon_a": 0.003,
+        "epsilon_metric": 0.001,
+        "rule": "cluster_bootstrap"
+      },
+      "config_sha256": "a09f8f09da5fe86d8e6c338a5bf074c7a111d5ab32673fb47e1a0f894fdb78aa",
+      "data": {
+        "buffer_hops": 2,
+        "download": true,
+        "feature_standardization": false,
+        "internal_val_fraction": 0.1,
+        "num_clusters": 32,
+        "partitioner": "metis",
+        "split_index": 0
+      },
+      "data_kind": "Roman-empire",
+      "dataset": "Roman-empire",
+      "file_sha256": "63bff7a397b665ef22fe92ca749837c9ad390dd502936ac27bf1dbd6277169c1",
+      "master_and_split_seed": 314159,
+      "model": {
+        "activation": "relu",
+        "backbone": "heterophily",
+        "checkpoint_segment": 16,
+        "depth": 256,
+        "dropout": 0.1,
+        "encoder_layers": 4,
+        "hidden_dim": 384,
+        "precision": "fp32"
+      },
+      "offline_trajectories": 9600,
+      "path": "configs/roman_empire_full.json",
+      "profile": "full",
+      "scientific_run": true,
+      "selection": {
+        "alpha": 0.025,
+        "bootstrap_reps": 10000,
+        "enforce_entry_contract": true,
+        "epsilon_eq": 0.002,
+        "epsilon_metric": 0.001,
+        "epsilon_r": 0.003,
+        "inner_folds": 4,
+        "max_normalized_work": 18.0,
+        "outer_folds": 5
+      },
+      "split_index_default": 0,
+      "task": {
+        "metric": "accuracy",
+        "num_outputs": 18,
+        "prediction_axis": "node",
+        "type": "multiclass"
+      },
+      "training": {
+        "checkpoint_rule": "min_loss",
+        "epochs": 800,
+        "grad_clip": 1.0,
+        "lr": 0.001,
+        "patience": 100,
+        "schedule": "constant",
+        "seeds": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "weight_decay": 0.0005
+      },
+      "training_seeds": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ]
+    },
+    {
+      "admission": {
+        "alpha": 0.025,
+        "bootstrap_reps": 80,
+        "clip": 0.1,
+        "epsilon_a": 0.003,
+        "epsilon_metric": 0.001,
+        "rule": "empirical_bernstein"
+      },
+      "config_sha256": "922018f810bb925df20d0e43ee887ae74ac6cc321b45fb3402246d3945c12563",
+      "data": {
+        "download": false,
+        "feature_standardization": false,
+        "internal_val_fraction": 0.1,
+        "partitioner": "graphs",
+        "synthetic_classes": 4,
+        "synthetic_features": 12,
+        "synthetic_graphs": 80,
+        "synthetic_nodes": 160,
+        "synthetic_nodes_per_graph": 8
+      },
+      "data_kind": "synthetic",
+      "dataset": "PascalVOC-SP",
+      "file_sha256": "2dd58eef4ff26ddb6106fe6144e429abab81b8ab67fbbf38a0fd0e994247d55d",
+      "master_and_split_seed": 314159,
+      "model": {
+        "activation": "relu",
+        "attention_heads": 4,
+        "backbone": "gps",
+        "checkpoint_segment": 2,
+        "depth": 8,
+        "dropout": 0.1,
+        "encoder_layers": 1,
+        "hidden_dim": 16,
+        "native_layers": 2,
+        "precision": "fp32"
+      },
+      "offline_trajectories": 12,
+      "path": "configs/pascalvoc_sp_smoke.json",
+      "profile": "smoke",
+      "scientific_run": false,
+      "selection": {
+        "alpha": 0.025,
+        "bootstrap_reps": 80,
+        "enforce_entry_contract": false,
+        "epsilon_eq": 0.002,
+        "epsilon_metric": 0.001,
+        "epsilon_r": 0.003,
+        "inner_folds": 3,
+        "max_normalized_work": 18.0,
+        "outer_folds": 4
+      },
+      "split_index_default": null,
+      "task": {
+        "metric": "macro_f1",
+        "num_outputs": 4,
+        "prediction_axis": "node",
+        "type": "multiclass"
+      },
+      "training": {
+        "checkpoint_rule": "min_loss",
+        "epochs": 3,
+        "grad_clip": 1.0,
+        "graph_batch_size": 2,
+        "lr": 0.0003,
+        "patience": 3,
+        "schedule": "constant",
+        "seeds": [
+          1,
+          2
+        ],
+        "weight_decay": 0.0001
+      },
+      "training_seeds": [
+        1,
+        2
+      ]
+    },
+    {
+      "admission": {
+        "alpha": 0.025,
+        "bootstrap_reps": 500,
+        "clip": 0.1,
+        "epsilon_a": 0.003,
+        "epsilon_metric": 0.001,
+        "rule": "empirical_bernstein"
+      },
+      "config_sha256": "7ace686d108b3b4bdffd25b1e3ac7f17ce0d26f8cac2cde86ea8bd57a8a60765",
+      "data": {
+        "download": true,
+        "feature_standardization": false,
+        "internal_val_fraction": 0.1,
+        "partitioner": "graphs"
+      },
+      "data_kind": "PascalVOC-SP",
+      "dataset": "PascalVOC-SP",
+      "file_sha256": "d0e1e9c1c378fce12dce355176725d96fca6847d0f928bf8bbf229f697b3372c",
+      "master_and_split_seed": 314159,
+      "model": {
+        "activation": "relu",
+        "attention_heads": 4,
+        "backbone": "gps",
+        "checkpoint_segment": 8,
+        "depth": 32,
+        "dropout": 0.1,
+        "encoder_layers": 1,
+        "hidden_dim": 64,
+        "native_layers": 6,
+        "precision": "bf16"
+      },
+      "offline_trajectories": 24,
+      "path": "configs/pascalvoc_sp_pilot.json",
+      "profile": "pilot",
+      "scientific_run": false,
+      "selection": {
+        "alpha": 0.025,
+        "bootstrap_reps": 500,
+        "enforce_entry_contract": false,
+        "epsilon_eq": 0.002,
+        "epsilon_metric": 0.001,
+        "epsilon_r": 0.003,
+        "inner_folds": 4,
+        "max_normalized_work": 18.0,
+        "outer_folds": 5
+      },
+      "split_index_default": null,
+      "task": {
+        "metric": "macro_f1",
+        "num_outputs": 21,
+        "prediction_axis": "node",
+        "type": "multiclass"
+      },
+      "training": {
+        "checkpoint_rule": "min_loss",
+        "epochs": 30,
+        "grad_clip": 1.0,
+        "graph_batch_size": 8,
+        "lr": 0.0005,
+        "patience": 8,
+        "schedule": "constant",
+        "seeds": [
+          1,
+          2
+        ],
+        "weight_decay": 1e-05
+      },
+      "training_seeds": [
+        1,
+        2
+      ]
+    },
+    {
+      "admission": {
+        "alpha": 0.025,
+        "bootstrap_reps": 10000,
+        "clip": 0.1,
+        "epsilon_a": 0.003,
+        "epsilon_metric": 0.001,
+        "rule": "empirical_bernstein"
+      },
+      "config_sha256": "5ea7c3bf07d57529718c9c45f4a2ef356189fcec38c3243451d7fb1f0045901e",
+      "data": {
+        "download": true,
+        "feature_standardization": false,
+        "internal_val_fraction": 0.1,
+        "partitioner": "graphs"
+      },
+      "data_kind": "PascalVOC-SP",
+      "dataset": "PascalVOC-SP",
+      "file_sha256": "f845c5b00bae9a96e0ae67149d745e19ddb972b941c7edda046cea24b18653e4",
+      "master_and_split_seed": 314159,
+      "model": {
+        "activation": "relu",
+        "attention_heads": 4,
+        "backbone": "gps",
+        "checkpoint_segment": 16,
+        "depth": 128,
+        "dropout": 0.1,
+        "encoder_layers": 1,
+        "hidden_dim": 128,
+        "native_layers": 6,
+        "precision": "bf16"
+      },
+      "offline_trajectories": 20480,
+      "path": "configs/pascalvoc_sp_full.json",
+      "profile": "full",
+      "scientific_run": true,
+      "selection": {
+        "alpha": 0.025,
+        "bootstrap_reps": 10000,
+        "enforce_entry_contract": true,
+        "epsilon_eq": 0.002,
+        "epsilon_metric": 0.001,
+        "epsilon_r": 0.003,
+        "inner_folds": 4,
+        "max_normalized_work": 18.0,
+        "outer_folds": 5
+      },
+      "split_index_default": null,
+      "task": {
+        "metric": "macro_f1",
+        "num_outputs": 21,
+        "prediction_axis": "node",
+        "type": "multiclass"
+      },
+      "training": {
+        "checkpoint_rule": "min_loss",
+        "epochs": 300,
+        "grad_clip": 1.0,
+        "graph_batch_size": 32,
+        "lr": 0.0005,
+        "patience": 30,
+        "schedule": "constant",
+        "seeds": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "weight_decay": 1e-05
+      },
+      "training_seeds": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ]
+    },
+    {
+      "admission": {
+        "alpha": 0.025,
+        "bootstrap_reps": 80,
+        "clip": 0.1,
+        "epsilon_a": 0.003,
+        "epsilon_metric": 0.001,
+        "rule": "empirical_bernstein"
+      },
+      "config_sha256": "51bdd5f83258fb9cc6332f114f60e0067f86081ad93d8b8de8f4eb43000e8a58",
+      "data": {
+        "download": false,
+        "feature_standardization": false,
+        "internal_val_fraction": 0.1,
+        "partitioner": "graphs",
+        "synthetic_classes": 4,
+        "synthetic_features": 12,
+        "synthetic_graphs": 80,
+        "synthetic_nodes": 160,
+        "synthetic_nodes_per_graph": 8
+      },
+      "data_kind": "synthetic",
+      "dataset": "COCO-SP",
+      "file_sha256": "887460da410062b957600d977fcefd1b9ca3a1082171d30319b06781f44ea7be",
+      "master_and_split_seed": 314159,
+      "model": {
+        "activation": "relu",
+        "attention_heads": 4,
+        "backbone": "gps",
+        "checkpoint_segment": 2,
+        "depth": 8,
+        "dropout": 0.1,
+        "encoder_layers": 1,
+        "hidden_dim": 16,
+        "native_layers": 2,
+        "precision": "fp32"
+      },
+      "offline_trajectories": 12,
+      "path": "configs/coco_sp_smoke.json",
+      "profile": "smoke",
+      "scientific_run": false,
+      "selection": {
+        "alpha": 0.025,
+        "bootstrap_reps": 80,
+        "enforce_entry_contract": false,
+        "epsilon_eq": 0.002,
+        "epsilon_metric": 0.001,
+        "epsilon_r": 0.003,
+        "inner_folds": 3,
+        "max_normalized_work": 18.0,
+        "outer_folds": 4
+      },
+      "split_index_default": null,
+      "task": {
+        "metric": "macro_f1",
+        "num_outputs": 4,
+        "prediction_axis": "node",
+        "type": "multiclass"
+      },
+      "training": {
+        "checkpoint_rule": "min_loss",
+        "epochs": 3,
+        "grad_clip": 1.0,
+        "graph_batch_size": 2,
+        "lr": 0.0003,
+        "patience": 3,
+        "schedule": "constant",
+        "seeds": [
+          1,
+          2
+        ],
+        "weight_decay": 0.0001
+      },
+      "training_seeds": [
+        1,
+        2
+      ]
+    },
+    {
+      "admission": {
+        "alpha": 0.025,
+        "bootstrap_reps": 500,
+        "clip": 0.1,
+        "epsilon_a": 0.003,
+        "epsilon_metric": 0.001,
+        "rule": "empirical_bernstein"
+      },
+      "config_sha256": "d57af541f492fa05645298848a90cb75c1ea98ac68d45a0ae4a84c00c071d905",
+      "data": {
+        "download": true,
+        "feature_standardization": false,
+        "internal_val_fraction": 0.1,
+        "partitioner": "graphs"
+      },
+      "data_kind": "COCO-SP",
+      "dataset": "COCO-SP",
+      "file_sha256": "a104b40591d2e3bcb39d291980cb47947d34f900cd30680439c609390e098d81",
+      "master_and_split_seed": 314159,
+      "model": {
+        "activation": "relu",
+        "attention_heads": 4,
+        "backbone": "gps",
+        "checkpoint_segment": 8,
+        "depth": 32,
+        "dropout": 0.1,
+        "encoder_layers": 1,
+        "hidden_dim": 64,
+        "native_layers": 6,
+        "precision": "bf16"
+      },
+      "offline_trajectories": 24,
+      "path": "configs/coco_sp_pilot.json",
+      "profile": "pilot",
+      "scientific_run": false,
+      "selection": {
+        "alpha": 0.025,
+        "bootstrap_reps": 500,
+        "enforce_entry_contract": false,
+        "epsilon_eq": 0.002,
+        "epsilon_metric": 0.001,
+        "epsilon_r": 0.003,
+        "inner_folds": 4,
+        "max_normalized_work": 18.0,
+        "outer_folds": 5
+      },
+      "split_index_default": null,
+      "task": {
+        "metric": "macro_f1",
+        "num_outputs": 81,
+        "prediction_axis": "node",
+        "type": "multiclass"
+      },
+      "training": {
+        "checkpoint_rule": "min_loss",
+        "epochs": 30,
+        "grad_clip": 1.0,
+        "graph_batch_size": 8,
+        "lr": 0.0005,
+        "patience": 8,
+        "schedule": "constant",
+        "seeds": [
+          1,
+          2
+        ],
+        "weight_decay": 1e-05
+      },
+      "training_seeds": [
+        1,
+        2
+      ]
+    },
+    {
+      "admission": {
+        "alpha": 0.025,
+        "bootstrap_reps": 10000,
+        "clip": 0.1,
+        "epsilon_a": 0.003,
+        "epsilon_metric": 0.001,
+        "rule": "empirical_bernstein"
+      },
+      "config_sha256": "3eef85e35956a7f22da8eca4c7aacc73b2dc9678df4d4eb7dedfdd4382b340ed",
+      "data": {
+        "download": true,
+        "feature_standardization": false,
+        "internal_val_fraction": 0.1,
+        "partitioner": "graphs"
+      },
+      "data_kind": "COCO-SP",
+      "dataset": "COCO-SP",
+      "file_sha256": "470d313e2b66c645a77ee8ad7983ad8f4a7f609f39863678cb75750899d15b6e",
+      "master_and_split_seed": 314159,
+      "model": {
+        "activation": "relu",
+        "attention_heads": 4,
+        "backbone": "gps",
+        "checkpoint_segment": 16,
+        "depth": 128,
+        "dropout": 0.1,
+        "encoder_layers": 1,
+        "hidden_dim": 128,
+        "native_layers": 6,
+        "precision": "bf16"
+      },
+      "offline_trajectories": 32000,
+      "path": "configs/coco_sp_full.json",
+      "profile": "full",
+      "scientific_run": true,
+      "selection": {
+        "alpha": 0.025,
+        "bootstrap_reps": 10000,
+        "enforce_entry_contract": true,
+        "epsilon_eq": 0.002,
+        "epsilon_metric": 0.001,
+        "epsilon_r": 0.003,
+        "inner_folds": 4,
+        "max_normalized_work": 18.0,
+        "outer_folds": 5
+      },
+      "split_index_default": null,
+      "task": {
+        "metric": "macro_f1",
+        "num_outputs": 81,
+        "prediction_axis": "node",
+        "type": "multiclass"
+      },
+      "training": {
+        "checkpoint_rule": "min_loss",
+        "epochs": 300,
+        "grad_clip": 1.0,
+        "graph_batch_size": 32,
+        "lr": 0.0005,
+        "patience": 30,
+        "schedule": "constant",
+        "seeds": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "weight_decay": 1e-05
+      },
+      "training_seeds": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ]
+    },
+    {
+      "admission": {
+        "alpha": 0.025,
+        "bootstrap_reps": 80,
+        "clip": 0.1,
+        "epsilon_a": 0.003,
+        "epsilon_metric": 0.001,
+        "rule": "empirical_bernstein"
+      },
+      "config_sha256": "286b22b6af7a6faefa617db030931ef522bef77157294b536089634410ea53da",
+      "data": {
+        "download": false,
+        "feature_standardization": false,
+        "internal_val_fraction": 0.1,
+        "partitioner": "graphs",
+        "synthetic_classes": 4,
+        "synthetic_features": 12,
+        "synthetic_graphs": 80,
+        "synthetic_nodes": 160,
+        "synthetic_nodes_per_graph": 8
+      },
+      "data_kind": "synthetic",
+      "dataset": "Peptides-func",
+      "file_sha256": "d0f525794f46aaa3ec6875a87a54007a519b3b529e612a9fc0edafb830c2829e",
+      "master_and_split_seed": 314159,
+      "model": {
+        "activation": "relu",
+        "backbone": "linear_gine",
+        "checkpoint_segment": 2,
+        "depth": 8,
+        "dropout": 0.1,
+        "encoder_layers": 1,
+        "hidden_dim": 16,
+        "native_layers": 2,
+        "precision": "fp32"
+      },
+      "offline_trajectories": 12,
+      "path": "configs/peptides_func_smoke.json",
+      "profile": "smoke",
+      "scientific_run": false,
+      "selection": {
+        "alpha": 0.025,
+        "bootstrap_reps": 80,
+        "enforce_entry_contract": false,
+        "epsilon_eq": 0.002,
+        "epsilon_metric": 0.001,
+        "epsilon_r": 0.003,
+        "inner_folds": 3,
+        "max_normalized_work": 18.0,
+        "outer_folds": 4
+      },
+      "split_index_default": null,
+      "task": {
+        "metric": "ap",
+        "num_outputs": 4,
+        "prediction_axis": "graph",
+        "type": "multilabel"
+      },
+      "training": {
+        "checkpoint_rule": "max_ap_bce_tiebreak",
+        "epochs": 3,
+        "grad_clip": 1.0,
+        "graph_batch_size": 2,
+        "lr": 0.0003,
+        "patience": 3,
+        "schedule": "constant",
+        "seeds": [
+          1,
+          2
+        ],
+        "weight_decay": 0.0001
+      },
+      "training_seeds": [
+        1,
+        2
+      ]
+    },
+    {
+      "admission": {
+        "alpha": 0.025,
+        "bootstrap_reps": 500,
+        "clip": 0.1,
+        "epsilon_a": 0.0015,
+        "epsilon_metric": 0.001,
+        "rule": "empirical_bernstein"
+      },
+      "config_sha256": "1878ff366201aadd45231331b7f22625b97671bea97b3fbb26d7b96f4b873653",
+      "data": {
+        "download": true,
+        "feature_standardization": false,
+        "internal_val_fraction": 0.1,
+        "partitioner": "graphs"
+      },
+      "data_kind": "Peptides-func",
+      "dataset": "Peptides-func",
+      "file_sha256": "abece102eec7368ebc174e42347945573100784fa3d7158603a77071919315ce",
+      "master_and_split_seed": 314159,
+      "model": {
+        "activation": "relu",
+        "backbone": "linear_gine",
+        "checkpoint_segment": 8,
+        "depth": 32,
+        "dropout": 0.1,
+        "encoder_layers": 1,
+        "hidden_dim": 64,
+        "native_layers": 8,
+        "precision": "bf16"
+      },
+      "offline_trajectories": 24,
+      "path": "configs/peptides_func_pilot.json",
+      "profile": "pilot",
+      "scientific_run": false,
+      "selection": {
+        "alpha": 0.025,
+        "bootstrap_reps": 500,
+        "enforce_entry_contract": false,
+        "epsilon_eq": 0.002,
+        "epsilon_metric": 0.001,
+        "epsilon_r": 0.0015,
+        "inner_folds": 4,
+        "max_normalized_work": 18.0,
+        "outer_folds": 5
+      },
+      "split_index_default": null,
+      "task": {
+        "metric": "ap",
+        "num_outputs": 10,
+        "prediction_axis": "graph",
+        "type": "multilabel"
+      },
+      "training": {
+        "checkpoint_rule": "max_ap_bce_tiebreak",
+        "epochs": 30,
+        "grad_clip": 1.0,
+        "graph_batch_size": 8,
+        "lr": 0.001,
+        "patience": 8,
+        "schedule": "constant",
+        "seeds": [
+          1,
+          2
+        ],
+        "weight_decay": 1e-05
+      },
+      "training_seeds": [
+        1,
+        2
+      ]
+    },
+    {
+      "admission": {
+        "alpha": 0.025,
+        "bootstrap_reps": 10000,
+        "clip": 0.1,
+        "epsilon_a": 0.0015,
+        "epsilon_metric": 0.001,
+        "rule": "empirical_bernstein"
+      },
+      "config_sha256": "975c4ee1220e859f67e2adc714313ed3ce7faadf47af01663ff624b496e08d5a",
+      "data": {
+        "download": true,
+        "feature_standardization": false,
+        "internal_val_fraction": 0.1,
+        "partitioner": "graphs"
+      },
+      "data_kind": "Peptides-func",
+      "dataset": "Peptides-func",
+      "file_sha256": "554e5e8417818bb279832dbd15aef4da2f2bb5ec562e4ce16baa4bad4d710578",
+      "master_and_split_seed": 314159,
+      "model": {
+        "activation": "relu",
+        "backbone": "linear_gine",
+        "checkpoint_segment": 16,
+        "depth": 64,
+        "dropout": 0.1,
+        "encoder_layers": 1,
+        "hidden_dim": 128,
+        "native_layers": 8,
+        "precision": "bf16"
+      },
+      "offline_trajectories": 24000,
+      "path": "configs/peptides_func_full.json",
+      "profile": "full",
+      "scientific_run": true,
+      "selection": {
+        "alpha": 0.025,
+        "bootstrap_reps": 10000,
+        "enforce_entry_contract": true,
+        "epsilon_eq": 0.002,
+        "epsilon_metric": 0.001,
+        "epsilon_r": 0.0015,
+        "inner_folds": 4,
+        "max_normalized_work": 18.0,
+        "outer_folds": 5
+      },
+      "split_index_default": null,
+      "task": {
+        "metric": "ap",
+        "num_outputs": 10,
+        "prediction_axis": "graph",
+        "type": "multilabel"
+      },
+      "training": {
+        "checkpoint_rule": "max_ap_bce_tiebreak",
+        "epochs": 250,
+        "grad_clip": 1.0,
+        "graph_batch_size": 128,
+        "lr": 0.001,
+        "patience": 30,
+        "schedule": "constant",
+        "seeds": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "weight_decay": 1e-05
+      },
+      "training_seeds": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ]
+    }
+  ],
+  "roman_campaign": {
+    "dataset": "Roman-empire",
+    "official_split_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "single_split_is_aggregate": false
+  },
+  "schema_version": "cross-morse-configured-profiles-1",
+  "scope": "Generated from committed configuration bytes. Configured seeds are not historical manuscript seed identities; profiles are not evidence that their runs completed."
+}

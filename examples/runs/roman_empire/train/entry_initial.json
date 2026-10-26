@@ -1,0 +1,106 @@
+{
+  "depth_accuracy": [
+    0.0,
+    0.6,
+    0.6,
+    0.6
+  ],
+  "depth_ce": [
+    1.7094261646270752,
+    1.0465102195739746,
+    1.1434710025787354,
+    1.073732614517212
+  ],
+  "depth_gate_pass": true,
+  "depth_grid": [
+    1,
+    2,
+    4,
+    6
+  ],
+  "depth_loss": [
+    1.7094261646270752,
+    1.0465102195739746,
+    1.1434710025787354,
+    1.073732614517212
+  ],
+  "depth_metric": [
+    0.0,
+    0.6,
+    0.6,
+    0.6
+  ],
+  "dil_gap": -0.11400060436425186,
+  "dil_log_depth": 1.207541420248175,
+  "dil_reference": "feature-only q0 loss repeated on the depth grid (reconstruction choice)",
+  "identity_pass": true,
+  "initial_entry_pass": false,
+  "instrumentation": {
+    "backbone": "heterophily",
+    "controlled_depth": 6,
+    "dense_chunk_size": 0,
+    "inserted_site_count": 0,
+    "native_site_count": 6,
+    "parameter_count": 1668,
+    "site_indexing": "zero-based transition d to d+1",
+    "task": {
+      "dataset": "Roman-empire",
+      "metric": "accuracy",
+      "num_outputs": 4,
+      "prediction_level": "node",
+      "task_type": "multiclass"
+    },
+    "transport_history_definition": "kernel transport mass and expected kernel hops before source retention; inserted A0 bypass=0/0; designated native A0 mean aggregation=1/1; other transports use registered nu and kernel hop moment; hybrid resets=0/0; these are transport descriptors, not complete block work or effective output displacement"
+  },
+  "labels": "internal D_fit validation",
+  "loss_name": "ce",
+  "metric_available": true,
+  "metric_name": "accuracy",
+  "nominal_identity": [
+    {
+      "absolute_fit_val_loss_deviation": 0.0,
+      "loss_tolerance": 1e-06,
+      "max_relative_state_error": 0.0,
+      "pass": true,
+      "seed": 1,
+      "state_tolerance": 1e-05
+    },
+    {
+      "absolute_fit_val_loss_deviation": 0.0,
+      "loss_tolerance": 1e-06,
+      "max_relative_state_error": 0.0,
+      "pass": true,
+      "seed": 2,
+      "state_tolerance": 1e-05
+    }
+  ],
+  "pdd_fraction": 0.0,
+  "plant_gate_pass": false,
+  "plant_vs_q0": {
+    "bootstrap_replicates": 80,
+    "bootstrap_seed": 314160,
+    "independent_graph_guarantee": false,
+    "interval_level": 0.95,
+    "lower": -0.5215843826532364,
+    "mean": -0.2478094220161438,
+    "method": "paired whole-unit bootstrap; descriptive when units are dependent",
+    "one_sided_alpha": 0.025,
+    "p_greater_zero": 0.9259259259259259,
+    "p_less_zero": 0.08641975308641975,
+    "se": 0.15631997769298295,
+    "units": 4,
+    "upper": 0.03141855001449585,
+    "valid_interval": true,
+    "weight_sum": 5.0,
+    "weighting": "fixed_unit_weight_ratio"
+  },
+  "risk_weighting": "node-weighted statistical cores",
+  "statistical_scope": "descriptive dependent-core bootstrap",
+  "task": {
+    "dataset": "Roman-empire",
+    "metric": "accuracy",
+    "num_outputs": 4,
+    "prediction_level": "node",
+    "task_type": "multiclass"
+  }
+}

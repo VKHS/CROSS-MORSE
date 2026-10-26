@@ -1,0 +1,9 @@
+{
+  "path": "/workspace/scratch/2aa93dc25af6/review_work_20261025/validation_current/peptides_review.zip",
+  "sha256": "0639dfec84af71a069d962253aadbd752fb10fe870906bed6d57640084849ed6",
+  "status": "PASS",
+  "dataset": "synthetic",
+  "scientific_run": false,
+  "source_and_run_unmodified": true,
+  "checkpoints_included": false
+}

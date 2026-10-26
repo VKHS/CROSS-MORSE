@@ -1,0 +1,16 @@
+{
+ "schema": "cross-morse-records-index-1",
+ "sets": [],
+ "sets_defined": [
+  "baselines",
+  "factorials",
+  "negative_controls",
+  "input_gate",
+  "nominal_time",
+  "sensor_parameters",
+  "cross_backbone",
+  "ensemble_grid",
+  "inserted_site",
+  "budget_matched"
+ ]
+}

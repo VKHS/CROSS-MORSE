@@ -1,0 +1,240 @@
+{
+  "config_sha256": "286b22b6af7a6faefa617db030931ef522bef77157294b536089634410ea53da",
+  "label_accesses": [
+    {
+      "nodes": 10,
+      "role": "explore",
+      "stage": "select"
+    },
+    {
+      "nodes": 10,
+      "role": "explore",
+      "stage": "select"
+    },
+    {
+      "nodes": 10,
+      "role": "explore",
+      "stage": "select"
+    },
+    {
+      "nodes": 10,
+      "role": "explore",
+      "stage": "select"
+    },
+    {
+      "nodes": 10,
+      "role": "explore",
+      "stage": "select"
+    },
+    {
+      "nodes": 10,
+      "role": "explore",
+      "stage": "select"
+    },
+    {
+      "nodes": 5,
+      "role": "select",
+      "stage": "select"
+    },
+    {
+      "nodes": 5,
+      "role": "select",
+      "stage": "select"
+    },
+    {
+      "nodes": 5,
+      "role": "select",
+      "stage": "select"
+    },
+    {
+      "nodes": 5,
+      "role": "select",
+      "stage": "select"
+    },
+    {
+      "nodes": 5,
+      "role": "select",
+      "stage": "select"
+    },
+    {
+      "nodes": 5,
+      "role": "select",
+      "stage": "select"
+    },
+    {
+      "nodes": 5,
+      "role": "select",
+      "stage": "select"
+    },
+    {
+      "nodes": 5,
+      "role": "select",
+      "stage": "select"
+    },
+    {
+      "nodes": 5,
+      "role": "select",
+      "stage": "select"
+    },
+    {
+      "nodes": 5,
+      "role": "select",
+      "stage": "select"
+    },
+    {
+      "nodes": 5,
+      "role": "select",
+      "stage": "select"
+    },
+    {
+      "nodes": 5,
+      "role": "select",
+      "stage": "select"
+    },
+    {
+      "nodes": 5,
+      "role": "select",
+      "stage": "select"
+    },
+    {
+      "nodes": 5,
+      "role": "select",
+      "stage": "select"
+    },
+    {
+      "nodes": 5,
+      "role": "select",
+      "stage": "select"
+    },
+    {
+      "nodes": 5,
+      "role": "select",
+      "stage": "select"
+    },
+    {
+      "nodes": 5,
+      "role": "select",
+      "stage": "select"
+    },
+    {
+      "nodes": 5,
+      "role": "select",
+      "stage": "select"
+    },
+    {
+      "nodes": 5,
+      "role": "select",
+      "stage": "select"
+    },
+    {
+      "nodes": 5,
+      "role": "select",
+      "stage": "select"
+    },
+    {
+      "nodes": 5,
+      "role": "select",
+      "stage": "select"
+    },
+    {
+      "nodes": 5,
+      "role": "select",
+      "stage": "select"
+    },
+    {
+      "nodes": 5,
+      "role": "select",
+      "stage": "select"
+    },
+    {
+      "nodes": 5,
+      "role": "select",
+      "stage": "select"
+    },
+    {
+      "nodes": 5,
+      "role": "select",
+      "stage": "select"
+    },
+    {
+      "nodes": 5,
+      "role": "select",
+      "stage": "select"
+    },
+    {
+      "nodes": 5,
+      "role": "select",
+      "stage": "select"
+    },
+    {
+      "nodes": 5,
+      "role": "select",
+      "stage": "select"
+    },
+    {
+      "nodes": 5,
+      "role": "select",
+      "stage": "select"
+    },
+    {
+      "nodes": 5,
+      "role": "select",
+      "stage": "select"
+    },
+    {
+      "nodes": 5,
+      "role": "select",
+      "stage": "select"
+    },
+    {
+      "nodes": 5,
+      "role": "select",
+      "stage": "select"
+    },
+    {
+      "nodes": 5,
+      "role": "select",
+      "stage": "select"
+    },
+    {
+      "nodes": 5,
+      "role": "select",
+      "stage": "select"
+    },
+    {
+      "nodes": 5,
+      "role": "select",
+      "stage": "select"
+    },
+    {
+      "nodes": 5,
+      "role": "select",
+      "stage": "select"
+    },
+    {
+      "nodes": 5,
+      "role": "select",
+      "stage": "select"
+    },
+    {
+      "nodes": 5,
+      "role": "select",
+      "stage": "select"
+    },
+    {
+      "nodes": 5,
+      "role": "select",
+      "stage": "select"
+    },
+    {
+      "nodes": 5,
+      "role": "select",
+      "stage": "select"
+    }
+  ],
+  "manifest_sha256": "01d71215c04861d12f2f0cd96714bbe9cd39c162d939ea0216dfa96b8b2747c0",
+  "seconds_this_attempt": 51.5454024579999,
+  "source_sha256": "9e0154c11c0ebc67d533a84b6d6a80c4e77a8d76e6d2cc165bcff5897980b108",
+  "stage": "select",
+  "status": "COMPLETE"
+}

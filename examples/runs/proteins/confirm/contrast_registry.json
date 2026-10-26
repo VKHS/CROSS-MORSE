@@ -1,0 +1,6 @@
+{
+  "candidate_indices": [],
+  "family_scope": "selected route and eligible simpler predecessors on the declared dataset",
+  "selection_fixed": true,
+  "state_matching": "exact depth, previous action, initial entropy bin"
+}

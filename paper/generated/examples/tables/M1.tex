@@ -1,0 +1,23 @@
+% Split, seed and environment manifest
+% generated from 7 run(s) [examples]; runtime source 9e0154c11c0e; runs: ogbn-arxiv:arxiv, ogbn-products:products, ogbn-proteins:proteins, Roman-empire:roman_empire, PascalVOC-SP:pascalvoc_sp, COCO-SP:coco_sp, Peptides-func:peptides_func
+% Do not edit: regenerate with `make tables`.
+% SYNTHETIC SOFTWARE EXAMPLES: these values are not benchmark results.
+\begin{table}[t]
+\centering
+\small
+\caption{Split, seed and environment manifest (synthetic example runs). Every value is read from the sealed run: prepared/metadata.json (split rule, sizes and role hashes), config.json (seeds), final/results_summary.json (ensemble members), the decision records (bootstrap seeds), environment.json and run_state.json. The full role membership arrays are prepared/splits.npz; manifests/ holds the extracted per-run manifests.}
+\label{tab:M1}
+\begin{tabular}{lllllllllllll}
+\hline
+Dataset & profile & data source & split unit & split sizes (fit/explore/select/confirm/admit/test) & partition seed & training seeds & ensemble seeds q\_C / q\_D & bootstrap seeds (select/admit/final) & Python / Torch / CUDA & device & source identity & config identity \\
+\hline
+ogbn-arxiv & smoke & synthetic\_fixture & node & 57/19/10/10/32/32 & 314159 & [1, 2] & [1, 2] / [1, 2] & 314163 / 314165 / 314166 & 3.12.14 / 2.10.0+cpu / None & cpu & 9e0154c11c0ebc67 & 2f97bcb6667d1a9c \\
+ogbn-products & smoke & synthetic\_fixture & node & 57/19/10/10/32/32 & 314159 & [1, 2] & [1, 2] / [1, 2] & 314163 / 314165 / 314166 & 3.12.14 / 2.10.0+cpu / None & cpu & 9e0154c11c0ebc67 & 723c9eb663f1e687 \\
+ogbn-proteins & smoke & synthetic\_fixture & node & 57/19/10/10/32/32 & 314159 & [1, 2] & [1] / [1] & 314163 / 314165 / 314166 & 3.12.14 / 2.10.0+cpu / None & cpu & 9e0154c11c0ebc67 & f5e80883a75806ca \\
+Roman-empire & smoke & synthetic\_fixture & node & 57/19/10/10/32/32 & 314159 & [1, 2] & [1] / [1] & 314163 / 314165 / 314166 & 3.12.14 / 2.10.0+cpu / None & cpu & 9e0154c11c0ebc67 & 2b8da655efb76599 \\
+PascalVOC-SP & smoke & synthetic\_fixture & graph & 224/80/40/40/128/128 & 314159 & [1, 2] & [1, 2] / [1, 2] & 314163 / 314165 / 314166 & 3.12.14 / 2.10.0+cpu / None & cpu & 9e0154c11c0ebc67 & 922018f810bb925d \\
+COCO-SP & smoke & synthetic\_fixture & graph & 224/80/40/40/128/128 & 314159 & [1, 2] & [1, 2] / [1, 2] & 314163 / 314165 / 314166 & 3.12.14 / 2.10.0+cpu / None & cpu & 9e0154c11c0ebc67 & 51bdd5f83258fb9c \\
+Peptides-func & smoke & synthetic\_fixture & graph & 28/10/5/5/16/16 & 314159 & [1, 2] & [1, 2] / [1, 2] & 314163 / 314165 / 314166 & 3.12.14 / 2.10.0+cpu / None & cpu & 9e0154c11c0ebc67 & 286b22b6af7a6fae \\
+\hline
+\end{tabular}
+\end{table}

@@ -1,0 +1,41 @@
+{
+  "assessment_fraction": 0.2,
+  "assessment_used_for_selection": false,
+  "calibration_fraction": 0.2,
+  "data_role": "Dexplore",
+  "fingerprint": "f6cd94686ed73133363a2a6b35e020df2d13153e7d4f2f2811d85510bfe75607",
+  "group_definition": "complete seed_index/trajectory pair; not independent graphs",
+  "groups": {
+    "assessment": [
+      3,
+      10
+    ],
+    "model_fit": [
+      0,
+      1,
+      2,
+      4,
+      6,
+      7,
+      9,
+      11
+    ],
+    "radius_fit": [
+      5,
+      8
+    ]
+  },
+  "protocol": "trajectory_holdout_v2",
+  "role_codes": {
+    "0": "model_fit",
+    "1": "radius_fit",
+    "2": "assessment"
+  },
+  "rows": {
+    "assessment": 12,
+    "model_fit": 48,
+    "radius_fit": 12
+  },
+  "shared_graph": true,
+  "split_seed": 319876
+}

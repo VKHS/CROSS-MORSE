@@ -1,0 +1,23 @@
+% Policy and deployment ledger (main Table 1)
+% generated from 7 run(s) [examples]; runtime source 9e0154c11c0e; runs: ogbn-arxiv:arxiv, ogbn-products:products, ogbn-proteins:proteins, Roman-empire:roman_empire, PascalVOC-SP:pascalvoc_sp, COCO-SP:coco_sp, Peptides-func:peptides_func
+% Do not edit: regenerate with `make tables`.
+% SYNTHETIC SOFTWARE EXAMPLES: these values are not benchmark results.
+\begin{table}[t]
+\centering
+\small
+\caption{Policy and deployment ledger (main Table 1) (synthetic example runs). input fallback: the serving-time compatibility gate g_input is not implemented in this release, so the fraction is not measured.}
+\label{tab:T1}
+\begin{tabular}{llllll}
+\hline
+Dataset & exact q\_C identity; provisional & confirmation output & global admission (criterion) & input fallback & final effect over q\_C; scope \\
+\hline
+ogbn-arxiv & learned stop, E = 2, full; learned stop, E = 2, full & no feedback candidate in Q\_s; q\_C retained & G\_admit = 0; comparator returned (no feedback candidate survived selection and confirmation) & -- & +0.00 [+0.00, +0.00] accuracy pp; +0.00000 [+0.00000, +0.00000] CE; descriptive dependent-core inference \\
+ogbn-products & learned stop, E = 2, full; learned stop, E = 2, full & no feedback candidate in Q\_s; q\_C retained & G\_admit = 0; comparator returned (no feedback candidate survived selection and confirmation) & -- & +0.00 [+0.00, +0.00] accuracy pp; +0.00000 [+0.00000, +0.00000] CE; descriptive dependent-core inference \\
+ogbn-proteins & best depth, E = 1; best depth, E = 1 & no feedback candidate in Q\_s; q\_C retained & G\_admit = 0; comparator returned (no feedback candidate survived selection and confirmation) & -- & +0.00 [+0.00, +0.00] ROC-AUC pp; +0.00000 [+0.00000, +0.00000] BCE; descriptive dependent-core inference \\
+Roman-empire & fixed sequence, E = 1; fixed sequence, E = 1 & no feedback candidate in Q\_s; q\_C retained & G\_admit = 0; comparator returned (no feedback candidate survived selection and confirmation) & -- & +0.00 [+0.00, +0.00] accuracy pp; +0.00000 [+0.00000, +0.00000] CE; descriptive dependent-core inference \\
+PascalVOC-SP & learned stop, E = 2, full; learned stop, E = 2, full & no feedback candidate in Q\_s; q\_C retained & G\_admit = 0; comparator returned (no feedback candidate survived selection and confirmation) & -- & +0.00 [+0.00, +0.00] macro F1 pp; +0.00000 [+0.00000, +0.00000] CE; paired graph bootstrap conditional on the fixed trained ensemble \\
+COCO-SP & learned stop, E = 2, full; learned stop, E = 2, full & no feedback candidate in Q\_s; q\_C retained & G\_admit = 0; comparator returned (no feedback candidate survived selection and confirmation) & -- & +0.00 [+0.00, +0.00] macro F1 pp; +0.00000 [+0.00000, +0.00000] CE; paired graph bootstrap conditional on the fixed trained ensemble \\
+Peptides-func & phase schedule, E = 2; phase schedule, E = 2 & no feedback candidate in Q\_s; q\_C retained & G\_admit = 0; comparator returned (no feedback candidate survived selection and confirmation) & -- & +0.00 [+0.00, +0.00] AP pp; +0.00000 [+0.00000, +0.00000] BCE; paired graph bootstrap conditional on the fixed trained ensemble \\
+\hline
+\end{tabular}
+\end{table}

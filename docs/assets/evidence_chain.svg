@@ -1,0 +1,190 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1416" viewBox="0 0 1080 1416" role="img" aria-labelledby="title desc">
+<title id="title">From the source identity to the manuscript's tables</title>
+<desc id="desc">Four stages connect the code to the manuscript. The runtime source, the registered configurations and the Arrhenius site profile define a run; one Slurm job executes the eight sealed stages and leaves a run directory whose stage manifests chain the SHA-256 of every file; the run-archive contract packs, verifies, deposits and ingests that directory into runs/index.json, and the experiments outside the eight stages enter as measurement-record sets traced value by value to their raw logs; the paper build reads only ingested or bundled runs and deposited record sets and writes the tables and figures. make verify runs every check on each push. The seven bundled synthetic runs travel the same chain under a synthetic banner. A sealed chain shows that a run's bytes are the bytes it wrote; who ran it, when, and whether it is the run behind a reported number are declared, not proven.</desc>
+<metadata id="diagram-contract">{"archive_steps": ["archive-run", "deposit", "ingest-run"], "chronology_authenticated": false, "kind": "evidence_chain", "paper_outputs": {"figures": ["F1", "F2", "F3", "F4", "F5", "F6"], "tables": ["T1", "T2", "S4", "S12", "S12c", "S13", "S14", "S15", "S23", "S41", "M1"]}, "record_steps": ["records-index", "records-check", "records-tables"], "result_binding_is_declared": true, "run_identity": ["source_sha256", "config_sha256"], "stages": ["source_and_configuration", "execution", "run_archive_contract", "paper_build"], "verify_targets": ["registry-check", "fingerprint", "audit-artifacts", "example-views-check", "example-paper-check", "manifests-check", "records-check", "availability-check", "runs-check-if-present", "audit"]}</metadata>
+<defs><marker id="arrow-315e91" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#315e91"/></marker><marker id="arrow-16776b" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#16776b"/></marker><marker id="arrow-94611c" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#94611c"/></marker><marker id="arrow-526171" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#526171"/></marker></defs>
+<rect x="0.5" y="0.5" width="1079" height="1415" rx="18" fill="#ffffff" stroke="#d8e1e8" stroke-width="1"/>
+<text x="40.0" y="44.0" text-anchor="start" dominant-baseline="middle" font-family="'DejaVu Sans', Arial, 'Helvetica Neue', sans-serif" font-size="28" fill="#172b3a" font-weight="700"><tspan dy="-0" font-size="28">From the source identity to the manuscript's tables</tspan></text>
+<text x="40.0" y="79.0" text-anchor="start" dominant-baseline="middle" font-family="'DejaVu Sans', Arial, 'Helvetica Neue', sans-serif" font-size="17" fill="#526171"><tspan dy="-0" font-size="17">One chain: sealed run → verified archive → ingested index → run-derived tables and figures</tspan></text>
+<rect x="40.0" y="104.0" width="1000.0" height="208.0" rx="14" fill="#edf3fa" stroke="#b8cce3" stroke-width="1.2"/>
+<rect x="40.0" y="104.0" width="6.0" height="208.0" rx="3" fill="#315e91" stroke="none"/>
+<text x="58.0" y="121.0" text-anchor="start" dominant-baseline="middle" font-family="'DejaVu Sans', Arial, 'Helvetica Neue', sans-serif" font-size="15" fill="#315e91" font-weight="600" letter-spacing="0.8"><tspan dy="-0" font-size="15">1 · SOURCE AND CONFIGURATION · what every run seals</tspan></text>
+<g id="source" data-phase="definition">
+<rect x="58.0" y="140.0" width="304.0" height="156.0" rx="9" fill="#ffffff" stroke="#b8cce3" stroke-width="1.2"/>
+<rect x="58.0" y="140.0" width="304.0" height="4.0" rx="2" fill="#315e91" stroke="none"/>
+<text x="69.0" y="166.2" text-anchor="start" dominant-baseline="middle" font-family="'DejaVu Sans', Arial, 'Helvetica Neue', sans-serif" font-size="18" fill="#315e91" font-weight="600"><tspan dy="-0" font-size="18">Runtime source identity</tspan></text>
+<text x="69.0" y="192.1" text-anchor="start" dominant-baseline="middle" font-family="'DejaVu Sans', Arial, 'Helvetica Neue', sans-serif" font-size="15.5" fill="#172b3a"><tspan dy="-0" font-size="15.5">cross_morse/*.py +</tspan></text>
+<text x="69.0" y="214.1" text-anchor="start" dominant-baseline="middle" font-family="'DejaVu Sans', Arial, 'Helvetica Neue', sans-serif" font-size="15.5" fill="#172b3a"><tspan dy="-0" font-size="15.5">run_cross_morse*.py → one</tspan></text>
+<text x="69.0" y="236.1" text-anchor="start" dominant-baseline="middle" font-family="'DejaVu Sans', Arial, 'Helvetica Neue', sans-serif" font-size="15.5" fill="#172b3a"><tspan dy="-0" font-size="15.5">SHA-256 (make fingerprint)</tspan></text>
+<text x="69.0" y="258.1" text-anchor="start" dominant-baseline="middle" font-family="'DejaVu Sans', Arial, 'Helvetica Neue', sans-serif" font-size="15.5" fill="#172b3a"><tspan dy="-0" font-size="15.5">sealed as source_sha256 in every</tspan></text>
+<text x="69.0" y="280.1" text-anchor="start" dominant-baseline="middle" font-family="'DejaVu Sans', Arial, 'Helvetica Neue', sans-serif" font-size="15.5" fill="#172b3a"><tspan dy="-0" font-size="15.5">run_state.json</tspan></text>
+</g>
+<g id="configs" data-phase="definition">
+<rect x="388.0" y="140.0" width="304.0" height="156.0" rx="9" fill="#ffffff" stroke="#b8cce3" stroke-width="1.2"/>
+<rect x="388.0" y="140.0" width="304.0" height="4.0" rx="2" fill="#315e91" stroke="none"/>
+<text x="399.0" y="166.2" text-anchor="start" dominant-baseline="middle" font-family="'DejaVu Sans', Arial, 'Helvetica Neue', sans-serif" font-size="18" fill="#315e91" font-weight="600"><tspan dy="-0" font-size="18">Registered configurations</tspan></text>
+<text x="399.0" y="192.1" text-anchor="start" dominant-baseline="middle" font-family="'DejaVu Sans', Arial, 'Helvetica Neue', sans-serif" font-size="15.5" fill="#172b3a"><tspan dy="-0" font-size="15.5">7 datasets × smoke / pilot / full:</tspan></text>
+<text x="399.0" y="214.1" text-anchor="start" dominant-baseline="middle" font-family="'DejaVu Sans', Arial, 'Helvetica Neue', sans-serif" font-size="15.5" fill="#172b3a"><tspan dy="-0" font-size="15.5">split rule, seeds, folds, margins ε</tspan><tspan dy="3.41" font-size="11.16">R</tspan><tspan dy="-3.41" font-size="15.5">,</tspan></text>
+<text x="399.0" y="236.1" text-anchor="start" dominant-baseline="middle" font-family="'DejaVu Sans', Arial, 'Helvetica Neue', sans-serif" font-size="15.5" fill="#172b3a"><tspan dy="-0" font-size="15.5">ε</tspan><tspan dy="3.41" font-size="11.16">eq</tspan><tspan dy="-3.41" font-size="15.5">, ε</tspan><tspan dy="3.41" font-size="11.16">a</tspan></text>
+<text x="399.0" y="258.1" text-anchor="start" dominant-baseline="middle" font-family="'DejaVu Sans', Arial, 'Helvetica Neue', sans-serif" font-size="15.5" fill="#172b3a"><tspan dy="-0" font-size="15.5">design recorded in</tspan></text>
+<text x="399.0" y="280.1" text-anchor="start" dominant-baseline="middle" font-family="'DejaVu Sans', Arial, 'Helvetica Neue', sans-serif" font-size="15.5" fill="#172b3a"><tspan dy="-0" font-size="15.5">manifests/registered/</tspan></text>
+</g>
+<g id="site" data-phase="definition">
+<rect x="718.0" y="140.0" width="304.0" height="156.0" rx="9" fill="#ffffff" stroke="#b8cce3" stroke-width="1.2"/>
+<rect x="718.0" y="140.0" width="304.0" height="4.0" rx="2" fill="#315e91" stroke="none"/>
+<text x="729.0" y="166.2" text-anchor="start" dominant-baseline="middle" font-family="'DejaVu Sans', Arial, 'Helvetica Neue', sans-serif" font-size="18" fill="#315e91" font-weight="600"><tspan dy="-0" font-size="18">Arrhenius site profile</tspan></text>
+<text x="729.0" y="192.1" text-anchor="start" dominant-baseline="middle" font-family="'DejaVu Sans', Arial, 'Helvetica Neue', sans-serif" font-size="15.5" fill="#172b3a"><tspan dy="-0" font-size="15.5">configs/arrhenius-site.env.example</tspan></text>
+<text x="729.0" y="214.1" text-anchor="start" dominant-baseline="middle" font-family="'DejaVu Sans', Arial, 'Helvetica Neue', sans-serif" font-size="15.5" fill="#172b3a"><tspan dy="-0" font-size="15.5">— GH200 partition, wall time,</tspan></text>
+<text x="729.0" y="236.1" text-anchor="start" dominant-baseline="middle" font-family="'DejaVu Sans', Arial, 'Helvetica Neue', sans-serif" font-size="15.5" fill="#172b3a"><tspan dy="-0" font-size="15.5">project paths</tspan></text>
+<text x="729.0" y="258.1" text-anchor="start" dominant-baseline="middle" font-family="'DejaVu Sans', Arial, 'Helvetica Neue', sans-serif" font-size="15.5" fill="#172b3a"><tspan dy="-0" font-size="15.5">allocation identifiers stay</tspan></text>
+<text x="729.0" y="280.1" text-anchor="start" dominant-baseline="middle" font-family="'DejaVu Sans', Arial, 'Helvetica Neue', sans-serif" font-size="15.5" fill="#172b3a"><tspan dy="-0" font-size="15.5">placeholders</tspan></text>
+</g>
+<path data-source="source" data-target="configs" data-role="flow" d="M 362.0,218.0 L 388.0,218.0" fill="none" stroke="#315e91" stroke-width="1.7" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrow-315e91)"/>
+<path data-source="configs" data-target="site" data-role="flow" d="M 692.0,218.0 L 718.0,218.0" fill="none" stroke="#315e91" stroke-width="1.7" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrow-315e91)"/>
+<rect x="40.0" y="354.0" width="1000.0" height="234.0" rx="14" fill="#edf7f4" stroke="#b9dcd2" stroke-width="1.2"/>
+<rect x="40.0" y="354.0" width="6.0" height="234.0" rx="3" fill="#16776b" stroke="none"/>
+<text x="58.0" y="371.0" text-anchor="start" dominant-baseline="middle" font-family="'DejaVu Sans', Arial, 'Helvetica Neue', sans-serif" font-size="15" fill="#16776b" font-weight="600" letter-spacing="0.8"><tspan dy="-0" font-size="15">2 · EXECUTION · one Slurm job per run (docs/ARRHENIUS.md)</tspan></text>
+<g id="launcher" data-phase="execution">
+<rect x="58.0" y="390.0" width="304.0" height="182.0" rx="9" fill="#ffffff" stroke="#b9dcd2" stroke-width="1.2"/>
+<rect x="58.0" y="390.0" width="304.0" height="4.0" rx="2" fill="#16776b" stroke="none"/>
+<text x="69.0" y="416.2" text-anchor="start" dominant-baseline="middle" font-family="'DejaVu Sans', Arial, 'Helvetica Neue', sans-serif" font-size="18" fill="#16776b" font-weight="600"><tspan dy="-0" font-size="18">Launcher</tspan></text>
+<text x="69.0" y="442.1" text-anchor="start" dominant-baseline="middle" font-family="'DejaVu Sans', Arial, 'Helvetica Neue', sans-serif" font-size="15.5" fill="#172b3a"><tspan dy="-0" font-size="15.5">run_cross_morse_&lt;dataset&gt;.sh</tspan></text>
+<text x="69.0" y="464.1" text-anchor="start" dominant-baseline="middle" font-family="'DejaVu Sans', Arial, 'Helvetica Neue', sans-serif" font-size="15.5" fill="#172b3a"><tspan dy="-0" font-size="15.5">submit full</tspan></text>
+<text x="69.0" y="486.1" text-anchor="start" dominant-baseline="middle" font-family="'DejaVu Sans', Arial, 'Helvetica Neue', sans-serif" font-size="15.5" fill="#172b3a"><tspan dy="-0" font-size="15.5">snapshots source + config into</tspan></text>
+<text x="69.0" y="508.1" text-anchor="start" dominant-baseline="middle" font-family="'DejaVu Sans', Arial, 'Helvetica Neue', sans-serif" font-size="15.5" fill="#172b3a"><tspan dy="-0" font-size="15.5">SUITE/source/; 1 GPU, 24 h,</tspan></text>
+<text x="69.0" y="530.1" text-anchor="start" dominant-baseline="middle" font-family="'DejaVu Sans', Arial, 'Helvetica Neue', sans-serif" font-size="15.5" fill="#172b3a"><tspan dy="-0" font-size="15.5">requeue, resume from the last</tspan></text>
+<text x="69.0" y="552.1" text-anchor="start" dominant-baseline="middle" font-family="'DejaVu Sans', Arial, 'Helvetica Neue', sans-serif" font-size="15.5" fill="#172b3a"><tspan dy="-0" font-size="15.5">sealed stage</tspan></text>
+</g>
+<g id="stages" data-phase="execution">
+<rect x="388.0" y="390.0" width="304.0" height="182.0" rx="9" fill="#ffffff" stroke="#b9dcd2" stroke-width="1.2"/>
+<rect x="388.0" y="390.0" width="304.0" height="4.0" rx="2" fill="#16776b" stroke="none"/>
+<text x="399.0" y="416.2" text-anchor="start" dominant-baseline="middle" font-family="'DejaVu Sans', Arial, 'Helvetica Neue', sans-serif" font-size="18" fill="#16776b" font-weight="600"><tspan dy="-0" font-size="18">Eight sealed stages</tspan></text>
+<text x="399.0" y="442.1" text-anchor="start" dominant-baseline="middle" font-family="'DejaVu Sans', Arial, 'Helvetica Neue', sans-serif" font-size="15.5" fill="#172b3a"><tspan dy="-0" font-size="15.5">prepare · train · explore · fit ·</tspan></text>
+<text x="399.0" y="464.1" text-anchor="start" dominant-baseline="middle" font-family="'DejaVu Sans', Arial, 'Helvetica Neue', sans-serif" font-size="15.5" fill="#172b3a"><tspan dy="-0" font-size="15.5">select · confirm · admit · evaluate</tspan></text>
+<text x="399.0" y="486.1" text-anchor="start" dominant-baseline="middle" font-family="'DejaVu Sans', Arial, 'Helvetica Neue', sans-serif" font-size="15.5" fill="#172b3a"><tspan dy="-0" font-size="15.5">each stage writes a manifest with</tspan></text>
+<text x="399.0" y="508.1" text-anchor="start" dominant-baseline="middle" font-family="'DejaVu Sans', Arial, 'Helvetica Neue', sans-serif" font-size="15.5" fill="#172b3a"><tspan dy="-0" font-size="15.5">the SHA-256 of its files; later</tspan></text>
+<text x="399.0" y="530.1" text-anchor="start" dominant-baseline="middle" font-family="'DejaVu Sans', Arial, 'Helvetica Neue', sans-serif" font-size="15.5" fill="#172b3a"><tspan dy="-0" font-size="15.5">stages verify earlier ones</tspan></text>
+</g>
+<g id="run" data-phase="execution">
+<rect x="718.0" y="390.0" width="304.0" height="182.0" rx="9" fill="#ffffff" stroke="#b9dcd2" stroke-width="1.2"/>
+<rect x="718.0" y="390.0" width="304.0" height="4.0" rx="2" fill="#16776b" stroke="none"/>
+<text x="729.0" y="416.2" text-anchor="start" dominant-baseline="middle" font-family="'DejaVu Sans', Arial, 'Helvetica Neue', sans-serif" font-size="18" fill="#16776b" font-weight="600"><tspan dy="-0" font-size="18">Completed run directory</tspan></text>
+<text x="729.0" y="442.1" text-anchor="start" dominant-baseline="middle" font-family="'DejaVu Sans', Arial, 'Helvetica Neue', sans-serif" font-size="15.5" fill="#172b3a"><tspan dy="-0" font-size="15.5">prepared/ · train/ checkpoints ·</tspan></text>
+<text x="729.0" y="464.1" text-anchor="start" dominant-baseline="middle" font-family="'DejaVu Sans', Arial, 'Helvetica Neue', sans-serif" font-size="15.5" fill="#172b3a"><tspan dy="-0" font-size="15.5">explore/ trajectories · select/ ·</tspan></text>
+<text x="729.0" y="486.1" text-anchor="start" dominant-baseline="middle" font-family="'DejaVu Sans', Arial, 'Helvetica Neue', sans-serif" font-size="15.5" fill="#172b3a"><tspan dy="-0" font-size="15.5">confirm/ · admit/ · final/ predictions</tspan></text>
+<text x="729.0" y="508.1" text-anchor="start" dominant-baseline="middle" font-family="'DejaVu Sans', Arial, 'Helvetica Neue', sans-serif" font-size="15.5" fill="#172b3a"><tspan dy="-0" font-size="15.5">environment.json · policy_lock.json</tspan></text>
+<text x="729.0" y="530.1" text-anchor="start" dominant-baseline="middle" font-family="'DejaVu Sans', Arial, 'Helvetica Neue', sans-serif" font-size="15.5" fill="#172b3a"><tspan dy="-0" font-size="15.5">· run_state.json</tspan></text>
+</g>
+<path data-source="launcher" data-target="stages" data-role="flow" d="M 362.0,481.0 L 388.0,481.0" fill="none" stroke="#16776b" stroke-width="1.7" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrow-16776b)"/>
+<path data-source="stages" data-target="run" data-role="flow" d="M 692.0,481.0 L 718.0,481.0" fill="none" stroke="#16776b" stroke-width="1.7" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrow-16776b)"/>
+<rect x="40.0" y="630.0" width="1000.0" height="252.0" rx="14" fill="#fcf5e8" stroke="#e7d0a7" stroke-width="1.2"/>
+<rect x="40.0" y="630.0" width="6.0" height="252.0" rx="3" fill="#94611c" stroke="none"/>
+<text x="58.0" y="647.0" text-anchor="start" dominant-baseline="middle" font-family="'DejaVu Sans', Arial, 'Helvetica Neue', sans-serif" font-size="15" fill="#94611c" font-weight="600" letter-spacing="0.8"><tspan dy="-0" font-size="15">3 · DEPOSIT · run archives (docs/RUN_ARCHIVES.md) and measurement records (records/)</tspan></text>
+<g id="archive" data-phase="archive">
+<rect x="58.0" y="666.0" width="221.5" height="200.0" rx="9" fill="#ffffff" stroke="#e7d0a7" stroke-width="1.2"/>
+<rect x="58.0" y="666.0" width="221.5" height="4.0" rx="2" fill="#94611c" stroke="none"/>
+<text x="69.0" y="691.3" text-anchor="start" dominant-baseline="middle" font-family="'DejaVu Sans', Arial, 'Helvetica Neue', sans-serif" font-size="17" fill="#94611c" font-weight="600"><tspan dy="-0" font-size="17">make archive-run</tspan></text>
+<text x="69.0" y="715.9" text-anchor="start" dominant-baseline="middle" font-family="'DejaVu Sans', Arial, 'Helvetica Neue', sans-serif" font-size="15" fill="#172b3a"><tspan dy="-0" font-size="15">verifies the stage chain,</tspan></text>
+<text x="69.0" y="736.9" text-anchor="start" dominant-baseline="middle" font-family="'DejaVu Sans', Arial, 'Helvetica Neue', sans-serif" font-size="15" fill="#172b3a"><tspan dy="-0" font-size="15">then packs the run</tspan></text>
+<text x="69.0" y="757.9" text-anchor="start" dominant-baseline="middle" font-family="'DejaVu Sans', Arial, 'Helvetica Neue', sans-serif" font-size="15" fill="#172b3a"><tspan dy="-0" font-size="15">ARCHIVE_MANIFEST.json:</tspan></text>
+<text x="69.0" y="778.9" text-anchor="start" dominant-baseline="middle" font-family="'DejaVu Sans', Arial, 'Helvetica Neue', sans-serif" font-size="15" fill="#172b3a"><tspan dy="-0" font-size="15">file hashes, source and</tspan></text>
+<text x="69.0" y="799.9" text-anchor="start" dominant-baseline="middle" font-family="'DejaVu Sans', Arial, 'Helvetica Neue', sans-serif" font-size="15" fill="#172b3a"><tspan dy="-0" font-size="15">config identities</tspan></text>
+</g>
+<g id="deposit" data-phase="archive">
+<rect x="305.5" y="666.0" width="221.5" height="200.0" rx="9" fill="#ffffff" stroke="#e7d0a7" stroke-width="1.2"/>
+<rect x="305.5" y="666.0" width="221.5" height="4.0" rx="2" fill="#94611c" stroke="none"/>
+<text x="316.5" y="691.3" text-anchor="start" dominant-baseline="middle" font-family="'DejaVu Sans', Arial, 'Helvetica Neue', sans-serif" font-size="17" fill="#94611c" font-weight="600"><tspan dy="-0" font-size="17">Deposit with a DOI</tspan></text>
+<text x="316.5" y="715.9" text-anchor="start" dominant-baseline="middle" font-family="'DejaVu Sans', Arial, 'Helvetica Neue', sans-serif" font-size="15" fill="#172b3a"><tspan dy="-0" font-size="15">Zenodo or the</tspan></text>
+<text x="316.5" y="736.9" text-anchor="start" dominant-baseline="middle" font-family="'DejaVu Sans', Arial, 'Helvetica Neue', sans-serif" font-size="15" fill="#172b3a"><tspan dy="-0" font-size="15">institutional repository</tspan></text>
+<text x="316.5" y="757.9" text-anchor="start" dominant-baseline="middle" font-family="'DejaVu Sans', Arial, 'Helvetica Neue', sans-serif" font-size="15" fill="#172b3a"><tspan dy="-0" font-size="15">recorded with it: archive</tspan></text>
+<text x="316.5" y="778.9" text-anchor="start" dominant-baseline="middle" font-family="'DejaVu Sans', Arial, 'Helvetica Neue', sans-serif" font-size="15" fill="#172b3a"><tspan dy="-0" font-size="15">SHA-256, source identity,</tspan></text>
+<text x="316.5" y="799.9" text-anchor="start" dominant-baseline="middle" font-family="'DejaVu Sans', Arial, 'Helvetica Neue', sans-serif" font-size="15" fill="#172b3a"><tspan dy="-0" font-size="15">commit hash</tspan></text>
+</g>
+<g id="ingest" data-phase="archive">
+<rect x="553.0" y="666.0" width="221.5" height="200.0" rx="9" fill="#ffffff" stroke="#e7d0a7" stroke-width="1.2"/>
+<rect x="553.0" y="666.0" width="221.5" height="4.0" rx="2" fill="#94611c" stroke="none"/>
+<text x="564.0" y="691.3" text-anchor="start" dominant-baseline="middle" font-family="'DejaVu Sans', Arial, 'Helvetica Neue', sans-serif" font-size="17" fill="#94611c" font-weight="600"><tspan dy="-0" font-size="17">make ingest-run</tspan></text>
+<text x="564.0" y="715.9" text-anchor="start" dominant-baseline="middle" font-family="'DejaVu Sans', Arial, 'Helvetica Neue', sans-serif" font-size="15" fill="#172b3a"><tspan dy="-0" font-size="15">verifies again →</tspan></text>
+<text x="564.0" y="736.9" text-anchor="start" dominant-baseline="middle" font-family="'DejaVu Sans', Arial, 'Helvetica Neue', sans-serif" font-size="15" fill="#172b3a"><tspan dy="-0" font-size="15">runs/&lt;stem&gt;/ and</tspan></text>
+<text x="564.0" y="757.9" text-anchor="start" dominant-baseline="middle" font-family="'DejaVu Sans', Arial, 'Helvetica Neue', sans-serif" font-size="15" fill="#172b3a"><tspan dy="-0" font-size="15">runs/index.json</tspan></text>
+<text x="564.0" y="778.9" text-anchor="start" dominant-baseline="middle" font-family="'DejaVu Sans', Arial, 'Helvetica Neue', sans-serif" font-size="15" fill="#172b3a"><tspan dy="-0" font-size="15">manifests/official/</tspan></text>
+<text x="564.0" y="799.9" text-anchor="start" dominant-baseline="middle" font-family="'DejaVu Sans', Arial, 'Helvetica Neue', sans-serif" font-size="15" fill="#172b3a"><tspan dy="-0" font-size="15">extracted;</tspan></text>
+<text x="564.0" y="820.9" text-anchor="start" dominant-baseline="middle" font-family="'DejaVu Sans', Arial, 'Helvetica Neue', sans-serif" font-size="15" fill="#172b3a"><tspan dy="-0" font-size="15">AVAILABILITY.md</tspan></text>
+<text x="564.0" y="841.9" text-anchor="start" dominant-baseline="middle" font-family="'DejaVu Sans', Arial, 'Helvetica Neue', sans-serif" font-size="15" fill="#172b3a"><tspan dy="-0" font-size="15">regenerated</tspan></text>
+</g>
+<g id="records" data-phase="archive">
+<rect x="800.5" y="666.0" width="221.5" height="200.0" rx="9" fill="#ffffff" stroke="#e7d0a7" stroke-width="1.2"/>
+<rect x="800.5" y="666.0" width="221.5" height="4.0" rx="2" fill="#94611c" stroke="none"/>
+<text x="811.5" y="691.3" text-anchor="start" dominant-baseline="middle" font-family="'DejaVu Sans', Arial, 'Helvetica Neue', sans-serif" font-size="17" fill="#94611c" font-weight="600"><tspan dy="-0" font-size="17">make records-index</tspan></text>
+<text x="811.5" y="715.9" text-anchor="start" dominant-baseline="middle" font-family="'DejaVu Sans', Arial, 'Helvetica Neue', sans-serif" font-size="15" fill="#172b3a"><tspan dy="-0" font-size="15">records/&lt;set&gt;/: raw logs,</tspan></text>
+<text x="811.5" y="736.9" text-anchor="start" dominant-baseline="middle" font-family="'DejaVu Sans', Arial, 'Helvetica Neue', sans-serif" font-size="15" fill="#172b3a"><tspan dy="-0" font-size="15">code, summary.csv</tspan></text>
+<text x="811.5" y="757.9" text-anchor="start" dominant-baseline="middle" font-family="'DejaVu Sans', Arial, 'Helvetica Neue', sans-serif" font-size="15" fill="#172b3a"><tspan dy="-0" font-size="15">every value re-read from</tspan></text>
+<text x="811.5" y="778.9" text-anchor="start" dominant-baseline="middle" font-family="'DejaVu Sans', Arial, 'Helvetica Neue', sans-serif" font-size="15" fill="#172b3a"><tspan dy="-0" font-size="15">its raw log;</tspan></text>
+<text x="811.5" y="799.9" text-anchor="start" dominant-baseline="middle" font-family="'DejaVu Sans', Arial, 'Helvetica Neue', sans-serif" font-size="15" fill="#172b3a"><tspan dy="-0" font-size="15">records/index.json</tspan></text>
+</g>
+<path data-source="archive" data-target="deposit" data-role="flow" d="M 279.5,766.0 L 305.5,766.0" fill="none" stroke="#94611c" stroke-width="1.7" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrow-94611c)"/>
+<path data-source="deposit" data-target="ingest" data-role="flow" d="M 527.0,766.0 L 553.0,766.0" fill="none" stroke="#94611c" stroke-width="1.7" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrow-94611c)"/>
+<rect x="40.0" y="924.0" width="1000.0" height="248.0" rx="14" fill="#f4f6f8" stroke="#d1dbe3" stroke-width="1.2"/>
+<rect x="40.0" y="924.0" width="6.0" height="248.0" rx="3" fill="#526171" stroke="none"/>
+<text x="58.0" y="941.0" text-anchor="start" dominant-baseline="middle" font-family="'DejaVu Sans', Arial, 'Helvetica Neue', sans-serif" font-size="15" fill="#526171" font-weight="600" letter-spacing="0.8"><tspan dy="-0" font-size="15">4 · PAPER BUILD · make paper (paper/build/, scripts/records.py)</tspan></text>
+<g id="evidence" data-phase="build">
+<rect x="58.0" y="960.0" width="221.5" height="196.0" rx="9" fill="#ffffff" stroke="#d1dbe3" stroke-width="1.2"/>
+<rect x="58.0" y="960.0" width="221.5" height="4.0" rx="2" fill="#526171" stroke="none"/>
+<text x="69.0" y="985.3" text-anchor="start" dominant-baseline="middle" font-family="'DejaVu Sans', Arial, 'Helvetica Neue', sans-serif" font-size="17" fill="#526171" font-weight="600"><tspan dy="-0" font-size="17">Evidence records</tspan></text>
+<text x="69.0" y="1010.0" text-anchor="start" dominant-baseline="middle" font-family="'DejaVu Sans', Arial, 'Helvetica Neue', sans-serif" font-size="15.5" fill="#172b3a"><tspan dy="-0" font-size="15.5">one JSON per run:</tspan></text>
+<text x="69.0" y="1032.0" text-anchor="start" dominant-baseline="middle" font-family="'DejaVu Sans', Arial, 'Helvetica Neue', sans-serif" font-size="15.5" fill="#172b3a"><tspan dy="-0" font-size="15.5">identities, roles, seeds,</tspan></text>
+<text x="69.0" y="1054.0" text-anchor="start" dominant-baseline="middle" font-family="'DejaVu Sans', Arial, 'Helvetica Neue', sans-serif" font-size="15.5" fill="#172b3a"><tspan dy="-0" font-size="15.5">entry, candidates,</tspan></text>
+<text x="69.0" y="1076.0" text-anchor="start" dominant-baseline="middle" font-family="'DejaVu Sans', Arial, 'Helvetica Neue', sans-serif" font-size="15.5" fill="#172b3a"><tspan dy="-0" font-size="15.5">decisions, effects, costs</tspan></text>
+</g>
+<g id="tables" data-phase="build">
+<rect x="305.5" y="960.0" width="221.5" height="196.0" rx="9" fill="#ffffff" stroke="#d1dbe3" stroke-width="1.2"/>
+<rect x="305.5" y="960.0" width="221.5" height="4.0" rx="2" fill="#526171" stroke="none"/>
+<text x="316.5" y="985.3" text-anchor="start" dominant-baseline="middle" font-family="'DejaVu Sans', Arial, 'Helvetica Neue', sans-serif" font-size="17" fill="#526171" font-weight="600"><tspan dy="-0" font-size="17">Tables</tspan></text>
+<text x="316.5" y="1010.0" text-anchor="start" dominant-baseline="middle" font-family="'DejaVu Sans', Arial, 'Helvetica Neue', sans-serif" font-size="15.5" fill="#172b3a"><tspan dy="-0" font-size="15.5">T1 T2 S4 S12 S12c S13</tspan></text>
+<text x="316.5" y="1032.0" text-anchor="start" dominant-baseline="middle" font-family="'DejaVu Sans', Arial, 'Helvetica Neue', sans-serif" font-size="15.5" fill="#172b3a"><tspan dy="-0" font-size="15.5">S14 S15 S23 S41 M1;</tspan></text>
+<text x="316.5" y="1054.0" text-anchor="start" dominant-baseline="middle" font-family="'DejaVu Sans', Arial, 'Helvetica Neue', sans-serif" font-size="15.5" fill="#172b3a"><tspan dy="-0" font-size="15.5">record tables from</tspan></text>
+<text x="316.5" y="1076.0" text-anchor="start" dominant-baseline="middle" font-family="'DejaVu Sans', Arial, 'Helvetica Neue', sans-serif" font-size="15.5" fill="#172b3a"><tspan dy="-0" font-size="15.5">records/</tspan></text>
+<text x="316.5" y="1098.0" text-anchor="start" dominant-baseline="middle" font-family="'DejaVu Sans', Arial, 'Helvetica Neue', sans-serif" font-size="15.5" fill="#172b3a"><tspan dy="-0" font-size="15.5">.tex / .md / .csv;</tspan></text>
+<text x="316.5" y="1120.0" text-anchor="start" dominant-baseline="middle" font-family="'DejaVu Sans', Arial, 'Helvetica Neue', sans-serif" font-size="15.5" fill="#172b3a"><tspan dy="-0" font-size="15.5">unmeasured cells stay</tspan></text>
+<text x="316.5" y="1142.0" text-anchor="start" dominant-baseline="middle" font-family="'DejaVu Sans', Arial, 'Helvetica Neue', sans-serif" font-size="15.5" fill="#172b3a"><tspan dy="-0" font-size="15.5">dashes</tspan></text>
+</g>
+<g id="figures" data-phase="build">
+<rect x="553.0" y="960.0" width="221.5" height="196.0" rx="9" fill="#ffffff" stroke="#d1dbe3" stroke-width="1.2"/>
+<rect x="553.0" y="960.0" width="221.5" height="4.0" rx="2" fill="#526171" stroke="none"/>
+<text x="564.0" y="985.3" text-anchor="start" dominant-baseline="middle" font-family="'DejaVu Sans', Arial, 'Helvetica Neue', sans-serif" font-size="17" fill="#526171" font-weight="600"><tspan dy="-0" font-size="17">Figures</tspan></text>
+<text x="564.0" y="1010.0" text-anchor="start" dominant-baseline="middle" font-family="'DejaVu Sans', Arial, 'Helvetica Neue', sans-serif" font-size="15.5" fill="#172b3a"><tspan dy="-0" font-size="15.5">F1 Fig. 4d · F2 Fig. 5a ·</tspan></text>
+<text x="564.0" y="1032.0" text-anchor="start" dominant-baseline="middle" font-family="'DejaVu Sans', Arial, 'Helvetica Neue', sans-serif" font-size="15.5" fill="#172b3a"><tspan dy="-0" font-size="15.5">F3 Fig. 2c · F4 Fig. S14b</tspan></text>
+<text x="564.0" y="1054.0" text-anchor="start" dominant-baseline="middle" font-family="'DejaVu Sans', Arial, 'Helvetica Neue', sans-serif" font-size="15.5" fill="#172b3a"><tspan dy="-0" font-size="15.5">· F5 Table S41 · F6 Fig.</tspan></text>
+<text x="564.0" y="1076.0" text-anchor="start" dominant-baseline="middle" font-family="'DejaVu Sans', Arial, 'Helvetica Neue', sans-serif" font-size="15.5" fill="#172b3a"><tspan dy="-0" font-size="15.5">S9</tspan></text>
+</g>
+<g id="compare" data-phase="build">
+<rect x="800.5" y="960.0" width="221.5" height="196.0" rx="9" fill="#ffffff" stroke="#d1dbe3" stroke-width="1.2"/>
+<rect x="800.5" y="960.0" width="221.5" height="4.0" rx="2" fill="#526171" stroke="none"/>
+<text x="811.5" y="985.3" text-anchor="start" dominant-baseline="middle" font-family="'DejaVu Sans', Arial, 'Helvetica Neue', sans-serif" font-size="17" fill="#526171" font-weight="600"><tspan dy="-0" font-size="17">make compare-runs</tspan></text>
+<text x="811.5" y="1010.0" text-anchor="start" dominant-baseline="middle" font-family="'DejaVu Sans', Arial, 'Helvetica Neue', sans-serif" font-size="15.5" fill="#172b3a"><tspan dy="-0" font-size="15.5">run value beside the</tspan></text>
+<text x="811.5" y="1032.0" text-anchor="start" dominant-baseline="middle" font-family="'DejaVu Sans', Arial, 'Helvetica Neue', sans-serif" font-size="15.5" fill="#172b3a"><tspan dy="-0" font-size="15.5">transcribed manuscript</tspan></text>
+<text x="811.5" y="1054.0" text-anchor="start" dominant-baseline="middle" font-family="'DejaVu Sans', Arial, 'Helvetica Neue', sans-serif" font-size="15.5" fill="#172b3a"><tspan dy="-0" font-size="15.5">value, at printed</tspan></text>
+<text x="811.5" y="1076.0" text-anchor="start" dominant-baseline="middle" font-family="'DejaVu Sans', Arial, 'Helvetica Neue', sans-serif" font-size="15.5" fill="#172b3a"><tspan dy="-0" font-size="15.5">precision</tspan></text>
+</g>
+<path data-source="evidence" data-target="tables" data-role="flow" d="M 279.5,1058.0 L 305.5,1058.0" fill="none" stroke="#526171" stroke-width="1.7" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrow-526171)"/>
+<path data-source="tables" data-target="figures" data-role="flow" d="M 527.0,1058.0 L 553.0,1058.0" fill="none" stroke="#526171" stroke-width="1.7" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrow-526171)"/>
+<path data-source="figures" data-target="compare" data-role="flow" d="M 774.5,1058.0 L 800.5,1058.0" fill="none" stroke="#526171" stroke-width="1.7" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrow-526171)"/>
+<path data-source="configs" data-target="launcher" data-role="handoff" d="M 540.0,312.0 L 540.0,354.0" fill="none" stroke="#315e91" stroke-width="2.0" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrow-315e91)"/>
+<rect x="560.0" y="320.2" width="479.4" height="25.5" rx="12.75" fill="#f4f6f8" stroke="#d1dbe3" stroke-width="1"/>
+<text x="799.7" y="333.0" text-anchor="middle" dominant-baseline="middle" font-family="'DejaVu Sans', Arial, 'Helvetica Neue', sans-serif" font-size="15" fill="#526171" font-weight="600"><tspan dy="-0" font-size="15">snapshot of source + resolved configuration + profile</tspan></text>
+<path data-source="run" data-target="archive" data-role="handoff" d="M 540.0,588.0 L 540.0,630.0" fill="none" stroke="#16776b" stroke-width="2.0" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrow-16776b)"/>
+<rect x="560.0" y="596.2" width="238.9" height="25.5" rx="12.75" fill="#f4f6f8" stroke="#d1dbe3" stroke-width="1"/>
+<text x="679.4" y="609.0" text-anchor="middle" dominant-baseline="middle" font-family="'DejaVu Sans', Arial, 'Helvetica Neue', sans-serif" font-size="15" fill="#526171" font-weight="600"><tspan dy="-0" font-size="15">completed suite directory</tspan></text>
+<path data-source="ingest" data-target="evidence" data-role="handoff" d="M 540.0,882.0 L 540.0,924.0" fill="none" stroke="#94611c" stroke-width="2.0" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrow-94611c)"/>
+<rect x="560.0" y="890.2" width="445.9" height="25.5" rx="12.75" fill="#f4f6f8" stroke="#d1dbe3" stroke-width="1"/>
+<text x="782.9" y="903.0" text-anchor="middle" dominant-baseline="middle" font-family="'DejaVu Sans', Arial, 'Helvetica Neue', sans-serif" font-size="15" fill="#526171" font-weight="600"><tspan dy="-0" font-size="15">verified archives and record sets (runs/, records/)</tspan></text>
+<rect x="40.0" y="1192.0" width="1000.0" height="138.0" rx="14" fill="#edf7f4" stroke="#b9dcd2" stroke-width="1.2"/>
+<rect x="40.0" y="1192.0" width="6.0" height="138.0" rx="3" fill="#16776b" stroke="none"/>
+<text x="58.0" y="1210.0" text-anchor="start" dominant-baseline="middle" font-family="'DejaVu Sans', Arial, 'Helvetica Neue', sans-serif" font-size="15" fill="#16776b" font-weight="600" letter-spacing="0.8"><tspan dy="-0" font-size="15">5 · CHECKED ON EVERY PUSH · make verify</tspan></text>
+<text x="58.0" y="1238.0" text-anchor="start" dominant-baseline="middle" font-family="'DejaVu Sans', Arial, 'Helvetica Neue', sans-serif" font-size="15.5" fill="#172b3a"><tspan dy="-0" font-size="15.5">registry-check · fingerprint · audit-artifacts · example-views-check · example-paper-check · manifests-check ·</tspan></text>
+<text x="58.0" y="1259.0" text-anchor="start" dominant-baseline="middle" font-family="'DejaVu Sans', Arial, 'Helvetica Neue', sans-serif" font-size="15.5" fill="#172b3a"><tspan dy="-0" font-size="15.5">records-check · availability-check · runs-check · audit</tspan></text>
+<text x="58.0" y="1286.0" text-anchor="start" dominant-baseline="middle" font-family="'DejaVu Sans', Arial, 'Helvetica Neue', sans-serif" font-size="15.5" fill="#526171"><tspan dy="-0" font-size="15.5">The seven bundled synthetic runs travel the same chain into paper/generated/examples/ under a synthetic banner;</tspan></text>
+<text x="58.0" y="1307.0" text-anchor="start" dominant-baseline="middle" font-family="'DejaVu Sans', Arial, 'Helvetica Neue', sans-serif" font-size="15.5" fill="#526171"><tspan dy="-0" font-size="15.5">official archives are built into paper/generated/official/ and compared with the manuscript.</tspan></text>
+<text x="40.0" y="1356.0" text-anchor="start" dominant-baseline="middle" font-family="'DejaVu Sans', Arial, 'Helvetica Neue', sans-serif" font-size="15" fill="#526171"><tspan dy="-0" font-size="15">A sealed chain shows that a run's bytes are the bytes it wrote. Who ran it, when, and whether it is the run behind a reported</tspan></text>
+<text x="40.0" y="1377.0" text-anchor="start" dominant-baseline="middle" font-family="'DejaVu Sans', Arial, 'Helvetica Neue', sans-serif" font-size="15" fill="#526171"><tspan dy="-0" font-size="15">number are declared in the result binding, not proven by the hash.</tspan></text>
+</svg>

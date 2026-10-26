@@ -1,0 +1,51 @@
+{
+  "all_ten_masks_disjoint_and_exhaustive": true,
+  "canonical_edge_entries": 65854,
+  "command": [
+    "/workspace/scratch/2aa93dc25af6/review_work_20261025/runtime_env/bin/python",
+    "-B",
+    "run_cross_morse_roman_empire.py",
+    "--profile",
+    "pilot",
+    "--stage",
+    "prepare",
+    "--split-index",
+    "0",
+    "--device",
+    "cpu",
+    "--threads",
+    "2",
+    "--data-root",
+    "/workspace/scratch/2aa93dc25af6/review_work_20261024/validation_current/official_data",
+    "--output-dir",
+    "/workspace/scratch/2aa93dc25af6/review_work_20261025/validation_current/roman_official_prepare"
+  ],
+  "dataset": "Roman-empire",
+  "features": 300,
+  "nodes": 22662,
+  "official_split_index": 0,
+  "official_split_sizes": {
+    "test": 5666,
+    "train": 11331,
+    "valid": 5665
+  },
+  "operation": "official raw-data preparation only",
+  "outputs": 18,
+  "prepared_fingerprint": "ef8bd8899875608774230c836161502cf63e47a6a22371ba7e583a2945f29671",
+  "role_sizes": {
+    "admit": 5665,
+    "confirm": 1134,
+    "explore": 2266,
+    "fit": 6798,
+    "fit_train": 6119,
+    "fit_val": 679,
+    "select": 1133,
+    "test": 5666
+  },
+  "source_file_sha256": "a58ba741d123bf892fe5c872138d07463d75a2e9012360b8dd78ac2d4766d428",
+  "source_sha256": "9e0154c11c0ebc67d533a84b6d6a80c4e77a8d76e6d2cc165bcff5897980b108",
+  "source_url": "https://github.com/yandex-research/heterophilous-graphs/raw/main/data/roman_empire.npz",
+  "stage_manifest_sha256": "77c046238b234b36523949371bf737efd75ac0a698167d4bce2f82e33ac445ab",
+  "status": "PASS",
+  "training_executed": false
+}

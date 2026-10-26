@@ -1,0 +1,61 @@
+{
+  "assessment_labels_used_for_fitting": false,
+  "data_role": "Dexplore assessment holdout",
+  "estimand": "absolute nominal-relative critic residual within empirical radius on matched logged states",
+  "policies": [
+    {
+      "all_actions": {
+        "covered_rows": 3,
+        "finite_radius_rows": 3,
+        "ipw_residual_radius_coverage": 1.0,
+        "matched_residual_radius_coverage": 1.0,
+        "matched_rows": 3,
+        "matched_trajectories": 2
+      },
+      "eligible_rows": 24,
+      "kappa": 0.0,
+      "kind": "one_step",
+      "nominal_matches": 0,
+      "nonnominal_actions": {
+        "covered_rows": 3,
+        "finite_radius_rows": 3,
+        "ipw_residual_radius_coverage": 1.0,
+        "matched_residual_radius_coverage": 1.0,
+        "matched_rows": 3,
+        "matched_trajectories": 2
+      },
+      "recovery_or_unscorable_rows": 0
+    },
+    {
+      "all_actions": {
+        "covered_rows": 8,
+        "finite_radius_rows": 8,
+        "ipw_residual_radius_coverage": 0.9999999999999998,
+        "matched_residual_radius_coverage": 1.0,
+        "matched_rows": 8,
+        "matched_trajectories": 2
+      },
+      "eligible_rows": 24,
+      "kappa": 1.0,
+      "kind": "radius",
+      "nominal_matches": 8,
+      "nonnominal_actions": {
+        "covered_rows": 0,
+        "finite_radius_rows": 0,
+        "ipw_residual_radius_coverage": null,
+        "matched_residual_radius_coverage": null,
+        "matched_rows": 0,
+        "matched_trajectories": 0
+      },
+      "recovery_or_unscorable_rows": 0
+    }
+  ],
+  "policy_state_distribution_coverage": "NOT_MEASURED",
+  "radii_frozen_before_assessment": true,
+  "rows": 24,
+  "schema_version": "calibration-assessment-2",
+  "scope": "off-policy logged-history diagnostic; not complete-policy, sequence, or independent-graph coverage",
+  "score_contract": "mean_kappa_sigma_radius_transport_v2",
+  "sequence_coverage": "NOT_MEASURED",
+  "trajectories": 2
+}

@@ -1,0 +1,81 @@
+name: Verify on a fresh clone
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  PYTHONDONTWRITEBYTECODE: "1"
+  OMP_NUM_THREADS: "2"
+  OPENBLAS_NUM_THREADS: "2"
+  MKL_NUM_THREADS: "2"
+
+jobs:
+  verify:
+    name: make verify (NumPy only; no PyTorch, no data, no training)
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v7.0.1
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v7.1.0
+        with:
+          python-version: "3.12"
+      - name: Install the numeric-review dependencies from the recorded lock
+        run: python -m pip install -c environment/requirements-cpu.lock -r requirements-review.txt 'matplotlib>=3.8,<4'
+      - name: Sealed example artifacts must be byte-exact after checkout
+        run: python -B scripts/artifact_inventory.py examples/runs/arxiv --output examples/inventory/arxiv.json --check
+      - name: Everything a reviewer runs first
+        run: make verify PYTHON=python
+      - name: Replay the seven bundled examples and rebuild their paper tables and figures
+        run: |
+          make reproduce PYTHON=python REPORT_ROOT="$RUNNER_TEMP/reproduced-examples"
+          make example-paper PYTHON=python PAPER_EXAMPLES_ROOT="$RUNNER_TEMP/example-paper"
+          test -f "$RUNNER_TEMP/example-paper/tables/T1.tex"
+          test -f "$RUNNER_TEMP/example-paper/figures/F1.png"
+      - name: Archive, ingest and build tables from an ingested archive
+        run: |
+          python -B scripts/archive_run.py examples/runs/peptides_func --output "$RUNNER_TEMP/deposit/peptides.tar.gz"
+          python -B scripts/archive_run.py --verify "$RUNNER_TEMP/deposit/peptides.tar.gz"
+          python -B scripts/ingest_run.py "$RUNNER_TEMP/deposit/peptides.tar.gz" --runs-root "$RUNNER_TEMP/runs" --index "$RUNNER_TEMP/runs/index.json"
+          python -B scripts/build_paper.py all --index "$RUNNER_TEMP/runs/index.json" --label ci --output-dir "$RUNNER_TEMP/ci-paper"
+      - name: NumPy-only unit tests
+        run: make test-no-torch PYTHON=python
+
+  pytorch:
+    name: Full test suite and one synthetic end-to-end run (CPU PyTorch)
+    needs: verify
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v7.0.1
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v7.1.0
+        with:
+          python-version: "3.12"
+      - name: Install the recorded CPU environment
+        run: |
+          python -m pip install --index-url https://download.pytorch.org/whl/cpu "torch==$(grep -oP '^torch==\K[0-9.]+' environment/requirements-cpu.lock)"
+          python -m pip install -c environment/requirements-cpu.lock -r requirements.txt 'matplotlib>=3.8,<4'
+          python -m pip check
+          python -B environment/check_environment.py || true
+      - name: Complete unit-test suite
+        run: make test PYTHON=python
+      - name: Train one synthetic example end to end, archive it, ingest it, build its tables
+        run: |
+          make train-sample PYTHON=python DATASET=Peptides-func RUN_ROOT="$RUNNER_TEMP/runs/peptides" DATA_ROOT="$RUNNER_TEMP/data"
+          python -B scripts/validate_run_manifest.py "$RUNNER_TEMP/runs/peptides"
+          make reexecute PYTHON=python RUN_ROOT="$RUNNER_TEMP/runs/peptides" REPORT_ROOT="$RUNNER_TEMP/reports"
+          python -B scripts/archive_run.py "$RUNNER_TEMP/runs/peptides" --output "$RUNNER_TEMP/deposit/peptides.tar.gz"
+          python -B scripts/ingest_run.py "$RUNNER_TEMP/deposit/peptides.tar.gz" --runs-root "$RUNNER_TEMP/ingested" --index "$RUNNER_TEMP/ingested/index.json"
+          python -B scripts/build_paper.py all --index "$RUNNER_TEMP/ingested/index.json" --label ci --output-dir "$RUNNER_TEMP/ci-paper"

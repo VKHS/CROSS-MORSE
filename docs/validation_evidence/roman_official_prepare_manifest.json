@@ -1,0 +1,69 @@
+{
+  "claim_scope": "registered dataset execution or synthetic validation; manuscript agreement requires result artifact bindings",
+  "config_sha256": "b8bfef0ca9d57ec0abe7cdf2c5ff0bb1b62a0032939be7219cb07fc9e4ee0a53",
+  "created_utc": "2026-10-25T19:08:02.037811+00:00",
+  "dataset": "Roman-empire",
+  "evaluator": null,
+  "inputs": [],
+  "model_audit": null,
+  "outputs": [
+    {
+      "bytes": 1815,
+      "path": "action_registry.json",
+      "sha256": "6dda7a004f82a77c140474da0a3a2bb58e533149e3c5806bf2eaad131b104cad"
+    },
+    {
+      "bytes": 2756,
+      "path": "config.json",
+      "sha256": "a05ab6fb70fb889b40d08abf667a440be154ec4fdd538d2b3a3ec8317ccb9517"
+    },
+    {
+      "bytes": 3485,
+      "path": "environment.json",
+      "sha256": "0c9fd228c221ad336877ef58d981b3ddbb816bf246b266887cbb2b6d95c7d902"
+    },
+    {
+      "bytes": 0,
+      "path": "prepared/.prepare.lock",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 181572,
+      "path": "prepared/clusters.npz",
+      "sha256": "914fd7d1c3251ce56db3e84e9c2e64648b051eb2e632e999246c2ea8b12aebd7"
+    },
+    {
+      "bytes": 28430102,
+      "path": "prepared/graph.npz",
+      "sha256": "358446ad8935508690a56275814bbfd55bdb84da0e4a3befbfcbe4aff0eefb39"
+    },
+    {
+      "bytes": 8876,
+      "path": "prepared/metadata.json",
+      "sha256": "ef3163f1bd33bb994d0b54f0e6c52e3b672713ebac183e13265e023790424f1b"
+    },
+    {
+      "bytes": 182042,
+      "path": "prepared/official_splits.npz",
+      "sha256": "cb42bfe531ee4fc0df2490079d81e9adb161983d7860545b8db68a718611a154"
+    },
+    {
+      "bytes": 237654,
+      "path": "prepared/splits.npz",
+      "sha256": "6f9689b9f253a7db265751b043f66b25f862881e227139268c6d4eebd9d5fa0e"
+    },
+    {
+      "bytes": 55443,
+      "path": "provenance/evaluator.py",
+      "sha256": "1adaf12cfd31c68c4207f7796063eb5856353bfe63be43b91ee6fdff8e452050"
+    }
+  ],
+  "parent_manifest": null,
+  "schema_version": "1.1",
+  "scientific_role": "auxiliary",
+  "source_sha256": "9e0154c11c0ebc67d533a84b6d6a80c4e77a8d76e6d2cc165bcff5897980b108",
+  "stage": "prepare",
+  "stage_index": 0,
+  "unit_manifest_path": "prepared/splits.npz",
+  "unit_sha256": "6f9689b9f253a7db265751b043f66b25f862881e227139268c6d4eebd9d5fa0e"
+}

@@ -1,0 +1,50 @@
+{
+  "active_parameter_count": 276,
+  "baseline": true,
+  "best_internal_fit_val_bce": 0.6489479839801788,
+  "best_internal_fit_val_loss": 0.6489479839801788,
+  "best_internal_fit_val_metric": 0.5,
+  "checkpoint_rule": "max_ap_bce_tiebreak",
+  "checkpoint_selection_labels": "fit_val only",
+  "checkpoint_sha256": "01fd077732457cf58cffbbe2ba0e6fc6d02ccd28ac58cf65a677d6594ee8fa38",
+  "epochs_completed": 3,
+  "execution": "whole-graph episodes with gradient accumulation",
+  "graph_batch_size": 2,
+  "instrumentation": {
+    "backbone": "linear_gine",
+    "controlled_depth": 8,
+    "dense_chunk_size": 0,
+    "global_attention": "none",
+    "inserted_nominal": "literal identity",
+    "inserted_site_count": 6,
+    "native_aggregation": "nonnegative degree-normalized linear mean",
+    "native_position_choice": "first site in each block interval",
+    "native_site_count": 2,
+    "native_sites": [
+      0,
+      4
+    ],
+    "parameter_count": 1430,
+    "site_indexing": "zero-based transition d to d+1",
+    "task": {
+      "dataset": "Peptides-func",
+      "metric": "ap",
+      "num_outputs": 4,
+      "prediction_level": "graph",
+      "task_type": "multilabel"
+    },
+    "transport_history_definition": "kernel transport mass and expected kernel hops before source retention; inserted A0 bypass=0/0; designated native A0 mean aggregation=1/1; other transports use registered nu and kernel hop moment; hybrid resets=0/0; these are transport descriptors, not complete block work or effective output displacement"
+  },
+  "official_validation_used": false,
+  "parameter_count": 1430,
+  "schedule": "constant",
+  "seconds_this_attempt": 0.09769680099998368,
+  "seed": 1,
+  "task": {
+    "dataset": "Peptides-func",
+    "metric": "ap",
+    "num_outputs": 4,
+    "prediction_level": "graph",
+    "task_type": "multilabel"
+  }
+}

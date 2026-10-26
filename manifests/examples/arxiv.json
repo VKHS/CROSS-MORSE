@@ -1,0 +1,180 @@
+{
+ "benchmark_dataset": "ogbn-arxiv",
+ "data_kind": "synthetic",
+ "dataset": "ogbn-arxiv",
+ "environment": {
+  "cuda_runtime": null,
+  "cudnn_deterministic": false,
+  "deterministic_algorithms_enabled": false,
+  "device": "cpu",
+  "gpu": null,
+  "machine": "x86_64",
+  "numpy": "2.3.5",
+  "platform": "Linux-6.18.55-x86_64-with-glibc2.39",
+  "precision": "fp32",
+  "python": "3.12.14",
+  "python_implementation": "CPython",
+  "tf32_matmul": false,
+  "torch": "2.10.0+cpu"
+ },
+ "identities": {
+  "config_sha256": "2f97bcb6667d1a9c246183513885913fa3677cf4a54b9afb94c0f1c46df331e5",
+  "prepared_fingerprint": "58f58a937c2794fdfd3f2a8b9fb365b7b4ea6406362e3d4c299eb153c1d8dc7b",
+  "source_sha256": "9e0154c11c0ebc67d533a84b6d6a80c4e77a8d76e6d2cc165bcff5897980b108",
+  "unit_sha256": "97212529605501122bab96f5a6f71580e449955ec68b53142c0f08749c7f2b63"
+ },
+ "is_benchmark_data": false,
+ "packages": {
+  "CairoSVG": "2.9.1",
+  "Jinja2": "3.1.6",
+  "MarkupSafe": "3.0.3",
+  "attrs": "26.1.0",
+  "cairocffi": "1.7.1",
+  "certifi": "2026.10.23",
+  "cffi": "2.1.1",
+  "charset-normalizer": "3.5.2",
+  "cloudpickle": "3.1.2",
+  "contourpy": "1.4.0",
+  "cssselect2": "0.10.1",
+  "cycler": "0.12.1",
+  "defusedxml": "0.7.1",
+  "filelock": "3.32.3",
+  "fonttools": "4.67.0",
+  "fsspec": "2026.7.0",
+  "idna": "3.20",
+  "joblib": "1.6.0",
+  "jsonschema": "4.26.0",
+  "jsonschema-specifications": "2025.9.1",
+  "kiwisolver": "1.5.1",
+  "littleutils": "0.2.4",
+  "matplotlib": "3.10.8",
+  "mpmath": "1.3.0",
+  "narwhals": "2.27.1",
+  "networkx": "3.6.1",
+  "numpy": "2.3.5",
+  "ogb": "1.3.6",
+  "outdated": "0.2.2",
+  "packaging": "26.3",
+  "pandas": "3.1.0",
+  "pillow": "13.0.0",
+  "pip": "25.0.1",
+  "pycparser": "3.12",
+  "pymetis": "2025.2.2",
+  "pyparsing": "3.3.3",
+  "python-dateutil": "3.0.0",
+  "referencing": "0.37.0",
+  "requests": "2.34.2",
+  "rpds-py": "2026.9.1",
+  "scikit-learn": "1.9.1",
+  "scipy": "1.17.0",
+  "setuptools": "78.1.0",
+  "six": "1.17.0",
+  "sympy": "1.14.0",
+  "threadpoolctl": "3.7.0",
+  "tinycss2": "1.5.1",
+  "torch": "2.10.0+cpu",
+  "tqdm": "4.70.1",
+  "typing_extensions": "4.16.0",
+  "tzdata": "2026.5",
+  "urllib3": "2.8.0",
+  "webencodings": "0.6.1"
+ },
+ "policy_lock": {
+  "comparator_hash": "fce702bb8c7c7cef54009fb6e06f6654f1ed2aabcb9088e1bb7c8d9e109a31a6",
+  "deployed_hash": "fce702bb8c7c7cef54009fb6e06f6654f1ed2aabcb9088e1bb7c8d9e109a31a6",
+  "model_hashes": {
+   "fit/full/controller.pt": "bcce083986b03505ae32888dad67aaca58716beeafd3e044949158b5d45d0026",
+   "fit/lean/controller.pt": "bf0db56ab6e58fe22b42347239bf5ff1122c8793803631c42a71f3e76bb5079c",
+   "train/plant_seed1_best.pt": "6b3d54a5044255ee5363261f1de2068eb31aa8f1126cc0b3c4dfc9380a21be85",
+   "train/plant_seed2_best.pt": "f6830cfdadec0ff439f2aa529b0b5689ead5b1002802f340a57d4b821fa38d14",
+   "train/q0_seed1_best.pt": "3431278baf1b28b04bb10da4cc5f5959d06bdf20532d698fe617500610b51408",
+   "train/q0_seed2_best.pt": "3b4faea578adb0b1237af2365d2d16084e4529b6c60b4c81713d66aaf8fdb363"
+  }
+ },
+ "profile": "smoke",
+ "run_name": "arxiv",
+ "schema": "cross-morse-run-manifest-1",
+ "scientific_run": false,
+ "seeds": {
+  "bootstrap_seeds": {
+   "admission": 314165,
+   "final": 314166,
+   "selection": 314163
+  },
+  "ensemble_seeds": {
+   "qC": [
+    1,
+    2
+   ],
+   "qD": [
+    1,
+    2
+   ]
+  },
+  "partition_seed": 314159,
+  "split_index": null,
+  "training_seeds": [
+   1,
+   2
+  ]
+ },
+ "source_data": {
+  "num_features": 12,
+  "num_graphs": 1,
+  "num_nodes": 160,
+  "num_outputs": 4,
+  "source": "synthetic_fixture",
+  "source_array_hashes": {
+   "edge_index": "ddbb7e114537fd4c22ef5ba8061829c1c4372c19017205e08b40265d7070c7e7",
+   "x": "35dedcb0aa3d8a4f76f7f60ab5c434383e1477a0e497b33a1715d63d5a5767a0",
+   "y": "837e5df7788952710873eca29a428ccb82f51cc039f1437674eceff50c08c78f"
+  }
+ },
+ "splits": {
+  "arrays": {
+   "clusters.npz": {
+    "bytes": 1556,
+    "sha256": "763b7e089d4ee6676c253ab96833619193be1dc9f4f2c743752f86de0324eef3"
+   },
+   "official_splits.npz": {
+    "bytes": 2026,
+    "sha256": "ac5f5014c191ca39be874bc8161ac89cc27923f7cebea39177456bb29c84d72f"
+   },
+   "splits.npz": {
+    "bytes": 3710,
+    "sha256": "97212529605501122bab96f5a6f71580e449955ec68b53142c0f08749c7f2b63"
+   }
+  },
+  "graph_role_hashes": null,
+  "independent_graphs": false,
+  "official_split_axis": "node",
+  "official_split_hashes": {
+   "test": "5805e21c23157b5091a6e2ef73982ba3464cc0cc73642ef5ec75addd64f6d59a",
+   "train": "3c99a813c2d300c0a4fd4269462f147e3023ab6115a0bd5595f4fa41c69fc8d1",
+   "valid": "38982c31b52ad4dab5826a9c2d708354922f0e04a7b912e01fda8450a9578738"
+  },
+  "role_hashes": {
+   "admit": "38982c31b52ad4dab5826a9c2d708354922f0e04a7b912e01fda8450a9578738",
+   "confirm": "e302b4b73968775668e6ef568d123a07f10b6cde0796d10219a1f90897ba350c",
+   "explore": "f4c09ea956b657e1ba0a92798fdcc6ea84ef5d3b815eba8a60f7ca9b420dad9d",
+   "fit": "e3bb5bc83f6f699f7296167b7ea252c462ba033d9ef26cb2cbcd8aaa8662b85a",
+   "fit_train": "5863507a68e3ec70e4ba6ab16e6597c76a25930ae907f0406f729e3e952798c2",
+   "fit_val": "edfeeed949d89b95e0d8cf9c8ed187509ee04aa8310463da66f77752d7a16cf5",
+   "select": "a8c2461426087ae5d5cdb02d12bca82e58ec268cb34310a1cc3a7cbe0d8d58f3",
+   "test": "5805e21c23157b5091a6e2ef73982ba3464cc0cc73642ef5ec75addd64f6d59a"
+  },
+  "rule": "seeded permutation of official train; floor cuts at 60%,80%,90%; remaining units in confirm",
+  "sizes": {
+   "admit": 32,
+   "confirm": 10,
+   "explore": 19,
+   "fit": 57,
+   "fit_train": 52,
+   "fit_val": 5,
+   "select": 10,
+   "test": 32
+  },
+  "statistical_unit": "balanced synthetic core",
+  "unit": "node"
+ }
+}

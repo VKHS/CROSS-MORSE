@@ -1,0 +1,23 @@
+% Selection rule of main Eq. (19) under three equivalence readings (Supplementary Table S12c)
+% generated from 7 run(s) [examples]; runtime source 9e0154c11c0e; runs: ogbn-arxiv:arxiv, ogbn-products:products, ogbn-proteins:proteins, Roman-empire:roman_empire, PascalVOC-SP:pascalvoc_sp, COCO-SP:coco_sp, Peptides-func:peptides_func
+% Do not edit: regenerate with `make tables`.
+% SYNTHETIC SOFTWARE EXAMPLES: these values are not benchmark results.
+\begin{table}[t]
+\centering
+\small
+\caption{Selection rule of main Eq. (19) under three equivalence readings (Supplementary Table S12c) (synthetic example runs). Representative row of each feedback route family as in Table S12 (smallest U_s); eligible routes have U_s < -eps_R and pass the metric gate; the comparator's family is not a candidate. Near-best sets and the lexicographic choice are computed under the three equivalence readings of Supplementary Table S12c from the sealed select/decision.json. The last column applies main Eq. (19) to every (route, E, profile) configuration, as the runner does, and checks it against the run's own provisional selection.}
+\label{tab:S12c}
+\begin{tabular}{llllllll}
+\hline
+Dataset & U\_min (eligible routes) & eps\_eq = 0.002 on U\_s (registered): near-best -> choice & eps\_eq = 0.002 on Delta\_s: near-best -> choice & eps\_eq = 0.001 on Delta\_s: near-best -> choice & selected & registered reading & registered rule on all configurations \\
+\hline
+ogbn-arxiv & -- & — -> q\_C & — -> q\_C & — -> q\_C & q\_C & consistent & reproduces the sealed selection \\
+ogbn-products & -- & — -> q\_C & — -> q\_C & — -> q\_C & q\_C & consistent & reproduces the sealed selection \\
+ogbn-proteins & -- & — -> q\_C & — -> q\_C & — -> q\_C & q\_C & consistent & reproduces the sealed selection \\
+Roman-empire & -- & — -> q\_C & — -> q\_C & — -> q\_C & q\_C & consistent & reproduces the sealed selection \\
+PascalVOC-SP & -- & — -> q\_C & — -> q\_C & — -> q\_C & q\_C & consistent & reproduces the sealed selection \\
+COCO-SP & -- & — -> q\_C & — -> q\_C & — -> q\_C & q\_C & consistent & reproduces the sealed selection \\
+Peptides-func & -- & — -> q\_C & — -> q\_C & — -> q\_C & q\_C & consistent & reproduces the sealed selection \\
+\hline
+\end{tabular}
+\end{table}

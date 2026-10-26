@@ -1,0 +1,217 @@
+{
+  "schema": "cross-morse-records-specs-1",
+  "description": "Measurement records of the experiments that the eight-stage runner does not produce. Each set is a directory records/<set>/ holding summary.csv (one measured value per row, each traced to the raw file it is read from), the raw logs under raw/, the code and configurations under code/, and provenance.json. scripts/records.py checks every value against its raw file and prints the supplementary table from the summary.",
+  "summary_columns": [
+    "quantity",
+    "value",
+    "unit",
+    "source_file",
+    "locator"
+  ],
+  "provenance_fields": [
+    "experiment",
+    "produced_by",
+    "hardware",
+    "period",
+    "protocol"
+  ],
+  "sets": {
+    "baselines": {
+      "title": "Per-rerun resource ledger and retrained baselines",
+      "manuscript_tables": [
+        "Supplementary Table S15",
+        "Supplementary Table S15b"
+      ],
+      "experiments": [
+        "E12",
+        "E17"
+      ],
+      "keys": [
+        "dataset",
+        "method",
+        "seed"
+      ],
+      "quantities": {
+        "serial_cost": "nominal executions (nominal = 1), measured after warm-up",
+        "wall_time": "controller-branch wall time in nominal executions (nominal = 1)",
+        "gpu_hours": "qualification or retraining GPU-hours from the scheduler accounting",
+        "score": "official test metric of one optimization seed (percent or AP points)",
+        "hpo_trials": "hyperparameter trials under the shared 48-trial ceiling",
+        "params_millions": "trainable parameters (millions)"
+      },
+      "per_seed_quantities": [
+        "score"
+      ],
+      "table": "seed_mean_sd",
+      "notes": "Rows without a seed carry per-method quantities; the score SD over the 12 optimization seeds is computed from the per-seed rows."
+    },
+    "factorials": {
+      "title": "Equal-budget 2^3 factorials",
+      "manuscript_tables": [
+        "Supplementary Table S16",
+        "Supplementary Table S16b"
+      ],
+      "experiments": [],
+      "keys": [
+        "dataset",
+        "cell"
+      ],
+      "quantities": {
+        "ld_integrated_loss": "log-depth-integrated CE (nats)",
+        "interval_low": "lower end of the 95% interval (nats)",
+        "interval_high": "upper end of the 95% interval (nats)",
+        "official_metric": "official test metric (percent or F1 points)",
+        "activity": "action activity fraction",
+        "relative_time": "time relative to cell 000"
+      },
+      "table": "list"
+    },
+    "negative_controls": {
+      "title": "Negative controls and unsupported regimes",
+      "manuscript_tables": [
+        "Supplementary Table S19"
+      ],
+      "experiments": [],
+      "keys": [
+        "control"
+      ],
+      "quantities": {
+        "residual_activity": "fraction of graphs or episodes with residual action activity",
+        "input_fallback": "fraction of graphs or episodes returned by the input fallback",
+        "worst_pre_fallback_harm": "worst paired loss before fallback (nats)"
+      },
+      "table": "list"
+    },
+    "input_gate": {
+      "title": "Serving-time input gate and deployed latency",
+      "manuscript_tables": [
+        "Supplementary Table S23"
+      ],
+      "experiments": [],
+      "keys": [
+        "dataset"
+      ],
+      "quantities": {
+        "fallback_probability": "fraction of test inputs returned to q_C by the input gate g_input",
+        "deployed_wall_overhead_percent": "deployed latency after fallback relative to q_C (percent)",
+        "gpu_memory_gib": "peak GPU memory (GiB)",
+        "cpu_memory_gib": "peak host memory (GiB)"
+      },
+      "table": "list"
+    },
+    "nominal_time": {
+      "title": "Per-input nominal execution time",
+      "manuscript_tables": [
+        "Supplementary Table S23b"
+      ],
+      "experiments": [
+        "E17"
+      ],
+      "keys": [
+        "dataset"
+      ],
+      "quantities": {
+        "t_nom_seconds": "measured per-input nominal execution time (seconds)"
+      },
+      "table": "list"
+    },
+    "sensor_parameters": {
+      "title": "Executed sensor parameters",
+      "manuscript_tables": [
+        "Supplementary Table S6c"
+      ],
+      "experiments": [
+        "E17"
+      ],
+      "keys": [
+        "dataset"
+      ],
+      "quantities": {
+        "sketch_dim": "executed sketch width k (0 = full-state sensing)",
+        "observer_period": "executed sensing period P_s (control depths)",
+        "residual_fraction": "executed residual fraction f_res"
+      },
+      "table": "list",
+      "notes": "The executed (k, P_s, f_res) of the reported runs; Table S6c bounds (k/d)/P_s from the sensing-cost identity."
+    },
+    "cross_backbone": {
+      "title": "Cross-backbone substitutions",
+      "manuscript_tables": [
+        "Supplementary Table S25"
+      ],
+      "experiments": [],
+      "keys": [
+        "regime",
+        "model"
+      ],
+      "quantities": {
+        "effect_nats": "paired test effect against q_C (nats)",
+        "route_stable_folds": "outer folds selecting the reported route",
+        "outer_folds": "outer folds evaluated"
+      },
+      "table": "list"
+    },
+    "ensemble_grid": {
+      "title": "Ensemble law on the extended grid",
+      "manuscript_tables": [
+        "Supplementary Table S26b"
+      ],
+      "experiments": [
+        "E14"
+      ],
+      "keys": [
+        "dataset",
+        "ensemble"
+      ],
+      "quantities": {
+        "loss_nats": "comparator loss of the E-member ensemble with the paired seed structure (nats)"
+      },
+      "table": "ensemble_law",
+      "notes": "The table fits l(E) = l_inf + D_inf / E by least squares over the deposited ensemble sizes, as Supplementary Table S26b states."
+    },
+    "inserted_site": {
+      "title": "Three-arm attribution of inserted-site transport",
+      "manuscript_tables": [
+        "Supplementary Table S45"
+      ],
+      "experiments": [
+        "E13"
+      ],
+      "keys": [
+        "dataset",
+        "arm"
+      ],
+      "quantities": {
+        "effect_nats": "paired effect relative to q_C (nats)",
+        "standard_error": "graph-unit standard error (nats)"
+      },
+      "table": "list"
+    },
+    "budget_matched": {
+      "title": "Budget-matched arms at the common ceiling",
+      "manuscript_tables": [
+        "Supplementary Table S46",
+        "Supplementary Table S46b"
+      ],
+      "experiments": [
+        "E3",
+        "E4",
+        "E5",
+        "E6"
+      ],
+      "keys": [
+        "dataset",
+        "arm",
+        "configuration"
+      ],
+      "quantities": {
+        "effect_mnats": "paired effect relative to q_C (millinats)",
+        "overhead_percent": "expected serial overhead relative to q_C (percent)"
+      },
+      "range_key": "configuration",
+      "central_configuration": "selected",
+      "table": "configuration_range",
+      "notes": "Each arm lists its evaluated configurations; the configuration named 'selected' is the development-selected one whose effect is the central value, and the range spans all configurations."
+    }
+  }
+}

@@ -1,0 +1,10 @@
+# Selection rule of main Eq. (19) under three equivalence readings (Supplementary Table S12c) -- SYNTHETIC SOFTWARE EXAMPLES: these values are not benchmark results
+"# generated from 7 run(s) [examples]; runtime source 9e0154c11c0e; runs: ogbn-arxiv:arxiv, ogbn-products:products, ogbn-proteins:proteins, Roman-empire:roman_empire, PascalVOC-SP:pascalvoc_sp, COCO-SP:coco_sp, Peptides-func:peptides_func"
+Dataset,U_min (eligible routes),eps_eq = 0.002 on U_s (registered): near-best -> choice,eps_eq = 0.002 on Delta_s: near-best -> choice,eps_eq = 0.001 on Delta_s: near-best -> choice,selected,registered reading,registered rule on all configurations
+ogbn-arxiv,,— -> q_C,— -> q_C,— -> q_C,q_C,consistent,reproduces the sealed selection
+ogbn-products,,— -> q_C,— -> q_C,— -> q_C,q_C,consistent,reproduces the sealed selection
+ogbn-proteins,,— -> q_C,— -> q_C,— -> q_C,q_C,consistent,reproduces the sealed selection
+Roman-empire,,— -> q_C,— -> q_C,— -> q_C,q_C,consistent,reproduces the sealed selection
+PascalVOC-SP,,— -> q_C,— -> q_C,— -> q_C,q_C,consistent,reproduces the sealed selection
+COCO-SP,,— -> q_C,— -> q_C,— -> q_C,q_C,consistent,reproduces the sealed selection
+Peptides-func,,— -> q_C,— -> q_C,— -> q_C,q_C,consistent,reproduces the sealed selection
